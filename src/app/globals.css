@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+    background: #2AE2BD;
+}
+
+.special-text::selection{
+    background: #575757;
+}
+
+.bold-text::selection{
+    background: #e6e6e6;
+}
+
 *,
 html {
     margin: 0;
@@ -119,3 +131,4 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+

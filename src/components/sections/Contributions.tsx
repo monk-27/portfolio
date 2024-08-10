@@ -42,7 +42,7 @@ export default function Contributions() {
     return (
         <section className="flex-col-start min-h-full">
             {loading ? (
-                <p>{loading ? "Loading GitHub contributions..." : error}</p>
+                <p className="set-wf-full flex-col-center">{loading ? "Loading GitHub contributions..." : error}</p>
             ) : (
                 <CustomLineChart
                     contributions={contributions}

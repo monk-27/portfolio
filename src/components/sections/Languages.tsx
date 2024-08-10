@@ -37,7 +37,7 @@ export default function Languages() {
     }, []);
 
     if (loading) {
-        return <p>Loading language data...</p>;
+        return <p className="set-wf-full flex-col-center">Loading language data...</p>;
     }
 
     if (error) {

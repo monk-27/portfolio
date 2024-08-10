@@ -40,7 +40,6 @@ export default function StarredRepo() {
                     const commits = await commitResponse.json();
                     const commit = commits[0];
 
-                    // Step 3: Compare commit dates to find the latest commit
                     if (
                         !latestCommit ||
                         new Date(commit.commit.author.date) >
@@ -52,7 +51,6 @@ export default function StarredRepo() {
                 }
 
                 if (latestRepo && latestCommit) {
-                    // Step 4: Set the repo data including the latest commit
                     setRepoData({
                         title: latestRepo.name,
                         description: latestRepo.description || "No Description",
@@ -73,7 +71,7 @@ export default function StarredRepo() {
     }, []);
 
     if (error) {
-        return <p>Error: {error}</p>;
+        return <p className="set-wf-full flex-col-center">{error}</p>;
     }
 
     return (

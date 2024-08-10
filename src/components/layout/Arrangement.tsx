@@ -21,10 +21,10 @@ export default function Arrangement(props: IArrangementProps) {
                 <div className="section bg-gray-100">
                     <GitHub />
                 </div>
-                <div className="section bg-gray-100">
+                <div className="section bg-gray-200">
                     <Projects />
                 </div>
-                <div className="section bg-gray-100">
+                <div className="section bg-gray-300">
                     <Articles />
                 </div>
             </div>
@@ -40,12 +40,12 @@ function Hero() {
         <div className="relative min-h-[95vh] min-w-[95%] px-5 py-4 rounded-xl">
             <Heading className="text-6xl font-bold leading-tight">
                 Crafting Digital Experiences with{" "}
-                <span className="text-aqua-green">Artistry & Precision</span>
+                <span className="text-aqua-green special-text">Artistry & Precision</span>
             </Heading>
             <Paragraph className="text-lg leading-relaxed mt-4">
                 My journey began with a passion for art, evolving into a
                 relentless pursuit of excellence in software development. As a{" "}
-                <span className="font-semibold">Full Stack Web Developer</span>,
+                <span className="font-semibold bold-text">Full Stack Web Developer</span>,
                 I bring creativity and technical prowess to the digital world,
                 crafting seamless, visually stunning, and high-performance
                 websites.
@@ -55,13 +55,19 @@ function Hero() {
             </Paragraph>
             <ActionButton text="Read Case studies" />
 
-            {/* Icon positioned at the bottom right */}
             <IoArrowDownOutline className="absolute bottom-5 right-5 scale-[250%]" />
         </div>
     );
 }
 
 function GitHub() {
+    const handleScrollDown = () => {
+        const nextSection = document.getElementById("projects");
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <div
             id="github"
@@ -76,7 +82,14 @@ function GitHub() {
             <div className="bg-aqua-green bg-opacity-50 p-4 rounded-xl">
                 <StarredRepo />
             </div>
-            <div className="bg-gray-100 p-4 rounded-xl"></div>
+            <div
+                className="bg-gray-200 p-4 rounded-xl group hover:cursor-none hover:bg-gray-300 transition ease-in-out duration-300"
+                onClick={handleScrollDown}
+            >
+                <div className="set-wf-full flex-col-center">
+                    <IoArrowDownOutline className="scale-[500%] text-gray-100 group-hover:text-color-light" />
+                </div>
+            </div>
         </div>
     );
 }

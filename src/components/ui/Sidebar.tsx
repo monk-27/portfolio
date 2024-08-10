@@ -13,12 +13,12 @@ export default function SideBar(props: ISideBarProps) {
     return (
         <nav className="set-flex-col justify-start items-center set-wf-full py-4 px-2 bg-white">
             <ProfilePicture />
-            <Heading className="text-5xl">Armaan Jaj</Heading>
-            <div className="set-flex-row justify-evenly items-center gap-2">
+            <Heading className="text-5xl mb-2">Armaan Jaj</Heading>
+            <div className="set-flex-row justify-evenly items-center gap-4 bg-color-dark text-[#e6e6e6] px-3 py-1 rounded-lg text-sm">
                 <span>
                     <HiLocationMarker className="scale-150" />
                 </span>
-                <span className="text-xl">Calgary</span>
+                <span className="text-lg">Calgary, Alberta</span>
             </div>
             <div className="set-flex-row justify-evenly items-center set-wf-full">
                 <Link
