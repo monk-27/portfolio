@@ -100,6 +100,9 @@ const CustomPieChart: React.FC<CustomPieChartProps> = ({ data }) => {
         );
     }
 
+    // Calculate the total size to determine the percentage
+    const totalSize = data.reduce((acc, item) => acc + item.size, 0);
+
     return (
         <div className="max-w-full max-h-full">
             <ResponsiveContainer width="110%" height={250}>
@@ -122,7 +125,15 @@ const CustomPieChart: React.FC<CustomPieChartProps> = ({ data }) => {
                             />
                         ))}
                     </Pie>
-                    <Tooltip formatter={(value) => ``} />
+                    <Tooltip
+                        formatter={(value, name) => {
+                            const percentage =
+                                ((value as number) / totalSize) * 100;
+                            return `${percentage.toFixed(
+                                2
+                            )}%`;
+                        }}
+                    />
                 </PieChart>
             </ResponsiveContainer>
         </div>
