@@ -63,7 +63,7 @@ export default function StarredRepo({
     }, [reload]); // Depend on reload to refetch data when it changes
 
     if (isLoading) {
-        return <p className="set-wf-full flex-col-center">Loading...</p>;
+        return <p className="set-wf-full flex-col-center">Loading repo details...</p>;
     }
 
     if (error) {
