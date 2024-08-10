@@ -1,7 +1,13 @@
 import * as React from "react";
 import FolderCard from "../layout/FolderCard";
 
-export default function StarredRepo({ className }: { className?: string }) {
+export default function StarredRepo({
+    className,
+    reload,
+}: {
+    className?: string;
+    reload: boolean;
+}) {
     const [repoData, setRepoData] = React.useState({
         title: "",
         description: "",
@@ -54,7 +60,7 @@ export default function StarredRepo({ className }: { className?: string }) {
         };
 
         fetchLatestCommitData();
-    }, []);
+    }, [reload]); // Depend on reload to refetch data when it changes
 
     if (isLoading) {
         return <p className="set-wf-full flex-col-center">Loading...</p>;

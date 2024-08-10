@@ -8,6 +8,7 @@ import Contributions from "../sections/Contributions";
 import Languages from "../sections/Languages";
 import StarredRepo from "../sections/StarredRepo";
 import { IoArrowDownOutline } from "react-icons/io5";
+import { IoReload } from "react-icons/io5";
 
 export interface IArrangementProps {}
 
@@ -65,11 +66,10 @@ function Hero() {
 }
 
 function GitHub() {
-    const handleScrollDown = () => {
-        const nextSection = document.getElementById("projects");
-        if (nextSection) {
-            nextSection.scrollIntoView({ behavior: "smooth" });
-        }
+    const [reload, setReload] = React.useState(false);
+
+    const handleReload = () => {
+        setReload((prevReload) => !prevReload);
     };
 
     return (
@@ -84,17 +84,38 @@ function GitHub() {
                 <Languages />
             </div>
             <div className="bg-aqua-green bg-opacity-50 p-4 rounded-xl set-flex-col justify-between h-full">
-                <div className="mb-3 md:text-lg xl:text-2xl font-bold">
-                    <p>Currently working on</p>
+                <div className="set-flex-row justify-between items-center w-full">
+                    <div className="mb-3 md:text-lg xl:text-2xl font-bold">
+                        <p>Active Project</p>
+                    </div>
+                    <div
+                        className="scale-150 mb-2 cursor-pointer hover:rotate-[360deg] transition-transform duration-500"
+                        onClick={handleReload}
+                        title="Reload repo data"
+                    >
+                        <IoReload />
+                    </div>
                 </div>
-                <StarredRepo className="flex-grow" />
+                <StarredRepo className="flex-grow" reload={reload} />
             </div>
-            <div
-                className="bg-gray-200 p-4 rounded-xl group hover:cursor-none hover:bg-gray-300 transition ease-in-out duration-300 flex items-center justify-center"
-                onClick={handleScrollDown}
-            >
-                <IoArrowDownOutline className="scale-[500%] text-gray-100 group-hover:text-color-light" />
-            </div>
+            <ScrollDown />
+        </div>
+    );
+}
+
+function ScrollDown() {
+    const handleScrollDown = () => {
+        const nextSection = document.getElementById("projects");
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+    return (
+        <div
+            className="bg-gray-200 p-4 rounded-xl group hover:cursor-none hover:bg-gray-300 transition ease-in-out duration-300 flex items-center justify-center"
+            onClick={handleScrollDown}
+        >
+            <IoArrowDownOutline className="scale-[500%] text-gray-100 group-hover:text-color-light" />
         </div>
     );
 }
