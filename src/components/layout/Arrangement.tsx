@@ -6,6 +6,8 @@ import Heading from "../ui/Heading";
 import Paragraph from "../ui/Paragraph";
 import Contributions from "../sections/Contributions";
 import Languages from "../sections/Languages";
+import StarredRepo from "../sections/StarredRepo";
+import { IoArrowDownOutline } from "react-icons/io5";
 
 export interface IArrangementProps {}
 
@@ -19,7 +21,7 @@ export default function Arrangement(props: IArrangementProps) {
                 <div className="section bg-gray-100">
                     <GitHub />
                 </div>
-                <div className="section bg-gray-200">
+                <div className="section bg-gray-100">
                     <Projects />
                 </div>
                 <div className="section bg-gray-100">
@@ -35,7 +37,7 @@ export default function Arrangement(props: IArrangementProps) {
 
 function Hero() {
     return (
-        <div className="min-h-[95vh] min-w-[95%] px-5 py-4 rounded-xl">
+        <div className="relative min-h-[95vh] min-w-[95%] px-5 py-4 rounded-xl">
             <Heading className="text-6xl font-bold leading-tight">
                 Crafting Digital Experiences with{" "}
                 <span className="text-aqua-green">Artistry & Precision</span>
@@ -52,6 +54,9 @@ function Hero() {
                 Let's create something extraordinary together.
             </Paragraph>
             <ActionButton text="Read Case studies" />
+
+            {/* Icon positioned at the bottom right */}
+            <IoArrowDownOutline className="absolute bottom-5 right-5 scale-[250%]" />
         </div>
     );
 }
@@ -60,7 +65,7 @@ function GitHub() {
     return (
         <div
             id="github"
-            className="grid grid-cols-2 grid-rows-2 gap-4 max-h-screen min-w-[95%] px-5 py-4 rounded-xl"
+            className="grid grid-cols-2 grid-rows-2 gap-4 md:max-h-screen xl:min-h-screen min-w-[95%] px-5 py-4 rounded-xl"
         >
             <div className="bg-white p-4 rounded-xl">
                 <Contributions />
@@ -68,7 +73,9 @@ function GitHub() {
             <div className="bg-white p-4 rounded-xl">
                 <Languages />
             </div>
-            <div className="bg-gray-100 p-4 rounded-xl"></div>
+            <div className="bg-aqua-green bg-opacity-50 p-4 rounded-xl">
+                <StarredRepo />
+            </div>
             <div className="bg-gray-100 p-4 rounded-xl"></div>
         </div>
     );
