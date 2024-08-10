@@ -8,16 +8,42 @@ interface CommitNode {
     };
 }
 
-interface GetLatestCommitResponse {
-    repository: {
-        ref: {
-            target: {
-                history: {
-                    edges: {
-                        node: CommitNode;
-                    }[];
-                };
-            };
+interface RefNode {
+    target: {
+        history: {
+            edges: Array<{ node: CommitNode }>;
         };
     };
+}
+
+interface LanguageEdge {
+    node: {
+        name: string;
+    };
+}
+
+interface Repository {
+    name: string;
+    description: string;
+    forkCount: number;
+    isPrivate: boolean;
+    stargazers: {
+        totalCount: number;
+    };
+    languages: {
+        edges: LanguageEdge[];
+    };
+    refs: {
+        edges: Array<{ node: RefNode }>;
+    };
+}
+
+interface User {
+    repositories: {
+        nodes: Repository[];
+    };
+}
+
+interface GetAllReposResponse {
+    user: User;
 }

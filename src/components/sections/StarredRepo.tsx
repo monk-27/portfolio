@@ -1,85 +1,78 @@
-"use client";
 import * as React from "react";
 import FolderCard from "../layout/FolderCard";
 
-export default function StarredRepo() {
+export default function StarredRepo({ className }: { className?: string }) {
     const [repoData, setRepoData] = React.useState({
-        title: "Loading...",
+        title: "",
         description: "",
         starCount: 0,
-        latestCommitMessage: "Loading...",
+        forkCount: 0,
+        isPrivate: false,
+        languages: [],
+        latestCommitMessage: "",
         latestCommitUrl: "",
         latestCommitDate: "",
     });
 
+    const [isLoading, setIsLoading] = React.useState(true);
     const [error, setError] = React.useState<string | null>(null);
 
     React.useEffect(() => {
         const fetchLatestCommitData = async () => {
+            setIsLoading(true);
             try {
-                // Step 1: Fetch the user's repositories
-                const repoResponse = await fetch(
-                    `https://api.github.com/users/armaanjaj/repos`
+                const owner = "armaanjaj";
+
+                const response = await fetch(
+                    `/api/github-latest-commit?owner=${owner}`
                 );
-                if (!repoResponse.ok)
-                    throw new Error("Failed to fetch repositories");
 
-                const repos = await repoResponse.json();
-
-                let latestRepo = null;
-                let latestCommit = null;
-
-                // Step 2: For each repository, fetch the latest commit
-                for (const repo of repos) {
-                    const commitResponse = await fetch(
-                        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?per_page=1`
-                    );
-                    if (!commitResponse.ok)
-                        throw new Error("Failed to fetch commits");
-
-                    const commits = await commitResponse.json();
-                    const commit = commits[0];
-
-                    if (
-                        !latestCommit ||
-                        new Date(commit.commit.author.date) >
-                            new Date(latestCommit.commit.author.date)
-                    ) {
-                        latestRepo = repo;
-                        latestCommit = commit;
-                    }
+                if (!response.ok) {
+                    throw new Error("Failed to fetch repository details");
                 }
 
-                if (latestRepo && latestCommit) {
-                    setRepoData({
-                        title: latestRepo.name,
-                        description: latestRepo.description || "No Description",
-                        starCount: latestRepo.stargazers_count || 0,
-                        latestCommitMessage: latestCommit.commit.message,
-                        latestCommitUrl: latestCommit.html_url,
-                        latestCommitDate: new Date(
-                            latestCommit.commit.author.date
-                        ).toLocaleString(),
-                    });
-                }
+                const data = await response.json();
+
+                setRepoData({
+                    title: data.title,
+                    description: data.description || "No Description",
+                    starCount: data.starCount || 0,
+                    forkCount: data.forkCount || 0,
+                    isPrivate: data.isPrivate,
+                    languages: data.languages || "N/A",
+                    latestCommitMessage: data.latestCommitMessage,
+                    latestCommitUrl: data.latestCommitUrl,
+                    latestCommitDate: new Date(
+                        data.latestCommitDate
+                    ).toLocaleString(),
+                });
             } catch (err: any) {
                 setError(err.message || "An unknown error occurred");
+            } finally {
+                setIsLoading(false);
             }
         };
 
         fetchLatestCommitData();
     }, []);
 
+    if (isLoading) {
+        return <p className="set-wf-full flex-col-center">Loading...</p>;
+    }
+
     if (error) {
         return <p className="set-wf-full flex-col-center">{error}</p>;
     }
 
     return (
-        <div className="set-wf-full flex-col-center">
+        <div className={`set-wf-full flex-col-center ${className}`}>
             <FolderCard
                 title={repoData.title}
                 description={repoData.description}
                 starCount={repoData.starCount}
+                forkCount={repoData.forkCount}
+                isPrivate={repoData.isPrivate}
+                languages={repoData.languages}
                 latestCommitMessage={repoData.latestCommitMessage}
                 latestCommitUrl={repoData.latestCommitUrl}
                 latestCommitDate={repoData.latestCommitDate}

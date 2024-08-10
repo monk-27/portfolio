@@ -10,21 +10,49 @@ const client = new GraphQLClient(GITHUB_GRAPHQL_API, {
     },
 });
 
-const GET_LATEST_COMMIT = gql`
-    query ($owner: String!, $name: String!) {
-        repository(owner: $owner, name: $name) {
-            ref(qualifiedName: "main") {
-                target {
-                    ... on Commit {
-                        history(first: 1) {
-                            edges {
-                                node {
-                                    message
-                                    committedDate
-                                    url
-                                    author {
-                                        name
-                                        email
+const GET_ALL_REPOS = gql`
+    query ($owner: String!) {
+        user(login: $owner) {
+            repositories(
+                first: 100
+                orderBy: { field: UPDATED_AT, direction: DESC }
+                affiliations: [OWNER]
+                isFork: false
+            ) {
+                nodes {
+                    name
+                    description
+                    forkCount
+                    isPrivate
+                    stargazers {
+                        totalCount
+                    }
+                    languages(first: 10) {
+                        edges {
+                            node {
+                                name
+                            }
+                        }
+                    }
+                    refs(first: 1, refPrefix: "refs/heads/") {
+                        edges {
+                            node {
+                                name
+                                target {
+                                    ... on Commit {
+                                        history(first: 1) {
+                                            edges {
+                                                node {
+                                                    message
+                                                    committedDate
+                                                    url
+                                                    author {
+                                                        name
+                                                        email
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -39,31 +67,71 @@ const GET_LATEST_COMMIT = gql`
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const owner = searchParams.get("owner");
-    const repo = searchParams.get("repo");
 
-    if (!owner || !repo) {
+    if (!owner) {
         return NextResponse.json(
-            { error: "Owner and repository name are required." },
+            { error: "Owner name is required." },
             { status: 400 }
         );
     }
 
     try {
-        const data = await client.request<GetLatestCommitResponse>(
-            GET_LATEST_COMMIT,
-            {
-                owner,
-                name: repo,
+        const data = await client.request<GetAllReposResponse>(GET_ALL_REPOS, {
+            owner,
+        });
+
+        const repositories = data.user.repositories.nodes;
+
+        if (repositories.length === 0) {
+            return NextResponse.json(
+                { error: "No repositories found." },
+                { status: 404 }
+            );
+        }
+
+        let latestRepo = null;
+        let latestCommitDate = null;
+
+        for (const repo of repositories) {
+            const commitNode =
+                repo.refs?.edges[0]?.node?.target?.history?.edges[0]?.node;
+
+            if (commitNode && commitNode.author) {
+                const commitDate = new Date(commitNode.committedDate);
+                if (!latestCommitDate || commitDate > latestCommitDate) {
+                    latestCommitDate = commitDate;
+                    latestRepo = {
+                        title: repo.name,
+                        description: repo.description,
+                        forkCount: repo.forkCount,
+                        isPrivate: repo.isPrivate,
+                        starCount: repo.stargazers.totalCount,
+                        languages: repo.languages.edges.map(
+                            (edge) => edge.node.name
+                        ), // Map to array of strings
+                        latestCommitMessage: commitNode.message,
+                        latestCommitUrl: commitNode.url,
+                        latestCommitDate: commitNode.committedDate,
+                    };
+                }
             }
-        );
+        }
 
-        const latestCommit = data.repository.ref.target.history.edges[0].node;
+        if (!latestRepo) {
+            return NextResponse.json(
+                {
+                    error: "No recent commits found in your repositories.",
+                    repos: repositories,
+                },
+                { status: 404 }
+            );
+        }
 
-        return NextResponse.json(latestCommit, { status: 200 });
+        return NextResponse.json(latestRepo, { status: 200 });
     } catch (error) {
         console.error(error);
         return NextResponse.json(
-            { error: "Failed to fetch latest commit details." },
+            { error: "Failed to fetch repository details." },
             { status: 500 }
         );
     }

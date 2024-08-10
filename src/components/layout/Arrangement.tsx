@@ -40,13 +40,17 @@ function Hero() {
         <div className="relative min-h-[95vh] min-w-[95%] px-5 py-4 rounded-xl">
             <Heading className="text-6xl font-bold leading-tight">
                 Crafting Digital Experiences with{" "}
-                <span className="text-aqua-green special-text">Artistry & Precision</span>
+                <span className="text-aqua-green special-text">
+                    Artistry & Precision
+                </span>
             </Heading>
             <Paragraph className="text-lg leading-relaxed mt-4">
                 My journey began with a passion for art, evolving into a
                 relentless pursuit of excellence in software development. As a{" "}
-                <span className="font-semibold bold-text">Full Stack Web Developer</span>,
-                I bring creativity and technical prowess to the digital world,
+                <span className="font-semibold bold-text">
+                    Full Stack Web Developer
+                </span>
+                , I bring creativity and technical prowess to the digital world,
                 crafting seamless, visually stunning, and high-performance
                 websites.
                 <br />
@@ -73,22 +77,23 @@ function GitHub() {
             id="github"
             className="grid grid-cols-2 grid-rows-2 gap-4 md:max-h-screen xl:min-h-screen min-w-[95%] px-5 py-4 rounded-xl"
         >
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-white p-4 rounded-xl set-flex-col">
                 <Contributions />
             </div>
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-white p-4 rounded-xl set-flex-col">
                 <Languages />
             </div>
-            <div className="bg-aqua-green bg-opacity-50 p-4 rounded-xl">
-                <StarredRepo />
+            <div className="bg-aqua-green bg-opacity-50 p-4 rounded-xl set-flex-col justify-between h-full">
+                <div className="mb-3 md:text-lg xl:text-2xl font-bold">
+                    <p>Currently working on</p>
+                </div>
+                <StarredRepo className="flex-grow" />
             </div>
             <div
-                className="bg-gray-200 p-4 rounded-xl group hover:cursor-none hover:bg-gray-300 transition ease-in-out duration-300"
+                className="bg-gray-200 p-4 rounded-xl group hover:cursor-none hover:bg-gray-300 transition ease-in-out duration-300 flex items-center justify-center"
                 onClick={handleScrollDown}
             >
-                <div className="set-wf-full flex-col-center">
-                    <IoArrowDownOutline className="scale-[500%] text-gray-100 group-hover:text-color-light" />
-                </div>
+                <IoArrowDownOutline className="scale-[500%] text-gray-100 group-hover:text-color-light" />
             </div>
         </div>
     );
