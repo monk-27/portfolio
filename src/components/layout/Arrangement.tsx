@@ -9,6 +9,8 @@ import Languages from "../sections/Languages";
 import StarredRepo from "../sections/StarredRepo";
 import { IoArrowDownOutline } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
+import Projects from "../sections/Projects";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 export interface IArrangementProps {}
 
@@ -17,16 +19,16 @@ export default function Arrangement(props: IArrangementProps) {
         <div className="grid grid-cols-10 h-full w-full">
             <div className="col-span-7 scroll-container">
                 <div className="section bg-white">
-                    <Hero />
+                    <HeroSection />
                 </div>
                 <div className="section bg-gray-100">
-                    <GitHub />
+                    <GitHubSection />
                 </div>
                 <div className="section bg-gray-200">
-                    <Projects />
+                    <ProjectsSection />
                 </div>
                 <div className="section bg-gray-300">
-                    <Articles />
+                    <ArticlesSection />
                 </div>
             </div>
             <div className="col-span-3">
@@ -36,7 +38,7 @@ export default function Arrangement(props: IArrangementProps) {
     );
 }
 
-function Hero() {
+function HeroSection() {
     return (
         <div className="relative min-h-[95vh] min-w-[95%] px-5 py-4 rounded-xl">
             <Heading className="text-6xl font-bold leading-tight">
@@ -65,7 +67,7 @@ function Hero() {
     );
 }
 
-function GitHub() {
+function GitHubSection() {
     const [reload, setReload] = React.useState(false);
 
     const handleReload = () => {
@@ -103,6 +105,145 @@ function GitHub() {
     );
 }
 
+function ProjectsSection() {
+    const [currentPage, setCurrentPage] = React.useState(0);
+    const [itemsPerPage, setItemsPerPage] = React.useState(1);
+    const containerRef = React.useRef<HTMLDivElement | null>(null);
+    const [projects, setProjects] = React.useState([]);
+    const [loading, setLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        const fetchProjects = async () => {
+            setLoading(true);
+            try {
+                const response = await fetch("/api/projects");
+                if (response.ok) {
+                    const data = await response.json();
+                    setProjects(data);
+                } else {
+                    console.error("Failed to fetch projects");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProjects();
+    }, []);
+
+    React.useEffect(() => {
+        const updateItemsPerPage = () => {
+            if (containerRef.current) {
+                const containerWidth = containerRef.current.clientWidth;
+                const containerHeight = containerRef.current.clientHeight;
+
+                const cardMinWidth = 180; // Minimum width of each card
+                const cardMinHeight = 100; // Minimum height of each card
+
+                const columns = Math.max(
+                    Math.floor(containerWidth / cardMinWidth),
+                    1
+                );
+                const rows = Math.max(
+                    Math.floor(containerHeight / cardMinHeight),
+                    1
+                );
+
+                setItemsPerPage(columns * rows);
+            }
+        };
+
+        window.addEventListener("resize", updateItemsPerPage);
+        updateItemsPerPage(); // Initial call
+
+        return () => {
+            window.removeEventListener("resize", updateItemsPerPage);
+        };
+    }, []);
+
+    const totalPages = Math.ceil(projects.length / itemsPerPage);
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages - 1) {
+            setCurrentPage((prevPage) => prevPage + 1);
+        }
+    };
+
+    const handlePreviousPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage((prevPage) => prevPage - 1);
+        }
+    };
+
+    const currentProjects = projects.slice(
+        currentPage * itemsPerPage,
+        (currentPage + 1) * itemsPerPage
+    );
+
+    return (
+        <div
+            id="projects"
+            className="px-5 py-4 rounded-xl flex flex-col justify-end gap-0 min-w-[95%] h-full overflow-hidden"
+            ref={containerRef}
+        >
+            <div>
+                <Heading className="text-5xl mb-2">Projects</Heading>
+            </div>
+
+            {loading ? (
+                <div className="flex flex-col justify-center items-center h-full">
+                    <span className="animate-pulse">Loading Projects...</span>
+                </div>
+            ) : (
+                <>
+                    <div className="flex-row-end w-full p-4 h-fit gap-5">
+                        <IoIosArrowRoundBack
+                            className={`text-2xl cursor-pointer bg-color-dark text-white rounded-lg hover:bg-color-light transition-colors duration-300 ${
+                                currentPage === 0
+                                    ? "opacity-50 cursor-not-allowed"
+                                    : ""
+                            }`}
+                            onClick={
+                                currentPage > 0 ? handlePreviousPage : undefined
+                            }
+                            title="Previous Page"
+                        />
+                        <IoIosArrowRoundForward
+                            className={`text-2xl cursor-pointer bg-color-dark text-white rounded-lg hover:bg-color-light transition-colors duration-300 ${
+                                currentPage === totalPages - 1
+                                    ? "opacity-50 cursor-not-allowed"
+                                    : ""
+                            }`}
+                            onClick={
+                                currentPage < totalPages - 1
+                                    ? handleNextPage
+                                    : undefined
+                            }
+                            title="Next Page"
+                        />
+                    </div>
+                    <div className="h-3/5 overflow-hidden">
+                        <Projects
+                            projects={currentProjects}
+                            className="grid grid-cols-2 gap-4 items-center"
+                        />
+                    </div>
+                </>
+            )}
+        </div>
+    );
+}
+
+function ArticlesSection() {
+    return (
+        <div id="articles">
+            <div>Articles and Case Studies</div>
+        </div>
+    );
+}
+
 function ScrollDown() {
     const handleScrollDown = () => {
         const nextSection = document.getElementById("projects");
@@ -116,22 +257,6 @@ function ScrollDown() {
             onClick={handleScrollDown}
         >
             <IoArrowDownOutline className="scale-[500%] text-gray-100 group-hover:text-color-light" />
-        </div>
-    );
-}
-
-function Projects() {
-    return (
-        <div id="projects">
-            <div>Projects Here</div>
-        </div>
-    );
-}
-
-function Articles() {
-    return (
-        <div id="articles">
-            <div>Articles and Case Studies</div>
         </div>
     );
 }

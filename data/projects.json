@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "We-DD",
+        "description": "A designated driver website developed for a Calgary based taxi company easing their day to day operations.",
+        "logo": "/Logos/pL1.jpg",
+        "url": "https://we-dd.vercel.app/"
+    },
+    {
+        "id": 2,
+        "title": "My Inventory",
+        "description": "Inventory management software helping users to add, manage and print details of their invetory items.",
+        "logo": "/Logos/pL2.jpg",
+        "url": "https://github.com/armaanjaj/myinventory"
+    },
+    {
+        "id": 3,
+        "title": "Portfolio - v1.0",
+        "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
+        "logo": "/Logos/pL3.jpg",
+        "url": "https://www.v1.armaancodes.com/"
+    },
+    {
+        "id": 4,
+        "title": "Sumit Nanda Real Estate",
+        "description": "A portfolio website for Calgary based real estate professional showcasing services offered and proof of commitment.",
+        "logo": "/Logos/pL4.png",
+        "url": "https://www.sumitnanda.ca/"
+    },
+    {
+        "id": 5,
+        "title": "Morning Star Contractors",
+        "description": "Morning Star Contractors is a Canadian construction company based in Calgary.",
+        "logo": "/Logos/pL5.jpg",
+        "url": "https://www.morningstarcontractors.ca/"
+    },
+    {
+        "id": 6,
+        "title": "Portfolio - v2.0",
+        "description": "My second iteration of the portfolio website. Tried the trendy bento grid UI and used the aceternity UI components to add a modern feel.",
+        "logo": "/Logos/pL6.png",
+        "url": "https://portfolio-v2-five-sigma.vercel.app/"
+    },
+    {
+        "id": 7,
+        "title": "Portfolio - v3.0",
+        "description": "My current version of portfolio website. Focused on a more layback and easy web design. Google's 'Material You' UI was the inspiraton for its design.",
+        "logo": "/Logos/pL7.png",
+        "url": "https://www.armaancodes.com/"
+    }
+]
