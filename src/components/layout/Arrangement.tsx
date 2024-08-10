@@ -4,6 +4,8 @@ import SideBar from "../ui/Sidebar";
 import ActionButton from "../layout/ActionButton";
 import Heading from "../ui/Heading";
 import Paragraph from "../ui/Paragraph";
+import Contributions from "../sections/Contributions";
+import Languages from "../sections/Languages";
 
 export interface IArrangementProps {}
 
@@ -56,15 +58,25 @@ function Hero() {
 
 function GitHub() {
     return (
-        <div id="#github">
-            <div>GitHub Contribution here</div>
+        <div
+            id="github"
+            className="grid grid-cols-2 grid-rows-2 gap-4 max-h-screen min-w-[95%] px-5 py-4 rounded-xl"
+        >
+            <div className="bg-white p-4 rounded-xl">
+                <Contributions />
+            </div>
+            <div className="bg-white p-4 rounded-xl">
+                <Languages />
+            </div>
+            <div className="bg-gray-100 p-4 rounded-xl"></div>
+            <div className="bg-gray-100 p-4 rounded-xl"></div>
         </div>
     );
 }
 
 function Projects() {
     return (
-        <div id="#projects">
+        <div id="projects">
             <div>Projects Here</div>
         </div>
     );
@@ -72,7 +84,7 @@ function Projects() {
 
 function Articles() {
     return (
-        <div id="#articles">
+        <div id="articles">
             <div>Articles and Case Studies</div>
         </div>
     );
