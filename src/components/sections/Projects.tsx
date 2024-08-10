@@ -22,8 +22,8 @@ export default function Projects({ className, projects }: IProjectsProps) {
 
             if (cards.length > 0) {
                 cards.forEach((card) => {
-                    const tiltX = Math.random() * 10 - 5; // Random tilt between -5 and 5 degrees
-                    const tiltY = Math.random() * 10 - 5;
+                    const tiltX = Math.random() * 30 - 10;
+                    const tiltY = Math.random() * 30 - 10;
 
                     // Apply initial tilt
                     gsap.set(card, { rotateX: tiltX, rotateY: tiltY });
