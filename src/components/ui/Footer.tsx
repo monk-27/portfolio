@@ -12,7 +12,7 @@ export default function Footer(props: IFooterProps) {
     return (
         <div className="bg-gray-50 px-5 pb-5 w-full">
             <div className="bg-color-dark p-5 rounded-lg text-white">
-                <div className="flex flex-col md:flex-row justify-between items-start">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-4">
                     <PersonalInfo />
                     <QuickLinks />
                     <SubscribeForm />
@@ -25,7 +25,7 @@ export default function Footer(props: IFooterProps) {
 
 function PersonalInfo() {
     return (
-        <div className="set-flex-col justify-between items-start h-full">
+        <div className="flex flex-col justify-between items-start h-full">
             <div>
                 <Heading className="text-2xl text-white">Armaan Jaj</Heading>
                 <p className="text-gray-300 max-w-sm mt-2">
@@ -42,7 +42,7 @@ function SocialMedia() {
         <div className="mt-6">
             <div className="flex-col-start w-full gap-3">
                 <p className="text-xs">Follow me</p>
-                <div className="flex-row-center gap-8 w-full">
+                <div className="flex-row-center gap-4 md:gap-6 lg:gap-8 w-full">
                     <Link
                         href={"https://github.com/armaanjaj"}
                         target="_blank"
@@ -83,9 +83,11 @@ function SocialMedia() {
 
 function QuickLinks() {
     return (
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
             <div className="flex-col-start">
-                <h3 className="text-lg font-semibold text-gray-300">Quick Links</h3>
+                <h3 className="text-lg font-semibold text-gray-300">
+                    Quick Links
+                </h3>
                 <Link
                     href="/"
                     className="text-gray-400 hover:text-aqua-green mt-2 transition duration-300 w-fit"
@@ -122,7 +124,7 @@ function SubscribeForm() {
             <p className="text-gray-500 text-sm mb-4">
                 Get the latest updates and offers right to your inbox.
             </p>
-            <form className="flex items-center">
+            <form className="flex items-center" noValidate>
                 <input
                     type="email"
                     placeholder="Enter your email"
@@ -141,33 +143,35 @@ function SubscribeForm() {
 
 function LegalStuff() {
     return (
-        <div className="text-center text-sm text-gray-300 mt-4 set-flex-row justify-between items-center w-full">
-            <p>
-                &copy; {new Date().getFullYear()} Armaan Jaj. All rights
-                reserved.
-            </p>
-            <p className="mt-1">
-                <Link
-                    href="/privacy-policy"
-                    className="hover:text-aqua-green transition duration-300"
-                >
-                    Privacy Policy
-                </Link>{" "}
-                |{" "}
-                <Link
-                    href="/terms"
-                    className="hover:text-aqua-green transition duration-300"
-                >
-                    Terms of Service
-                </Link>{" "}
-                |{" "}
-                <Link
-                    href="/sitemap"
-                    className="hover:text-aqua-green transition duration-300"
-                >
-                    Sitemap
-                </Link>
-            </p>
+        <div className="mt-4 lg:mt-6 w-full">
+            <div className="text-center lg:text-left text-sm text-gray-300 flex flex-col lg:flex-row lg:justify-between items-center">
+                <p>
+                    &copy; {new Date().getFullYear()} Armaan Jaj. All rights
+                    reserved.
+                </p>
+                <p className="mt-1 lg:mt-0">
+                    <Link
+                        href="/privacy-policy"
+                        className="hover:text-aqua-green transition duration-300"
+                    >
+                        Privacy Policy
+                    </Link>{" "}
+                    |{" "}
+                    <Link
+                        href="/terms"
+                        className="hover:text-aqua-green transition duration-300"
+                    >
+                        Terms of Service
+                    </Link>{" "}
+                    |{" "}
+                    <Link
+                        href="/sitemap"
+                        className="hover:text-aqua-green transition duration-300"
+                    >
+                        Sitemap
+                    </Link>
+                </p>
+            </div>
         </div>
     );
 }
