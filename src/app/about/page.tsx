@@ -7,6 +7,9 @@ import Footer from "@/components/ui/Footer";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoCodeSlash } from "react-icons/io5";
 import Testimonials from "@/components/ui/Testimonials";
+import Overlay from "@/components/layout/Overlay";
+import Form from "@/components/layout/Form";
+import * as yup from "yup";
 
 export interface IAboutMePageProps {}
 
@@ -37,26 +40,36 @@ const experiences: IExperienceItem[] = [
 ];
 
 export default function AboutMePage(props: IAboutMePageProps) {
+    const [isOverlayOpen, setOverlayOpen] = React.useState(false);
+
+    const handleOverlayOpen = () => setOverlayOpen(true);
+    const handleOverlayClose = () => setOverlayOpen(false);
+
     return (
         <>
             <DynamicNavbar title="Learn about me" />
             <div className="bg-gray-50 text-color-dark py-16 px-8">
-                <HeroSection />
+                <HeroSection onContactClick={handleOverlayOpen} />
                 <MyStorySection />
                 <SkillsSection />
                 <ExperienceSection experiences={experiences} />
                 <div className="max-w-[75vw] md:max-w-[50vw] mx-auto">
                     <Testimonials />
                 </div>
-                <CallToActionSection />
+                <CallToActionSection onGetInTouchClick={handleOverlayOpen} />
             </div>
             <Footer />
+
+            {/* Conditionally render the Overlay */}
+            {isOverlayOpen && (
+                <OverlayForm overlayHandler={handleOverlayClose} />
+            )}
         </>
     );
 }
 
 // Hero Section
-function HeroSection() {
+function HeroSection({ onContactClick }: { onContactClick: () => void }) {
     return (
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1">
@@ -86,7 +99,10 @@ function HeroSection() {
                     />
                 </div>
                 <div className="flex gap-4">
-                    <button className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300">
+                    <button
+                        onClick={onContactClick}
+                        className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300"
+                    >
                         Contact Me
                     </button>
                     <a
@@ -367,7 +383,11 @@ function ExperienceItem({ experience }: { experience: IExperienceItem }) {
 }
 
 // Call to Action Section
-function CallToActionSection() {
+function CallToActionSection({
+    onGetInTouchClick,
+}: {
+    onGetInTouchClick: () => void;
+}) {
     return (
         <div className="max-w-7xl mx-auto mt-16 py-12 text-center">
             <Heading className="text-3xl font-bold mb-6">
@@ -377,9 +397,50 @@ function CallToActionSection() {
                 I'm always excited to collaborate on new projects. If you have
                 an idea, let's bring it to life together.
             </p>
-            <button className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300">
+            <button
+                onClick={onGetInTouchClick}
+                className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300"
+            >
                 Get in Touch
             </button>
         </div>
+    );
+}
+
+function OverlayForm({ overlayHandler }: { overlayHandler: () => void }) {
+    return (
+        <Overlay onClose={overlayHandler}>
+            <Form
+                schema={yup.object().shape({
+                    name: yup.string().required("Name is required"),
+                    email: yup
+                        .string()
+                        .email("Invalid email")
+                        .required("Email is required"),
+                    message: yup.string().required("Message is required"),
+                })}
+                onSubmit={(data) => console.log(data)}
+                fields={[
+                    {
+                        name: "name",
+                        label: "Name",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "email",
+                        label: "Email",
+                        type: "email",
+                        required: true,
+                    },
+                    {
+                        name: "message",
+                        label: "Message",
+                        type: "text",
+                        required: true,
+                    },
+                ]}
+            />
+        </Overlay>
     );
 }
