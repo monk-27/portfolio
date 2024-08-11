@@ -68,7 +68,7 @@ export default function Testimonials (props: ITestimonialsProps) {
     return (
         <div className="max-w-[90vw] mx-auto mt-16">
             <Heading className="text-3xl font-bold text-center mb-10">
-                What Clients Say
+                Hear About Me
             </Heading>
             <div className="flex justify-center items-center text-center">
                 <div className="testimonial-content set-flex-col items-center w-full">
