@@ -22,7 +22,7 @@ export default function ProjectCard({
             <div className="flex flex-col md:flex-row justify-between items-start gap-4 h-full">
                 <div className="flex flex-col justify-between items-start gap-2 flex-1">
                     <div className="flex flex-row justify-between items-center w-full">
-                        <Heading className="text-lg my-0 md:text-xl font-semibold w-fit">
+                        <Heading className="text-lg my-1 md:text-xl font-semibold w-fit">
                             {title}
                         </Heading>
                         <Link
