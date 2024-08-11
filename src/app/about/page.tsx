@@ -6,6 +6,7 @@ import DynamicNavbar from "@/components/layout/DynamicNavbar";
 import Footer from "@/components/ui/Footer";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoCodeSlash } from "react-icons/io5";
+import Testimonials from "@/components/ui/Testimonials";
 
 export interface IAboutMePageProps {}
 
@@ -44,7 +45,9 @@ export default function AboutMePage(props: IAboutMePageProps) {
                 <MyStorySection />
                 <SkillsSection />
                 <ExperienceSection experiences={experiences} />
-                <TestimonialsSection />
+                <div className="max-w-[75vw] md:max-w-[50vw] mx-auto">
+                    <Testimonials />
+                </div>
                 <CallToActionSection />
             </div>
             <Footer />
@@ -71,8 +74,16 @@ function HeroSection() {
                     code.
                 </p>
                 <div className="text-base flex-row-start gap-5 w-3/5 mb-6">
-                    <InfoItem icon={<HiLocationMarker />} text="Calgary" title="I live in" />
-                    <InfoItem icon={<IoCodeSlash />} text="2020" title="Coding since" />
+                    <InfoItem
+                        icon={<HiLocationMarker />}
+                        text="Calgary"
+                        title="I live in"
+                    />
+                    <InfoItem
+                        icon={<IoCodeSlash />}
+                        text="2020"
+                        title="Coding since"
+                    />
                 </div>
                 <div className="flex gap-4">
                     <button className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300">
@@ -87,7 +98,7 @@ function HeroSection() {
                     </a>
                 </div>
             </div>
-            <div onContextMenu={(e)=>e.preventDefault()}>
+            <div onContextMenu={(e) => e.preventDefault()}>
                 <Image
                     src="/Armaan.jpeg"
                     alt="Armaan Jaj"
@@ -100,7 +111,15 @@ function HeroSection() {
     );
 }
 
-function InfoItem({ icon, text, title }: { icon: React.ReactNode; text: string; title: string; }) {
+function InfoItem({
+    icon,
+    text,
+    title,
+}: {
+    icon: React.ReactNode;
+    text: string;
+    title: string;
+}) {
     return (
         <div className="flex items-center gap-2" title={title}>
             {icon}
@@ -343,66 +362,6 @@ function ExperienceItem({ experience }: { experience: IExperienceItem }) {
                 {experience.role} | {experience.duration}
             </p>
             <p className="text-gray-600 mt-2">{experience.description}</p>
-        </div>
-    );
-}
-
-// Testimonials Section
-function TestimonialsSection() {
-    const testimonials = [
-        {
-            name: "Sumit Nanda",
-            feedback:
-                "Working with Armaan was a game-changer for my real estate business. The project was completed on time, and the end result exceeded all my expectations.",
-            photo: "/Photos/Services/Testimonials/tSI1.png",
-        },
-        {
-            name: "Vikram Saraon",
-            feedback:
-                "Armaan crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through.",
-            photo: "/Photos/Services/Testimonials/tSI1.jpg",
-        },
-    ];
-
-    return (
-        <div className="max-w-7xl mx-auto mt-16">
-            <Heading className="text-3xl font-bold text-center mb-12">
-                What People Say
-            </Heading>
-            <div className="flex flex-col md:flex-row gap-12 justify-around">
-                {testimonials.map((testimonial, index) => (
-                    <Testimonial
-                        key={index}
-                        name={testimonial.name}
-                        feedback={testimonial.feedback}
-                        photo={testimonial.photo}
-                    />
-                ))}
-            </div>
-        </div>
-    );
-}
-
-function Testimonial({
-    name,
-    feedback,
-    photo,
-}: {
-    name: string;
-    feedback: string;
-    photo: string;
-}) {
-    return (
-        <div className="bg-white p-6 rounded-lg flex flex-col items-center text-center">
-            <Image
-                src={photo}
-                alt={name}
-                width={100}
-                height={100}
-                className="rounded-full mb-4"
-            />
-            <p className="text-lg font-semibold">{name}</p>
-            <p className="text-gray-700 italic mt-2">{feedback}</p>
         </div>
     );
 }
