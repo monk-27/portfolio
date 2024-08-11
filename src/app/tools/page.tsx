@@ -223,6 +223,9 @@ export default function ToolsPage(props: IToolsPageProps): JSX.Element {
                 ))}
             </div>
 
+            {/* Divider */}
+            <hr className="border-t-2 border-gray-300 w-full max-w-7xl mx-auto" />
+
             <div id="resources-section">
                 <ResourcesSection />
             </div>
@@ -287,18 +290,71 @@ function Hero(): JSX.Element {
     );
 }
 
-// ResourcesSection Component
+export interface IResource {
+    title: string;
+    description: string;
+    link: string;
+}
+
+const resourcesData: IResource[] = [
+    {
+        title: "Next.js Project Starter",
+        description:
+            "A fully configured Next.js project template with essential dependencies, including TypeScript, TailwindCSS, and ESLint.",
+        link: "#",
+    },
+    {
+        title: "React Component Library",
+        description:
+            "A collection of reusable React components with a focus on accessibility and performance.",
+        link: "#",
+    },
+    {
+        title: "Express.js API Template",
+        description:
+            "A boilerplate for building RESTful APIs with Express.js, including JWT authentication and MongoDB integration.",
+        link: "#",
+    },
+    {
+        title: "TypeScript Best Practices",
+        description:
+            "A comprehensive guide to writing clean and maintainable TypeScript code, including tips and examples.",
+        link: "#",
+    },
+];
+
 function ResourcesSection(): JSX.Element {
     return (
         <div className="px-5 py-16 bg-gray-50 flex-col-center w-full gap-10">
             <Heading className="text-3xl font-semibold mb-8 text-center text-aqua-green">
                 Resources
             </Heading>
-            <p className="text-lg max-w-2xl mx-auto text-center">
-                Coming soon: Templates, guides, and more to help you get started
-                quickly with your projects.
+            <p className="text-lg max-w-2xl mx-auto text-center mb-12">
+                Browse through a curated collection of resources to help you get
+                started with your projects. From templates to guides, find
+                everything you need to kickstart your development journey.
             </p>
-            {/* Add more resources content here */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                {resourcesData.map((resource, index) => (
+                    <div
+                        key={index}
+                        className="bg-white p-6 rounded-lg border border-gray-200 set-flex-col justify-between items-start"
+                    >
+                        <Heading className="text-xl font-semibold mb-4 text-aqua-green-dark">
+                            {resource.title}
+                        </Heading>
+                        <p className="text-gray-700 mb-6">
+                            {resource.description}
+                        </p>
+                        <a
+                            href={resource.link}
+                            className="text-aqua-green-dark font-medium"
+                        >
+                            View Resource
+                        </a>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
