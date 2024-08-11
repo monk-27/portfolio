@@ -6,5 +6,5 @@ export interface IParagraphProps {
 }
 
 export default function Paragraph({ children, className }: IParagraphProps) {
-    return <div className="text-3xl my-8">{children}</div>;
+    return <div className={`${className}`}>{children}</div>;
 }

@@ -6,24 +6,49 @@ import { usePathname } from "next/navigation";
 
 // Main DynamicNavbar component
 export interface IDynamicNavbarProps {
-    title: string;
+    title?: string;
+    className?: string;
+    titlePosition?: "left" | "right" | "center"; // Control the position of the title
+    linksPosition?: "left" | "right" | "center"; // Control the position of the links
 }
 
-export default function DynamicNavbar({ title }: IDynamicNavbarProps) {
+export default function DynamicNavbar({
+    title,
+    className = "",
+    titlePosition = "left",
+    linksPosition = "right",
+}: IDynamicNavbarProps) {
     return (
-        <header className="py-7 px-6 bg-gray-50">
-            <nav className="flex flex-col md:flex-row justify-between items-center set-wf-full gap-10">
-                <NavLinks />
-                <NavHeader title={title} />
+        <header className={`py-7 px-6 bg-gray-50 ${className}`}>
+            <nav className="flex flex-col md:flex-row justify-between items-center w-full gap-10">
+                {linksPosition === "left" && <NavLinks />}
+                {title && <NavHeader title={title} position={titlePosition} />}
+                {linksPosition === "center" && <NavLinks />}
+                {linksPosition === "right" && <NavLinks />}
             </nav>
         </header>
     );
 }
 
 // Internal component: NavHeader
-function NavHeader({ title }: { title: string }) {
+function NavHeader({
+    title,
+    position,
+}: {
+    title: string;
+    position: "left" | "right" | "center";
+}) {
+    const alignment =
+        position === "left"
+            ? "order-first md:order-first"
+            : position === "right"
+            ? "order-last md:order-last"
+            : "order-first md:order-none mx-auto";
+
     return (
-        <Heading className="text-4xl font-bold w-fit mt-4 md:mt-0 md:order-first">
+        <Heading
+            className={`text-4xl font-bold w-fit mt-4 md:mt-0 ${alignment}`}
+        >
             {title}
         </Heading>
     );
@@ -32,7 +57,7 @@ function NavHeader({ title }: { title: string }) {
 // Internal component: NavLinks
 function NavLinks() {
     return (
-        <div className="flex justify-evenly items-center w-full md:w-1/3 py-4 px-3 rounded-3xl bg-aqua-green text-white text-base md:order-last">
+        <div className="flex justify-evenly items-center w-full md:w-auto py-4 px-3 rounded-3xl bg-aqua-green text-white text-base">
             <NavLinkItem href="/" label="Homepage" />
             <NavLinkItem href="/about" label="About me" />
             <NavLinkItem href="/tools" label="Tools" />

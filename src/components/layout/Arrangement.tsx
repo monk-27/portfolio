@@ -11,12 +11,17 @@ import { IoArrowDownOutline } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
 import Projects from "../sections/Projects";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import DynamicNavbar from "../ui/DynamicNavbar";
+import gsap from "gsap";
 
 export interface IArrangementProps {}
 
 export default function Arrangement(props: IArrangementProps) {
     return (
         <div className="grid grid-cols-10 h-full w-full">
+            <div className="col-span-3">
+                <SideBar />
+            </div>
             <div className="col-span-7 scroll-container">
                 <div className="section bg-white">
                     <HeroSection />
@@ -31,41 +36,97 @@ export default function Arrangement(props: IArrangementProps) {
                     <ArticlesSection />
                 </div> */}
             </div>
-            <div className="col-span-3">
-                <SideBar />
-            </div>
         </div>
     );
 }
 
 function HeroSection() {
-    return (
-        <div className="relative min-h-[95vh] min-w-[95%] px-5 py-4 rounded-xl">
-            <Heading className="text-6xl font-bold leading-tight">
-                Crafting Digital Experiences with{" "}
-                <span className="text-aqua-green special-text">
-                    Artistry & Precision
-                </span>
-            </Heading>
-            <Paragraph className="text-lg leading-relaxed mt-4">
-                My journey began with a passion for art, evolving into a
-                relentless pursuit of excellence in software development. As a{" "}
-                <span className="font-semibold dark-bold-text">
-                    Full Stack Web Developer
-                </span>
-                , I bring creativity and technical prowess to the digital world,
-                crafting seamless, visually stunning, and high-performance
-                websites.
-                <br />
-                <br />
-                Let's create something extraordinary together.
-            </Paragraph>
-            <div className="flex-row-start gap-5">
-                <ActionButton text="Read Case studies" />
-                <ActionButton text="Hire Me" />
-            </div>
+    const [showOverlay, setShowOverlay] = React.useState(false);
+    const overlayRef = React.useRef<HTMLDivElement>(null);
 
-            <IoArrowDownOutline className="absolute bottom-5 right-5 scale-[250%]" />
+    React.useEffect(() => {
+        const showTimer = setTimeout(() => {
+            setShowOverlay(true);
+        }, 5000); // Show after 5 seconds
+
+        const hideTimer = setTimeout(() => {
+            if (overlayRef.current) {
+                gsap.to(overlayRef.current, {
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "power2.out",
+                    onComplete: () => setShowOverlay(false),
+                });
+            }
+        }, 7000); // Hide 2 seconds after showing
+
+        return () => {
+            clearTimeout(showTimer);
+            clearTimeout(hideTimer);
+        };
+    }, []);
+
+    React.useEffect(() => {
+        if (showOverlay && overlayRef.current) {
+            gsap.fromTo(
+                overlayRef.current,
+                { opacity: 0 },
+                { opacity: 1, duration: 0.5, ease: "power2.inOut" }
+            );
+        }
+    }, [showOverlay]);
+
+    return (
+        <div className="relative w-full">
+            <div className="w-full flex justify-end">
+                <DynamicNavbar
+                    className="bg-white"
+                    titlePosition="right"
+                    linksPosition="right"
+                />
+            </div>
+            <div className="flex flex-col items-center mt-8 relative w-full px-5 rounded-xl">
+                <Heading className="text-4xl font-bold leading-tight text-center">
+                    Crafting Digital Experiences with{" "}
+                    <span className="text-aqua-green special-text">
+                        Artistry & Precision
+                    </span>
+                </Heading>
+                <Paragraph className="text-lg leading-relaxed mt-4 text-center max-w-3xl">
+                    My journey began with a passion for art, evolving into a
+                    relentless pursuit of excellence in software development. As
+                    a{" "}
+                    <span className="font-semibold dark-bold-text">
+                        Full Stack Web Developer
+                    </span>
+                    , I bring creativity and technical prowess to the digital
+                    world, crafting seamless, visually stunning, and
+                    high-performance websites.
+                    <br />
+                    <br />
+                    Let's create something extraordinary together.
+                </Paragraph>
+                <div className="flex gap-5 mt-8">
+                    <ActionButton text="Read Case Studies" />
+                    <ActionButton text="Hire Me" />
+                </div>
+            </div>
+            {/* Section-Confined Overlay */}
+            {showOverlay && (
+                <div
+                    ref={overlayRef}
+                    className="absolute inset-0 z-50 flex items-center justify-center bg-white bg-opacity-50 backdrop-blur"
+                >
+                    <div className="flex flex-col items-center">
+                        <div className="w-8 h-14 border-4 border-gray-500 rounded-full flex items-start justify-center">
+                            <div className="w-2 h-4 bg-gray-500 rounded-full mt-3 animate-bounce" />
+                        </div>
+                        <span className="mt-4 text-lg text-gray-700">
+                            Scroll Down
+                        </span>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
