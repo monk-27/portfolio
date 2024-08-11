@@ -49,12 +49,12 @@ export default function AboutMePage(props: IAboutMePageProps) {
     return (
         <>
             <DynamicNavbar title="Learn about me" />
-            <div className="bg-gray-50 text-color-dark py-16 px-8">
+            <div className="bg-gray-50 text-color-dark py-8 sm:py-16 px-4 sm:px-8">
                 <HeroSection onContactClick={handleOverlayOpen} />
                 <MyStorySection />
                 <SkillsSection />
                 <ExperienceSection experiences={experiences} />
-                <div className="max-w-[75vw] md:max-w-[50vw] mx-auto">
+                <div className="max-w-[90vw] sm:max-w-[75vw] md:max-w-[50vw] mx-auto">
                     <Testimonials />
                 </div>
                 <CallToActionSection onGetInTouchClick={handleOverlayOpen} />
@@ -62,9 +62,7 @@ export default function AboutMePage(props: IAboutMePageProps) {
             <Footer />
 
             {/* Conditionally render the Overlay */}
-            {isOverlayOpen && (
-                <OverlayForm overlayHandler={handleOverlayClose} />
-            )}
+            {isOverlayOpen && <OverlayForm overlayHandler={handleOverlayClose} />}
         </>
     );
 }
@@ -74,10 +72,10 @@ function HeroSection({ onContactClick }: { onContactClick: () => void }) {
     return (
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1">
-                <Heading className="text-5xl font-bold mb-4">
+                <Heading className="text-4xl sm:text-5xl font-bold mb-4">
                     Hi, I'm Armaan Jaj
                 </Heading>
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-base sm:text-lg text-gray-700 mb-6">
                     A passionate{" "}
                     <span className="bg-color-dark text-white px-1">
                         Full Stack Developer
@@ -87,7 +85,7 @@ function HeroSection({ onContactClick }: { onContactClick: () => void }) {
                     bring ideas to life through clean, efficient, and scalable
                     code.
                 </p>
-                <div className="text-base flex-row-start gap-5 w-3/5 mb-6">
+                <div className="text-sm sm:text-base flex-row-start gap-5 w-full sm:w-3/5 mb-6">
                     <InfoItem
                         icon={<HiLocationMarker />}
                         text="Calgary"
@@ -121,12 +119,12 @@ function HeroSection({ onContactClick }: { onContactClick: () => void }) {
                     />
                 </div>
             </div>
-            <div onContextMenu={(e) => e.preventDefault()}>
+            <div onContextMenu={(e) => e.preventDefault()} className="mt-8 md:mt-0">
                 <Image
                     src="/Armaan.jpeg"
                     alt="Armaan Jaj"
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
                     className="rounded-lg shadow-lg"
                 />
             </div>
@@ -154,14 +152,14 @@ function InfoItem({
 // Story Section
 function MyStorySection() {
     return (
-        <div className="py-16 px-8">
+        <div className="py-8 sm:py-16 px-4 sm:px-8">
             <div className="max-w-7xl mx-auto flex flex-col items-center">
                 {/* My Story */}
-                <div className="text-center mb-12">
-                    <Heading className="text-4xl font-bold mb-4">
+                <div className="text-center mb-8 sm:mb-12">
+                    <Heading className="text-3xl sm:text-4xl font-bold mb-4">
                         My Story
                     </Heading>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
                         Ever since I gripped my fingers around a pencil, I've
                         been on a never-ending quest to create. From the early
                         days of sketching and getting lost in the world of art,
@@ -172,7 +170,7 @@ function MyStorySection() {
                         into crafting stunning websites that not only look good
                         but work flawlessly too.
                     </p>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-6">
+                    <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mt-4 sm:mt-6">
                         I’ve got a magical toolkit that includes TailwindCSS,
                         Next.js, React.js, and Node.js—think of me as a digital
                         wizard (minus the robes, unfortunately). I’ve honed my
@@ -180,7 +178,7 @@ function MyStorySection() {
                         functionality because, let’s face it, a website that’s
                         all looks and no brains isn’t going to impress anyone.
                     </p>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-6">
+                    <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mt-4 sm:mt-6">
                         My journey has taken me through some pretty cool
                         projects like my Portfolio, where I designed and
                         debugged a Next.js app, utilizing the power of
@@ -196,8 +194,8 @@ function MyStorySection() {
                 </div>
 
                 {/* Interests & Favorites */}
-                <div className="w-full bg-gray-100 py-12 rounded-lg flex flex-col items-center px-5">
-                    <Heading className="text-3xl font-bold mb-6">
+                <div className="w-full bg-gray-100 py-8 sm:py-12 rounded-lg flex flex-col items-center px-4 sm:px-5">
+                    <Heading className="text-2xl sm:text-3xl font-bold mb-6">
                         Interests & Favorites
                     </Heading>
                     <div className="flex flex-col gap-6 w-full max-w-3xl">
@@ -240,11 +238,11 @@ function MyStorySection() {
                 </div>
 
                 {/* Personal Mantra */}
-                <div className="w-full bg-aqua-green py-12 mt-12 rounded-lg flex flex-col items-center text-white text-center px-5">
-                    <Heading className="text-3xl font-bold mb-4">
+                <div className="w-full bg-aqua-green py-8 sm:py-12 mt-8 sm:mt-12 rounded-lg flex flex-col items-center text-white text-center px-4 sm:px-5">
+                    <Heading className="text-2xl sm:text-3xl font-bold mb-4">
                         Personal Mantra
                     </Heading>
-                    <p className="text-lg max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg max-w-3xl mx-auto">
                         "Embrace the journey, cherish the moments, and always
                         strive to leave a positive impact."
                     </p>
@@ -263,7 +261,7 @@ function FavoriteItem({
 }) {
     return (
         <div className="w-full flex flex-col gap-3">
-            <Heading className="text-2xl font-semibold text-aqua-green">
+            <Heading className="text-xl sm:text-2xl font-semibold text-aqua-green">
                 {title}
             </Heading>
             {items.map((item, index) => (
@@ -357,7 +355,7 @@ function ExperienceSection({
             <Heading className="text-3xl font-bold text-center mb-8">
                 Experience
             </Heading>
-            <div className="flex items-start gap-8">
+            <div className="flex flex-col md:flex-row items-start gap-8">
                 <div className="flex-1 flex flex-col gap-12">
                     {experiences.map((experience, index) => (
                         <ExperienceItem key={index} experience={experience} />
