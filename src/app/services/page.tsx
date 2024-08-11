@@ -2,6 +2,7 @@ import * as React from "react";
 import Heading from "@/components/ui/Heading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import DynamicNavbar from "@/components/layout/DynamicNavbar";
+import PricingCard from "@/components/layout/PricingCard";
 
 export interface IServicesPageProps {}
 
@@ -44,6 +45,47 @@ const servicesData = [
     },
 ];
 
+const pricingData = [
+    {
+        id: 1,
+        title: "Sustainable",
+        price: "CA $199",
+        features: [
+            "Responsive Web Design",
+            "Basic SEO",
+            "5 Pages",
+            "Email Support",
+        ],
+        cta: "Get Sustainable",
+    },
+    {
+        id: 2,
+        title: "Easy",
+        price: "CA $499",
+        features: [
+            "Everything in Basic",
+            "10 Pages",
+            "Advanced SEO",
+            "Custom Design",
+            "Priority Support",
+        ],
+        cta: "Choose Easy",
+    },
+    {
+        id: 3,
+        title: "Advance",
+        price: "CA $999",
+        features: [
+            "Everything in Standard",
+            "Unlimited Pages",
+            "E-commerce Integration",
+            "Custom Animations",
+            "24/7 Support",
+        ],
+        cta: "Go Advance",
+    },
+];
+
 export default function ServicesPage(props: IServicesPageProps) {
     return (
         <main className="set-wf-full">
@@ -51,17 +93,31 @@ export default function ServicesPage(props: IServicesPageProps) {
             <div className="px-5 py-10 bg-gray-50">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[90vw] mx-auto">
                     {servicesData.map((service) => (
-                        <div
+                        <ServiceCard
                             key={service.id}
-                            className="transform hover:scale-105 transition-transform duration-300"
-                        >
-                            <ServiceCard
-                                title={service.title}
-                                description={service.description}
-                                icon={service.icon}
-                            />
-                        </div>
+                            title={service.title}
+                            description={service.description}
+                            icon={service.icon}
+                        />
                     ))}
+                </div>
+
+                <div className="max-w-[75vw] mx-auto">
+                    <Heading className="text-3xl font-bold mt-16 mb-8 text-center">
+                        Pricing Plans
+                    </Heading>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        {pricingData.map((plan) => (
+                            <PricingCard
+                                key={plan.id}
+                                title={plan.title}
+                                price={plan.price}
+                                features={plan.features}
+                                cta={plan.cta}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </main>
