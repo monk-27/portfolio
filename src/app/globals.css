@@ -12,8 +12,12 @@
     background: #575757;
 }
 
-.bold-text::selection{
+.dark-bold-text::selection{
     background: #e6e6e6;
+}
+
+.light-bold-text::selection{
+    background: #2AE2BD;
 }
 
 *,

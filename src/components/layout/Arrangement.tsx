@@ -50,7 +50,7 @@ function HeroSection() {
             <Paragraph className="text-lg leading-relaxed mt-4">
                 My journey began with a passion for art, evolving into a
                 relentless pursuit of excellence in software development. As a{" "}
-                <span className="font-semibold bold-text">
+                <span className="font-semibold dark-bold-text">
                     Full Stack Web Developer
                 </span>
                 , I bring creativity and technical prowess to the digital world,
@@ -60,7 +60,10 @@ function HeroSection() {
                 <br />
                 Let's create something extraordinary together.
             </Paragraph>
-            <ActionButton text="Read Case studies" />
+            <div className="flex-row-start gap-5">
+                <ActionButton text="Read Case studies" />
+                <ActionButton text="Hire Me" />
+            </div>
 
             <IoArrowDownOutline className="absolute bottom-5 right-5 scale-[250%]" />
         </div>
