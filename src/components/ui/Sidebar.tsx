@@ -10,9 +10,10 @@ import { PiQuotesFill } from "react-icons/pi";
 import { IoCodeSlash } from "react-icons/io5";
 import { IoIosBriefcase } from "react-icons/io";
 import { FaTools  } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
 
 export interface ISideBarProps {}
-interface IDesignerButtonProps {
+interface ISidebarButtonsProps {
     icon: React.ReactNode;
     text: string;
     url: string;
@@ -45,19 +46,19 @@ export default function SideBar(props: ISideBarProps) {
                     </div>
                     <Quote />
                     <div className="flex-row-center flex-wrap gap-2 w-4/5">
-                        <DesignerButton
+                        <SidebarButtons
                             icon={<IoIosBriefcase />}
                             text={"Resume"}
                             url={"/Resume.pdf"}
                             title={"View my Resume"}
                         />
-                        <DesignerButton
+                        <SidebarButtons
                             icon={<RiServiceFill />}
                             text={"Services"}
                             url={"/services"}
                             title={"Explore my services"}
                         />
-                        <DesignerButton
+                        <SidebarButtons
                             icon={<FaTools  />}
                             text={"Favorite Tools"}
                             url={"/favorite-tools"}
@@ -93,11 +94,12 @@ function SocialMedia() {
         <>
             <div className="flex-col-center w-full gap-3">
                 <p className="text-xs">Follow me</p>
-                <div className="flex-row-center gap-10 w-full">
+                <div className="flex-row-center gap-8 w-full">
                     <Link
                         href={"https://github.com/armaanjaj"}
                         target="_blank"
                         className=""
+                        title="GitHub"
                     >
                         <TbBrandGithubFilled className="scale-150 hover:text-aqua-green transition duration-300" />
                     </Link>
@@ -105,6 +107,7 @@ function SocialMedia() {
                         href={"https://www.linkedin.com/in/connectarmaan/"}
                         target="_blank"
                         className=""
+                        title="LinkedIn"
                     >
                         <TfiLinkedin className="scale-150 hover:text-aqua-green transition duration-300" />
                     </Link>
@@ -112,8 +115,17 @@ function SocialMedia() {
                         href={"https://x.com/armaanjaj"}
                         target="_blank"
                         className=""
+                        title="X/Twitter"
                     >
                         <RiTwitterXLine className="scale-150 hover:text-aqua-green transition duration-300" />
+                    </Link>
+                    <Link
+                        href={"https://instagram.com/armaan_jaj"}
+                        target="_blank"
+                        className=""
+                        title="Instagram"
+                    >
+                        <IoLogoInstagram className="scale-150 hover:text-aqua-green transition duration-300" />
                     </Link>
                 </div>
             </div>
@@ -121,7 +133,7 @@ function SocialMedia() {
     );
 }
 
-function DesignerButton({ icon, text, url, title }: IDesignerButtonProps) {
+function SidebarButtons({ icon, text, url, title }: ISidebarButtonsProps) {
     return (
         <>
             <Link
