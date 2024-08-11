@@ -61,8 +61,8 @@ function NavHeader({
 function NavLinks() {
     return (
         <div className="flex justify-evenly items-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-white text-base">
-            <NavLinkItem icon={<IoIosHome />} href="/" label="Homepage" />
-            <NavLinkItem icon={<IoIosPerson />} href="/about" label="About" />
+            <NavLinkItem href="/" label="Homepage" />
+            <NavLinkItem href="/about" label="About" />
             <NavLinkItem icon={<FaTools />} href="/tools" label="Tools" />
             <NavLinkItem
                 icon={<RiServiceFill />}
@@ -79,7 +79,7 @@ function NavLinkItem({
     href,
     label,
 }: {
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     href: string;
     label: string;
 }) {

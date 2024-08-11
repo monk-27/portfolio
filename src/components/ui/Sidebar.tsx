@@ -4,20 +4,22 @@ import Heading from "./Heading";
 import Link from "next/link";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { TfiLinkedin } from "react-icons/tfi";
-import { RiServiceFill, RiTwitterXLine } from "react-icons/ri";
+import { RiTwitterXLine } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
 import { PiQuotesFill } from "react-icons/pi";
 import { IoCodeSlash } from "react-icons/io5";
-import { IoIosBriefcase } from "react-icons/io";
-import { FaTools  } from "react-icons/fa";
+import { IoIosBriefcase, IoIosPie } from "react-icons/io";
+import { FaTools } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 
 export interface ISideBarProps {}
+
 interface ISidebarButtonsProps {
     icon: React.ReactNode;
     text: string;
-    url: string;
+    url?: string;
     title: string;
+    scrollTarget?: string;
 }
 
 export default function SideBar(props: ISideBarProps) {
@@ -53,16 +55,16 @@ export default function SideBar(props: ISideBarProps) {
                             title={"View my Resume"}
                         />
                         <SidebarButtons
-                            icon={<RiServiceFill />}
-                            text={"Services"}
-                            url={"/services"}
-                            title={"Explore my services"}
+                            icon={<IoIosPie />}
+                            text={"Analytics"}
+                            scrollTarget={"github"}
+                            title={"Check Analytics"}
                         />
                         <SidebarButtons
-                            icon={<FaTools  />}
-                            text={"Tools & Resouces"}
-                            url={"/tools"}
-                            title={"Discover the tools I use"}
+                            icon={<FaTools />}
+                            text={"Projects"}
+                            scrollTarget={"projects"}
+                            title={"View projects"}
                         />
                     </div>
                 </div>
@@ -133,17 +135,30 @@ function SocialMedia() {
     );
 }
 
-function SidebarButtons({ icon, text, url, title }: ISidebarButtonsProps) {
+function SidebarButtons({
+    icon,
+    text,
+    url,
+    title,
+    scrollTarget,
+}: ISidebarButtonsProps) {
+    const handleScroll = () => {
+        if (scrollTarget) {
+            const section = document.getElementById(scrollTarget);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    };
+
     return (
-        <>
-            <Link
-                href={url}
-                className="bg-color-dark text-[#e6e6e6] rounded-lg px-3 py-2 flex-row-center gap-2 text-sm hover:bg-color-light transition-colors duration-300"
-                title={title}
-            >
-                {icon}
-                {text}
-            </Link>
-        </>
+        <button
+            onClick={scrollTarget ? handleScroll : undefined}
+            className="bg-color-dark text-[#e6e6e6] rounded-lg px-3 py-2 flex-row-center gap-2 text-sm hover:bg-color-light transition-colors duration-300"
+            title={title}
+        >
+            {icon}
+            {text}
+        </button>
     );
 }
