@@ -3,6 +3,7 @@ import Heading from "@/components/ui/Heading";
 
 export interface IPricingCardProps {
     title: string;
+    description: string;
     price: string;
     features: string[];
     cta: string;
@@ -10,19 +11,21 @@ export interface IPricingCardProps {
 
 export default function PricingCard({
     title,
+    description,
     price,
     features,
     cta,
 }: IPricingCardProps) {
     return (
-        <div className="bg-white p-6 rounded-br-xl rounded-bl-xl hover:shadow-lg transition-shadow duration-300 border-t-4 border-aqua-green set-flex-col justify-between items-center gap-2 h-full">
+        <div className="bg-white p-6 rounded-br-xl rounded-bl-xl hover:shadow-lg transition-shadow duration-300 border-t-4 border-aqua-green set-flex-col justify-between items-center gap-2 h-full w-2/3">
             <div className="set-flex-col justify-start items-center gap-5">
                 <Heading className="text-2xl font-semibold text-center mb-4">
                     {title}
                 </Heading>
-                <div className="text-center text-4xl font-bold text-gray-800 mb-6">
+                <div className="text-center text-4xl font-bold text-gray-800 mb-4">
                     {price}
                 </div>
+                <p className="text-center text-gray-600 mb-6 text-sm">{description}</p>
                 <ul className="text-gray-700 mb-6">
                     {features.map((feature, index) => (
                         <li key={index} className="mb-2 flex items-center">

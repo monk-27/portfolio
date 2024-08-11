@@ -136,7 +136,7 @@ export default function ContactForm() {
                         Select a Plan <span className="font-light italic">(Optional)</span>
                     </label>
                     <div className="grid grid-cols-3 gap-4 text-base">
-                        {["Sustainable", "Easy", "Advance"].map((plan) => (
+                        {["Sustainable", "Easy"].map((plan) => (
                             <div
                                 key={plan}
                                 onClick={() => handlePlanSelect(plan)}

@@ -51,6 +51,8 @@ const pricingData = [
     {
         id: 1,
         title: "Sustainable",
+        description:
+            "Put yourself or your business in public. Showcase your offerings and convert your sales. Best for people starting their first internet venture.",
         price: "CA $199",
         features: [
             "Responsive Web Design",
@@ -63,6 +65,8 @@ const pricingData = [
     {
         id: 2,
         title: "Easy",
+        description:
+            "A great choice for those looking to expand their online presence with additional customization and advanced SEO features.",
         price: "CA $499",
         features: [
             "Everything in Basic",
@@ -73,19 +77,21 @@ const pricingData = [
         ],
         cta: "Choose Easy",
     },
-    {
-        id: 3,
-        title: "Advance",
-        price: "CA $999",
-        features: [
-            "Everything in Standard",
-            "Unlimited Pages",
-            "E-commerce Integration",
-            "Custom Animations",
-            "24/7 Support",
-        ],
-        cta: "Go Advance",
-    },
+    // {
+    //     id: 3,
+    //     title: "Advance",
+    //     description:
+    //         "Perfect for established businesses requiring full-scale online solutions, including e-commerce integration and unlimited pages.",
+    //     price: "CA $999",
+    //     features: [
+    //         "Everything in Standard",
+    //         "Unlimited Pages",
+    //         "E-commerce Integration",
+    //         "Custom Animations",
+    //         "24/7 Support",
+    //     ],
+    //     cta: "Go Advance",
+    // },
 ];
 
 export default function ServicesPage(props: IServicesPageProps) {
@@ -167,11 +173,12 @@ function PricingPlans() {
                 Pricing Plans
             </Heading>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-0 w-full justify-items-center">
                 {pricingData.map((plan) => (
                     <PricingCard
                         key={plan.id}
                         title={plan.title}
+                        description={plan.description}
                         price={plan.price}
                         features={plan.features}
                         cta={plan.cta}
