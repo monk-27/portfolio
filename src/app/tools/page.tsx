@@ -4,6 +4,7 @@ import DynamicNavbar from "@/components/ui/DynamicNavbar";
 import Footer from "@/components/ui/Footer";
 import Heading from "@/components/ui/Heading";
 import Image from "next/image";
+import ActionButton from "@/components/layout/ActionButton";
 
 export interface IToolsPageProps {}
 
@@ -272,18 +273,26 @@ function Hero(): JSX.Element {
             />
 
             <div className="flex justify-center mt-8 gap-4 relative z-10">
-                <button
-                    onClick={() => scrollToSection("tools-section")}
-                    className="px-6 py-3 bg-white text-aqua-green-dark rounded-lg hover:bg-gray-200 transition duration-300"
-                >
-                    Explore Tools
-                </button>
-                <button
-                    onClick={() => scrollToSection("resources-section")}
-                    className="px-6 py-3 bg-white text-aqua-green-dark rounded-lg hover:bg-gray-200 transition duration-300"
-                >
-                    Explore Resources
-                </button>
+                <span onClick={() => scrollToSection("tools-section")}>
+                    <ActionButton
+                        text="Explore Tools"
+                        className=""
+                        bgColor="bg-white"
+                        textColor="text-aqua-green-dark"
+                        hoverBgColor="hover:bg-gray-200"
+                        size="sm"
+                    />
+                </span>
+                <span onClick={() => scrollToSection("resources-section")}>
+                    <ActionButton
+                        text="Explore Resources"
+                        className=""
+                        bgColor="bg-white"
+                        textColor="text-aqua-green-dark"
+                        hoverBgColor="hover:bg-gray-200"
+                        size="sm"
+                    />
+                </span>
             </div>
         </div>
     );

@@ -57,9 +57,9 @@ function NavHeader({
 // Internal component: NavLinks
 function NavLinks() {
     return (
-        <div className="flex justify-evenly items-center w-full md:w-auto py-4 px-3 rounded-3xl bg-aqua-green text-white text-base">
+        <div className="flex justify-evenly items-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-white text-base">
             <NavLinkItem href="/" label="Homepage" />
-            <NavLinkItem href="/about" label="About me" />
+            <NavLinkItem href="/about" label="About" />
             <NavLinkItem href="/tools" label="Tools" />
             <NavLinkItem href="/services" label="Services" />
         </div>
@@ -73,7 +73,7 @@ function NavLinkItem({ href, label }: { href: string; label: string }) {
     return (
         <Link
             href={href}
-            className={`transition-colors duration-200 px-2 rounded-xl ${
+            className={`transition-colors duration-200 px-2 rounded-lg ${
                 currentPath === href
                     ? "bg-white text-black cursor-default"
                     : "hover:text-gray-100"

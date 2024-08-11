@@ -9,6 +9,7 @@ import Footer from "@/components/ui/Footer";
 import Testimonials from "@/components/ui/Testimonials";
 import * as yup from "yup";
 import Form from "@/components/layout/Form";
+import ActionButton from "@/components/layout/ActionButton";
 
 export interface IServicesPageProps {}
 
@@ -22,6 +23,7 @@ type FormField = {
     required?: boolean;
 };
 
+// Services Data
 const servicesData = [
     {
         id: 1,
@@ -60,6 +62,7 @@ const servicesData = [
     },
 ];
 
+// Pricing Data
 const pricingData = [
     {
         id: 1,
@@ -128,12 +131,16 @@ function Hero() {
                     from web and mobile app development to custom software
                     solutions. Let's create something extraordinary together.
                 </p>
-                <button
-                    onClick={scrollToServices}
-                    className="mt-8 px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300"
-                >
-                    Explore Services
-                </button>
+                <span onClick={scrollToServices} className="mt-8">
+                    <ActionButton
+                        text="Explore Services"
+                        className=""
+                        bgColor="bg-aqua-green"
+                        textColor="text-white"
+                        hoverBgColor="hover:bg-aqua-green-dark"
+                        size="sm"
+                    />
+                </span>
             </div>
             <div>
                 <Image
@@ -285,7 +292,7 @@ function ContactSection() {
                 schema={servicesSchema}
                 onSubmit={handleSubmit}
                 fields={servicesFields}
-                />
+            />
         </div>
     );
 }

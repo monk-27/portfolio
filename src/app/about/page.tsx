@@ -10,6 +10,7 @@ import Testimonials from "@/components/ui/Testimonials";
 import Overlay from "@/components/layout/Overlay";
 import Form from "@/components/layout/Form";
 import * as yup from "yup";
+import ActionButton from "@/components/layout/ActionButton";
 
 export interface IAboutMePageProps {}
 
@@ -99,19 +100,25 @@ function HeroSection({ onContactClick }: { onContactClick: () => void }) {
                     />
                 </div>
                 <div className="flex gap-4">
-                    <button
-                        onClick={onContactClick}
-                        className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300"
-                    >
-                        Contact Me
-                    </button>
-                    <a
-                        href="/Resume.pdf"
-                        download
-                        className="px-6 py-3 bg-gray-200 text-color-dark rounded-lg hover:bg-gray-300 transition duration-300"
-                    >
-                        Download Resume
-                    </a>
+                    <span onClick={onContactClick}>
+                        <ActionButton
+                            text="Contact Me"
+                            className=""
+                            bgColor="bg-aqua-green"
+                            textColor="text-white"
+                            hoverBgColor="hover:bg-aqua-green-dark"
+                            size="sm"
+                        />
+                    </span>
+                    <ActionButton
+                        text="Download Resume"
+                        link="/Resume.pdf"
+                        className=""
+                        bgColor="bg-gray-200"
+                        textColor="text-color-dark"
+                        hoverBgColor="hover:bg-gray-300"
+                        size="sm"
+                    />
                 </div>
             </div>
             <div onContextMenu={(e) => e.preventDefault()}>
@@ -397,12 +404,16 @@ function CallToActionSection({
                 I'm always excited to collaborate on new projects. If you have
                 an idea, let's bring it to life together.
             </p>
-            <button
-                onClick={onGetInTouchClick}
-                className="px-6 py-3 bg-aqua-green text-white rounded-lg hover:bg-aqua-green-dark transition duration-300"
-            >
-                Get in Touch
-            </button>
+            <span onClick={onGetInTouchClick}>
+                <ActionButton
+                    text="Get in Touch"
+                    className=""
+                    bgColor="bg-aqua-green"
+                    textColor="text-white"
+                    hoverBgColor="hover:bg-aqua-green-dark"
+                    size="sm"
+                />
+            </span>
         </div>
     );
 }
