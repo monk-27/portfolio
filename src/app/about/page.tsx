@@ -2,7 +2,7 @@
 import * as React from "react";
 import Heading from "@/components/ui/Heading";
 import Image from "next/image";
-import DynamicNavbar from "@/components/layout/DynamicNavbar";
+import DynamicNavbar from "@/components/ui/DynamicNavbar";
 import Footer from "@/components/ui/Footer";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoCodeSlash } from "react-icons/io5";

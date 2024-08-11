@@ -2,7 +2,7 @@
 import * as React from "react";
 import Heading from "@/components/ui/Heading";
 import ServiceCard from "@/components/ui/ServiceCard";
-import DynamicNavbar from "@/components/layout/DynamicNavbar";
+import DynamicNavbar from "@/components/ui/DynamicNavbar";
 import PricingCard from "@/components/layout/PricingCard";
 import Image from "next/image";
 import Footer from "@/components/ui/Footer";

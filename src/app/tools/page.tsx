@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import DynamicNavbar from "@/components/layout/DynamicNavbar";
+import DynamicNavbar from "@/components/ui/DynamicNavbar";
 import Footer from "@/components/ui/Footer";
 import Heading from "@/components/ui/Heading";
 import Image from "next/image";
