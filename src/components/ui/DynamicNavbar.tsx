@@ -3,6 +3,9 @@ import * as React from "react";
 import Heading from "./Heading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { RiServiceFill } from "react-icons/ri";
+import { FaTools } from "react-icons/fa";
+import { IoIosHome, IoIosPerson } from "react-icons/io";
 
 // Main DynamicNavbar component
 export interface IDynamicNavbarProps {
@@ -58,27 +61,40 @@ function NavHeader({
 function NavLinks() {
     return (
         <div className="flex justify-evenly items-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-white text-base">
-            <NavLinkItem href="/" label="Homepage" />
-            <NavLinkItem href="/about" label="About" />
-            <NavLinkItem href="/tools" label="Tools" />
-            <NavLinkItem href="/services" label="Services" />
+            <NavLinkItem icon={<IoIosHome />} href="/" label="Homepage" />
+            <NavLinkItem icon={<IoIosPerson />} href="/about" label="About" />
+            <NavLinkItem icon={<FaTools />} href="/tools" label="Tools" />
+            <NavLinkItem
+                icon={<RiServiceFill />}
+                href="/services"
+                label="Services"
+            />
         </div>
     );
 }
 
 // Internal component: NavLinkItem
-function NavLinkItem({ href, label }: { href: string; label: string }) {
+function NavLinkItem({
+    icon,
+    href,
+    label,
+}: {
+    icon: React.ReactNode;
+    href: string;
+    label: string;
+}) {
     const currentPath = usePathname();
 
     return (
         <Link
             href={href}
-            className={`transition-colors duration-200 px-2 rounded-lg ${
+            className={`transition-colors duration-200 px-2 rounded-lg flex-row-center gap-1 ${
                 currentPath === href
                     ? "bg-white text-black cursor-default"
                     : "hover:text-gray-100"
             }`}
         >
+            <span className="hidden md:block">{icon}</span>
             {label}
         </Link>
     );
