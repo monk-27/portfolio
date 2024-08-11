@@ -204,7 +204,7 @@ const categories: Category[] = [
 
 export default function ToolsPage(props: IToolsPageProps): JSX.Element {
     return (
-        <main className="set-wf-full">
+        <main className="w-full">
             <DynamicNavbar title="Tools I Use" />
 
             <Hero />
@@ -212,7 +212,7 @@ export default function ToolsPage(props: IToolsPageProps): JSX.Element {
             {/* Tools Grid Section */}
             <div
                 id="tools-section"
-                className="px-5 py-16 bg-gray-50 flex-col-center w-full gap-10"
+                className="px-4 py-12 sm:py-16 bg-gray-50 flex-col-center w-full gap-10"
             >
                 {categories.map((category) => (
                     <ToolsGrid
@@ -246,54 +246,54 @@ function Hero(): JSX.Element {
     };
 
     return (
-        <div className="relative bg-aqua-green py-20 text-white text-center overflow-hidden">
-            <Heading className="text-5xl font-bold mb-4 max-w-xl mx-auto">
-                Crafting Digital Experiences with These Tools
-            </Heading>
-            <p className="text-lg max-w-2xl mx-auto">
-                These are the tools I rely on daily to build, design, and manage
-                projects. From development to productivity, each tool plays a
-                crucial role in my workflow.
-            </p>
+        <div className="relative bg-aqua-green py-16 sm:py-20 text-white text-center overflow-hidden">
+            <div className="relative z-10">
+                <Heading className="text-3xl sm:text-5xl font-bold mb-4 max-w-xl mx-auto">
+                    Crafting Digital Experiences with These Tools
+                </Heading>
+                <p className="text-base sm:text-lg max-w-2xl mx-auto">
+                    These are the tools I rely on daily to build, design, and manage
+                    projects. From development to productivity, each tool plays a
+                    crucial role in my workflow.
+                </p>
 
-            {/* SVGs Positioned Half In and Half Out of Screen */}
+                <div className="flex justify-center mt-8 gap-4">
+                    <span onClick={() => scrollToSection("tools-section")}>
+                        <ActionButton
+                            text="Explore Tools"
+                            bgColor="bg-white"
+                            textColor="text-aqua-green-dark"
+                            hoverBgColor="hover:bg-gray-200"
+                            size="sm"
+                        />
+                    </span>
+                    <span onClick={() => scrollToSection("resources-section")}>
+                        <ActionButton
+                            text="Explore Resources"
+                            bgColor="bg-white"
+                            textColor="text-aqua-green-dark"
+                            hoverBgColor="hover:bg-gray-200"
+                            size="sm"
+                        />
+                    </span>
+                </div>
+            </div>
+
+            {/* Hide SVGs on small screens */}
             <Image
                 src="/Icons/tI1.svg"
                 alt="Tools Hero Image"
-                width={300}
-                height={300}
-                className="absolute bottom-0 left-[-150px]"
+                width={250}
+                height={250}
+                className="hidden sm:block absolute bottom-0 left-[-150px] z-0 opacity-90"
             />
             <Image
                 src="/Icons/tI3.svg"
                 alt="Tools Hero Image"
-                width={300}
-                height={300}
-                className="absolute bottom-0 right-[-150px]"
+                width={250}
+                height={250}
+                className="hidden sm:block absolute bottom-0 right-[-150px] z-0 opacity-90"
             />
-
-            <div className="flex justify-center mt-8 gap-4 relative z-10">
-                <span onClick={() => scrollToSection("tools-section")}>
-                    <ActionButton
-                        text="Explore Tools"
-                        className=""
-                        bgColor="bg-white"
-                        textColor="text-aqua-green-dark"
-                        hoverBgColor="hover:bg-gray-200"
-                        size="sm"
-                    />
-                </span>
-                <span onClick={() => scrollToSection("resources-section")}>
-                    <ActionButton
-                        text="Explore Resources"
-                        className=""
-                        bgColor="bg-white"
-                        textColor="text-aqua-green-dark"
-                        hoverBgColor="hover:bg-gray-200"
-                        size="sm"
-                    />
-                </span>
-            </div>
         </div>
     );
 }
@@ -333,11 +333,11 @@ const resourcesData: IResource[] = [
 
 function ResourcesSection(): JSX.Element {
     return (
-        <div className="px-5 py-16 bg-gray-50 flex-col-center w-full gap-10">
-            <Heading className="text-3xl font-semibold mb-8 text-center text-aqua-green">
+        <div className="px-4 py-12 sm:py-16 bg-gray-50 flex-col-center w-full gap-10">
+            <Heading className="text-2xl sm:text-3xl font-semibold mb-8 text-center text-aqua-green">
                 Resources
             </Heading>
-            <p className="text-lg max-w-2xl mx-auto text-center mb-12">
+            <p className="text-base sm:text-lg max-w-2xl mx-auto text-center mb-12">
                 Browse through a curated collection of resources to help you get
                 started with your projects. From templates to guides, find
                 everything you need to kickstart your development journey.
@@ -346,17 +346,17 @@ function ResourcesSection(): JSX.Element {
                 {resourcesData.map((resource, index) => (
                     <div
                         key={index}
-                        className="bg-white p-6 rounded-lg border border-gray-200 set-flex-col justify-between items-start"
+                        className="bg-white p-6 rounded-lg border border-gray-200 flex flex-col justify-between items-start"
                     >
-                        <Heading className="text-xl font-semibold mb-4 text-aqua-green-dark">
+                        <Heading className="text-lg sm:text-xl font-semibold mb-4 text-aqua-green-dark">
                             {resource.title}
                         </Heading>
-                        <p className="text-gray-700 mb-6">
+                        <p className="text-gray-700 mb-6 text-sm sm:text-base">
                             {resource.description}
                         </p>
                         <a
                             href={resource.link}
-                            className="text-aqua-green-dark font-medium"
+                            className="text-aqua-green-dark font-medium text-sm sm:text-base"
                         >
                             View Resource
                         </a>
@@ -380,18 +380,18 @@ function ToolsGrid({
     tools,
 }: ToolsGridProps): JSX.Element {
     return (
-        <div className="mb-16 w-full max-w-7xl">
-            <Heading className="text-3xl font-semibold mb-8 text-center text-aqua-green">
+        <div className="mb-16 w-full max-w-7xl mx-auto px-4">
+            <Heading className="text-2xl sm:text-3xl font-semibold mb-8 text-center sm:text-left text-aqua-green">
                 {category}
             </Heading>
 
             {subCategories.length > 0 ? (
                 subCategories.map((subCategory) => (
                     <div key={subCategory} className="mb-12">
-                        <Heading className="text-2xl font-semibold mb-6 text-left text-aqua-green">
+                        <Heading className="text-xl sm:text-2xl font-semibold mb-6 text-left text-aqua-green">
                             {subCategory}
                         </Heading>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                             {tools
                                 .filter(
                                     (tool) =>
@@ -405,7 +405,7 @@ function ToolsGrid({
                     </div>
                 ))
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {tools
                         .filter((tool) => tool.category === category)
                         .map((tool) => (
@@ -424,14 +424,16 @@ interface ToolCardProps {
 
 function ToolCard({ tool }: ToolCardProps): JSX.Element {
     return (
-        <div className="bg-white p-6 rounded-lg">
+        <div className="bg-white p-4 sm:p-6 rounded-lg">
             <div className="flex items-center mb-4">
-                <Image src={tool.icon} alt={tool.name} width={50} height={50} />
-                <Heading className="text-xl font-semibold ml-4">
+                <Image src={tool.icon} alt={tool.name} width={40} height={40} />
+                <Heading className="text-lg sm:text-xl font-semibold ml-4">
                     {tool.name}
                 </Heading>
             </div>
-            <p className="text-gray-700">{tool.description}</p>
+            <p className="text-gray-700 text-sm sm:text-base">
+                {tool.description}
+            </p>
         </div>
     );
 }
