@@ -6,7 +6,7 @@ import Heading from "../ui/Heading";
 import Paragraph from "../ui/Paragraph";
 import Contributions from "../sections/Contributions";
 import Languages from "../sections/Languages";
-import StarredRepo from "../sections/StarredRepo";
+import ActiveRepo from "../sections/ActiveRepo";
 import { IoArrowDownOutline } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
 import Projects from "../sections/Projects";
@@ -101,7 +101,7 @@ function GitHubSection() {
                         <IoReload />
                     </div>
                 </div>
-                <StarredRepo className="flex-grow" reload={reload} />
+                <ActiveRepo className="flex-grow" reload={reload} />
             </div>
             <ScrollDown />
         </div>

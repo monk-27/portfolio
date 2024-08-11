@@ -1,7 +1,7 @@
 import * as React from "react";
 import FolderCard from "../layout/FolderCard";
 
-export default function StarredRepo({
+export default function ActiveRepo({
     className,
     reload,
 }: {
