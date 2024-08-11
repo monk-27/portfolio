@@ -7,7 +7,7 @@ export interface IHeadingProps {
 
 export default function Heading({ children, className }: IHeadingProps) {
     return (
-        <h1 className={`leading-none my-6 ${className}`}>
+        <h1 className={`leading-none ${className}`}>
             {children}
         </h1>
     );
