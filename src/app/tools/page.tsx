@@ -245,7 +245,7 @@ function Hero(): JSX.Element {
     };
 
     return (
-        <div className="relative bg-aqua-green-dark py-20 text-white text-center overflow-hidden">
+        <div className="relative bg-aqua-green py-20 text-white text-center overflow-hidden">
             <Heading className="text-5xl font-bold mb-4 max-w-xl mx-auto">
                 Crafting Digital Experiences with These Tools
             </Heading>
@@ -254,7 +254,6 @@ function Hero(): JSX.Element {
                 projects. From development to productivity, each tool plays a
                 crucial role in my workflow.
             </p>
-            <div className="absolute inset-0 bg-white opacity-40 mix-blend-overlay pointer-events-none" />
 
             {/* SVGs Positioned Half In and Half Out of Screen */}
             <Image
