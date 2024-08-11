@@ -121,12 +121,12 @@ function Hero() {
         }
     };
     return (
-        <div className="set-flex-row justify-between items-center set-wf-full bg-white p-10 rounded-lg shadow-lg">
+        <div className="set-flex-row justify-between items-center set-wf-full bg-white p-6 sm:p-10 rounded-lg shadow-lg">
             <div className="flex flex-col justify-center items-start max-w-xl">
-                <Heading className="text-5xl font-bold leading-tight">
+                <Heading className="text-4xl sm:text-5xl font-bold leading-tight">
                     I Do the Work So You Can Focus on Yours
                 </Heading>
-                <p className="text-lg text-gray-700 mt-4">
+                <p className="text-base sm:text-lg text-gray-700 mt-4">
                     Professional services tailored to meet your business needs,
                     from web and mobile app development to custom software
                     solutions. Let's create something extraordinary together.
@@ -142,12 +142,12 @@ function Hero() {
                     />
                 </span>
             </div>
-            <div>
+            <div className="hidden sm:block">
                 <Image
                     src="/Illustrations/services/hero.svg"
                     alt="Our Services"
-                    width={400}
-                    height={500}
+                    width={350}
+                    height={400}
                 />
             </div>
         </div>
@@ -159,7 +159,7 @@ function ServicesGrid() {
     return (
         <div
             id="services"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-[90vw] mx-auto mt-12 pt-10"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-[90vw] mx-auto mt-12 pt-10"
         >
             {servicesData.map((service) => (
                 <ServiceCard
@@ -176,7 +176,7 @@ function ServicesGrid() {
 // Work Proof Section
 function ProofOfWorkStats() {
     return (
-        <div className="max-w-[90vw] mx-auto mt-16 py-12 px-10 bg-white rounded-lg">
+        <div className="max-w-[90vw] mx-auto mt-16 py-12 px-6 sm:px-10 bg-white rounded-lg">
             <Heading className="text-3xl font-bold text-center mb-10">
                 Proof of Commitment
             </Heading>
@@ -186,8 +186,8 @@ function ProofOfWorkStats() {
                     <div className="bg-aqua-green p-5 rounded-full">
                         <Image
                             src="/illustrations/services/stats/calender.svg"
-                            width={80}
-                            height={80}
+                            width={70}
+                            height={70}
                             alt="Calendar"
                         />
                     </div>
@@ -204,8 +204,8 @@ function ProofOfWorkStats() {
                     <div className="bg-aqua-green p-5 rounded-full">
                         <Image
                             src="/illustrations/services/stats/ribbon.svg"
-                            width={80}
-                            height={80}
+                            width={70}
+                            height={70}
                             alt="Ribbon"
                         />
                     </div>
@@ -224,11 +224,11 @@ function ProofOfWorkStats() {
 // Pricing Section
 function PricingPlans() {
     return (
-        <div className="max-w-[75vw] mx-auto mt-16">
+        <div className="max-w-[90vw] md:max-w-[75vw] mx-auto mt-16">
             <Heading className="text-3xl font-bold mb-12 text-center">
                 Pricing Plans
             </Heading>
-            <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:gap-8 w-full justify-items-center">
+            <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 md:gap-8 w-full justify-items-center">
                 {pricingData.map((plan) => (
                     <PricingCard
                         key={plan.id}
@@ -284,7 +284,7 @@ function ContactSection() {
     };
 
     return (
-        <div className="mt-16 max-w-[90vw] md:max-w-[60vw]">
+        <div className="mt-16 max-w-[90vw] md:max-w-[60vw] mx-auto">
             <h3 className="text-3xl font-semibold mb-8 text-center">
                 Get in Touch
             </h3>
