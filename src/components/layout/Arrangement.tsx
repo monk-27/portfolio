@@ -27,9 +27,9 @@ export default function Arrangement(props: IArrangementProps) {
                 <div className="section bg-gray-200">
                     <ProjectsSection />
                 </div>
-                <div className="section bg-gray-300">
+                {/* <div className="section bg-gray-300">
                     <ArticlesSection />
-                </div>
+                </div> */}
             </div>
             <div className="col-span-3">
                 <SideBar />
@@ -203,10 +203,10 @@ function ProjectsSection() {
                 <>
                     <div className="flex-row-end w-full p-4 h-fit gap-5">
                         <IoIosArrowRoundBack
-                            className={`text-2xl cursor-pointer bg-color-dark text-white rounded-lg hover:bg-color-light transition-colors duration-300 ${
+                            className={`text-2xl cursor-pointer bg-color-dark text-white rounded-lg transition-colors duration-300 ${
                                 currentPage === 0
-                                    ? "opacity-50 cursor-not-allowed"
-                                    : ""
+                                    ? "opacity-50 cursor-no-drop"
+                                    : "hover:bg-color-light"
                             }`}
                             onClick={
                                 currentPage > 0 ? handlePreviousPage : undefined
@@ -214,10 +214,10 @@ function ProjectsSection() {
                             title="Previous Page"
                         />
                         <IoIosArrowRoundForward
-                            className={`text-2xl cursor-pointer bg-color-dark text-white rounded-lg hover:bg-color-light transition-colors duration-300 ${
+                            className={`text-2xl cursor-pointer bg-color-dark text-white rounded-lg transition-colors duration-300 ${
                                 currentPage === totalPages - 1
-                                    ? "opacity-50 cursor-not-allowed"
-                                    : ""
+                                    ? "opacity-50 cursor-no-drop"
+                                    : "hover:bg-color-light"
                             }`}
                             onClick={
                                 currentPage < totalPages - 1
