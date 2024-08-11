@@ -27,7 +27,10 @@ const GET_ALL_REPOS = gql`
                     stargazers {
                         totalCount
                     }
-                    languages(first: 10) {
+                    languages(
+                        first: 10
+                        orderBy: { field: SIZE, direction: DESC }
+                    ) {
                         edges {
                             node {
                                 name
@@ -106,9 +109,7 @@ export async function GET(req: NextRequest) {
                         forkCount: repo.forkCount,
                         isPrivate: repo.isPrivate,
                         starCount: repo.stargazers.totalCount,
-                        languages: repo.languages.edges.map(
-                            (edge) => edge.node.name
-                        ), // Map to array of strings
+                        language: repo.languages.edges[0]?.node?.name,
                         latestCommitMessage: commitNode.message,
                         latestCommitUrl: commitNode.url,
                         latestCommitDate: commitNode.committedDate,

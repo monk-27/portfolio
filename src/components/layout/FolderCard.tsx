@@ -1,8 +1,7 @@
 import Link from "next/link";
 import * as React from "react";
-import { FaRegStar, FaCodeBranch, FaLock, FaGlobe } from "react-icons/fa";
-import { IoLockClosed } from "react-icons/io5";
-import { IoLockOpen } from "react-icons/io5";
+import { FaRegStar, FaCodeBranch } from "react-icons/fa";
+import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 
 interface FolderCardProps {
     title: string;
@@ -10,7 +9,7 @@ interface FolderCardProps {
     starCount: number;
     forkCount: number;
     isPrivate: boolean;
-    languages: string[];
+    language: string; // Updated to string
     latestCommitMessage: string;
     latestCommitUrl: string;
     latestCommitDate: string;
@@ -19,7 +18,7 @@ interface FolderCardProps {
 interface CardFooterProps {
     starCount: number;
     forkCount: number;
-    languages: string[];
+    language: string; // Updated to string
     isPrivate: boolean;
     latestCommitMessage: string;
     latestCommitUrl: string;
@@ -35,7 +34,7 @@ export default function FolderCard({
     starCount,
     forkCount,
     isPrivate,
-    languages,
+    language,
     latestCommitMessage,
     latestCommitUrl,
     latestCommitDate,
@@ -69,7 +68,7 @@ export default function FolderCard({
             <CardFooter
                 starCount={starCount}
                 forkCount={forkCount}
-                languages={languages}
+                language={language} // Pass the single language
                 isPrivate={isPrivate}
                 latestCommitMessage={latestCommitMessage}
                 latestCommitUrl={latestCommitUrl}
@@ -82,7 +81,7 @@ export default function FolderCard({
 function CardFooter({
     starCount,
     forkCount,
-    languages,
+    language,
     isPrivate,
     latestCommitMessage,
     latestCommitUrl,
@@ -101,16 +100,11 @@ function CardFooter({
                         <span>{forkCount}</span>
                     </span>
                 </div>
-                <div className=" font-bold set-flex-row justify-start items-end gap-1 flex-wrap">
-                    {languages && languages.length > 0 ? (
-                        languages.map((item, i) => (
-                            <span
-                                key={i}
-                                className="bg-gray-100 text-xs px-2 py-1 rounded-md"
-                            >
-                                {item}
-                            </span>
-                        ))
+                <div className="font-bold set-flex-row justify-start items-end gap-1">
+                    {language ? (
+                        <span className="bg-gray-100 text-xs px-2 py-1 rounded-md">
+                            {language}
+                        </span>
                     ) : (
                         <div>Language data not available</div>
                     )}

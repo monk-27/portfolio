@@ -14,7 +14,7 @@ export default function StarredRepo({
         starCount: 0,
         forkCount: 0,
         isPrivate: false,
-        languages: [],
+        language: "", // Updated to store a single language
         latestCommitMessage: "",
         latestCommitUrl: "",
         latestCommitDate: "",
@@ -45,7 +45,7 @@ export default function StarredRepo({
                     starCount: data.starCount || 0,
                     forkCount: data.forkCount || 0,
                     isPrivate: data.isPrivate,
-                    languages: data.languages || "N/A",
+                    language: data.language || "N/A", // Updated to handle a single language
                     latestCommitMessage: data.latestCommitMessage,
                     latestCommitUrl: data.latestCommitUrl,
                     latestCommitDate: new Date(
@@ -63,7 +63,11 @@ export default function StarredRepo({
     }, [reload]); // Depend on reload to refetch data when it changes
 
     if (isLoading) {
-        return <p className="set-wf-full flex-col-center">Loading repo details...</p>;
+        return (
+            <p className="set-wf-full flex-col-center">
+                Loading repo details...
+            </p>
+        );
     }
 
     if (error) {
@@ -78,7 +82,7 @@ export default function StarredRepo({
                 starCount={repoData.starCount}
                 forkCount={repoData.forkCount}
                 isPrivate={repoData.isPrivate}
-                languages={repoData.languages}
+                language={repoData.language} // Pass the single language
                 latestCommitMessage={repoData.latestCommitMessage}
                 latestCommitUrl={repoData.latestCommitUrl}
                 latestCommitDate={repoData.latestCommitDate}
