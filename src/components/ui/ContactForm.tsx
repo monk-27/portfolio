@@ -168,6 +168,7 @@ export default function ContactForm() {
                             <input
                                 id="message"
                                 {...register("message")}
+                                placeholder="Describle your query..."
                                 className="w-full p-3 h-10 border rounded-tl-md rounded-bl-md bg-gray-50 focus:outline-none focus:border focus:border-aqua-green"
                             />
                             <button

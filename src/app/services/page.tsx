@@ -6,6 +6,7 @@ import DynamicNavbar from "@/components/layout/DynamicNavbar";
 import PricingCard from "@/components/layout/PricingCard";
 import ContactForm from "@/components/ui/ContactForm";
 import Image from "next/image";
+import Footer from "@/components/ui/Footer";
 
 export interface IServicesPageProps {}
 
@@ -107,6 +108,7 @@ export default function ServicesPage(props: IServicesPageProps) {
 
                 <ContactSection />
             </div>
+            <Footer />
         </main>
     );
 }
