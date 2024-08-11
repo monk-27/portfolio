@@ -18,9 +18,10 @@ interface LanguageData {
 const GET_REPOS_LANGUAGES_QUERY = gql`
     query ($username: String!) {
         user(login: $username) {
-            repositories(first: 100) {
+            repositories(first: 100, isFork: false) {
                 nodes {
                     name
+                    isFork
                     languages(first: 5) {
                         edges {
                             size
@@ -44,6 +45,7 @@ export async function GET(req: NextRequest) {
             user: {
                 repositories: {
                     nodes: Array<{
+                        isFork: boolean;
                         languages: {
                             edges: Array<{
                                 size: number;
@@ -60,16 +62,18 @@ export async function GET(req: NextRequest) {
         const languageMap: Record<string, number> = {};
 
         data.user.repositories.nodes.forEach((repo) => {
-            repo.languages.edges.forEach((language) => {
-                const { name } = language.node;
-                const { size } = language;
+            if (!repo.isFork) {
+                repo.languages.edges.forEach((language) => {
+                    const { name } = language.node;
+                    const { size } = language;
 
-                if (languageMap[name]) {
-                    languageMap[name] += size;
-                } else {
-                    languageMap[name] = size;
-                }
-            });
+                    if (languageMap[name]) {
+                        languageMap[name] += size;
+                    } else {
+                        languageMap[name] = size;
+                    }
+                });
+            }
         });
 
         const topLanguages: LanguageData[] = Object.entries(languageMap)
