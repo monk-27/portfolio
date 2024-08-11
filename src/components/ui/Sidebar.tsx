@@ -4,12 +4,20 @@ import Heading from "./Heading";
 import Link from "next/link";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { TfiLinkedin } from "react-icons/tfi";
-import { RiTwitterXLine } from "react-icons/ri";
+import { RiServiceFill, RiTwitterXLine } from "react-icons/ri";
 import { HiLocationMarker } from "react-icons/hi";
 import { PiQuotesFill } from "react-icons/pi";
 import { IoCodeSlash } from "react-icons/io5";
+import { IoIosBriefcase } from "react-icons/io";
+import { FaTools  } from "react-icons/fa";
 
 export interface ISideBarProps {}
+interface IDesignerButtonProps {
+    icon: React.ReactNode;
+    text: string;
+    url: string;
+    title: string;
+}
 
 export default function SideBar(props: ISideBarProps) {
     return (
@@ -36,6 +44,26 @@ export default function SideBar(props: ISideBarProps) {
                         </div>
                     </div>
                     <Quote />
+                    <div className="flex-row-center flex-wrap gap-2 w-4/5">
+                        <DesignerButton
+                            icon={<IoIosBriefcase />}
+                            text={"Resume"}
+                            url={"/Resume.pdf"}
+                            title={"View my Resume"}
+                        />
+                        <DesignerButton
+                            icon={<RiServiceFill />}
+                            text={"Services"}
+                            url={"/services"}
+                            title={"Explore my services"}
+                        />
+                        <DesignerButton
+                            icon={<FaTools  />}
+                            text={"Favorite Tools"}
+                            url={"/favorite-tools"}
+                            title={"Discover the tools I use"}
+                        />
+                    </div>
                 </div>
                 <SocialMedia />
             </nav>
@@ -45,7 +73,7 @@ export default function SideBar(props: ISideBarProps) {
 
 function Quote() {
     return (
-        <div className="flex-row-center gap-2 h-fit w-3/5">
+        <div className="flex-row-center gap-2 h-fit w-3/5 mb-5">
             <div className="h-full set-flex-col items-center justify-start">
                 <PiQuotesFill className="rotate-[190deg]" />
             </div>
@@ -89,6 +117,21 @@ function SocialMedia() {
                     </Link>
                 </div>
             </div>
+        </>
+    );
+}
+
+function DesignerButton({ icon, text, url, title }: IDesignerButtonProps) {
+    return (
+        <>
+            <Link
+                href={url}
+                className="bg-color-dark text-[#e6e6e6] rounded-lg px-3 py-2 flex-row-center gap-2 text-sm hover:bg-color-light transition-colors duration-300"
+                title={title}
+            >
+                {icon}
+                {text}
+            </Link>
         </>
     );
 }
