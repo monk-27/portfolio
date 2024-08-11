@@ -1,5 +1,6 @@
 import * as React from "react";
 import Heading from "@/components/ui/Heading";
+import ActionButton from "./ActionButton";
 
 export interface IPricingCardProps {
     title: string;
@@ -17,7 +18,7 @@ export default function PricingCard({
     cta,
 }: IPricingCardProps) {
     return (
-        <div className="bg-white p-6 rounded-br-xl rounded-bl-xl hover:shadow-lg transition-shadow duration-300 border-t-4 border-aqua-green set-flex-col justify-between items-center gap-2 h-full w-2/3">
+        <div className="bg-white p-6 rounded-br-xl rounded-bl-xl hover:shadow-lg transition-shadow duration-300 border-t-4 border-aqua-green set-flex-col justify-between items-center gap-2 h-full">
             <div className="set-flex-col justify-start items-center gap-5">
                 <Heading className="text-2xl font-semibold text-center mb-4">
                     {title}
@@ -35,11 +36,16 @@ export default function PricingCard({
                     ))}
                 </ul>
             </div>
-            <div className="text-center">
-                <button className="bg-aqua-green text-white py-2 px-4 rounded-lg hover:bg-aqua-green-dark transition-colors duration-300">
-                    {cta}
-                </button>
-            </div>
+            <span>
+                    <ActionButton
+                        text={cta}
+                        className=""
+                        bgColor="bg-aqua-green"
+                        textColor="text-white"
+                        hoverBgColor="hover:bg-aqua-green-dark"
+                        size="sm"
+                    />
+                </span>
         </div>
     );
 }
