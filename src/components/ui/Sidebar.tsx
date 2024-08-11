@@ -60,8 +60,8 @@ export default function SideBar(props: ISideBarProps) {
                         />
                         <SidebarButtons
                             icon={<FaTools  />}
-                            text={"Favorite Tools"}
-                            url={"/favorite-tools"}
+                            text={"Tools & Resouces"}
+                            url={"/tools"}
                             title={"Discover the tools I use"}
                         />
                     </div>
