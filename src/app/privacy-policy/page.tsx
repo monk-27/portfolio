@@ -6,7 +6,7 @@ export interface IPrivacyPolicyPageProps {}
 
 export default function PrivacyPolicyPage(props: IPrivacyPolicyPageProps) {
     return (
-        <main className="bg-white">
+        <main className="bg-gray-50">
             <DynamicNavbar title="Privacy Policy" />
             <div className="py-16 px-6 bg-gray-50">
                 <div className="container mx-auto max-w-4xl">
@@ -164,6 +164,7 @@ export default function PrivacyPolicyPage(props: IPrivacyPolicyPageProps) {
                         <p className="text-lg">
                             <strong>Email:</strong> armaansjaj@gmail.com
                         </p>
+                        <p><strong>Last update:</strong> July 11, 2024</p>
                     </section>
                 </div>
             </div>
