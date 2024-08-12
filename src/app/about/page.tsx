@@ -62,7 +62,9 @@ export default function AboutMePage(props: IAboutMePageProps) {
             <Footer />
 
             {/* Conditionally render the Overlay */}
-            {isOverlayOpen && <OverlayForm overlayHandler={handleOverlayClose} />}
+            {isOverlayOpen && (
+                <OverlayForm overlayHandler={handleOverlayClose} />
+            )}
         </main>
     );
 }
@@ -119,7 +121,10 @@ function HeroSection({ onContactClick }: { onContactClick: () => void }) {
                     />
                 </div>
             </div>
-            <div onContextMenu={(e) => e.preventDefault()} className="mt-8 md:mt-0">
+            <div
+                onContextMenu={(e) => e.preventDefault()}
+                className="mt-8 md:mt-0"
+            >
                 <Image
                     src="/Armaan.jpeg"
                     alt="Armaan Jaj"
@@ -419,37 +424,42 @@ function CallToActionSection({
 function OverlayForm({ overlayHandler }: { overlayHandler: () => void }) {
     return (
         <Overlay onClose={overlayHandler}>
-            <Form
-                schema={yup.object().shape({
-                    name: yup.string().required("Name is required"),
-                    email: yup
-                        .string()
-                        .email("Invalid email")
-                        .required("Email is required"),
-                    message: yup.string().required("Message is required"),
-                })}
-                onSubmit={(data) => console.log(data)}
-                fields={[
-                    {
-                        name: "name",
-                        label: "Name",
-                        type: "text",
-                        required: true,
-                    },
-                    {
-                        name: "email",
-                        label: "Email",
-                        type: "email",
-                        required: true,
-                    },
-                    {
-                        name: "message",
-                        label: "Message",
-                        type: "text",
-                        required: true,
-                    },
-                ]}
-            />
+            <div className="p-0 max-w-full sm:max-w-lg mx-auto">
+                <h2 className="text-2xl font-bold mb-5 text-center">
+                    Contact Me
+                </h2>
+                <Form
+                    schema={yup.object().shape({
+                        name: yup.string().required("Name is required"),
+                        email: yup
+                            .string()
+                            .email("Invalid email")
+                            .required("Email is required"),
+                        message: yup.string().required("Message is required"),
+                    })}
+                    onSubmit={(data) => console.log(data)}
+                    fields={[
+                        {
+                            name: "name",
+                            label: "Name",
+                            type: "text",
+                            required: true,
+                            },
+                        {
+                            name: "email",
+                            label: "Email",
+                            type: "email",
+                            required: true,
+                            },
+                        {
+                            name: "message",
+                            label: "Message",
+                            type: "textarea",
+                            required: true,
+                            },
+                    ]}
+                />
+            </div>
         </Overlay>
     );
 }

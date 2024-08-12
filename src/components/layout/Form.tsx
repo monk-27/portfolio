@@ -68,7 +68,7 @@ export default function Form({ schema, onSubmit, fields }: IFormProps) {
     const selectFields = fields.filter((field) => field.type === "select");
 
     return (
-        <div className="mx-auto p-6">
+        <div className="mx-auto p-2">
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-wrap -mx-3 mb-6">
                 {/* Constant Fields: Name, Email */}
                 <div className={`w-full ${selectFields.length ? "md:w-1/2" : "w-full"} px-3`}>

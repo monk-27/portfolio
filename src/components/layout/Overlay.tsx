@@ -21,12 +21,12 @@ export default function Overlay({
         gsap.fromTo(
             overlayRef.current,
             { opacity: 0 },
-            { opacity: 1, duration: 0.4 }
+            { opacity: 1, duration: 0.2 }
         );
         gsap.fromTo(
             contentRef.current,
             { opacity: 0 },
-            { opacity: 1, duration: 0.2, ease: "power3.out" }
+            { opacity: 1, duration: 0.1, ease: "power3.out" }
         );
         window.addEventListener("scroll", (e)=>{
         })
@@ -36,20 +36,20 @@ export default function Overlay({
     const handleCloseClick = () => {
         gsap.to(contentRef.current, {
             opacity: 0,
-            duration: 0.2,
+            duration: 0.1,
             ease: "power3.in",
             onComplete: onClose,
         });
         gsap.to(overlayRef.current, {
             opacity: 0,
-            duration: 0.4,
+            duration: 0.2,
         });
     };
 
     return (
         <div
             ref={overlayRef}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-gray-400 bg-opacity-80 backdrop-blur"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-gray-400 bg-opacity-80 backdrop-blur h-screen"
         >
             <div
                 ref={contentRef}
