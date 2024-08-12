@@ -10,7 +10,7 @@ export interface IFooterProps {}
 
 export default function Footer(props: IFooterProps) {
     return (
-        <div className="bg-gray-50 p-5 w-full">
+        <div className="bg-inherit p-5 w-full">
             <div className="bg-color-dark p-5 rounded-lg text-white">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-4">
                     <PersonalInfo />

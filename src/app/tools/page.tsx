@@ -204,7 +204,7 @@ const categories: Category[] = [
 
 export default function ToolsPage(props: IToolsPageProps): JSX.Element {
     return (
-        <main className="w-full">
+        <main className="w-full bg-gray-50">
             <DynamicNavbar title="Tools I Use" />
 
             <Hero />

@@ -47,7 +47,7 @@ export default function AboutMePage(props: IAboutMePageProps) {
     const handleOverlayClose = () => setOverlayOpen(false);
 
     return (
-        <>
+        <main className="bg-gray-50">
             <DynamicNavbar title="Learn about me" />
             <div className="bg-gray-50 text-color-dark py-8 sm:py-16 px-4 sm:px-8">
                 <HeroSection onContactClick={handleOverlayOpen} />
@@ -63,7 +63,7 @@ export default function AboutMePage(props: IAboutMePageProps) {
 
             {/* Conditionally render the Overlay */}
             {isOverlayOpen && <OverlayForm overlayHandler={handleOverlayClose} />}
-        </>
+        </main>
     );
 }
 

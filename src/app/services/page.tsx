@@ -97,7 +97,7 @@ const pricingData = [
 
 export default function ServicesPage(props: IServicesPageProps) {
     return (
-        <main className="set-wf-full">
+        <main className="set-wf-full bg-gray-50">
             <DynamicNavbar title="Services I Offer" />
             <div className="px-5 py-10 bg-gray-50 flex-col-center w-full gap-10">
                 <Hero />
