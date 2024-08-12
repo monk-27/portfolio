@@ -342,3 +342,43 @@ export const NavLinksData = [
     { id: 3, name: "Tools", link: "/tools", icon: ToolIcon },
     { id: 4, name: "Services", link: "/services", icon: ServiceIcon },
 ];
+
+export const SitemapLinks = [
+    {
+        section: "Main Sections",
+        links: [
+            { href: "/", label: "Home" },
+            { href: "/about", label: "About Me" },
+            { href: "/tools", label: "Tools" },
+            { href: "/services", label: "Services" },
+        ],
+    },
+    {
+        section: "Legal",
+        links: [
+            { href: "/privacy-policy", label: "Privacy Policy" },
+            { href: "/terms", label: "Terms of Service" },
+            { href: "/sitemap", label: "Sitemap" },
+        ],
+    },
+    // {
+    //     section: "Resources",
+    //     links: [
+    //         { href: "/portfolio", label: "Portfolio Overview" },
+    //         { href: "/portfolio/web-development", label: "Web Development" },
+    //         { href: "/portfolio/design", label: "Design" },
+    //         { href: "/blog", label: "Blog Home" },
+    //         { href: "/blog/category-1", label: "Category 1" },
+    //         { href: "/blog/category-2", label: "Category 2" },
+    //     ],
+    // },
+    {
+        section: "Contact & Connect",
+        links: [
+            // { href: "/contact", label: "Contact Form" },
+            { href: "https://github.com/armaanjaj", label: "GitHub" },
+            { href: "https://linkedin.com/in/armaanjaj", label: "LinkedIn" },
+            { href: "https://x.com/armaanjaj", label: "Twitter" },
+        ],
+    },
+];
