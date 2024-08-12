@@ -18,7 +18,7 @@ export default function ProjectCard({
     url,
 }: IProjectCardProps) {
     return (
-        <div className="bg-white p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 h-fit project-card">
+        <div className="bg-white p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 h-fit project-card shadow">
             <div className="flex flex-col md:flex-row justify-between items-start gap-4 h-full">
                 <div className="flex flex-col justify-between items-start gap-2 flex-1">
                     <div className="flex flex-row justify-between items-center w-full">
