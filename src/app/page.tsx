@@ -1,5 +1,5 @@
 import * as React from "react";
-import HomePageManager from "@/components/pageManager/HomePageManager";
+import HomePageManager from "@/components/pages/pageManager/HomePageManager";
 import { metadata as HOMEPAGE_MD } from "./page.metadata";
 import { Metadata } from "next";
 

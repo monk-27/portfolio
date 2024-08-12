@@ -1,5 +1,5 @@
 import * as React from "react";
-import ToolsPageManager from "@/components/pageManager/ToolsPageManager";
+import ToolsPageManager from "@/components/pages/pageManager/ToolsPageManager";
 import { Metadata } from "next";
 import { metadata as TOOLS_MD } from "./page.metadata";
 

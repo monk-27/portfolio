@@ -1,5 +1,5 @@
 import * as React from "react";
-import PrivacyPolicyPageManager from "@/components/pageManager/PrivacyPolicyPageManager";
+import PrivacyPolicyPageManager from "@/components/pages/pageManager/PrivacyPolicyPageManager";
 import { metadata as _MD } from "./page.metadata";
 import { Metadata } from "next";
 

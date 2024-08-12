@@ -1,5 +1,5 @@
 import * as React from "react";
-import ServicesPageManager from "@/components/pageManager/ServicesPageManager";
+import ServicesPageManager from "@/components/pages/pageManager/ServicesPageManager";
 import { metadata as SERVICES_MD } from "./page.metadata";
 import { Metadata } from "next";
 

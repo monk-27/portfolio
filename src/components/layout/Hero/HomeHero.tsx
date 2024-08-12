@@ -1,8 +1,8 @@
 "use client";
-import Heading from "@/components/ui/Heading";
-import Paragraph from "@/components/ui/Paragraph";
+import Heading from "@/components/ui/designs/Heading";
+import Paragraph from "@/components/ui/designs/Paragraph";
 import * as React from "react";
-import ActionButton from "../ActionButton";
+import ActionButton from "@/components/ui/designs/ActionButton";
 
 export interface IHomeHeroProps {}
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { _404Illustration, LinkIcon } from "@/utils/icons";
-import ActionButton from "@/components/layout/ActionButton";
+import ActionButton from "@/components/ui/designs/ActionButton";
 
 export default function NotFoundPage() {
     return (

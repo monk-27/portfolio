@@ -1,4 +1,4 @@
-import TermsPageManager from "@/components/pageManager/TermsPageManager";
+import TermsPageManager from "@/components/pages/pageManager/TermsPageManager";
 import * as React from "react";
 import { metadata as _MD } from "./page.metadata";
 import { Metadata } from "next";

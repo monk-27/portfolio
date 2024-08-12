@@ -6,7 +6,7 @@ import { metadata as _MD } from "./page.metadata";
 export const metadata: Metadata = _MD;
 
 export const viewport: Viewport = {
-    themeColor: "#333333",
+    themeColor: "#F9FAFB",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <NextTopLoader color="#2AE2BD" showSpinner={false} height={5} />
+                <NextTopLoader color="#22B394" showSpinner={false} height={5} />
                 {children}
             </body>
         </html>

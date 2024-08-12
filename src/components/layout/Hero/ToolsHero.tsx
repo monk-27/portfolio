@@ -1,9 +1,9 @@
 "use client";
 import * as React from "react";
-import ActionButton from "../ActionButton";
+import ActionButton from "@/components/ui/designs/ActionButton";
 import Image from "next/image";
 import { ComputerSVG, ToolSVG } from "@/utils/icons";
-import Heading from "@/components/ui/Heading";
+import Heading from "@/components/ui/designs/Heading";
 
 export interface IToolsHeroProps {}
 

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import * as React from "react";
-import AboutPageManager from "@/components/pageManager/AboutPageManager";
+import AboutPageManager from "@/components/pages/pageManager/AboutPageManager";
 import { metadata as ABOUT_MD } from "./page.metadata";
 
 export const metadata: Metadata = ABOUT_MD;
