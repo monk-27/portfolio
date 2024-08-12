@@ -1,11 +1,10 @@
 "use client";
-import Image from 'next/image';
-import * as React from 'react';
-import Heading from './Heading';
-import gsap from 'gsap';
+import Image from "next/image";
+import * as React from "react";
+import Heading from "./Heading";
+import gsap from "gsap";
 
-export interface ITestimonialsProps {
-}
+export interface ITestimonialsProps {}
 
 const testimonials = [
     {
@@ -28,7 +27,7 @@ const testimonials = [
     },
 ];
 
-export default function Testimonials (props: ITestimonialsProps) {
+export default function Testimonials(props: ITestimonialsProps) {
     const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
 
     React.useEffect(() => {
@@ -63,28 +62,28 @@ export default function Testimonials (props: ITestimonialsProps) {
         );
 
         return () => clearInterval(interval);
-    }, [currentTestimonial, testimonials.length]);
+    }, [currentTestimonial]);
 
     return (
-        <div className="max-w-[90vw] mx-auto mt-16">
+        <div className="max-w-[90vw] lg:max-w-[70vw] mx-auto mt-16">
             <Heading className="text-3xl font-bold text-center mb-10">
                 Hear About Me
             </Heading>
-            <div className="flex justify-center items-center text-center">
+            <div className="flex flex-col items-center text-center">
                 <div className="testimonial-content set-flex-col items-center w-full">
-                    <div className="flex-row-start w-full gap-3">
+                    <div className="flex flex-col items-center sm:flex-row sm:justify-start w-full gap-3">
                         <Image
                             src={testimonials[currentTestimonial].photo}
                             width={200}
                             height={200}
                             alt={testimonials[currentTestimonial].name}
-                            className="rounded-full w-24 h-24"
+                            className="rounded-full w-24 h-24 object-cover"
                         />
-                        <p className="text-xl font-semibold">
+                        <p className="text-xl font-semibold mt-2 sm:mt-0">
                             {testimonials[currentTestimonial].name}
                         </p>
                     </div>
-                    <p className="text-lg text-gray-700 mt-2 italic max-w-[50vw]">
+                    <p className="text-lg text-gray-700 mt-4 sm:mt-2 italic max-w-[90vw] md:max-w-[60vw]">
                         "{testimonials[currentTestimonial].feedback}"
                     </p>
                 </div>
