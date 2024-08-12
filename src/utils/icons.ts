@@ -68,3 +68,4 @@ export const PersonSVG = "/svgs/DEFAULT.svg";
 // SVG for illustrations
 export const ChattingIllustration = "/svgs/svg29.svg";
 export const HappyCarIllustration = "/svgs/svg30.svg";
+export const _404Illustration = "/svgs/svg32.svg";
