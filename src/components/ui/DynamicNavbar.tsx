@@ -1,11 +1,12 @@
 "use client";
 import * as React from "react";
+import { useEffect, useRef, useState } from "react";
 import Heading from "./Heading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLinksData } from "@/utils/assets";
+import gsap from "gsap";
 
-// Main DynamicNavbar component
 export interface IDynamicNavbarProps {
     title?: string;
     className?: string;
@@ -19,15 +20,97 @@ export default function DynamicNavbar({
     titlePosition = "left",
     linksPosition = "right",
 }: IDynamicNavbarProps) {
+    const [showSecondaryNavbar, setShowSecondaryNavbar] = useState(false);
+    const navbarRef = useRef<HTMLElement | null>(null);
+    const secondaryNavbarRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (navbarRef.current && secondaryNavbarRef.current) {
+                const navbarHeight = navbarRef.current.offsetHeight;
+                const scrollPosition = window.scrollY;
+
+                // Adjust the offset based on screen size
+                const offsetLargeScreen = 300;
+                const offsetSmallScreen = 150;
+
+                const scrollDownThreshold =
+                    window.innerWidth > 768
+                        ? navbarHeight + offsetLargeScreen
+                        : navbarHeight + offsetSmallScreen;
+
+                const scrollUpThreshold =
+                    window.innerWidth > 768
+                        ? navbarHeight + 150
+                        : navbarHeight + 75;
+
+                if (
+                    scrollPosition > scrollDownThreshold &&
+                    !showSecondaryNavbar
+                ) {
+                    setShowSecondaryNavbar(true);
+                    gsap.fromTo(
+                        secondaryNavbarRef.current,
+                        { y: -100, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.25,
+                            ease: "power3.out",
+                        }
+                    );
+                } else if (
+                    scrollPosition <= scrollUpThreshold &&
+                    showSecondaryNavbar
+                ) {
+                    gsap.to(secondaryNavbarRef.current, {
+                        y: -100,
+                        opacity: 0,
+                        duration: 0.25,
+                        ease: "power3.in",
+                        onComplete: () => setShowSecondaryNavbar(false),
+                    });
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [showSecondaryNavbar]);
+
     return (
-        <header className={`py-7 px-6 bg-gray-50 ${className}`}>
-            <nav className="flex flex-col md:flex-row justify-between items-center w-full gap-10">
-                {linksPosition === "left" && <NavLinks />}
-                {title && <NavHeader title={title} position={titlePosition} />}
-                {linksPosition === "center" && <NavLinks />}
-                {linksPosition === "right" && <NavLinks />}
-            </nav>
-        </header>
+        <>
+            <header
+                ref={navbarRef}
+                className={`py-7 px-6 bg-gray-50 ${className}`}
+            >
+                <nav className="flex flex-col md:flex-row justify-between items-center w-full gap-10">
+                    {linksPosition === "left" && <NavLinks />}
+                    {title && (
+                        <NavHeader title={title} position={titlePosition} />
+                    )}
+                    {linksPosition === "center" && <NavLinks />}
+                    {linksPosition === "right" && <NavLinks />}
+                </nav>
+            </header>
+
+            {/* Secondary Navbar */}
+            <div
+                ref={secondaryNavbarRef}
+                className={`fixed top-0 left-0 w-full bg-gray-50 bg-opacity-80 backdrop-blur-md shadow-lg shadow-gray-300 z-50 ${
+                    showSecondaryNavbar ? "block" : "hidden"
+                }`}
+            >
+                <div className="container mx-auto flex justify-between items-center py-3 px-6">
+                    {title && (
+                        <Heading className="text-2xl font-bold hidden md:block">
+                            {title}
+                        </Heading>
+                    )}
+                    <NavLinks />
+                </div>
+            </div>
+        </>
     );
 }
 
@@ -94,13 +177,13 @@ function NavLinkItem({
     return (
         <Link
             href={href}
-            className={`transition-colors duration-200 px-2 rounded-lg flex-row-center gap-1 ${
+            className={`transition-colors duration-200 px-2 rounded-lg flex-row-center md:gap-1 ${
                 currentPath === href
                     ? "bg-white text-black cursor-default"
                     : "hover:text-gray-100"
             }`}
         >
-            <span className="hidden md:block">{icon}</span>
+            {icon && <span className="hidden md:block">{icon}</span>}
             {label}
         </Link>
     );
