@@ -50,12 +50,6 @@ function HeroSection() {
 }
 
 function AnalyticsSection() {
-    const [reload, setReload] = React.useState(false);
-
-    const handleReload = () => {
-        setReload((prevReload) => !prevReload);
-    };
-
     return (
         <section className="py-16 px-5 bg-gray-50">
             <div className="container mx-auto">
@@ -68,16 +62,9 @@ function AnalyticsSection() {
                             <h3 className="text-xl md:text-2xl font-bold">
                                 Active Project
                             </h3>
-                            <div
-                                className="text-gray-500 cursor-pointer hover:text-aqua-green transition duration-300"
-                                onClick={handleReload}
-                                title="Reload repo data"
-                            >
-                                <ReloadIcon size={24} />
-                            </div>
                         </div>
                         <div className="mt-5 w-full flex-grow">
-                            <ActiveRepo reload={reload} />
+                            <ActiveRepo />
                         </div>
                     </div>
                     <div className="bg-white p-6 rounded-lg flex flex-col justify-between">
@@ -96,6 +83,19 @@ function AnalyticsSection() {
                             <Languages />
                         </div>
                     </div>
+                </div>
+                <div className="text-center text-sm text-gray-600 mt-8">
+                    <p>
+                        Powered by{" "}
+                        <a
+                            href="https://docs.github.com/en/graphql"
+                            target="_blank"
+                            className="hover:underline font-semibold"
+                        >
+                            GitHub GraphQL API
+                        </a>
+                    </p>
+                    <p>Displaying cached data.</p>
                 </div>
             </div>
         </section>
@@ -176,11 +176,10 @@ function ProjectsSection({ className }: IProjectsProps) {
                 // Fade in the project cards when the page changes
                 gsap.fromTo(
                     cards,
-                    { opacity: 0, x: -100 },
+                    { opacity: 0 },
                     {
                         opacity: 1,
-                        x: 0,
-                        duration: 0.4,
+                        duration: 0.2,
                         stagger: 0.1,
                         ease: "power2.inOut",
                     }
@@ -222,3 +221,4 @@ function ProjectsSection({ className }: IProjectsProps) {
         </section>
     );
 }
+

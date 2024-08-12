@@ -62,7 +62,7 @@ export async function GET(req: NextRequest) {
                     color: day.color,
                 }));
 
-        return NextResponse.json(
+        const response = NextResponse.json(
             {
                 totalContributions:
                     data.user.contributionsCollection.contributionCalendar
@@ -71,6 +71,14 @@ export async function GET(req: NextRequest) {
             },
             { status: 200 }
         );
+
+        // Set Cache-Control header to cache the response for 15 minutes
+        response.headers.set(
+            "Cache-Control",
+            "public, max-age=900, stale-while-revalidate=3600"
+        );
+
+        return response;
     } catch (error) {
         return NextResponse.json(
             { error: "Failed to fetch contributions" },

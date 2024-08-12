@@ -4,13 +4,7 @@ import FolderCard from "../layout/FolderCard";
 import CustomLineChart from "../charts/CustomLineChart";
 import CustomPieChart from "../charts/CustomPieChart";
 
-export function ActiveRepo({
-    className,
-    reload,
-}: {
-    className?: string;
-    reload: boolean;
-}) {
+export function ActiveRepo({ className }: { className?: string }) {
     const [repoData, setRepoData] = React.useState({
         title: "",
         description: "",
@@ -63,7 +57,7 @@ export function ActiveRepo({
         };
 
         fetchLatestCommitData();
-    }, [reload]); // Depend on reload to refetch data when it changes
+    }, []);
 
     if (isLoading) {
         return (

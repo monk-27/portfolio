@@ -128,7 +128,14 @@ export async function GET(req: NextRequest) {
             );
         }
 
-        return NextResponse.json(latestRepo, { status: 200 });
+        // Create response and set Cache-Control header
+        const response = NextResponse.json(latestRepo, { status: 200 });
+        response.headers.set(
+            "Cache-Control",
+            "public, max-age=300, stale-while-revalidate=3600"
+        );
+
+        return response;
     } catch (error) {
         console.error(error);
         return NextResponse.json(

@@ -84,7 +84,11 @@ export async function GET(req: NextRequest) {
                 size,
             }));
 
-        return NextResponse.json(topLanguages, { status: 200 });
+        // Setting cache control headers for 1 hour (3600 seconds)
+        const response = NextResponse.json(topLanguages, { status: 200 });
+        response.headers.set("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+
+        return response;
     } catch (error) {
         return NextResponse.json(
             { error: "Failed to fetch languages" },
