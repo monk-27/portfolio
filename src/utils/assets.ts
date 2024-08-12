@@ -382,3 +382,30 @@ export const SitemapLinks = [
         ],
     },
 ];
+
+export const ResourcesData = [
+    {
+        title: "Next.js Project Starter",
+        description:
+            "A fully configured Next.js project template with essential dependencies, including TypeScript, TailwindCSS, and ESLint.",
+        link: "#",
+    },
+    {
+        title: "React Component Library",
+        description:
+            "A collection of reusable React components with a focus on accessibility and performance.",
+        link: "#",
+    },
+    {
+        title: "Express.js API Template",
+        description:
+            "A boilerplate for building RESTful APIs with Express.js, including JWT authentication and MongoDB integration.",
+        link: "#",
+    },
+    {
+        title: "TypeScript Best Practices",
+        description:
+            "A comprehensive guide to writing clean and maintainable TypeScript code, including tips and examples.",
+        link: "#",
+    },
+];
