@@ -1,6 +1,6 @@
 import * as React from "react";
-import { IoClose } from "react-icons/io5";
 import gsap from "gsap";
+import { CloseIcon } from "@/utils/icons";
 
 export interface IOverlayProps {
     children: React.ReactNode;
@@ -59,7 +59,7 @@ export default function Overlay({
                     onClick={handleCloseClick}
                     className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
                 >
-                    <IoClose size={24} />
+                    <CloseIcon size={24} />
                 </button>
                 {children}
             </div>

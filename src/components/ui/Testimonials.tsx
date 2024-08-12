@@ -3,29 +3,10 @@ import Image from "next/image";
 import * as React from "react";
 import Heading from "./Heading";
 import gsap from "gsap";
+import { TestimonialsData } from "@/utils/assets";
+import { PersonSVG } from "@/utils/icons";
 
 export interface ITestimonialsProps {}
-
-const testimonials = [
-    {
-        name: "Sumit Nanda",
-        feedback:
-            "Working with Armaan was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
-        photo: "/Photos/Services/Testimonials/tSI1.png",
-    },
-    {
-        name: "Vikram Saraon",
-        feedback:
-            "Armaan was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
-        photo: "/Photos/Services/Testimonials/tSI1.jpg",
-    },
-    {
-        name: "Mohamed EIMenshawy",
-        feedback:
-            "I am pleased to highly recommend Armaan Jaj, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Armaan has my utmost confidence in his future pursuits.",
-        photo: "/Photos/Services/Testimonials/DEFAULT.svg",
-    },
-];
 
 export default function Testimonials(props: ITestimonialsProps) {
     const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
@@ -33,7 +14,7 @@ export default function Testimonials(props: ITestimonialsProps) {
     React.useEffect(() => {
         const interval = setInterval(() => {
             const nextTestimonial =
-                (currentTestimonial + 1) % testimonials.length;
+                (currentTestimonial + 1) % TestimonialsData.length;
 
             gsap.to(".testimonial-content", {
                 opacity: 0,
@@ -73,18 +54,22 @@ export default function Testimonials(props: ITestimonialsProps) {
                 <div className="testimonial-content set-flex-col items-center w-full">
                     <div className="flex flex-col items-center sm:flex-row sm:justify-start w-full gap-3">
                         <Image
-                            src={testimonials[currentTestimonial].photo}
+                            src={
+                                TestimonialsData[currentTestimonial].photo
+                                    ? TestimonialsData[currentTestimonial].photo
+                                    : PersonSVG
+                            }
                             width={200}
                             height={200}
-                            alt={testimonials[currentTestimonial].name}
+                            alt={TestimonialsData[currentTestimonial].name}
                             className="rounded-full w-24 h-24 object-cover"
                         />
                         <p className="text-xl font-semibold mt-2 sm:mt-0">
-                            {testimonials[currentTestimonial].name}
+                            {TestimonialsData[currentTestimonial].name}
                         </p>
                     </div>
                     <p className="text-lg text-gray-700 mt-4 sm:mt-2 italic max-w-[90vw] md:max-w-[60vw]">
-                        "{testimonials[currentTestimonial].feedback}"
+                        "{TestimonialsData[currentTestimonial].feedback}"
                     </p>
                 </div>
             </div>

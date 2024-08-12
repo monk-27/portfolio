@@ -3,7 +3,7 @@ import * as React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { CheckIcon } from "@/utils/icons";
 
 interface TextFieldProps {
     label: string;
@@ -158,7 +158,7 @@ function SelectField({
                     >
                         <span>{option}</span>
                         {selectedValue === option && (
-                            <IoCheckmarkCircleOutline size={24} />
+                            <CheckIcon size={24} />
                         )}
                     </div>
                 ))}

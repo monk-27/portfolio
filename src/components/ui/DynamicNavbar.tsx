@@ -3,9 +3,7 @@ import * as React from "react";
 import Heading from "./Heading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { RiServiceFill } from "react-icons/ri";
-import { FaTools } from "react-icons/fa";
-import { IoIosHome, IoIosPerson } from "react-icons/io";
+import { NavLinksData } from "@/utils/assets";
 
 // Main DynamicNavbar component
 export interface IDynamicNavbarProps {
@@ -61,14 +59,22 @@ function NavHeader({
 function NavLinks() {
     return (
         <div className="flex justify-evenly items-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-white text-base">
-            <NavLinkItem href="/" label="Homepage" />
-            <NavLinkItem href="/about" label="About" />
-            <NavLinkItem icon={<FaTools />} href="/tools" label="Tools" />
-            <NavLinkItem
-                icon={<RiServiceFill />}
-                href="/services"
-                label="Services"
-            />
+            {NavLinksData.map((item, _) =>
+                item.icon ? (
+                    <NavLinkItem
+                        href={item.link}
+                        label={item.name}
+                        icon={<item.icon />}
+                        key={item.id}
+                    />
+                ) : (
+                    <NavLinkItem
+                        href={item.link}
+                        label={item.name}
+                        key={item.id}
+                    />
+                )
+            )}
         </div>
     );
 }

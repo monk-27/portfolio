@@ -10,6 +10,8 @@ import Testimonials from "@/components/ui/Testimonials";
 import * as yup from "yup";
 import Form from "@/components/layout/Form";
 import ActionButton from "@/components/layout/ActionButton";
+import { PricingData, ServicesData } from "@/utils/assets";
+import { CalenderSVG, HappyCarIllustration, RibbonSVG } from "@/utils/icons";
 
 export interface IServicesPageProps {}
 
@@ -22,78 +24,6 @@ type FormField = {
     placeholder?: string;
     required?: boolean;
 };
-
-// Services Data
-const servicesData = [
-    {
-        id: 1,
-        title: "Web Development",
-        description:
-            "I build responsive and high-performance websites using modern technologies like React, Next.js, and TailwindCSS.",
-        icon: "/Icons/sI1.svg",
-    },
-    {
-        id: 2,
-        title: "Mobile App Development",
-        description:
-            "Creating sleek and user-friendly mobile applications for Android platform.",
-        icon: "/Icons/sI2.svg",
-    },
-    {
-        id: 3,
-        title: "UI/UX Design",
-        description:
-            "Designing intuitive and aesthetic user interfaces with a focus on user experience.",
-        icon: "/Icons/sI3.svg",
-    },
-    {
-        id: 4,
-        title: "SEO Optimization",
-        description:
-            "Improving your website’s visibility on search engines with best SEO practices.",
-        icon: "/icons/sI4.svg",
-    },
-    {
-        id: 5,
-        title: "Custom Software Solutions",
-        description:
-            "Providing tailored software solutions to meet your business needs, from concept to deployment.",
-        icon: "/Icons/sI5.svg",
-    },
-];
-
-// Pricing Data
-const pricingData = [
-    {
-        id: 1,
-        title: "Sustainable",
-        description:
-            "Put yourself or your business in public. Showcase your offerings and convert your sales. Best for people starting their first internet venture.",
-        price: "CA $199",
-        features: [
-            "Responsive Web Design",
-            "Basic SEO",
-            "5 Pages",
-            "Email Support",
-        ],
-        cta: "Get Sustainable",
-    },
-    {
-        id: 2,
-        title: "Easy",
-        description:
-            "A great choice for those looking to expand their online presence with additional customization and advanced SEO features.",
-        price: "CA $499",
-        features: [
-            "Everything in Basic",
-            "10 Pages",
-            "Advanced SEO",
-            "Custom Design",
-            "Priority Support",
-        ],
-        cta: "Choose Easy",
-    },
-];
 
 export default function ServicesPage(props: IServicesPageProps) {
     return (
@@ -144,7 +74,7 @@ function Hero() {
             </div>
             <div className="hidden sm:block">
                 <Image
-                    src="/Illustrations/services/hero.svg"
+                    src={HappyCarIllustration}
                     alt="Our Services"
                     width={350}
                     height={400}
@@ -161,7 +91,7 @@ function ServicesGrid() {
             id="services"
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-[90vw] mx-auto mt-12 pt-10"
         >
-            {servicesData.map((service) => (
+            {ServicesData.map((service) => (
                 <ServiceCard
                     key={service.id}
                     title={service.title}
@@ -185,7 +115,7 @@ function ProofOfWorkStats() {
                 <div className="flex flex-col items-center">
                     <div className="bg-aqua-green p-5 rounded-full">
                         <Image
-                            src="/illustrations/services/stats/calender.svg"
+                            src={CalenderSVG}
                             width={70}
                             height={70}
                             alt="Calendar"
@@ -203,7 +133,7 @@ function ProofOfWorkStats() {
                 <div className="flex flex-col items-center">
                     <div className="bg-aqua-green p-5 rounded-full">
                         <Image
-                            src="/illustrations/services/stats/ribbon.svg"
+                            src={RibbonSVG}
                             width={70}
                             height={70}
                             alt="Ribbon"
@@ -229,7 +159,7 @@ function PricingPlans() {
                 Pricing Plans
             </Heading>
             <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 md:gap-8 w-full justify-items-center">
-                {pricingData.map((plan) => (
+                {PricingData.map((plan) => (
                     <PricingCard
                         key={plan.id}
                         title={plan.title}

@@ -5,6 +5,8 @@ import Footer from "@/components/ui/Footer";
 import Heading from "@/components/ui/Heading";
 import Image from "next/image";
 import ActionButton from "@/components/layout/ActionButton";
+import { ToolsData } from "@/utils/assets";
+import { ComputerSVG, ToolSVG } from "@/utils/icons";
 
 export interface IToolsPageProps {}
 
@@ -23,168 +25,6 @@ interface Category {
     title: string;
     subCategories: string[];
 }
-
-// Define the data for tools and categories
-const toolsData = [
-    // Languages
-    {
-        id: 1,
-        name: "JavaScript",
-        description:
-            "Versatile language for front-end and back-end development.",
-        icon: "/Icons/tI13.svg",
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 2,
-        name: "Python",
-        description: "A powerful language for scripting and data analysis.",
-        icon: "/Icons/tI15.svg",
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 3,
-        name: "Java",
-        description:
-            "A robust language for enterprise and Android development.",
-        icon: "/Icons/tI16.svg",
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 4,
-        name: "PHP",
-        description: "A popular language for server-side web development.",
-        icon: "/Icons/tI17.svg",
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 5,
-        name: "Kotlin",
-        description: "A modern language for Android development.",
-        icon: "/Icons/tI18.svg",
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 6,
-        name: "TypeScript",
-        description: "JavaScript with static typing.",
-        icon: "/Icons/tI14.svg",
-        category: "Programming",
-        subCategory: "Languages",
-    },
-
-    // Front end
-    {
-        id: 7,
-        name: "Next.js",
-        description: "The React Framework for Production.",
-        icon: "/Icons/tI7.svg",
-        category: "Programming",
-        subCategory: "Front end",
-    },
-    {
-        id: 8,
-        name: "React.js",
-        description: "A JavaScript library for building user interfaces.",
-        icon: "/Icons/tI8.svg",
-        category: "Programming",
-        subCategory: "Front end",
-    },
-    {
-        id: 9,
-        name: "TailwindCSS",
-        description: "A utility-first CSS framework for rapid UI development.",
-        icon: "/Icons/tI20.svg",
-        category: "Programming",
-        subCategory: "Front end",
-    },
-
-    // Back end
-    {
-        id: 10,
-        name: "Node.js",
-        description:
-            "JavaScript runtime built on Chrome's V8 JavaScript engine.",
-        icon: "/Icons/tI9.svg",
-        category: "Programming",
-        subCategory: "Back end",
-    },
-    {
-        id: 11,
-        name: "Express.js",
-        description:
-            "Fast, unopinionated, minimalist web framework for Node.js.",
-        icon: "/Icons/tI10.svg",
-        category: "Programming",
-        subCategory: "Back end",
-    },
-
-    // Databases
-    {
-        id: 12,
-        name: "MySQL",
-        description: "Relational database management system.",
-        icon: "/Icons/tI12.svg",
-        category: "Programming",
-        subCategory: "Databases",
-    },
-    {
-        id: 13,
-        name: "MongoDB",
-        description: "NoSQL database for modern applications.",
-        icon: "/Icons/tI11.svg",
-        category: "Programming",
-        subCategory: "Databases",
-    },
-    {
-        id: 14,
-        name: "Redis",
-        description:
-            "An in-memory data structure store, used as a database, cache, and message broker.",
-        icon: "/Icons/tI19.svg",
-        category: "Programming",
-        subCategory: "Databases",
-    },
-
-    // Development Tools
-    {
-        id: 15,
-        name: "Visual Studio Code",
-        description:
-            "My go-to code editor with tons of extensions and customization.",
-        icon: "/Icons/tI4.svg",
-        category: "Development",
-    },
-    {
-        id: 16,
-        name: "Figma",
-        description: "Perfect for UI/UX design and collaboration.",
-        icon: "/Icons/sI3.svg",
-        category: "Development",
-    },
-    {
-        id: 17,
-        name: "GitHub",
-        description: "Great version controlling software.",
-        icon: "/Icons/tI6.svg",
-        category: "Development",
-    },
-
-    // Productivity Tools
-    {
-        id: 18,
-        name: "Notion",
-        description:
-            "All-in-one workspace for notes, tasks, and project management.",
-        icon: "/Icons/tI5.svg",
-        category: "Productivity",
-    },
-];
 
 // Define the categories and subcategories dynamically
 const categories: Category[] = [
@@ -219,7 +59,7 @@ export default function ToolsPage(props: IToolsPageProps): JSX.Element {
                         key={category.title}
                         category={category.title}
                         subCategories={category.subCategories}
-                        tools={toolsData}
+                        tools={ToolsData}
                     />
                 ))}
             </div>
@@ -281,14 +121,14 @@ function Hero(): JSX.Element {
 
             {/* Hide SVGs on small screens */}
             <Image
-                src="/Icons/tI1.svg"
+                src={ComputerSVG}
                 alt="Tools Hero Image"
                 width={250}
                 height={250}
                 className="hidden sm:block absolute bottom-0 left-[-150px] z-0 opacity-90"
             />
             <Image
-                src="/Icons/tI3.svg"
+                src={ToolSVG}
                 alt="Tools Hero Image"
                 width={250}
                 height={250}

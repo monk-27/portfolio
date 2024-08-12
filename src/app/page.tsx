@@ -7,9 +7,9 @@ import { ActiveRepo, Contributions, Languages } from "@/components/ui/GitHub";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import Testimonials from "@/components/ui/Testimonials";
+import { ReloadIcon } from "@/utils/icons";
 import gsap from "gsap";
 import React from "react";
-import { IoReload } from "react-icons/io5";
 
 export default function Home() {
     return (
@@ -73,7 +73,7 @@ function AnalyticsSection() {
                                 onClick={handleReload}
                                 title="Reload repo data"
                             >
-                                <IoReload size={24} />
+                                <ReloadIcon size={24} />
                             </div>
                         </div>
                         <div className="mt-5 w-full flex-grow">
@@ -197,7 +197,7 @@ function ProjectsSection({ className }: IProjectsProps) {
                 </h2>
                 <div
                     ref={projectsRef}
-                    className={`${className} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8`}
+                    className={`${className} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-3`}
                 >
                     {loading ? (
                         <div className="col-span-full flex justify-center items-center h-64">

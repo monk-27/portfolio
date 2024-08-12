@@ -1,8 +1,8 @@
 import * as React from "react";
 import Heading from "../ui/Heading";
-import { IoIosLink } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import { LinkIcon } from "@/utils/icons";
 
 export interface IProjectCardProps {
     title: string;
@@ -31,7 +31,7 @@ export default function ProjectCard({
                             target="_blank"
                             className="scale-110 hover:bg-color-dark hover:text-white transition-colors duration-300 rounded-lg p-1"
                         >
-                            <IoIosLink />
+                            <LinkIcon />
                         </Link>
                     </div>
                     <p className="text-sm md:text-base w-full">{description}</p>

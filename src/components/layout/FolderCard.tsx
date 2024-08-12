@@ -1,7 +1,6 @@
+import { GitBranchIcon, LockIcon, StarIcon, UnlockIcon } from "@/utils/icons";
 import Link from "next/link";
 import * as React from "react";
-import { FaRegStar, FaCodeBranch } from "react-icons/fa";
-import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 
 interface FolderCardProps {
     title: string;
@@ -52,12 +51,12 @@ export default function FolderCard({
                     <div className="flex-row-start gap-2">
                         {isPrivate ? (
                             <p className="px-3 py-1 rounded-full bg-color-light text-gray-200 flex-row-center gap-2 text-sm">
-                                <IoLockClosed className="text-gray-200 inline" />
+                                <LockIcon className="text-gray-200 inline" />
                                 <span>Private</span>
                             </p>
                         ) : (
                             <p className="px-3 py-1 rounded-full bg-color-light text-gray-200 flex-row-center gap-2 text-sm">
-                                <IoLockOpen className="text-gray-200 inline" />
+                                <UnlockIcon className="text-gray-200 inline" />
                                 <span>Public</span>
                             </p>
                         )}
@@ -92,11 +91,11 @@ function CardFooter({
             <div className="set-flex-col items-start justify-start gap-5 h-full">
                 <div className="set-flex-row justify-start items-center gap-3 w-full">
                     <span className="flex-row-start gap-1">
-                        <FaRegStar className="text-yellow-400" />
+                        <StarIcon className="text-yellow-400" />
                         <span>{starCount}</span>
                     </span>
                     <span className="flex-row-start gap-1">
-                        <FaCodeBranch className="text-gray-500" />
+                        <GitBranchIcon className="text-gray-500" />
                         <span>{forkCount}</span>
                     </span>
                 </div>

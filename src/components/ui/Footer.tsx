@@ -1,10 +1,7 @@
 import Link from "next/link";
 import * as React from "react";
 import Heading from "./Heading";
-import { IoLogoInstagram } from "react-icons/io5";
-import { RiTwitterXLine } from "react-icons/ri";
-import { TfiLinkedin } from "react-icons/tfi";
-import { TbBrandGithubFilled } from "react-icons/tb";
+import { NavLinksData, SocialMediaLinks } from "@/utils/assets";
 
 export interface IFooterProps {}
 
@@ -43,38 +40,17 @@ function SocialMedia() {
             <div className="flex-col-start w-full gap-3">
                 <p className="text-xs">Follow me</p>
                 <div className="flex-row-center gap-4 md:gap-6 lg:gap-8 w-full">
-                    <Link
-                        href={"https://github.com/armaanjaj"}
-                        target="_blank"
-                        className=""
-                        title="GitHub"
-                    >
-                        <TbBrandGithubFilled className="scale-110 hover:text-aqua-green transition duration-300" />
-                    </Link>
-                    <Link
-                        href={"https://www.linkedin.com/in/connectarmaan/"}
-                        target="_blank"
-                        className=""
-                        title="LinkedIn"
-                    >
-                        <TfiLinkedin className="scale-110 hover:text-aqua-green transition duration-300" />
-                    </Link>
-                    <Link
-                        href={"https://x.com/armaanjaj"}
-                        target="_blank"
-                        className=""
-                        title="X/Twitter"
-                    >
-                        <RiTwitterXLine className="scale-110 hover:text-aqua-green transition duration-300" />
-                    </Link>
-                    <Link
-                        href={"https://instagram.com/armaan_jaj"}
-                        target="_blank"
-                        className=""
-                        title="Instagram"
-                    >
-                        <IoLogoInstagram className="scale-110 hover:text-aqua-green transition duration-300" />
-                    </Link>
+                    {SocialMediaLinks.map((item, index) => (
+                        <Link
+                            href={item.href}
+                            target={item.target}
+                            className={item.className}
+                            title={item.title}
+                            key={index}
+                        >
+                            <item.icon className="scale-110 hover:text-aqua-green transition duration-300" />
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>
@@ -88,30 +64,16 @@ function QuickLinks() {
                 <h3 className="text-lg font-semibold text-gray-300">
                     Quick Links
                 </h3>
-                <Link
-                    href="/"
-                    className="text-gray-400 hover:text-aqua-green mt-2 transition duration-300 w-fit"
-                >
-                    Home
-                </Link>
-                <Link
-                    href="/about"
-                    className="text-gray-400 hover:text-aqua-green transition duration-300 w-fit"
-                >
-                    About
-                </Link>
-                <Link
-                    href="/tools"
-                    className="text-gray-400 hover:text-aqua-green transition duration-300 w-fit"
-                >
-                    Tools
-                </Link>
-                <Link
-                    href="/services"
-                    className="text-gray-400 hover:text-aqua-green transition duration-300 w-fit"
-                >
-                    Services
-                </Link>
+                {NavLinksData.map((item, _) => (
+                    <Link
+                        href={item.link}
+                        className="text-gray-400 hover:text-aqua-green transition duration-300 w-fit"
+                        key={item.id}
+                        title={item.name}
+                    >
+                        {item.name}
+                    </Link>
+                ))}
             </div>
         </div>
     );

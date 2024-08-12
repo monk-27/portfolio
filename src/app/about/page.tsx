@@ -4,13 +4,13 @@ import Heading from "@/components/ui/Heading";
 import Image from "next/image";
 import DynamicNavbar from "@/components/ui/DynamicNavbar";
 import Footer from "@/components/ui/Footer";
-import { HiLocationMarker } from "react-icons/hi";
-import { IoCodeSlash } from "react-icons/io5";
 import Testimonials from "@/components/ui/Testimonials";
 import Overlay from "@/components/layout/Overlay";
 import Form from "@/components/layout/Form";
 import * as yup from "yup";
 import ActionButton from "@/components/layout/ActionButton";
+import { CondensedSkills } from "@/utils/assets";
+import { CodeIcon, LocationIcon } from "@/utils/icons";
 
 export interface IAboutMePageProps {}
 
@@ -52,7 +52,7 @@ export default function AboutMePage(props: IAboutMePageProps) {
             <div className="bg-gray-50 text-color-dark py-8 sm:py-16 px-4 sm:px-8">
                 <HeroSection onContactClick={handleOverlayOpen} />
                 <MyStorySection />
-                <SkillsSection />
+                <CondensedSkillsSection />
                 <ExperienceSection experiences={experiences} />
                 <div className="max-w-[90vw] sm:max-w-[75vw] md:max-w-[50vw] mx-auto">
                     <Testimonials />
@@ -89,12 +89,12 @@ function HeroSection({ onContactClick }: { onContactClick: () => void }) {
                 </p>
                 <div className="text-sm sm:text-base flex-row-start gap-5 w-full sm:w-3/5 mb-6">
                     <InfoItem
-                        icon={<HiLocationMarker />}
+                        icon={<LocationIcon />}
                         text="Calgary"
                         title="I live in"
                     />
                     <InfoItem
-                        icon={<IoCodeSlash />}
+                        icon={<CodeIcon />}
                         text="2020"
                         title="Coding since"
                     />
@@ -284,35 +284,14 @@ function FavoriteItem({
 }
 
 // Skills Section
-function SkillsSection() {
-    const skills = [
-        {
-            title: "Front-End Development",
-            description:
-                "Building responsive and dynamic user interfaces using React.js, Next.js, and TailwindCSS.",
-            icon: "/Icons/aI1.svg",
-        },
-        {
-            title: "Back-End Development",
-            description:
-                "Creating scalable and efficient back-end systems using Node.js, Express.js, and databases like MongoDB and MySQL.",
-            icon: "/Icons/aI2.svg",
-        },
-        {
-            title: "UI/UX Design",
-            description:
-                "Designing intuitive and aesthetic user interfaces with a strong focus on user experience.",
-            icon: "/Icons/aI3.svg",
-        },
-    ];
-
+function CondensedSkillsSection() {
     return (
         <div className="max-w-7xl mx-auto mt-16">
             <Heading className="text-3xl font-bold text-center mb-12">
                 My Skills
             </Heading>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {skills.map((skill, index) => (
+                {CondensedSkills.map((skill, index) => (
                     <SkillCard
                         key={index}
                         title={skill.title}
