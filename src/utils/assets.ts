@@ -321,13 +321,13 @@ export const TestimonialsData = [
         name: "Sumit Nanda",
         feedback:
             "Working with Armaan was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
-        photo: "/Photos/Testimonials/Writer1.jpg",
+        photo: "/Photos/Testimonials/Writer2.png",
     },
     {
         name: "Vikram Saraon",
         feedback:
             "Armaan was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
-        photo: "/Photos/Testimonials/Writer2.png",
+        photo: "/Photos/Testimonials/Writer1.jpg",
     },
     {
         name: "Mohamed EIMenshawy",
