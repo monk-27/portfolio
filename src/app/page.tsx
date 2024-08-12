@@ -1,5 +1,6 @@
 "use client";
 import ActionButton from "@/components/layout/ActionButton";
+import Hero from "@/components/layout/Hero";
 import ProjectCard from "@/components/layout/ProjectCard";
 import DynamicNavbar from "@/components/ui/DynamicNavbar";
 import Footer from "@/components/ui/Footer";
@@ -7,15 +8,26 @@ import { ActiveRepo, Contributions, Languages } from "@/components/ui/GitHub";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import Testimonials from "@/components/ui/Testimonials";
-import { ReloadIcon } from "@/utils/icons";
 import gsap from "gsap";
 import React from "react";
+
+interface Project {
+    id: number;
+    title: string;
+    description: string;
+    logo: string;
+    url: string;
+}
+
+interface IProjectsProps {
+    className?: string;
+}
 
 export default function Home() {
     return (
         <main className="h-full w-full bg-white">
             <DynamicNavbar title="Armaan Jaj" className="bg-white" />
-            <HeroSection />
+            <Hero type="home" />
             <AnalyticsSection />
             <ProjectsSection />
             <section className="bg-white py-10 max-w-[90vw] lg:max-w-[70vw] mx-auto">
@@ -23,29 +35,6 @@ export default function Home() {
             </section>
             <Footer />
         </main>
-    );
-}
-
-function HeroSection() {
-    return (
-        <section className="relative w-full py-20 px-5 bg-white text-center">
-            <div className="container mx-auto flex flex-col items-center justify-center">
-                <Heading className="text-3xl md:text-5xl font-bold leading-tight">
-                    Crafting Digital Experiences with{" "}
-                    <span className="text-aqua-green whitespace-nowrap">
-                        Artistry & Precision
-                    </span>
-                </Heading>
-                <Paragraph className="text-base md:text-lg leading-relaxed mt-4 max-w-3xl">
-                    Empowering your business with top-notch web solutions. Let's
-                    create something extraordinary together.
-                </Paragraph>
-                <div className="flex gap-3 md:gap-5 mt-8 justify-center">
-                    <ActionButton text="View My Work" size="md" />
-                    <ActionButton text="Hire Me" size="md" />
-                </div>
-            </div>
-        </section>
     );
 }
 
@@ -100,18 +89,6 @@ function AnalyticsSection() {
             </div>
         </section>
     );
-}
-
-interface Project {
-    id: number;
-    title: string;
-    description: string;
-    logo: string;
-    url: string;
-}
-
-interface IProjectsProps {
-    className?: string;
 }
 
 function ProjectsSection({ className }: IProjectsProps) {
