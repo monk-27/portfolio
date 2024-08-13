@@ -64,6 +64,7 @@ export const BrowserSVG = "/svgs/svg27.svg";
 export const CalenderSVG = "/svgs/svg28.svg";
 export const RibbonSVG = "/svgs/svg31.svg";
 export const PersonSVG = "/svgs/DEFAULT.svg";
+export const ProjSVG = "/svgs/svg33.svg";
 
 // SVG for illustrations
 export const ChattingIllustration = "/svgs/svg29.svg";

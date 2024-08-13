@@ -2,7 +2,7 @@ import * as React from "react";
 import Heading from "../../ui/designs/Heading";
 import Link from "next/link";
 import Image from "next/image";
-import { LinkIcon } from "@/utils/icons";
+import { LinkIcon, ProjSVG } from "@/utils/icons";
 
 export interface IProjectCardProps {
     title: string;
@@ -38,10 +38,10 @@ export default function ProjectCard({
                 </div>
                 <div className="flex-shrink-0">
                     <Image
-                        src={logo}
+                        src={logo ? logo : ProjSVG}
                         alt="Logo"
-                        width={80}
-                        height={80}
+                        width={50}
+                        height={50}
                         className="object-contain"
                     />
                 </div>

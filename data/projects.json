@@ -3,21 +3,18 @@
         "id": 1,
         "title": "We-DD",
         "description": "A designated driver website developed for a Calgary based taxi company easing their day to day operations.",
-        "logo": "/Logos/project1.jpg",
         "url": "https://we-dd.vercel.app/"
     },
     {
         "id": 2,
         "title": "My Inventory",
         "description": "Inventory management software helping users to add, manage and print details of their invetory items.",
-        "logo": "/Logos/project2.jpg",
         "url": "https://github.com/armaanjaj/myinventory"
     },
     {
         "id": 3,
         "title": "Portfolio - v1.0",
         "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
-        "logo": "/Logos/project3.jpg",
         "url": "https://www.v1.armaancodes.com/"
     },
     {
