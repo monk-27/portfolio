@@ -1,2 +1,2 @@
-export { default as AnalyticsSection } from "./Analytics";
-export { default as ProjectsSection } from "./Projects";
+export { default as ActivityHub } from "./ActivityHub";
+export { default as ProjectsSection } from "./ProjectsSection";

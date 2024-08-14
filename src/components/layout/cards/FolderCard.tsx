@@ -1,3 +1,6 @@
+"use client";
+import Heading from "@/components/ui/designs/Heading";
+import Paragraph from "@/components/ui/designs/Paragraph";
 import { GitBranchIcon, LockIcon, StarIcon, UnlockIcon } from "@/utils/icons";
 import Link from "next/link";
 import * as React from "react";
@@ -8,7 +11,7 @@ interface FolderCardProps {
     starCount: number;
     forkCount: number;
     isPrivate: boolean;
-    language: string; // Updated to string
+    language: string;
     latestCommitMessage: string;
     latestCommitUrl: string;
     latestCommitDate: string;
@@ -17,7 +20,7 @@ interface FolderCardProps {
 interface CardFooterProps {
     starCount: number;
     forkCount: number;
-    language: string; // Updated to string
+    language: string;
     isPrivate: boolean;
     latestCommitMessage: string;
     latestCommitUrl: string;
@@ -44,30 +47,30 @@ export default function FolderCard({
             : description;
 
     return (
-        <div className="bg-white rounded-lg px-6 py-4 set-flex-col items-start justify-between gap-2 set-wf-full">
-            <div className="set-flex-col items-stretch justify-start w-full gap-3">
-                <div className="set-flex-row justify-between items-start w-full gap-0">
-                    <h2 className="text-xl font-bold">{title} </h2>
-                    <div className="flex-row-start gap-2">
+        <div className="rounded-lg p-3 flex-col-between-start gap-5 w-full bg-gray-900">
+            <div className="flex-col-start-start w-full gap-3">
+                <div className="flex-row-between-start w-full gap-0">
+                    <Heading level={6}>{title}</Heading>
+                    <div className="flex-row-start-start gap-2">
                         {isPrivate ? (
-                            <p className="px-3 py-1 rounded-full bg-color-light text-gray-200 flex-row-center gap-2 text-sm">
-                                <LockIcon className="text-gray-200 inline" />
+                            <p className="px-3 py-1 rounded-full bg-primary text-white flex-row-center-center gap-2 text-sm">
+                                <LockIcon className="inline" />
                                 <span>Private</span>
                             </p>
                         ) : (
-                            <p className="px-3 py-1 rounded-full bg-color-light text-gray-200 flex-row-center gap-2 text-sm">
+                            <p className="px-3 py-1 rounded-full bg-primary text-white flex-row-center-center gap-2 text-sm">
                                 <UnlockIcon className="text-gray-200 inline" />
                                 <span>Public</span>
                             </p>
                         )}
                     </div>
                 </div>
-                <p>{trimmedDescription}</p>
+                <Paragraph>{trimmedDescription}</Paragraph>
             </div>
             <CardFooter
                 starCount={starCount}
                 forkCount={forkCount}
-                language={language} // Pass the single language
+                language={language}
                 isPrivate={isPrivate}
                 latestCommitMessage={latestCommitMessage}
                 latestCommitUrl={latestCommitUrl}
@@ -87,21 +90,21 @@ function CardFooter({
     latestCommitDate,
 }: CardFooterProps) {
     return (
-        <div className="set-flex-row justify-between items-center w-full">
-            <div className="set-flex-col items-start justify-start gap-5 h-full">
-                <div className="set-flex-row justify-start items-center gap-3 w-full">
-                    <span className="flex-row-start gap-1">
-                        <StarIcon className="text-yellow-400" />
+        <div className="flex-row-between-center w-full">
+            <div className="flex-col-start-start gap-4 h-full">
+                <div className="flex-row-start-center gap-2 w-full text-gray-200">
+                    <span className="flex-row-start-start gap-1">
+                        <StarIcon className="text-secondary" />
                         <span>{starCount}</span>
                     </span>
-                    <span className="flex-row-start gap-1">
-                        <GitBranchIcon className="text-gray-500" />
+                    <span className="flex-row-start-start gap-1">
+                        <GitBranchIcon className="text-secondary" />
                         <span>{forkCount}</span>
                     </span>
                 </div>
-                <div className="font-bold set-flex-row justify-start items-end gap-1">
+                <div className="font-bold flex-row-start-end gap-1">
                     {language ? (
-                        <span className="bg-gray-100 text-xs px-2 py-1 rounded-md">
+                        <span className="bg-secondary bg-opacity-60 text-xs px-2 py-1 rounded-md">
                             {language}
                         </span>
                     ) : (
@@ -109,27 +112,34 @@ function CardFooter({
                     )}
                 </div>
             </div>
-            <div className="set-flex-col justify-end items-end w-full h-full">
-                <h3 className="font-bold">Last Commit</h3>
-                <p>
-                    {latestCommitMessage.length > MAX_COMMIT_DESCRIPTION_LENGTH
-                        ? latestCommitMessage.slice(
-                              0,
-                              MAX_COMMIT_DESCRIPTION_LENGTH
-                          ) + "..."
-                        : latestCommitMessage}
-                </p>
-                <p className="text-sm">{latestCommitDate}</p>
-                {!isPrivate && (
-                    <Link
-                        href={latestCommitUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                    >
-                        View Repository
-                    </Link>
-                )}
+            <div className="flex-col-end-end gap-3 w-full h-full">
+                <Heading level={0} className="text-gray-200">
+                    Last Commit
+                </Heading>
+                <div className="flex-col-end-end gap-0">
+                    <Paragraph>
+                        {latestCommitMessage.length >
+                        MAX_COMMIT_DESCRIPTION_LENGTH
+                            ? latestCommitMessage.slice(
+                                  0,
+                                  MAX_COMMIT_DESCRIPTION_LENGTH
+                              ) + "..."
+                            : latestCommitMessage}
+                    </Paragraph>
+                    <Paragraph className="text-sm">
+                        {latestCommitDate}
+                    </Paragraph>
+                    {!isPrivate && (
+                        <Link
+                            href={latestCommitUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline"
+                        >
+                            View Repository
+                        </Link>
+                    )}
+                </div>
             </div>
         </div>
     );

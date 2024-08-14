@@ -5,6 +5,7 @@ import Image from "next/image";
 import Heading from "@/components/ui/designs/Heading";
 import ActionButton from "@/components/ui/designs/ActionButton";
 import { LocationIcon, CodeIcon } from "@/utils/icons";
+import Paragraph from "@/components/ui/designs/Paragraph";
 
 export interface HeroSectionProps {
     onContactClick: () => void;
@@ -14,10 +15,14 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
     return (
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1">
-                <Heading className="text-4xl sm:text-5xl font-bold mb-4">
-                    Hi, I'm Armaan Jaj
+                <Heading
+                    level={1}
+                    className="text-4xl sm:text-5xl font-bold mb-4"
+                >
+                    Hi, I'm{" "}
+                    <span className="text-secondary">Armaan Jaj</span>
                 </Heading>
-                <p className="text-base sm:text-lg text-gray-700 mb-6">
+                <Paragraph className="text-xl mb-6">
                     A passionate{" "}
                     <span className="bg-color-dark text-white px-1">
                         Full Stack Developer
@@ -26,8 +31,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                     impact. With expertise in a range of modern technologies, I
                     bring ideas to life through clean, efficient, and scalable
                     code.
-                </p>
-                <div className="text-sm sm:text-base flex-row-start gap-5 w-full sm:w-3/5 mb-6">
+                </Paragraph>
+                <div className="text-sm flex-row-start-start gap-5 w-full mb-6">
                     <InfoItem
                         icon={<LocationIcon />}
                         text="Calgary"
@@ -39,14 +44,12 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                         title="Coding since"
                     />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex-row-start-center gap-4">
                     <span onClick={onContactClick}>
                         <ActionButton
                             text="Contact Me"
                             className=""
-                            bgColor="bg-aqua-green"
-                            textColor="text-white"
-                            hoverBgColor="hover:bg-aqua-green-dark"
+                            status="passive"
                             size="sm"
                         />
                     </span>
@@ -54,9 +57,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                         text="Download Resume"
                         link="/Resume.pdf"
                         className=""
-                        bgColor="bg-gray-200"
-                        textColor="text-color-dark"
-                        hoverBgColor="hover:bg-gray-300"
+                        status="active"
                         size="sm"
                     />
                 </div>
@@ -70,7 +71,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                     alt="Armaan Jaj"
                     width={400}
                     height={400}
-                    className="rounded-lg shadow-lg"
+                    className="rounded-lg shadow-lg shadow-gray-700"
                 />
             </div>
         </div>

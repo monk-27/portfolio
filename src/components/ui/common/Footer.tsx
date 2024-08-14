@@ -8,8 +8,8 @@ export interface IFooterProps {}
 export default function Footer(props: IFooterProps) {
     return (
         <div className="bg-inherit p-5 w-full">
-            <div className="bg-color-dark p-5 rounded-lg text-white">
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-4">
+            <div className="bg-gray-700 p-5 rounded-lg text-white">
+                <div className="flex-col-between-start lg:flex-row gap-8 lg:gap-4">
                     <PersonalInfo />
                     <QuickLinks />
                     <SubscribeForm />
@@ -22,9 +22,9 @@ export default function Footer(props: IFooterProps) {
 
 function PersonalInfo() {
     return (
-        <div className="flex flex-col justify-between items-start h-full">
+        <div className="flex-col-between-start h-full">
             <div>
-                <Heading className="text-2xl text-white">Armaan Jaj</Heading>
+                <Heading level={4}>Armaan Jaj</Heading>
                 <p className="text-gray-300 max-w-sm mt-2">
                     Full Stack Developer
                 </p>
@@ -37,9 +37,9 @@ function PersonalInfo() {
 function SocialMedia() {
     return (
         <div className="mt-6">
-            <div className="flex-col-start w-full gap-3">
+            <div className="flex-col-start-start w-full gap-3">
                 <p className="text-xs">Follow me</p>
-                <div className="flex-row-center gap-4 md:gap-6 lg:gap-8 w-full">
+                <div className="flex-row-center-start gap-4 md:gap-6 lg:gap-8 w-full">
                     {SocialMediaLinks.map((item, index) => (
                         <Link
                             href={item.href}
@@ -48,7 +48,7 @@ function SocialMedia() {
                             title={item.title}
                             key={index}
                         >
-                            <item.icon className="scale-110 hover:text-aqua-green transition duration-300" />
+                            <item.icon className="scale-110 hover:text-secondary transition duration-300" />
                         </Link>
                     ))}
                 </div>
@@ -59,15 +59,15 @@ function SocialMedia() {
 
 function QuickLinks() {
     return (
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
-            <div className="flex-col-start">
+        <div className="flex-col-start-start lg:flex-row gap-4 lg:gap-8">
+            <div className="flex-col-start-start">
                 <h3 className="text-lg font-semibold text-gray-300">
                     Quick Links
                 </h3>
                 {NavLinksData.map((item, _) => (
                     <Link
                         href={item.link}
-                        className="text-gray-400 hover:text-aqua-green transition duration-300 w-fit"
+                        className="text-gray-400 hover:text-secondary transition duration-300 w-fit"
                         key={item.id}
                         title={item.name}
                     >
@@ -81,8 +81,8 @@ function QuickLinks() {
 
 function SubscribeForm() {
     return (
-        <div className="flex flex-col items-start w-full gap-2 md:w-auto bg-gray-100 p-4 rounded-lg">
-            <Heading className="text-xl">Subscribe</Heading>
+        <div className="flex-col-start-start w-full gap-2 md:w-auto bg-gray-100 p-4 rounded-lg">
+            <Heading level={5} className="text-gray-800">Subscribe</Heading>
             <p className="text-gray-500 text-sm mb-4">
                 Get the latest updates and offers right to your inbox.
             </p>
@@ -90,11 +90,11 @@ function SubscribeForm() {
                 <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full p-3 h-10 border rounded-tl-md rounded-bl-md bg-gray-200 text-color-light focus:outline-none focus:border focus:border-aqua-green"
+                    className="w-full p-3 h-10 border rounded-tl-md rounded-bl-md bg-gray-200 text-gray-800 focus:outline-none focus:border focus:border-secondary"
                 />
                 <button
                     type="submit"
-                    className="w-auto bg-aqua-green text-white px-5 h-10 rounded-tr-md rounded-br-md hover:bg-aqua-green-dark transition duration-200"
+                    className="w-auto bg-secondary text-white px-5 h-10 rounded-tr-md rounded-br-md hover:bg-aqua-green-dark transition duration-200"
                 >
                     Subscribe
                 </button>
@@ -106,7 +106,7 @@ function SubscribeForm() {
 function LegalStuff() {
     return (
         <div className="mt-4 lg:mt-6 w-full">
-            <div className="text-center lg:text-left text-sm text-gray-300 flex flex-col lg:flex-row lg:justify-between items-center">
+            <div className="text-center lg:text-left text-sm text-gray-300 flex-col-center-center lg:flex-row lg:justify-between">
                 <p>
                     &copy; {new Date().getFullYear()} Armaan Jaj. All rights
                     reserved.
@@ -114,21 +114,21 @@ function LegalStuff() {
                 <p className="mt-1 lg:mt-0">
                     <Link
                         href="/privacy-policy"
-                        className="hover:text-aqua-green transition duration-300"
+                        className="hover:text-secondary transition duration-300"
                     >
                         Privacy Policy
                     </Link>{" "}
                     |{" "}
                     <Link
                         href="/terms"
-                        className="hover:text-aqua-green transition duration-300"
+                        className="hover:text-secondary transition duration-300"
                     >
                         Terms of Service
                     </Link>{" "}
                     |{" "}
                     <Link
                         href="/sitemap"
-                        className="hover:text-aqua-green transition duration-300"
+                        className="hover:text-secondary transition duration-300"
                     >
                         Sitemap
                     </Link>

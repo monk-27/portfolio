@@ -20,10 +20,10 @@ export async function GET(req: NextRequest) {
         const response = NextResponse.json(projects, { status: 200 });
 
         // Set Cache-Control header for caching
-        response.headers.set(
-            "Cache-Control",
-            "public, max-age=3600, stale-while-revalidate=86400"
-        );
+        // response.headers.set(
+        //     "Cache-Control",
+        //     "public, max-age=3600, stale-while-revalidate=86400"
+        // );
 
         // Return the response with caching
         return response;

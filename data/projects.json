@@ -3,46 +3,182 @@
         "id": 1,
         "title": "We-DD",
         "description": "A designated driver website developed for a Calgary based taxi company easing their day to day operations.",
-        "url": "https://we-dd.vercel.app/"
+        "technologies": [
+            "React.js",
+            "TailwindCSS",
+            "Node.js",
+            "MongoDB"
+        ],
+        "features": [
+            "User Authentication",
+            "Responsive Design",
+            "Email Notifications"
+        ],
+        "challenges": [
+            "Implementing real-time chat feature",
+            "Optimizing database queries",
+            "Web server hosting"
+        ],
+        "banner":"/project/header/ProjectHeader1.svg",
+        "links": {
+            "visit": "https://we-dd.vercel.app/",
+            "github": "https://github.com/armaanjaj/we-dd-mern"
+        },
+        "completed": {
+            "date": "November 2022",
+            "duration": "5 months",
+            "futurePlans": [
+                "Add a mobile app"
+            ]
+        }
     },
     {
         "id": 2,
         "title": "My Inventory",
         "description": "Inventory management software helping users to add, manage and print details of their invetory items.",
-        "url": "https://github.com/armaanjaj/myinventory"
+        "technologies": [
+            "React.js",
+            "TailwindCSS",
+            "Node.js",
+            "MongoDB"
+        ],
+        "features": [
+            "User Authentication",
+            "Responsive Design",
+            "Invoicing and printing"
+        ],
+        "challenges": [
+            "Implementing PDF invoice generation"
+        ],
+        "banner":"/project/header/ProjectHeader6.svg",
+        "links": {
+            "github": "https://github.com/armaanjaj/myinventory"
+        },
+        "completed": {
+            "date": "August 2023",
+            "duration": "1 month",
+            "futurePlans": [
+                "Add a mobile app"
+            ]
+        }
     },
     {
         "id": 3,
         "title": "Portfolio - v1.0",
         "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
-        "url": "https://www.v1.armaancodes.com/"
+        "technologies": [
+            "Next.js",
+            "TailwindCSS",
+            "Framer-motion"
+        ],
+        "features": [
+            "Blogging",
+            "Fade in and rise up animations"
+        ],
+        "challenges": [
+            "Implementing real-time chat feature",
+            "Optimizing database queries"
+        ],
+        "banner":"/project/header/ProjectHeader3.svg",
+        "links": {
+            "visit": "https://www.v1.armaancodes.com/",
+            "github": "https://github.com/armaanjaj/portfolio_v1"
+        },
+        "completed": {
+            "date": "April 2023",
+            "duration": "1 week"
+        }
     },
     {
         "id": 4,
         "title": "Sumit Nanda Real Estate",
         "description": "A portfolio website for Calgary based real estate professional showcasing services offered and proof of commitment.",
+        "technologies": [
+            "Next.js",
+            "TailwindCSS",
+            "MongoDB",
+            "Framer-motion"
+        ],
+        "features": [
+            "User Authentication",
+            "Admin dashboard",
+            "Email notifications"
+        ],
+        "challenges": [
+            "Role based user authentication"
+        ],
+        "banner":"/project/header/ProjectHeader4.svg",
         "logo": "/Logos/project4.png",
-        "url": "https://www.sumitnanda.ca/"
+        "links": {
+            "visit": "https://www.sumitnanda.ca/",
+            "github": "https://github.com/armaanjaj/sumit-nanda-real-estate"
+        },
+        "completed": {
+            "date": "October 2023",
+            "duration": "2 weeks"
+        },
+        "testimonials": [
+            {
+                "name": "Sumit Nanda",
+                "testimonial": "Working with Armaan was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
+                "image": "/Photos/Testimonials/Writer2.png"
+            }
+        ]
     },
     {
         "id": 5,
         "title": "Morning Star Contractors",
         "description": "Morning Star Contractors is a Canadian construction company based in Calgary.",
+        "technologies": [
+            "Next.js",
+            "TailwindCSS",
+            "Framer-motion"
+        ],
+        "features": [
+            "Blog pages",
+            "Responsive Design"
+        ],
+        "challenges": [
+            "Choosing a design matches the company values"
+        ],
+        "banner":"/project/header/ProjectHeader5.svg",
         "logo": "/Logos/project5.jpg",
-        "url": "https://www.morningstarcontractors.ca/"
+        "links": {
+            "visit": "https://www.morningstarcontractors.ca/"
+        },
+        "completed": {
+            "date": "June 2024",
+            "duration": "3 weeks"
+        }
     },
     {
         "id": 6,
         "title": "Portfolio - v2.0",
         "description": "My second iteration of the portfolio website. Tried the trendy bento grid UI and used the aceternity UI components to add a modern feel.",
+        "technologies": [
+            "Next.js",
+            "TailwindCSS",
+            "MongoDB",
+            "Aceternity UI",
+            "Framer-motion"
+        ],
+        "features": [
+            "Bento Grid Design",
+            "Live views counter"
+        ],
+        "challenges": [
+            "Bento grid design",
+            "Updating view counter live"
+        ],
+        "banner":"/project/header/ProjectHeader6.svg",
         "logo": "/Logos/project6.png",
-        "url": "https://portfolio-v2-five-sigma.vercel.app/"
-    },
-    {
-        "id": 7,
-        "title": "Portfolio - v3.0",
-        "description": "My current version of portfolio website. Focused on a more layback and easy web design. Google's 'Material You' UI was the inspiraton for its design.",
-        "logo": "/Logos/project7.png",
-        "url": "https://www.armaancodes.com/"
+        "links": {
+            "visit": "https://portfolio-v2-five-sigma.vercel.app/",
+            "github": "https://github.com/armaanjaj/portfolio_v2.git"
+        },
+        "completed": {
+            "date": "June 2024",
+            "duration": "2 weeks"
+        }
     }
 ]

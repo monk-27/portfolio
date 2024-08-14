@@ -78,13 +78,15 @@ const CustomLineChart: React.FC<CustomLineChartProps> = ({
                     margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="month" />
+                    <XAxis dataKey="month" tick={{ fill: "#FFF" }} />
                     <YAxis
                         label={{
                             value: "Commits",
                             angle: -90,
                             position: "insideLeft",
+                            fill: "#2AE2BD"
                         }}
+                        tick={{ fill: "#FFF" }}
                     />
                     <Tooltip />
                     <Line
@@ -96,14 +98,14 @@ const CustomLineChart: React.FC<CustomLineChartProps> = ({
                     />
                 </LineChart>
             </ResponsiveContainer>
-            <div className="flex-col-start gap-3">
-                <div className="flex flex-row justify-start items-center gap-3">
+            <div className="flex-col-start-start gap-3">
+                <div className="flex-row-start-center gap-3">
                     <label htmlFor="year-select" className="block text-sm">
                         Select Year:
                     </label>
                     <select
                         id="year-select"
-                        className="p-1 border-gray-300 border rounded text-sm"
+                        className="p-1 border-gray-300 border rounded text-sm text-black"
                         value={year}
                         onChange={(e) => onYearChange(e.target.value)}
                     >

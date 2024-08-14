@@ -1,6 +1,6 @@
 // REACT-ICONS
 import { RiServiceFill } from "react-icons/ri";
-import { FaTools } from "react-icons/fa";
+import { FaProjectDiagram, FaTools } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { RiTwitterXLine } from "react-icons/ri";
 import { TfiLinkedin } from "react-icons/tfi";
@@ -13,6 +13,8 @@ import { IoIosLink } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoCodeSlash } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosDownload } from "react-icons/io";
 
 export const ServiceIcon = RiServiceFill;
 export const ToolIcon = FaTools;
@@ -26,6 +28,9 @@ export const LinkIcon = IoIosLink;
 export const LocationIcon = HiLocationMarker;
 export const CodeIcon = IoCodeSlash;
 export const ReloadIcon = IoReload;
+export const LinkNodesIcon = FaProjectDiagram;
+export const ArrowInsideCircleIcon = IoIosArrowDroprightCircle;
+export const DownloadIcon = IoIosDownload;
 
 // Social Icons
 export const InstagramIcon = IoLogoInstagram;
@@ -71,3 +76,6 @@ export const ElectricitySVG = "/svgs/svg34.svg";
 export const ChattingIllustration = "/svgs/svg29.svg";
 export const HappyCarIllustration = "/svgs/svg30.svg";
 export const _404Illustration = "/svgs/svg32.svg";
+
+// General use images
+export const CaptainAmerica = "/photos/general/cap.jpg";

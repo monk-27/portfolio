@@ -7,7 +7,7 @@ export const metadata: Metadata = HOMEPAGE_MD;
 
 export default function Home() {
     return (
-        <main className="h-full w-full bg-white">
+        <main className="h-full w-full">
             <HomePageManager />
         </main>
     );

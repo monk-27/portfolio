@@ -5,112 +5,9 @@
 @tailwind utilities;
 
 ::selection {
-    background: #2AE2BD;
-}
-
-.special-text::selection{
-    background: #575757;
-}
-
-.dark-bold-text::selection{
-    background: #e6e6e6;
-}
-
-.light-bold-text::selection{
-    background: #2AE2BD;
-}
-
-*,
-html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    height: 100%;
-    position: relative;
-    font-weight: 400;
-    color: #575757;
-}
-
-body {
-    background-color: #e6e6e6;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #333333;
-    font-weight: 800;
-}
-
-/* FLEX CLASSES */
-
-.set-flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.set-flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Flex row */
-.flex-row-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-row-end {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-}
-
-.flex-row-start {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
-
-/* Flex row */
-.flex-col-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-col-end {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-}
-
-.flex-col-start {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-}
-
-/* Width's and Height's */
-.set-wf-full {
-    width: 100%;
-    height: 100%;
+    /* background: #4ccd99; */
+    background: #ffc700;
+    color: #030712;
 }
 
 /* Scroll-bar */
@@ -124,15 +21,319 @@ body {
     height: 12px;
 }
 
-.scroll-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.section {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    overflow-x: hidden;
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-weight: 400;
 }
 
+/* -----------------------------ROW COMBINATIONS START------------------------------------ */
+
+/* Row, Justify: Start, Align: Start */
+.flex-row-start-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Row, Justify: Start, Align: Center */
+.flex-row-start-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Row, Justify: Start, Align: End */
+.flex-row-start-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+}
+
+/* Row, Justify: Center, Align: Start */
+.flex-row-center-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Row, Justify: Center, Align: Center */
+.flex-row-center-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Row, Justify: Center, Align: End */
+.flex-row-center-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+}
+
+/* Row, Justify: End, Align: Start */
+.flex-row-end-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+}
+
+/* Row, Justify: End, Align: Center */
+.flex-row-end-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Row, Justify: End, Align: End */
+.flex-row-end-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+}
+
+/* Row, Justify: Space-Between, Align: Start */
+.flex-row-between-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* Row, Justify: Space-Between, Align: Center */
+.flex-row-between-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Row, Justify: Space-Between, Align: End */
+.flex-row-between-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+/* Row, Justify: Space-Evenly, Align: Start */
+.flex-row-evenly-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+/* Row, Justify: Space-Evenly, Align: Center */
+.flex-row-evenly-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Row, Justify: Space-Evenly, Align: End */
+.flex-row-evenly-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+/* Row, Justify: Space-Around, Align: Start */
+.flex-row-around-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+}
+
+/* Row, Justify: Space-Around, Align: Center */
+.flex-row-around-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Row, Justify: Space-Around, Align: End */
+.flex-row-around-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+}
+/* -----------------------------ROW COMBINATIONS END------------------------------------ */
+
+/* -----------------------------COLUMN COMBINATIONS START------------------------------------ */
+
+/* Column, Justify: Start, Align: Start */
+.flex-col-start-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Column, Justify: Start, Align: Center */
+.flex-col-start-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Column, Justify: Start, Align: End */
+.flex-col-start-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+}
+
+/* Column, Justify: Center, Align: Start */
+.flex-col-center-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Column, Justify: Center, Align: Center */
+.flex-col-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Column, Justify: Center, Align: End */
+.flex-col-center-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+/* Column, Justify: End, Align: Start */
+.flex-col-end-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+}
+
+/* Column, Justify: End, Align: Center */
+.flex-col-end-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* Column, Justify: End, Align: End */
+.flex-col-end-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+/* Column, Justify: Space-Between, Align: Start */
+.flex-col-between-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* Column, Justify: Space-Between, Align: Center */
+.flex-col-between-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Column, Justify: Space-Between, Align: End */
+.flex-col-between-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+/* Column, Justify: Space-Evenly, Align: Start */
+.flex-col-evenly-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+/* Column, Justify: Space-Evenly, Align: Center */
+.flex-col-evenly-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Column, Justify: Space-Evenly, Align: End */
+.flex-col-evenly-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+/* Column, Justify: Space-Around, Align: Start */
+.flex-col-around-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+/* Column, Justify: Space-Around, Align: Center */
+.flex-col-around-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Column, Justify: Space-Around, Align: End */
+.flex-col-around-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+}
+/* -----------------------------COLUMN COMBINATIONS END------------------------------------ */
+
+/* Width's and Height's */
+.set-wf-full {
+    width: 100%;
+    height: 100%;
+}

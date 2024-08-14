@@ -5,44 +5,73 @@ import * as React from "react";
 export interface IActionButtonProps {
     text: string;
     link?: string;
+    icon?: React.ReactNode;
     className?: string;
-    bgColor?: string; // Custom background color
-    textColor?: string; // Custom text color
-    hoverBgColor?: string; // Custom background color on hover
-    size?: "sm" | "md" | "lg"; // Size variants
+    status?: "active" | "passive";
+    size?: "sm" | "md" | "lg";
 }
 
 export default function ActionButton({
     text,
     link,
-    className = "",
-    bgColor = "bg-aqua-green",
-    textColor = "text-white",
-    hoverBgColor = "hover:bg-aqua-green-dark",
-    size = "md",
+    icon,
+    status = "passive",
+    className,
+    size = "sm",
 }: IActionButtonProps) {
-    // Define size classes based on the size prop
     const sizeClasses = {
         sm: "py-2 px-4 text-sm",
         md: "py-3 px-6 text-lg",
         lg: "py-4 px-8 text-xl",
     };
 
+    // Common styling
+    const defaultClasses =
+        "px-6 py-3 border border-gray-700 rounded-lg transition-all duration-300 ease-out cursor-pointer active:shadow-none active:scale-95 uppercase";
+
+    // Styling if button is an active style
+    const activeStyling = "bg-secondary text-gray-800 hover:bg-gray-300";
+
+    // Styling if button is a passive style
+    const passiveStyling =
+        "hover:bg-secondary hover:text-gray-800 text-gray-200 bg-transparent";
+
+    let stylingType;
+    if (status === "active") {
+        stylingType = activeStyling;
+    } else {
+        stylingType = passiveStyling;
+    }
+
     return (
         <div className={`relative inline-block ${className}`}>
             {link ? (
-                <Link href={link} className="no-underline">
+                <Link href={link}>
                     <button
-                        className={`px-6 py-3 border rounded-lg transition-all duration-300 ease-out cursor-pointer ${bgColor} ${textColor} ${hoverBgColor} ${sizeClasses[size]} active:shadow-none active:scale-95`}
+                        className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
                     >
-                        {text}
+                        {icon ? (
+                            <span className="flex-row-center-center gap-2">
+                                {icon}
+                                {text}
+                            </span>
+                        ) : (
+                            <>{text}</>
+                        )}
                     </button>
                 </Link>
             ) : (
                 <button
-                    className={`px-6 py-3 border rounded-lg transition-all duration-300 ease-out cursor-pointer ${bgColor} ${textColor} ${hoverBgColor} ${sizeClasses[size]} active:shadow-none active:scale-95`}
+                    className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
                 >
-                    {text}
+                    {icon ? (
+                        <span className="flex-row-center-center gap-2">
+                            <span className="scale-125">{icon}</span>
+                            {text}
+                        </span>
+                    ) : (
+                        <>{text}</>
+                    )}
                 </button>
             )}
         </div>

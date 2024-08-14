@@ -1,9 +1,11 @@
 import {
     BrowserSVG,
+    CodeIcon,
     ExpressjsSVG,
     FigmaSVG,
     FolderSVG,
     GeometrySVG,
+    GitBranchIcon,
     GitHubIcon,
     GithubSVG,
     GrowTrendSVG,
@@ -12,6 +14,7 @@ import {
     JavaSVG,
     KotlinSVG,
     LinkedInIcon,
+    LinkNodesIcon,
     MobileAppSVG,
     MongoDBSVG,
     MySQLSVG,
@@ -407,5 +410,29 @@ export const ResourcesData = [
         description:
             "A comprehensive guide to writing clean and maintainable TypeScript code, including tips and examples.",
         link: "#",
+    },
+];
+
+export const GitHubAnalyticsdata = [
+    {
+        id: 1,
+        title: "Active Project",
+        icon: LinkNodesIcon,
+        text: "I’m currently focused on this active project, diving deep into the latest contributions and commits. This is where I’m channeling my development efforts, pushing forward with significant updates and improvements.",
+        bgColor: "bg-transparent",
+    },
+    {
+        id: 2,
+        title: "GitHub Contributions",
+        icon: GitBranchIcon,
+        text: "Here’s a snapshot of my recent GitHub contributions. I take pride in consistently contributing to my repositories, tracking my progress and staying committed to my projects.",
+        bgColor: "bg-transparent",
+    },
+    {
+        id: 3,
+        title: "Top Languages",
+        icon: CodeIcon,
+        text: "These are the top programming languages I work with, reflecting my versatility across different technologies. It’s a quick glance at the tools I’m most proficient in, showcasing the breadth of my coding skills.",
+        bgColor: "bg-transparent",
     },
 ];

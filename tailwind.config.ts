@@ -8,21 +8,12 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            fontFamily: {
-                bebas: ["Bebas Neue", "sans-serif"],
-                nunito: ["Nunito Sans", "sans-serif"],
-            },
             colors: {
-                "aqua-green": {
-                    DEFAULT: "#2AE2BD",
-                    dark: "#22B394",
-                    light: "#A8F7E4",
-                },
-                background: "#e6e6e6",
-                color: {
-                    light: "#575757",
-                    dark: "#333333",
-                },
+                primary: "#030712", // 60%
+                // secondary: "#FFC700", // 30%
+                secondary: "#4CCD99", // 30%
+                // tertiary: "#4CCD99" // 10%
+                tertiary: "#FFC700" // 10%
             },
         },
     },

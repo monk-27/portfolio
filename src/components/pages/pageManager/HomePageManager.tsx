@@ -1,24 +1,49 @@
 "use client";
 import * as React from "react";
-import { AnalyticsSection, ProjectsSection } from "../sections/Homepage";
-import Testimonials from "@/components/ui/common/Testimonials";
+import { ActivityHub, ProjectsSection } from "../sections/Homepage";
 import Footer from "@/components/ui/common/Footer";
 import Navbar from "@/components/ui/common/Navbar";
 import Hero from "@/components/layout/Hero";
+import HorizontalScroll from "@/components/pages/sections/Homepage/HorizontalScroll";
 
 export interface IHomePageManagerProps {}
 
 export default function HomePageManager(props: IHomePageManagerProps) {
     return (
         <>
-            <Navbar title="Armaan Jaj" className="bg-white" />
-            <Hero type="home" />
-            <AnalyticsSection />
-            <ProjectsSection />
-            <section className="bg-white py-10 max-w-[90vw] lg:max-w-[70vw] mx-auto">
-                <Testimonials />
-            </section>
-            <Footer />
+            <article className="text-gray-200 bg-primary homepage">
+                <Navbar title="armaancodes" className="bg-inherit" />
+                {/* <Navbar title="AJ's Pixels" className="bg-inherit" /> */}
+                <section
+                    id="homepage-hero"
+                    className="pt-14 pb-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <Hero type="home" />
+                </section>
+
+                <section
+                    id="homepage-horizontal-scroll"
+                    className="hidden lg:block"
+                >
+                    <HorizontalScroll />
+                </section>
+
+                <section
+                    id="homepage-analytics"
+                    className="py-40 px-5 bg-inherit relative w-full mt-52"
+                >
+                    <ActivityHub />
+                </section>
+                <section
+                    id="homepage-projects"
+                    className="py-20 px-5 bg-inherit relative w-full"
+                >
+                    <ProjectsSection />
+                </section>
+                <footer id="footer">
+                    <Footer />
+                </footer>
+            </article>
         </>
     );
 }

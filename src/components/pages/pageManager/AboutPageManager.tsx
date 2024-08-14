@@ -21,22 +21,58 @@ export default function AboutPageManager(props: IAboutPageManagerProps) {
     const handleOverlayClose = () => setOverlayOpen(false);
     return (
         <>
-            <Navbar title="Learn about me" />
-            <div className="bg-gray-50 text-color-dark py-8 sm:py-16 px-4 sm:px-8">
-                <Hero type="about" onContactClick={handleOverlayOpen} />
-                <StorySection />
-                <SkillsSection />
-                <ExperienceSection />
-                <div className="max-w-[90vw] sm:max-w-[75vw] md:max-w-[50vw] mx-auto">
-                    <Testimonials />
-                </div>
-                <CallToActionSection onGetInTouchClick={handleOverlayOpen} />
-            </div>
-            <Footer />
+            <article className="text-gray-200 bg-primary homepage">
+                <Navbar title="Learn about me" />
+                <section
+                    id="about-hero"
+                    className="py-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <Hero type="about" onContactClick={handleOverlayOpen} />
+                </section>
+                <section
+                    id="about-story-section"
+                    className="py-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <StorySection />
+                </section>
+                <section
+                    id="about-skills-section"
+                    className="py-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <SkillsSection />
+                </section>
 
-            {isOverlayOpen && (
-                <OverlayForm overlayHandler={handleOverlayClose} />
-            )}
+                <section
+                    id="about-experience-section"
+                    className="py-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <ExperienceSection />
+                </section>
+
+                <section
+                    id="about-testimonials"
+                    className="py-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <Testimonials />
+                </section>
+
+                <section
+                    id="about-call-to-action-banner"
+                    className="py-40 px-5 bg-inherit relative w-full hero-section"
+                >
+                    <CallToActionSection
+                        onGetInTouchClick={handleOverlayOpen}
+                    />
+                </section>
+
+                <footer id="footer">
+                    <Footer />
+                </footer>
+
+                {isOverlayOpen && (
+                    <OverlayForm overlayHandler={handleOverlayClose} />
+                )}
+            </article>
         </>
     );
 }

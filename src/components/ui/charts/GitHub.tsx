@@ -61,18 +61,18 @@ export function ActiveRepo({ className }: { className?: string }) {
 
     if (isLoading) {
         return (
-            <p className="set-wf-full flex-col-center">
+            <p className="set-wf-full flex-col-center-center">
                 Loading repo details...
             </p>
         );
     }
 
     if (error) {
-        return <p className="set-wf-full flex-col-center">{error}</p>;
+        return <p className="set-wf-full flex-col-center-center">{error}</p>;
     }
 
     return (
-        <div className={`set-wf-full flex-col-center ${className}`}>
+        <div className={`set-wf-full flex-col-center-center ${className}`}>
             <FolderCard
                 title={repoData.title}
                 description={repoData.description}
@@ -126,9 +126,9 @@ export function Contributions() {
     }, [year]);
 
     return (
-        <section className="flex-col-start min-h-full">
+        <section className="flex-col-start-start min-h-full py-2">
             {loading ? (
-                <p className="set-wf-full flex-col-center">
+                <p className="set-wf-full flex-col-center-center">
                     {loading ? "Loading GitHub contributions..." : error}
                 </p>
             ) : (
@@ -180,7 +180,7 @@ export function Languages() {
 
     if (loading) {
         return (
-            <p className="set-wf-full flex-col-center">
+            <p className="set-wf-full flex-col-center-center">
                 Loading language data...
             </p>
         );
