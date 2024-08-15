@@ -8,7 +8,7 @@ export interface IFooterProps {}
 export default function Footer(props: IFooterProps) {
     return (
         <div className="bg-inherit p-5 w-full">
-            <div className="bg-gray-700 p-5 rounded-lg text-white">
+            <div className="bg-gray-700 p-5 rounded-3xl text-white">
                 <div className="flex-col-between-start lg:flex-row gap-8 lg:gap-4">
                     <PersonalInfo />
                     <QuickLinks />
@@ -81,7 +81,7 @@ function QuickLinks() {
 
 function SubscribeForm() {
     return (
-        <div className="flex-col-start-start w-full gap-2 md:w-auto bg-gray-100 p-4 rounded-lg">
+        <div className="flex-col-start-start w-full gap-2 md:w-auto bg-gray-100 p-4 rounded-3xl">
             <Heading level={5} className="text-gray-800">Subscribe</Heading>
             <p className="text-gray-500 text-sm mb-4">
                 Get the latest updates and offers right to your inbox.
@@ -90,11 +90,11 @@ function SubscribeForm() {
                 <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full p-3 h-10 border rounded-tl-md rounded-bl-md bg-gray-200 text-gray-800 focus:outline-none focus:border focus:border-secondary"
+                    className="w-full p-3 h-10 border rounded-tl-xl rounded-bl-xl bg-gray-200 text-gray-800 focus:outline-none focus:border focus:border-secondary"
                 />
                 <button
                     type="submit"
-                    className="w-auto bg-secondary text-white px-5 h-10 rounded-tr-md rounded-br-md hover:bg-aqua-green-dark transition duration-200"
+                    className="w-auto bg-secondary text-white px-5 h-10 rounded-tr-xl rounded-br-xl hover:bg-aqua-green-dark transition duration-200"
                 >
                     Subscribe
                 </button>

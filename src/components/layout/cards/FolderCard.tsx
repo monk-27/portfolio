@@ -47,7 +47,7 @@ export default function FolderCard({
             : description;
 
     return (
-        <div className="rounded-lg p-3 flex-col-between-start gap-5 w-full bg-gray-900">
+        <div className="rounded-3xl p-3 flex-col-between-start gap-5 w-full bg-gray-900">
             <div className="flex-col-start-start w-full gap-3">
                 <div className="flex-row-between-start w-full gap-0">
                     <Heading level={6}>{title}</Heading>

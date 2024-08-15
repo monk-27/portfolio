@@ -15,11 +15,10 @@
             "Email Notifications"
         ],
         "challenges": [
-            "Implementing real-time chat feature",
             "Optimizing database queries",
             "Web server hosting"
         ],
-        "banner":"/project/header/ProjectHeader1.svg",
+        "banner": "/project/header/ProjectHeader1.svg",
         "links": {
             "visit": "https://we-dd.vercel.app/",
             "github": "https://github.com/armaanjaj/we-dd-mern"
@@ -34,6 +33,33 @@
     },
     {
         "id": 2,
+        "title": "Portfolio - v1.0",
+        "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
+        "technologies": [
+            "Next.js",
+            "TailwindCSS",
+            "Framer-motion"
+        ],
+        "features": [
+            "Blogging",
+            "Fade in and rise up animations"
+        ],
+        "challenges": [
+            "Implementing real-time chat feature",
+            "Optimizing database queries"
+        ],
+        "banner": "/project/header/ProjectHeader2.svg",
+        "links": {
+            "visit": "https://www.v1.armaancodes.com/",
+            "github": "https://github.com/armaanjaj/portfolio_v1"
+        },
+        "completed": {
+            "date": "April 2023",
+            "duration": "1 week"
+        }
+    },
+    {
+        "id": 3,
         "title": "My Inventory",
         "description": "Inventory management software helping users to add, manage and print details of their invetory items.",
         "technologies": [
@@ -50,7 +76,7 @@
         "challenges": [
             "Implementing PDF invoice generation"
         ],
-        "banner":"/project/header/ProjectHeader6.svg",
+        "banner": "/project/header/ProjectHeader3.svg",
         "links": {
             "github": "https://github.com/armaanjaj/myinventory"
         },
@@ -60,33 +86,6 @@
             "futurePlans": [
                 "Add a mobile app"
             ]
-        }
-    },
-    {
-        "id": 3,
-        "title": "Portfolio - v1.0",
-        "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
-        "technologies": [
-            "Next.js",
-            "TailwindCSS",
-            "Framer-motion"
-        ],
-        "features": [
-            "Blogging",
-            "Fade in and rise up animations"
-        ],
-        "challenges": [
-            "Implementing real-time chat feature",
-            "Optimizing database queries"
-        ],
-        "banner":"/project/header/ProjectHeader3.svg",
-        "links": {
-            "visit": "https://www.v1.armaancodes.com/",
-            "github": "https://github.com/armaanjaj/portfolio_v1"
-        },
-        "completed": {
-            "date": "April 2023",
-            "duration": "1 week"
         }
     },
     {
@@ -107,7 +106,7 @@
         "challenges": [
             "Role based user authentication"
         ],
-        "banner":"/project/header/ProjectHeader4.svg",
+        "banner": "/project/header/ProjectHeader4.svg",
         "logo": "/Logos/project4.png",
         "links": {
             "visit": "https://www.sumitnanda.ca/",
@@ -141,7 +140,7 @@
         "challenges": [
             "Choosing a design matches the company values"
         ],
-        "banner":"/project/header/ProjectHeader5.svg",
+        "banner": "/project/header/ProjectHeader5.svg",
         "logo": "/Logos/project5.jpg",
         "links": {
             "visit": "https://www.morningstarcontractors.ca/"
@@ -170,14 +169,14 @@
             "Bento grid design",
             "Updating view counter live"
         ],
-        "banner":"/project/header/ProjectHeader6.svg",
+        "banner": "/project/header/ProjectHeader6.svg",
         "logo": "/Logos/project6.png",
         "links": {
             "visit": "https://portfolio-v2-five-sigma.vercel.app/",
             "github": "https://github.com/armaanjaj/portfolio_v2.git"
         },
         "completed": {
-            "date": "June 2024",
+            "date": "July 2024",
             "duration": "2 weeks"
         }
     }

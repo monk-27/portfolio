@@ -27,14 +27,14 @@ export default function ActionButton({
 
     // Common styling
     const defaultClasses =
-        "px-6 py-3 border border-gray-700 rounded-lg transition-all duration-300 ease-out cursor-pointer active:shadow-none active:scale-95 uppercase";
+        "px-6 py-3 border border-gray-700 rounded-2xl transition-all duration-300 ease-out cursor-pointer active:shadow-none active:scale-95 uppercase";
 
     // Styling if button is an active style
     const activeStyling = "bg-secondary text-gray-800 hover:bg-gray-300";
 
     // Styling if button is a passive style
     const passiveStyling =
-        "hover:bg-secondary hover:text-gray-800 text-gray-200 bg-transparent";
+        "hover:text-gray-800 hover:bg-gray-300 text-gray-200 bg-transparent";
 
     let stylingType;
     if (status === "active") {

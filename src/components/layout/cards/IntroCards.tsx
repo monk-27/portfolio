@@ -25,7 +25,7 @@ export default function CardHandler(props: CardHandlerProps) {
                 opacity: 0,
                 duration: 0.75,
                 scale: 0.8,
-                ease:"power4.inOut",
+                ease: "power4.inOut",
                 onComplete: () => {
                     setCurrentCard(newCard);
                     // Animation to fade in the new card

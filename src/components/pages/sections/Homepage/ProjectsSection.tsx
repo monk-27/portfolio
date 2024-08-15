@@ -203,7 +203,10 @@ function ProjectDetails({ project }: { project: Project }) {
                         )}
                     </div>
                     <div className="flex-col-start-start gap-5">
-                        <DescriptionSection project={project} />
+                        <DescriptionSection
+                            project={project}
+                            isTestimonial={project.testimonials ? true : false}
+                        />
                     </div>
                 </div>
                 {project.testimonials && (
@@ -215,26 +218,55 @@ function ProjectDetails({ project }: { project: Project }) {
 }
 
 // Component 4: Description Section
-function DescriptionSection({ project }: { project: Project }) {
+function DescriptionSection({
+    project,
+    isTestimonial,
+}: {
+    project: Project;
+    isTestimonial: boolean;
+}) {
     return (
-        <div className="bg-gray-800 rounded-lg p-4 text-neutral-400 space-y-10">
+        <div
+            className={`bg-gray-800 rounded-t-lg ${
+                isTestimonial ? "rounded-b-lg" : "rounded-b-3xl"
+            } p-4 text-neutral-400 space-y-10`}
+        >
             <p>{project.description}</p>
             <div className="flex-row-start-center flex-wrap h-full w-full gap-5">
                 <IconSection
                     title="Technologies"
                     items={project.technologies}
                 />
-                <IconSection title="Features" items={project.features} />
-                <IconSection title="Challenges" items={project.challenges} />
+                <IconSection
+                    title="Features"
+                    items={project.features}
+                />
+                <IconSection
+                    title="Challenges"
+                    items={project.challenges}
+                    isTestimonial={isTestimonial}
+                />
             </div>
         </div>
     );
 }
 
 // Component 5: Icon Section
-function IconSection({ title, items }: { title: string; items: string[] }) {
+function IconSection({
+    title,
+    items,
+    isTestimonial,
+}: {
+    title: string;
+    items: string[];
+    isTestimonial?: boolean | undefined;
+}) {
     return (
-        <div className="flex-col-start-start bg-gray-600 p-3 rounded-lg h-full w-full">
+        <div
+            className={`flex-col-start-start bg-gray-600 p-3 rounded-lg ${
+                isTestimonial === false ? "rounded-b-2xl" : "rounded-b-lg"
+            } h-full w-full`}
+        >
             <h4 className="text-sm font-bold text-white">{title}</h4>
             <ul className="text-sm text-neutral-300 space-y-1">
                 {items.map((item, index) => (
@@ -250,7 +282,7 @@ function CompletionDetails({ completed }: { completed: Project["completed"] }) {
     return (
         <div className="bg-gray-800 p-4 rounded-lg text-neutral-400">
             <p>
-                <strong className="text-gray-200">Completed on:</strong>{" "}
+                <strong className="text-gray-200">Completed:</strong>{" "}
                 {completed!.date}
             </p>
             <p>
@@ -259,7 +291,7 @@ function CompletionDetails({ completed }: { completed: Project["completed"] }) {
             </p>
             {completed!.futurePlans && (
                 <p>
-                    <strong>Future Plans:</strong>{" "}
+                    <strong className="text-gray-200">Future Plans:</strong>{" "}
                     {completed!.futurePlans.join(", ")}
                 </p>
             )}

@@ -342,7 +342,7 @@ export const TestimonialsData = [
 export const NavLinksData = [
     { id: 1, name: "Homepage", link: "/" },
     { id: 2, name: "About", link: "/about" },
-    { id: 3, name: "Tools", link: "/tools", icon: ToolIcon },
+    { id: 3, name: "Skills", link: "/tools", icon: ToolIcon },
     { id: 4, name: "Services", link: "/services", icon: ServiceIcon },
 ];
 
