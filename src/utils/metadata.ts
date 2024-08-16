@@ -98,19 +98,3 @@ export const reourcespage_MD = {
         },
     ],
 };
-
-export const trendpage_MD = {
-    title: "Trend | Armaan Jaj | Developer Portfolio",
-    description: "Description here.",
-    keywords:
-        "Armaan Jaj, sitemap, web development, portfolio, navigation, site links, full-stack developer",
-    url: "https://www.armaancodes.com/trend",
-    images: [
-        {
-            url: "https://www.armaancodes.com/website-gallery/Trend.png",
-            width: 1200,
-            height: 630,
-            alt: "Resources | Armaan Jaj | Developer Portfolio - Trend page",
-        },
-    ],
-};

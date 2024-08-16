@@ -355,7 +355,6 @@ export const SitemapLinks = [
             { href: "/skills", label: "Skills" },
             { href: "/services", label: "Services" },
             { href: "/resources", label: "Resources" },
-            { href: "/trend", label: "Trend" },
         ],
     },
     {

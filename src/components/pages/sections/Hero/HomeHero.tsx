@@ -30,14 +30,12 @@ export default function HomeHero(props: IHomeHeroProps) {
             title: "DevOps",
             chaptersCompleted: 3,
             totalChapters: 29,
-            link: "/trend",
         },
         {
             id: 2,
             type: "Current Project",
             title: "Data structure visualizer",
             progress: 5,
-            link: "/trend",
         },
     ];
 
@@ -181,31 +179,57 @@ function Placement2({
 function ProgressSection({ progressData }: { progressData: any[] }) {
     return (
         <div className="flex flex-col items-start gap-6 w-full">
-            {progressData.map((progress) => (
-                <Link
-                    href={progress.link}
-                    key={progress.id}
-                    className="w-full text-gray-300 group hover:bg-gray-900 p-4 rounded-lg duration-300 max-w-xs"
-                >
-                    <div className="flex flex-row justify-between items-start">
-                        <Heading
-                            level={5}
-                            className="text-sm font-light text-gray-200"
-                        >
-                            {progress.type}
-                        </Heading>
-                        <span>
-                            <ArrowRightIcon className="scale-150 group-hover:-rotate-45 duration-200" />
-                        </span>
+            {progressData.map((progress) =>
+                progress.link ? (
+                    <Link
+                        href={progress.link}
+                        key={progress.id}
+                        className="w-full text-gray-300 group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
+                    >
+                        <div className="flex flex-row justify-between items-start">
+                            <Heading
+                                level={5}
+                                className="text-sm font-light text-gray-200"
+                            >
+                                {progress.type}
+                            </Heading>
+                            <span>
+                                <ArrowRightIcon className="scale-150 group-hover:-rotate-45 duration-200" />
+                            </span>
+                        </div>
+                        <p className="text-xs font-extralight">
+                            {progress.title}
+                        </p>
+                        <ProgressBar
+                            progress={progress.progress}
+                            chaptersCompleted={progress.chaptersCompleted}
+                            totalChapters={progress.totalChapters}
+                        />
+                    </Link>
+                ) : (
+                    <div
+                        key={progress.id}
+                        className="w-full text-gray-300 group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
+                    >
+                        <div className="flex flex-row justify-between items-start">
+                            <Heading
+                                level={5}
+                                className="text-sm font-light text-gray-200"
+                            >
+                                {progress.type}
+                            </Heading>
+                        </div>
+                        <p className="text-xs font-extralight">
+                            {progress.title}
+                        </p>
+                        <ProgressBar
+                            progress={progress.progress}
+                            chaptersCompleted={progress.chaptersCompleted}
+                            totalChapters={progress.totalChapters}
+                        />
                     </div>
-                    <p className="text-xs font-extralight">{progress.title}</p>
-                    <ProgressBar
-                        progress={progress.progress}
-                        chaptersCompleted={progress.chaptersCompleted}
-                        totalChapters={progress.totalChapters}
-                    />
-                </Link>
-            ))}
+                )
+            )}
         </div>
     );
 }
