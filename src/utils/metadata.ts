@@ -66,40 +66,6 @@ export const servicespage_MD = {
     ],
 };
 
-export const termspage_MD = {
-    title: "Terms of Service | Armaan Jaj | Developer Portfolio",
-    description:
-        "Review the Terms of Service for Armaan Jaj's developer portfolio. Understand the terms governing the use of this website, including content ownership, user responsibilities, and legal disclaimers.",
-    keywords:
-        "Armaan Jaj, terms of service, web development, portfolio, legal terms, user responsibilities, content ownership",
-    url: "https://www.armaancodes.com/terms",
-    images: [
-        {
-            url: "https://www.armaancodes.com/website-gallery/homepage.png",
-            width: 1200,
-            height: 630,
-            alt: "Terms of Service | Armaan Jaj | Developer Portfolio - Home page",
-        },
-    ],
-};
-
-export const privacypolicy_MD = {
-    title: "Privacy Policy | Armaan Jaj | Developer Portfolio",
-    description:
-        "Learn about the privacy practices of Armaan Jaj's developer portfolio. Understand how your personal data is collected, used, and protected when you interact with this website.",
-    keywords:
-        "Armaan Jaj, privacy policy, web development, personal data, data protection, user privacy, portfolio",
-    url: "https://www.armaancodes.com/privacy-policy",
-    images: [
-        {
-            url: "https://www.armaancodes.com/website-gallery/homepage.png",
-            width: 1200,
-            height: 630,
-            alt: "Privacy Policy | Armaan Jaj | Developer Portfolio - Home page",
-        },
-    ],
-};
-
 export const sitemappage_MD = {
     title: "Sitemap | Armaan Jaj | Developer Portfolio",
     description:

@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import Navbar from "@/components/ui/common/Navbar";
 import Hero from "@/components/pages/sections/Hero";
@@ -6,10 +7,15 @@ import {
     SkillsSection,
     ResourcesSection,
 } from "@/components/pages/sections/ToolsPage";
+import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 
 export interface ISkillsPageManagerProps {}
 
 export default function SkillsPageManager(props: ISkillsPageManagerProps) {
+    useLocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+    });
     return (
         <article className="text-gray-200 bg-secondary homepage px-2">
             <header>

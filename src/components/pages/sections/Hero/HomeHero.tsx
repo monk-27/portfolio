@@ -7,7 +7,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { ArrowRightIcon, DownloadIcon } from "@/utils/icons";
-import CardHandler from "@/components/layout/cards/IntroCards";
 import { SocialMediaLinks } from "@/utils/assets";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -138,11 +137,6 @@ export default function HomeHero(props: IHomeHeroProps) {
             <div className="col-span-1">
                 <Placement4 />
             </div>
-
-            {/* Card area - Full width */}
-            {/* <div className="col-span-3 mt-12">
-                <Placement5 />
-            </div> */}
         </div>
     );
 }
@@ -191,7 +185,7 @@ function ProgressSection({ progressData }: { progressData: any[] }) {
                 <Link
                     href={progress.link}
                     key={progress.id}
-                    className="w-full text-gray-300 group hover:bg-gray-600 p-4 rounded-lg duration-300 max-w-xs"
+                    className="w-full text-gray-300 group hover:bg-gray-900 p-4 rounded-lg duration-300 max-w-xs"
                 >
                     <div className="flex flex-row justify-between items-start">
                         <Heading
@@ -281,14 +275,6 @@ function Placement4() {
                 <span className="text-5xl">300+</span>
                 <span className="text-sm">Medium double doubles</span>
             </div>
-        </div>
-    );
-}
-
-function Placement5() {
-    return (
-        <div className="relative">
-            <CardHandler />
         </div>
     );
 }

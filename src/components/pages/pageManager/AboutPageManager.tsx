@@ -8,10 +8,15 @@ import {
 } from "@/components/pages/sections/AboutPage";
 import Testimonials from "@/components/ui/common/Testimonials";
 import Footer from "@/components/ui/common/Footer";
+import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 
 export interface IAboutPageManagerProps {}
 
 export default function AboutPageManager(props: IAboutPageManagerProps) {
+    useLocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+    });
     return (
         <>
             <article className="text-gray-200 bg-secondary px-2">

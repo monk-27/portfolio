@@ -4,10 +4,15 @@ import { ActivityHub, ProjectsSection } from "../sections/Homepage";
 import Footer from "@/components/ui/common/Footer";
 import Navbar from "@/components/ui/common/Navbar";
 import Hero from "@/components/pages/sections/Hero";
+import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 
 export interface IHomePageManagerProps {}
 
 export default function HomePageManager(props: IHomePageManagerProps) {
+    useLocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+    });
     return (
         <>
             <article className="text-gray-200 bg-secondary homepage px-2">

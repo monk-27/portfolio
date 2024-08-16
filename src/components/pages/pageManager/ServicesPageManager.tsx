@@ -2,18 +2,17 @@
 import * as React from "react";
 import Navbar from "@/components/ui/common/Navbar";
 import Hero from "@/components/pages/sections/Hero";
-import {
-    ContactSection,
-    PricingSection,
-    ProofOfWorkSection,
-    ServicesSection,
-} from "@/components/pages/sections/ServicesPage";
-import Testimonials from "@/components/ui/common/Testimonials";
+import { ServicesSection } from "@/components/pages/sections/ServicesPage";
 import Footer from "@/components/ui/common/Footer";
+import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 
 export interface IServicesPageManagerProps {}
 
 export default function ServicesPageManager(props: IServicesPageManagerProps) {
+    useLocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+    });
     return (
         <article className="text-gray-200 bg-secondary px-2">
             <header>
@@ -36,24 +35,6 @@ export default function ServicesPageManager(props: IServicesPageManagerProps) {
                     className="py-10 bg-inherit relative w-full"
                 >
                     <ServicesSection />
-                </section>
-                <section
-                    id="services-prooof-section"
-                    className="py-10 px-6 bg-inherit relative w-full"
-                >
-                    <ProofOfWorkSection />
-                </section>
-                <section
-                    id="services-pricing-section"
-                    className="py-10 px-6 bg-inherit relative w-full"
-                >
-                    <PricingSection />
-                </section>
-                <section
-                    id="services-cta-section"
-                    className="py-10 bg-inherit relative w-full"
-                >
-                    <ContactSection />
                 </section>
             </div>
             <footer className="mt-10">

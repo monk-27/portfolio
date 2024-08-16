@@ -113,20 +113,6 @@ function LegalStuff() {
                 </p>
                 <p className="mt-1 lg:mt-0">
                     <Link
-                        href="/privacy-policy"
-                        className="hover:text-secondary transition duration-300"
-                    >
-                        Privacy Policy
-                    </Link>{" "}
-                    |{" "}
-                    <Link
-                        href="/terms"
-                        className="hover:text-secondary transition duration-300"
-                    >
-                        Terms of Service
-                    </Link>{" "}
-                    |{" "}
-                    <Link
                         href="/sitemap"
                         className="hover:text-secondary transition duration-300"
                     >
