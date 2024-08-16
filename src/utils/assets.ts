@@ -352,37 +352,23 @@ export const SitemapLinks = [
         links: [
             { href: "/", label: "Home" },
             { href: "/about", label: "About Me" },
-            { href: "/tools", label: "Tools" },
+            { href: "/skills", label: "Skills" },
             { href: "/services", label: "Services" },
+            { href: "/resources", label: "Resources" },
+            { href: "/trend", label: "Trend" },
         ],
     },
-    {
-        section: "Legal",
-        links: [
-            { href: "/privacy-policy", label: "Privacy Policy" },
-            { href: "/terms", label: "Terms of Service" },
-            { href: "/sitemap", label: "Sitemap" },
-        ],
-    },
-    // {
-    //     section: "Resources",
-    //     links: [
-    //         { href: "/portfolio", label: "Portfolio Overview" },
-    //         { href: "/portfolio/web-development", label: "Web Development" },
-    //         { href: "/portfolio/design", label: "Design" },
-    //         { href: "/blog", label: "Blog Home" },
-    //         { href: "/blog/category-1", label: "Category 1" },
-    //         { href: "/blog/category-2", label: "Category 2" },
-    //     ],
-    // },
     {
         section: "Contact & Connect",
         links: [
-            // { href: "/contact", label: "Contact Form" },
             { href: "https://github.com/armaanjaj", label: "GitHub" },
             { href: "https://linkedin.com/in/armaanjaj", label: "LinkedIn" },
             { href: "https://x.com/armaanjaj", label: "Twitter" },
         ],
+    },
+    {
+        section: "Others",
+        links: [{ href: "/sitemap", label: "Sitemap" }],
     },
 ];
 
@@ -436,5 +422,3 @@ export const GitHubAnalyticsdata = [
         bgColor: "bg-transparent",
     },
 ];
-
-export const AppVersion = "0.5.3";

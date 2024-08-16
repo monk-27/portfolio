@@ -14,9 +14,21 @@ export default function SitemapPageManager(props: ISitemapPageManagerProps) {
     });
     return (
         <>
-            <Navbar title="Sitemap" />
-            <SitemapSection />
-            <Footer />
+            <article className="text-gray-200 bg-secondary homepage px-2">
+                <header>
+                    <Navbar
+                        title="Sitemap"
+                        className="bg-inherit text-primary"
+                        titleColor="primary"
+                    />
+                </header>
+                <div className="rounded-3xl bg-primary overflow-hidden">
+                    <SitemapSection />
+                </div>
+                <footer className="mt-10">
+                    <Footer />
+                </footer>
+            </article>
         </>
     );
 }

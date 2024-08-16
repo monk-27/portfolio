@@ -1,3 +1,4 @@
+import Heading from "@/components/ui/designs/Heading";
 import { SitemapLinks } from "@/utils/assets";
 import Link from "next/link";
 import * as React from "react";
@@ -6,24 +7,26 @@ export interface ISitemapProps {}
 
 export default function Sitemap(props: ISitemapProps) {
     return (
-        <div className="py-16 px-6 bg-gray-50">
-            <div className="container mx-auto max-w-5xl">
-                {SitemapLinks.map((section, index) => (
-                    <section key={index} className="mb-12">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <SitemapTable
-                                links={section.links}
-                                section={section.section}
-                            />
-                        </div>
-                    </section>
-                ))}
+        <div className="py-16 px-6 bg-gray-900 text-gray-100">
+            <div className="container mx-auto max-w-6xl">
+                <Heading level={1} className="text-4xl font-bold mb-12 text-center">
+                    Sitemap
+                </Heading>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {SitemapLinks.map((section, index) => (
+                        <SitemapSection
+                            key={index}
+                            links={section.links}
+                            section={section.section}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
 }
 
-function SitemapTable({
+function SitemapSection({
     links,
     section,
 }: {
@@ -31,25 +34,23 @@ function SitemapTable({
     section: string;
 }) {
     return (
-        <div className="bg-white p-6 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4">{section}</h3>
-            <table className="w-full text-left">
-                <tbody>
-                    {links.map((link, index) => (
-                        <tr key={index} className="border-t border-gray-200">
-                            <td className="py-2">
-                                <Link
-                                    href={link.href}
-                                    className="hover:underline"
-                                    target="_blank"
-                                >
-                                    {link.label}
-                                </Link>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div className="bg-gray-800 p-8 rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold mb-6 text-secondary">
+                {section}
+            </h3>
+            <ul className="space-y-4">
+                {links.map((link, index) => (
+                    <li key={index} className="border-t border-gray-700 pt-2">
+                        <Link
+                            href={link.href}
+                            className="hover:text-secondary transition duration-200"
+                            target="_blank"
+                        >
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }

@@ -20,7 +20,7 @@ export default function SkillsPageManager(props: ISkillsPageManagerProps) {
         <article className="text-gray-200 bg-secondary homepage px-2">
             <header>
                 <Navbar
-                    title="Tools I Use"
+                    title="My skills"
                     className="bg-inherit text-primary"
                     titleColor="primary"
                 />
