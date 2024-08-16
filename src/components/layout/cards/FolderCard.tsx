@@ -93,11 +93,11 @@ function CardFooter({
         <div className="flex-row-between-center w-full">
             <div className="flex-col-start-start gap-4 h-full">
                 <div className="flex-row-start-center gap-2 w-full text-gray-200">
-                    <span className="flex-row-start-start gap-1">
+                    <span className="flex-row-start-center gap-1">
                         <StarIcon className="text-secondary" />
                         <span>{starCount}</span>
                     </span>
-                    <span className="flex-row-start-start gap-1">
+                    <span className="flex-row-start-center gap-1">
                         <GitBranchIcon className="text-secondary" />
                         <span>{forkCount}</span>
                     </span>

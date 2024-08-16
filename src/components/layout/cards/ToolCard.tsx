@@ -21,7 +21,7 @@ export default function ToolCard({ tool }: ToolCardProps): JSX.Element {
         <div className="bg-white p-4 sm:p-6 rounded-lg">
             <div className="flex items-center mb-4">
                 <Image src={tool.icon} alt={tool.name} width={40} height={40} />
-                <Heading className="text-lg sm:text-xl font-semibold ml-4">
+                <Heading level={3} className="text-lg sm:text-xl font-semibold ml-4">
                     {tool.name}
                 </Heading>
             </div>

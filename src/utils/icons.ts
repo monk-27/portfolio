@@ -9,7 +9,7 @@ import { FaRegStar, FaCodeBranch } from "react-icons/fa";
 import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { IoIosLink } from "react-icons/io";
+import { IoIosArrowRoundForward, IoIosLink } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoCodeSlash } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
@@ -31,6 +31,7 @@ export const ReloadIcon = IoReload;
 export const LinkNodesIcon = FaProjectDiagram;
 export const ArrowInsideCircleIcon = IoIosArrowDroprightCircle;
 export const DownloadIcon = IoIosDownload;
+export const ArrowRightIcon = IoIosArrowRoundForward;
 
 // Social Icons
 export const InstagramIcon = IoLogoInstagram;
@@ -79,3 +80,4 @@ export const _404Illustration = "/svgs/svg32.svg";
 
 // General use images
 export const CaptainAmerica = "/photos/general/cap.jpg";
+export const DefaultProjectHeader = "/project/header/Default.svg";

@@ -7,8 +7,8 @@ export interface IFooterProps {}
 
 export default function Footer(props: IFooterProps) {
     return (
-        <div className="bg-inherit p-5 w-full">
-            <div className="bg-gray-700 p-5 rounded-3xl text-white">
+        <div className="bg-inherit pb-5 w-full">
+            <div className="bg-primary p-5 rounded-3xl text-white">
                 <div className="flex-col-between-start lg:flex-row gap-8 lg:gap-4">
                     <PersonalInfo />
                     <QuickLinks />

@@ -8,11 +8,14 @@ export interface ISkillsSectionProps {}
 
 export default function SkillsSection(props: ISkillsSectionProps) {
     return (
-        <div className="max-w-7xl mx-auto mt-16">
-            <Heading className="text-3xl font-bold text-center mb-12">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-8">
+            <Heading
+                level={2}
+                className="text-4xl font-bold text-center mb-14 text-gray-200"
+            >
                 My Skills
             </Heading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
                 {CondensedSkills.map((skill, index) => (
                     <SkillCard
                         key={index}
@@ -36,16 +39,23 @@ function SkillCard({
     icon: string;
 }) {
     return (
-        <div className="bg-white p-6 rounded-lg flex flex-col items-center text-center">
-            <Image
-                src={icon}
-                alt={title}
-                width={50}
-                height={50}
-                className="mb-4"
-            />
-            <Heading className="text-xl font-semibold mb-2">{title}</Heading>
-            <p className="text-gray-700">{description}</p>
+        <div className="bg-gray-800 border border-transparent hover:border-gray-600 hover:bg-gray-700 p-8 rounded-3xl flex flex-col items-center text-center duration-300 shadow-lg hover:shadow-xl">
+            <div className="w-16 h-16 mb-4">
+                <Image
+                    src={icon}
+                    alt={title}
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                />
+            </div>
+            <Heading
+                level={3}
+                className="text-2xl font-semibold mb-2"
+            >
+                {title}
+            </Heading>
+            <p className="text-gray-300">{description}</p>
         </div>
     );
 }

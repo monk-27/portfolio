@@ -4,11 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-    /* background: #4ccd99; */
+/* ::selection {
+    background: #4ccd99;
     background: #ffc700;
     color: #030712;
-}
+} */
 
 /* Scroll-bar */
 body {

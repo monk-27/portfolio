@@ -32,6 +32,23 @@ export const aboutpage_MD = {
     ],
 };
 
+export const skillspage_MD = {
+    title: "Skills I possess | Armaan Jaj | Developer Portfolio",
+    description:
+        "Discover the powerful tools and technologies that Armaan Jaj leverages to build innovative web applications. From front-end frameworks to back-end technologies, explore the toolkit behind successful projects.",
+    keywords:
+        "Armaan Jaj, tools, technologies, full-stack developer, web development, JavaScript, React, Node.js, Next.js, development tools",
+    url: "https://www.armaancodes.com/tools",
+    images: [
+        {
+            url: "https://www.armaancodes.com/website-gallery/tools.png",
+            width: 1200,
+            height: 630,
+            alt: "Tools I Use | Armaan Jaj | Developer Portfolio - Tools page",
+        },
+    ],
+};
+
 export const servicespage_MD = {
     title: "Services by Armaan Jaj | Developer Portfolio",
     description:
@@ -45,23 +62,6 @@ export const servicespage_MD = {
             width: 1200,
             height: 630,
             alt: "Services by Armaan Jaj | Developer Portfolio - Services page",
-        },
-    ],
-};
-
-export const toolspage_MD = {
-    title: "Tools I Use | Armaan Jaj | Developer Portfolio",
-    description:
-        "Discover the powerful tools and technologies that Armaan Jaj leverages to build innovative web applications. From front-end frameworks to back-end technologies, explore the toolkit behind successful projects.",
-    keywords:
-        "Armaan Jaj, tools, technologies, full-stack developer, web development, JavaScript, React, Node.js, Next.js, development tools",
-    url: "https://www.armaancodes.com/tools",
-    images: [
-        {
-            url: "https://www.armaancodes.com/website-gallery/tools.png",
-            width: 1200,
-            height: 630,
-            alt: "Tools I Use | Armaan Jaj | Developer Portfolio - Tools page",
         },
     ],
 };
@@ -113,6 +113,38 @@ export const sitemappage_MD = {
             width: 1200,
             height: 630,
             alt: "Sitemap | Armaan Jaj | Developer Portfolio - Home page",
+        },
+    ],
+};
+
+export const reourcespage_MD = {
+    title: "Resources | Armaan Jaj | Developer Portfolio",
+    description: "Description here.",
+    keywords:
+        "Armaan Jaj, sitemap, web development, portfolio, navigation, site links, full-stack developer",
+    url: "https://www.armaancodes.com/resources",
+    images: [
+        {
+            url: "https://www.armaancodes.com/website-gallery/resources.png",
+            width: 1200,
+            height: 630,
+            alt: "Resources | Armaan Jaj | Developer Portfolio - Resources page",
+        },
+    ],
+};
+
+export const trendpage_MD = {
+    title: "Trend | Armaan Jaj | Developer Portfolio",
+    description: "Description here.",
+    keywords:
+        "Armaan Jaj, sitemap, web development, portfolio, navigation, site links, full-stack developer",
+    url: "https://www.armaancodes.com/trend",
+    images: [
+        {
+            url: "https://www.armaancodes.com/website-gallery/Trend.png",
+            width: 1200,
+            height: 630,
+            alt: "Resources | Armaan Jaj | Developer Portfolio - Trend page",
         },
     ],
 };

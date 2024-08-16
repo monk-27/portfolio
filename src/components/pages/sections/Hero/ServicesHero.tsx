@@ -22,35 +22,25 @@ export default function ServicesHero(props: IServicesHeroProps) {
     };
 
     return (
-        <div className="flex flex-col sm:flex-row justify-between items-center w-full bg-white p-6 sm:p-10 rounded-lg shadow-lg">
-            <div className="flex flex-col justify-center items-start max-w-xl">
-                <Heading className="text-3xl sm:text-5xl font-bold leading-tight">
+        <div className="flex flex-col sm:flex-row justify-between items-center w-full bg-gray-800 p-8 sm:p-12">
+            <div className="flex flex-col justify-center items-start max-w-xl text-gray-200">
+                <Heading
+                    level={1}
+                    className="text-3xl sm:text-5xl font-bold leading-tight"
+                >
                     I Do the Work So You Can Focus on Yours
                 </Heading>
-                <p className="text-base sm:text-lg text-gray-700 mt-4">
+                <p className="text-base sm:text-lg mt-4 text-gray-400">
                     Professional services tailored to meet your business needs,
                     from web and mobile app development to custom software
                     solutions. Let's create something extraordinary together.
                 </p>
-                <div className="flex gap-4 mt-8">
-                    <span onClick={scrollToPlans}>
-                        <ActionButton
-                            text="See packages"
-                            className=""
-                            bgColor="bg-aqua-green"
-                            textColor="text-white"
-                            hoverBgColor="hover:bg-aqua-green-dark"
-                            size="sm"
-                        />
-                    </span>
+                <div className="mt-8">
                     <span onClick={scrollToServices}>
                         <ActionButton
                             text="Explore Services"
-                            className=""
-                            bgColor="bg-gray-200"
-                            textColor="text-color-dark"
-                            hoverBgColor="hover:bg-gray-300"
                             size="sm"
+                            status="active"
                         />
                     </span>
                 </div>

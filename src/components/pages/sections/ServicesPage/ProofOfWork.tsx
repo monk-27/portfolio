@@ -7,47 +7,48 @@ export interface IProofOfWorkProps {}
 
 export default function ProofOfWork(props: IProofOfWorkProps) {
     return (
-        <div className="max-w-[90vw] mx-auto mt-16 py-12 px-6 sm:px-10 bg-white rounded-lg">
-            <Heading className="text-3xl font-bold text-center mb-10">
+        <div className="max-w-7xl mx-auto mt-16 py-12 px-6 sm:px-10 bg-gray-800 rounded-3xl shadow-md">
+            <Heading
+                level={2}
+                className="text-3xl sm:text-4xl font-bold text-center mb-10 text-gray-200"
+            >
                 Proof of Commitment
             </Heading>
-            <div className="flex flex-col md:flex-row justify-around items-center text-center gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 text-center">
                 {/* Stat 1 */}
-                <div className="flex flex-col items-center">
-                    <div className="bg-aqua-green p-5 rounded-full">
-                        <Image
-                            src={CalenderSVG}
-                            width={70}
-                            height={70}
-                            alt="Calendar"
-                        />
-                    </div>
-                    <h4 className="text-xl font-semibold mt-4">
-                        Project Delivery
-                    </h4>
-                    <p className="text-lg text-gray-700 mt-2">
-                        Timely project completion
-                    </p>
-                </div>
+                <StatCard
+                    icon={CalenderSVG}
+                    title="Project Delivery"
+                    description="Timely project completion"
+                />
 
                 {/* Stat 2 */}
-                <div className="flex flex-col items-center">
-                    <div className="bg-aqua-green p-5 rounded-full">
-                        <Image
-                            src={RibbonSVG}
-                            width={70}
-                            height={70}
-                            alt="Ribbon"
-                        />
-                    </div>
-                    <h4 className="text-xl font-semibold mt-4">
-                        Client Satisfaction
-                    </h4>
-                    <p className="text-lg text-gray-700 mt-2">
-                        Striving for excellence
-                    </p>
-                </div>
+                <StatCard
+                    icon={RibbonSVG}
+                    title="Client Satisfaction"
+                    description="Striving for excellence"
+                />
             </div>
+        </div>
+    );
+}
+
+interface StatCardProps {
+    icon: string;
+    title: string;
+    description: string;
+}
+
+function StatCard({ icon, title, description }: StatCardProps) {
+    return (
+        <div className="flex flex-col items-center">
+            <div className="bg-aqua-green p-5 rounded-full">
+                <Image src={icon} width={70} height={70} alt={title} />
+            </div>
+            <h4 className="text-xl font-semibold mt-4 text-gray-200">
+                {title}
+            </h4>
+            <p className="text-lg text-gray-400 mt-2">{description}</p>
         </div>
     );
 }

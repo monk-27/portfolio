@@ -67,7 +67,7 @@ export const SocialMediaLinks = [
     },
 ];
 
-export const ToolsData = [
+export const SkillsData = [
     // Languages
     {
         id: 1,
@@ -342,7 +342,7 @@ export const TestimonialsData = [
 export const NavLinksData = [
     { id: 1, name: "Homepage", link: "/" },
     { id: 2, name: "About", link: "/about" },
-    { id: 3, name: "Skills", link: "/tools", icon: ToolIcon },
+    { id: 3, name: "Skills", link: "/skills", icon: ToolIcon },
     { id: 4, name: "Services", link: "/services", icon: ServiceIcon },
 ];
 
@@ -418,7 +418,7 @@ export const GitHubAnalyticsdata = [
         id: 1,
         title: "Active Project",
         icon: LinkNodesIcon,
-        text: "I’m currently focused on this active project, diving deep into the latest contributions and commits. This is where I’m channeling my development efforts, pushing forward with significant updates and improvements.",
+        text: "This is where I’m channeling my development efforts, pushing forward with significant updates and improvements.",
         bgColor: "bg-transparent",
     },
     {
@@ -436,3 +436,5 @@ export const GitHubAnalyticsdata = [
         bgColor: "bg-transparent",
     },
 ];
+
+export const AppVersion = "0.5.3";

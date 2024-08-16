@@ -10,6 +10,7 @@ interface INavbarProps {
     className?: string;
     titlePosition?: "left" | "right" | "center";
     linksPosition?: "left" | "right" | "center";
+    titleColor?: "white" | "primary" | "secondary";
 }
 
 export default function Navbar({
@@ -17,10 +18,11 @@ export default function Navbar({
     className = "",
     titlePosition = "left",
     linksPosition = "right",
+    titleColor = "white",
 }: INavbarProps) {
     return (
         <>
-            <header className={`py-7 px-6 bg-inherit ${className}`}>
+            <div className={`py-7 px-6 bg-inherit ${className}`}>
                 <nav className="flex-col-between-center md:flex-row w-full gap-10">
                     {linksPosition === "left" && <NavLinks />}
                     {title && (
@@ -28,12 +30,13 @@ export default function Navbar({
                             title={title}
                             position={titlePosition}
                             hideOnMobile={true}
+                            titleColor={titleColor}
                         />
                     )}
                     {linksPosition === "center" && <NavLinks />}
                     {linksPosition === "right" && <NavLinks />}
                 </nav>
-            </header>
+            </div>
         </>
     );
 }
@@ -43,10 +46,12 @@ function NavHeader({
     title,
     position,
     hideOnMobile,
+    titleColor = "white",
 }: {
     title: string | React.ReactNode;
     position: "left" | "right" | "center";
     hideOnMobile?: boolean;
+    titleColor?: "white" | "primary" | "secondary";
 }) {
     const alignment =
         position === "left"
@@ -62,7 +67,10 @@ function NavHeader({
             }`}
         >
             {typeof title === "string" ? (
-                <Heading level={0} className="text-4xl font-bold text-white">
+                <Heading
+                    level={0}
+                    className={`text-4xl font-bold text-${titleColor}`}
+                >
                     {title}
                 </Heading>
             ) : (
@@ -75,7 +83,7 @@ function NavHeader({
 // Internal component: NavLinks
 function NavLinks() {
     return (
-        <div className="flex-row-evenly-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-white text-base">
+        <div className="flex-row-evenly-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-base">
             {NavLinksData.map((item, _) =>
                 item.icon ? (
                     <NavLinkItem
@@ -111,10 +119,10 @@ function NavLinkItem({
     return (
         <Link
             href={href}
-            className={`transition duration-300 px-2 rounded-lg flex-row-center-center md:gap-1 text-secondary ${
+            className={`transition duration-300 px-2 rounded-lg flex-row-center-center md:gap-1 text-inherit ${
                 currentPath === href
-                    ? "opacity-60 cursor-default"
-                    : "hover:opacity-70"
+                    ? "opacity-70 cursor-default"
+                    : "hover:opacity-80"
             }`}
         >
             {icon && <span className="hidden md:block">{icon}</span>}

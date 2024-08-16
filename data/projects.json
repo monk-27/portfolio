@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "We-DD",
+        "sneakPeakDescription":"A designated driver website.",
         "description": "A designated driver website developed for a Calgary based taxi company easing their day to day operations.",
         "technologies": [
             "React.js",
@@ -33,7 +34,8 @@
     },
     {
         "id": 2,
-        "title": "Portfolio - v1.0",
+        "title": "Portfolio 1.0",
+        "sneakPeakDescription":"My first portfolio website.",
         "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
         "technologies": [
             "Next.js",
@@ -61,6 +63,7 @@
     {
         "id": 3,
         "title": "My Inventory",
+        "sneakPeakDescription":"Inventory management web app.",
         "description": "Inventory management software helping users to add, manage and print details of their invetory items.",
         "technologies": [
             "React.js",
@@ -91,6 +94,7 @@
     {
         "id": 4,
         "title": "Sumit Nanda Real Estate",
+        "sneakPeakDescription":"Real Esate portfolio website.",
         "description": "A portfolio website for Calgary based real estate professional showcasing services offered and proof of commitment.",
         "technologies": [
             "Next.js",
@@ -127,6 +131,7 @@
     {
         "id": 5,
         "title": "Morning Star Contractors",
+        "sneakPeakDescription":"General construction company website.",
         "description": "Morning Star Contractors is a Canadian construction company based in Calgary.",
         "technologies": [
             "Next.js",
@@ -152,7 +157,8 @@
     },
     {
         "id": 6,
-        "title": "Portfolio - v2.0",
+        "title": "Portfolio 2.0",
+        "sneakPeakDescription":"Second portfolio design.",
         "description": "My second iteration of the portfolio website. Tried the trendy bento grid UI and used the aceternity UI components to add a modern feel.",
         "technologies": [
             "Next.js",
@@ -179,5 +185,27 @@
             "date": "July 2024",
             "duration": "2 weeks"
         }
+    },
+    {
+        "id": 7,
+        "title": "Data Structure visualizer",
+        "sneakPeakDescription":"Data structure visualizer web app.",
+        "description": "Web app for developers which will assist them to visualize what a particular data structure looks like and how an algorithm plays out. From Linked Lists to Stacks, it will visualize all.",
+        "technologies": [
+            "Next.js",
+            "TailwindCSS",
+            "MongoDB",
+            "GSAP",
+            "Framer-motion",
+            "Reacharts"
+        ],
+        "features": [
+            "User Authentication",
+            "Graphs",
+            "Live views counter"
+        ],
+        "challenges": [
+            "Data structure and algorithm"
+        ]
     }
 ]

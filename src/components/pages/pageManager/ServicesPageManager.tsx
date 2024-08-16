@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import Navbar from "@/components/ui/common/Navbar";
-import Hero from "@/components/layout/Hero";
+import Hero from "@/components/pages/sections/Hero";
 import {
     ContactSection,
     PricingSection,
@@ -15,17 +15,50 @@ export interface IServicesPageManagerProps {}
 
 export default function ServicesPageManager(props: IServicesPageManagerProps) {
     return (
-        <>
-            <Navbar title="Services I Offer" />
-            <div className="px-5 py-10 bg-gray-50 flex-col-center w-full gap-10">
-                <Hero type="services" />
-                <ServicesSection />
-                <ProofOfWorkSection />
-                <PricingSection />
-                <Testimonials />
-                <ContactSection />
+        <article className="text-gray-200 bg-secondary px-2">
+            <header>
+                <Navbar
+                    title="Services I offer"
+                    className="bg-inherit text-primary"
+                    titleColor="primary"
+                />
+            </header>
+
+            <div className="rounded-3xl bg-primary overflow-hidden">
+                <section
+                    id="services-hero-section"
+                    className="bg-inherit relative w-full"
+                >
+                    <Hero type="services" />
+                </section>
+                <section
+                    id="services-offerings-section"
+                    className="py-10 bg-inherit relative w-full"
+                >
+                    <ServicesSection />
+                </section>
+                <section
+                    id="services-prooof-section"
+                    className="py-10 px-6 bg-inherit relative w-full"
+                >
+                    <ProofOfWorkSection />
+                </section>
+                <section
+                    id="services-pricing-section"
+                    className="py-10 px-6 bg-inherit relative w-full"
+                >
+                    <PricingSection />
+                </section>
+                <section
+                    id="services-cta-section"
+                    className="py-10 bg-inherit relative w-full"
+                >
+                    <ContactSection />
+                </section>
             </div>
-            <Footer />
-        </>
+            <footer className="mt-10">
+                <Footer />
+            </footer>
+        </article>
     );
 }

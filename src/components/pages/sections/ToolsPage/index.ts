@@ -1,2 +1,2 @@
-export { default as ToolsSection } from "./Tools";
+export { default as SkillsSection } from "./Skills";
 export { default as ResourcesSection } from "./Resources";

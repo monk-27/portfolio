@@ -11,12 +11,15 @@ export default function Resources(props: IResourcesSectionProps) {
     return (
         <section
             id="resources-section"
-            className="px-4 py-12 sm:py-16 bg-gray-50 flex-col-center w-full gap-10"
+            className="px-4 sm:py-16 flex-col-center w-full gap-10 text-left"
         >
-            <Heading className="text-2xl sm:text-3xl font-semibold mb-8 text-center text-aqua-green">
+            <Heading
+                level={2}
+                className="text-2xl sm:text-3xl font-semibold mb-8 text-gray-200"
+            >
                 Resources
             </Heading>
-            <p className="text-base sm:text-lg max-w-2xl mx-auto text-center mb-12">
+            <p className="text-base sm:text-lg text-gray-400 mb-12">
                 Browse through a curated collection of resources to help you get
                 started with your projects. From templates to guides, find
                 everything you need to kickstart your development journey.
@@ -25,17 +28,20 @@ export default function Resources(props: IResourcesSectionProps) {
                 {resourcesData.map((resource, index) => (
                     <div
                         key={index}
-                        className="bg-white p-6 rounded-lg border border-gray-200 flex flex-col justify-between items-start"
+                        className="p-6 rounded-xl bg-gray-800 hover:bg-gray-700 transition-colors duration-300 flex flex-col justify-between items-start"
                     >
-                        <Heading className="text-lg sm:text-xl font-semibold mb-4 text-aqua-green-dark">
+                        <Heading
+                            level={3}
+                            className="text-lg sm:text-xl font-semibold mb-4 text-gray-100"
+                        >
                             {resource.title}
                         </Heading>
-                        <p className="text-gray-700 mb-6 text-sm sm:text-base">
+                        <p className="text-gray-400 mb-6 text-sm sm:text-base">
                             {resource.description}
                         </p>
                         <Link
                             href={resource.link}
-                            className="text-aqua-green-dark font-medium text-sm sm:text-base"
+                            className="text-secondary font-medium text-sm sm:text-base transition hover:underline"
                         >
                             View Resource
                         </Link>

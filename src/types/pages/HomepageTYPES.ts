@@ -3,13 +3,14 @@ interface Project {
     // Required props
     id: number;
     title: string;
+    sneakPeakDescription: string;
     description: string;
     technologies: string[];
     features: string[];
     challenges: string[];
-    banner: string;
-
+    
     // Optional props
+    banner?: string;
     logo?: string;
     links?: {
         visit?: string;

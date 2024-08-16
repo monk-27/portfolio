@@ -1,14 +1,14 @@
-import ToolsHero from "./ToolsHero";
+import SkillsHero from "./SkillsHero";
 import HomeHero from "./HomeHero";
 import AboutHero from "./AboutHero";
 import ServicesHero from "./ServicesHero";
 
-type HeroTypes = "tools" | "home" | "about" | "services";
+type HeroTypes = "home" | "about" | "skills" | "services";
 
 const heroComponents: Record<HeroTypes, React.ComponentType<any>> = {
-    tools: ToolsHero,
     home: HomeHero,
     about: AboutHero,
+    skills: SkillsHero,
     services: ServicesHero,
 };
 
