@@ -11,19 +11,19 @@ export interface HeroSectionProps {}
 
 export default function HeroSection(props: HeroSectionProps) {
     return (
-        <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-12 px-4">
+        <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-4 md:px-8 max-w-7xl mt-10">
             {/* Left Section - Text and Info */}
-            <div className="flex-1">
+            <div className="md:w-2/3">
                 <Heading
                     level={1}
-                    className="text-4xl sm:text-5xl font-bold mb-4 leading-tight"
+                    className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight"
                 >
                     Hi, I'm <span className="text-secondary">Armaan Jaj</span>
                 </Heading>
                 <Paragraph className="text-xl mb-6 text-gray-300 leading-relaxed">
                     A passionate{" "}
-                    <span className="bg-secondary text-primary px-1 py-0.5 rounded-md">
-                        Full Stack Developer
+                    <span className="text-secondary underline">
+                        <span className="text-gray-200">Full Stack Developer</span>
                     </span>{" "}
                     dedicated to crafting digital experiences that make an
                     impact. With expertise in a range of modern technologies, I
@@ -61,13 +61,13 @@ export default function HeroSection(props: HeroSectionProps) {
             </div>
 
             {/* Right Section - Image */}
-            <div className="flex-shrink-0 w-full sm:w-[300px] md:w-[400px] mt-8 md:mt-0">
+            <div data-scroll data-scroll-speed={-0.2} className="mt-8 md:w-1/3">
                 <Image
                     src="/Armaan.jpeg"
                     alt="Armaan Jaj"
-                    width={400}
-                    height={400}
-                    className="rounded-3xl shadow-lg object-cover"
+                    width={4032}
+                    height={3024}
+                    className="shadow-lg object-cover h-80"
                 />
             </div>
         </div>

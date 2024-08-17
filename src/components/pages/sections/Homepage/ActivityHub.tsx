@@ -48,7 +48,7 @@ function ActivityHubHeader() {
                 >
                     GitHub Activity Hub
                 </Heading>
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <div className="mt-8 flex flex-col md:flex-row justify-center md:justify-start items-center w-full gap-4">
                     <ActionButton
                         text="View Profile"
                         size="sm"

@@ -23,7 +23,7 @@ export default function Navbar({
 }: INavbarProps) {
     return (
         <>
-            <div className={`py-7 px-6 bg-inherit ${className}`}>
+            <div className={`md:py-7 px-6 bg-inherit ${className}`}>
                 <nav className="flex-col-between-center md:flex-row w-full gap-10">
                     {linksPosition === "left" && <NavLinks />}
                     {title && (
@@ -97,7 +97,7 @@ function NavLinkItem({ href, label }: { href: string; label: string }) {
     return (
         <Link
             href={href}
-            className={`relative duration-300 px-2 w-full h-full rounded-lg flex-row-center-center md:gap-1 text-inherit text-lg ${
+            className={`relative duration-300 px-2 w-full h-full rounded-lg flex-row-center-center md:gap-1 text-inherit text-sm md:text-lg ${
                 currentPath === href ? "underline" : ""
             }`}
         >

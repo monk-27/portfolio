@@ -47,7 +47,7 @@ export default function ExpandableCardDemo() {
                 <SectionHeader />
             </div>
             <div className="flex flex-col items-center w-full h-full gap-2 mx-auto px-5">
-                <div className="py-2 px-2 md:px-5 w-full flex flex-row justify-between items-center bg-gray-700 rounded-3xl text-center">
+                <div className="py-2 px-2 md:px-5 w-full flex flex-row justify-between items-center bg-gray-300 text-gray-800 rounded-3xl text-center">
                     <span className="w-[70%] md:w-[80%]">Case</span>
                     <span className="w-[10%] hidden md:block">Delivered</span>
                     <span className="w-[30%] md:w-[10%]">Status</span>
@@ -137,7 +137,7 @@ function ProjectCard({
                     <div className="flex-col-start-start pr-5">
                         <Heading
                             level={5}
-                            className="text-base md:text-3xl font-semibold text-inherit w-fit md:text-left group-hover:translate-x-0 md:group-hover:translate-x-5 transition-transform duration-300"
+                            className="text-base md:text-3xl font-semibold text-inherit w-fit md:text-left group-hover:translate-x-0 group-hover:italic md:group-hover:translate-x-5 transition-transform duration-300"
                         >
                             {project.title}
                         </Heading>
@@ -159,7 +159,7 @@ function ProjectCard({
                     ) : (
                         <span className="animate-pulse text-xs font-extralight whitespace-nowrap text-orange-500 border border-orange-500 rounded-full px-1 py-1">
                             <span className="whitespace-nowrap">
-                                ● Developing
+                                In Development
                             </span>
                         </span>
                     )}

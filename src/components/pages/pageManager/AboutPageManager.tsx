@@ -33,6 +33,8 @@ export default function AboutPageManager(props: IAboutPageManagerProps) {
             </section>
 
             <section
+                data-scroll
+                data-scroll-speed={0.1}
                 id="about-testimonials"
                 className="py-10 bg-inherit relative w-full"
             >

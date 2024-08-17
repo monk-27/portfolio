@@ -67,167 +67,6 @@ export const SocialMediaLinks = [
     },
 ];
 
-export const SkillsData = [
-    // Languages
-    {
-        id: 1,
-        name: "JavaScript",
-        description:
-            "Versatile language for front-end and back-end development.",
-        icon: JavaScriptSVG,
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 2,
-        name: "TypeScript",
-        description: "JavaScript with static typing.",
-        icon: TypeScriptSVG,
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 3,
-        name: "Java",
-        description:
-            "A robust language for enterprise and Android development.",
-        icon: JavaSVG,
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 4,
-        name: "PHP",
-        description: "A popular language for server-side web development.",
-        icon: PhpSVG,
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 5,
-        name: "Kotlin",
-        description: "A modern language for Android development.",
-        icon: KotlinSVG,
-        category: "Programming",
-        subCategory: "Languages",
-    },
-    {
-        id: 6,
-        name: "Python",
-        description: "A powerful language for scripting and data analysis.",
-        icon: PythonSVG,
-        category: "Programming",
-        subCategory: "Languages",
-    },
-
-    // Front end
-    {
-        id: 7,
-        name: "Next.js",
-        description: "The React Framework for Production.",
-        icon: NextjsSVG,
-        category: "Programming",
-        subCategory: "Front end",
-    },
-    {
-        id: 8,
-        name: "React.js",
-        description: "A JavaScript library for building user interfaces.",
-        icon: ReactjsSVG,
-        category: "Programming",
-        subCategory: "Front end",
-    },
-    {
-        id: 9,
-        name: "TailwindCSS",
-        description: "A utility-first CSS framework for rapid UI development.",
-        icon: TailwindCSSSVG,
-        category: "Programming",
-        subCategory: "Front end",
-    },
-
-    // Back end
-    {
-        id: 10,
-        name: "Node.js",
-        description:
-            "JavaScript runtime built on Chrome's V8 JavaScript engine.",
-        icon: NodejsSVG,
-        category: "Programming",
-        subCategory: "Back end",
-    },
-    {
-        id: 11,
-        name: "Express.js",
-        description:
-            "Fast, unopinionated, minimalist web framework for Node.js.",
-        icon: ExpressjsSVG,
-        category: "Programming",
-        subCategory: "Back end",
-    },
-
-    // Databases
-    {
-        id: 12,
-        name: "MySQL",
-        description: "Relational database management system.",
-        icon: MySQLSVG,
-        category: "Programming",
-        subCategory: "Databases",
-    },
-    {
-        id: 13,
-        name: "MongoDB",
-        description: "NoSQL database for modern applications.",
-        icon: MongoDBSVG,
-        category: "Programming",
-        subCategory: "Databases",
-    },
-    {
-        id: 14,
-        name: "Redis",
-        description:
-            "An in-memory data structure store, used as a database, cache, and message broker.",
-        icon: RedisSVG,
-        category: "Programming",
-        subCategory: "Databases",
-    },
-
-    // Development Tools
-    {
-        id: 15,
-        name: "Visual Studio Code",
-        description:
-            "My go-to code editor with tons of extensions and customization.",
-        icon: VSCodeSVG,
-        category: "Development",
-    },
-    {
-        id: 16,
-        name: "Figma",
-        description: "Perfect for UI/UX design and collaboration.",
-        icon: FigmaSVG,
-        category: "Development",
-    },
-    {
-        id: 17,
-        name: "GitHub",
-        description: "Great version controlling software.",
-        icon: GithubSVG,
-        category: "Development",
-    },
-
-    // Productivity Tools
-    {
-        id: 18,
-        name: "Notion",
-        description:
-            "All-in-one workspace for notes, tasks, and project management.",
-        icon: NotionSVG,
-        category: "Productivity",
-    },
-];
-
 export const ServicesData = [
     {
         id: 1,
@@ -266,56 +105,21 @@ export const ServicesData = [
     },
 ];
 
-export const PricingData = [
-    {
-        id: 1,
-        title: "Sustainable",
-        description:
-            "Put yourself or your business in public. Showcase your offerings and convert your sales. Best for people starting their first internet venture.",
-        price: "CA $199",
-        features: [
-            "Responsive Web Design",
-            "Basic SEO",
-            "5 Pages",
-            "Email Support",
-        ],
-        cta: "Get Sustainable",
-    },
-    {
-        id: 2,
-        title: "Easy",
-        description:
-            "A great choice for those looking to expand their online presence with additional customization and advanced SEO features.",
-        price: "CA $499",
-        features: [
-            "Everything in Basic",
-            "10 Pages",
-            "Advanced SEO",
-            "Custom Design",
-            "Priority Support",
-        ],
-        cta: "Choose Easy",
-    },
-];
-
 export const CondensedSkills = [
     {
-        title: "Front-End Development",
+        title: "Landing Page Development",
         description:
-            "Building responsive and dynamic user interfaces using React.js, Next.js, and TailwindCSS.",
-        icon: BrowserSVG,
+            "Expertise in crafting responsive, high-performance landing pages using modern web technologies, including React.js, Next.js, and TailwindCSS. Skilled in creating visually appealing interfaces that drive user engagement and conversions.",
     },
     {
-        title: "Back-End Development",
+        title: "Full-Stack Application Development",
         description:
-            "Creating scalable and efficient back-end systems using Node.js, Express.js, and databases like MongoDB and MySQL.",
-        icon: ServerSVG,
+            "Proven experience in building robust and scalable full-stack applications. Proficient in developing secure and efficient back-end systems using Node.js and Express.js, integrated with databases such as MongoDB and MySQL, to support complex business needs.",
     },
     {
-        title: "UI/UX Design",
+        title: "User Interface Design",
         description:
-            "Designing intuitive and aesthetic user interfaces with a strong focus on user experience.",
-        icon: GeometrySVG,
+            "Specialized in designing intuitive and visually compelling user interfaces. Committed to enhancing user experience by combining functionality with aesthetics, ensuring a seamless and engaging interaction for end-users.",
     },
 ];
 
@@ -342,8 +146,7 @@ export const TestimonialsData = [
 export const NavLinksData = [
     { id: 1, name: "Homepage", link: "/" },
     { id: 2, name: "About", link: "/about" },
-    { id: 3, name: "Skills", link: "/skills", icon: ToolIcon },
-    { id: 4, name: "Services", link: "/services", icon: ServiceIcon },
+    { id: 4, name: "Services", link: "/services" },
 ];
 
 export const SitemapLinks = [
