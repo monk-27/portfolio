@@ -4,9 +4,10 @@ import Heading from "../designs/Heading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLinksData } from "@/utils/assets";
+import Magnetic from "../designs/Magnetic";
 
 interface INavbarProps {
-    title?: string | React.ReactNode;
+    title?: string;
     className?: string;
     titlePosition?: "left" | "right" | "center";
     linksPosition?: "left" | "right" | "center";
@@ -48,7 +49,7 @@ function NavHeader({
     hideOnMobile,
     titleColor = "white",
 }: {
-    title: string | React.ReactNode;
+    title: string;
     position: "left" | "right" | "center";
     hideOnMobile?: boolean;
     titleColor?: "white" | "primary" | "secondary";
@@ -66,16 +67,14 @@ function NavHeader({
                 hideOnMobile ? "hidden md:block" : ""
             }`}
         >
-            {typeof title === "string" ? (
-                <Heading
-                    level={0}
-                    className={`text-4xl font-bold text-${titleColor}`}
-                >
-                    {title}
-                </Heading>
-            ) : (
-                title
-            )}
+            <Heading
+                level={0}
+                className={`text-4xl font-bold text-${titleColor}`}
+            >
+                <Magnetic>
+                    <span>{title}</span>
+                </Magnetic>
+            </Heading>
         </div>
     );
 }
@@ -83,50 +82,28 @@ function NavHeader({
 // Internal component: NavLinks
 function NavLinks() {
     return (
-        <div className="flex-row-evenly-center gap-2 w-full md:w-auto py-4 px-2 rounded-xl bg-aqua-green text-base">
-            {NavLinksData.map((item, _) =>
-                item.icon ? (
-                    <NavLinkItem
-                        href={item.link}
-                        label={item.name}
-                        icon={<item.icon />}
-                        key={item.id}
-                    />
-                ) : (
-                    <NavLinkItem
-                        href={item.link}
-                        label={item.name}
-                        key={item.id}
-                    />
-                )
-            )}
+        <div className="flex-row-evenly-center gap-2 md:gap-8 w-full md:w-auto py-4 px-2 rounded-xl text-base">
+            {NavLinksData.map((item, _) => (
+                <NavLinkItem href={item.link} label={item.name} key={item.id} />
+            ))}
         </div>
     );
 }
 
 // Internal component: NavLinkItem
-function NavLinkItem({
-    icon,
-    href,
-    label,
-}: {
-    icon?: React.ReactNode;
-    href: string;
-    label: string;
-}) {
+function NavLinkItem({ href, label }: { href: string; label: string }) {
     const currentPath = usePathname();
 
     return (
         <Link
             href={href}
-            className={`transition duration-300 px-2 rounded-lg flex-row-center-center md:gap-1 text-inherit ${
-                currentPath === href
-                    ? "opacity-70 cursor-default"
-                    : "hover:opacity-80"
+            className={`relative duration-300 px-2 w-full h-full rounded-lg flex-row-center-center md:gap-1 text-inherit text-lg ${
+                currentPath === href ? "underline" : ""
             }`}
         >
-            {icon && <span className="hidden md:block">{icon}</span>}
-            {label}
+            <Magnetic>
+                <span>{label}</span>
+            </Magnetic>
         </Link>
     );
 }

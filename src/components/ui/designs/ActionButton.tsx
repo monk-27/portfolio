@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import * as React from "react";
+import Magnetic from "./Magnetic";
 
 export interface IActionButtonProps {
     text: string;
@@ -20,7 +21,6 @@ export default function ActionButton({
     status = "passive",
     size = "sm",
 }: IActionButtonProps) {
-    
     // Button sizes based on size passed
     const sizeClasses = {
         sm: "py-2 px-4 text-sm",
@@ -52,32 +52,36 @@ export default function ActionButton({
         <div className="relative inline-block">
             {link ? (
                 <Link href={link.url} target={link.target}>
+                    <Magnetic>
+                        <button
+                            className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
+                        >
+                            {icon ? (
+                                <span className="flex-row-center-center gap-2 flex-nowrap">
+                                    {icon}
+                                    {text}
+                                </span>
+                            ) : (
+                                <>{text}</>
+                            )}
+                        </button>
+                    </Magnetic>
+                </Link>
+            ) : (
+                <Magnetic>
                     <button
                         className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
                     >
                         {icon ? (
                             <span className="flex-row-center-center gap-2 flex-nowrap">
-                                {icon}
+                                <span className="scale-125">{icon}</span>
                                 {text}
                             </span>
                         ) : (
                             <>{text}</>
                         )}
                     </button>
-                </Link>
-            ) : (
-                <button
-                    className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
-                >
-                    {icon ? (
-                        <span className="flex-row-center-center gap-2 flex-nowrap">
-                            <span className="scale-125">{icon}</span>
-                            {text}
-                        </span>
-                    ) : (
-                        <>{text}</>
-                    )}
-                </button>
+                </Magnetic>
             )}
         </div>
     );

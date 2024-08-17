@@ -36,18 +36,18 @@ export default function ActivityHub(props: IAnalyticsProps) {
 
 function ActivityHubHeader() {
     return (
-        <div className="relative w-full h-[70vh] bg-gray-800 rounded-3xl flex items-center justify-center">
-            <div className="relative flex flex-col items-center gap-4 text-center text-white w-full px-2">
+        <div className="relative w-full flex items-center justify-center">
+            <div
+                data-scroll
+                data-scroll-speed={0.1}
+                className="relative flex flex-col items-start gap-4 text-center text-white w-full px-2"
+            >
                 <Heading
                     level={1}
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                    className="text-5xl md:text-6xl lg:text-7xl font-light"
                 >
                     GitHub Activity Hub
                 </Heading>
-                <Paragraph className="text-lg md:text-xl lg:text-2xl max-w-xl mx-auto">
-                    Explore my coding activity, contributions, and top projects
-                    on GitHub, all in one place.
-                </Paragraph>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                     <ActionButton
                         text="View Profile"
@@ -118,7 +118,11 @@ function ActivityHubSummary() {
 
 function ActivityHubFooter() {
     return (
-        <div className="text-center text-sm text-gray-600 mt-8">
+        <div
+            data-scroll
+            data-scroll-speed={0.1}
+            className="text-center text-sm text-gray-600 mt-8"
+        >
             <p>
                 Powered by{" "}
                 <a

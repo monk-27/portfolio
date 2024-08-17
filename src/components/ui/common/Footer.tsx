@@ -2,6 +2,7 @@ import Link from "next/link";
 import * as React from "react";
 import Heading from "@/components/ui/designs/Heading";
 import { NavLinksData, SocialMediaLinks } from "@/utils/assets";
+import Magnetic from "../designs/Magnetic";
 
 export interface IFooterProps {}
 
@@ -41,15 +42,17 @@ function SocialMedia() {
                 <p className="text-xs">Follow me</p>
                 <div className="flex-row-center-start gap-4 md:gap-6 lg:gap-8 w-full">
                     {SocialMediaLinks.map((item, index) => (
-                        <Link
-                            href={item.href}
-                            target={item.target}
-                            className={item.className}
-                            title={item.title}
-                            key={index}
-                        >
-                            <item.icon className="scale-110 hover:text-secondary transition duration-300" />
-                        </Link>
+                        <Magnetic>
+                            <Link
+                                href={item.href}
+                                target={item.target}
+                                className={item.className}
+                                title={item.title}
+                                key={index}
+                            >
+                                <item.icon className="scale-110 hover:text-secondary duration-300" />
+                            </Link>
+                        </Magnetic>
                     ))}
                 </div>
             </div>
@@ -82,7 +85,9 @@ function QuickLinks() {
 function SubscribeForm() {
     return (
         <div className="flex-col-start-start w-full gap-2 md:w-auto bg-gray-100 p-4 rounded-3xl">
-            <Heading level={5} className="text-gray-800">Subscribe</Heading>
+            <Heading level={5} className="text-gray-800">
+                Subscribe
+            </Heading>
             <p className="text-gray-500 text-sm mb-4">
                 Get the latest updates and offers right to your inbox.
             </p>

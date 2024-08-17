@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { ArrowRightIcon, DownloadIcon } from "@/utils/icons";
 import { SocialMediaLinks } from "@/utils/assets";
+import Magnetic from "@/components/ui/designs/Magnetic";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,17 +108,23 @@ export default function HomeHero(props: IHomeHeroProps) {
             {/* Left Column - Progress Bars */}
             <div className="hidden md:flex col-span-1 flex-col justify-between items-center pl-2 h-full">
                 <ProgressSection progressData={progressData} />
-                <div className="flex flex-row justify-center gap-8">
+                <div
+                    data-scroll
+                    data-scroll-speed={0.1}
+                    className="flex flex-row justify-center gap-8"
+                >
                     {SocialMediaLinks.map((item, index) => (
-                        <Link
-                            href={item.href}
-                            target={item.target}
-                            className={item.className}
-                            title={item.title}
-                            key={index}
-                        >
-                            <item.icon className="scale-110 hover:text-secondary transition duration-300" />
-                        </Link>
+                        <Magnetic>
+                            <Link
+                                href={item.href}
+                                target={item.target}
+                                className={item.className}
+                                title={item.title}
+                                key={index}
+                            >
+                                <item.icon className="scale-110 hover:text-secondary transition duration-300" />
+                            </Link>
+                        </Magnetic>
                     ))}
                 </div>
             </div>
@@ -152,7 +159,11 @@ function Placement2({
             className="hero-intro leading-tight text-center mx-auto"
         >
             <div className="flex flex-col items-center">
-                <div className="flex flex-row gap-2">
+                <div
+                    data-scroll
+                    data-scroll-speed={0.075}
+                    className="flex flex-row gap-2"
+                >
                     <span className="text-sm sm:text-base md:text-lg text-gray-400 font-thin tracking-wide">
                         Hi,
                     </span>
@@ -160,25 +171,33 @@ function Placement2({
                         I'm
                     </span>
                 </div>
-                <Heading
-                    level={1}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-secondary leading-none"
-                >
-                    Armaan
-                </Heading>
-                <Heading
-                    level={2}
-                    className="text-xl sm:text-2xl md:text-3xl text-gray-100 font-medium"
-                >
-                    {titles[currentTitleIndex]}
-                </Heading>
+                <div data-scroll data-scroll-speed={0.05}>
+                    <Heading
+                        level={1}
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-secondary leading-none"
+                    >
+                        <span>Armaan</span>
+                    </Heading>
+                </div>
+                <div data-scroll data-scroll-speed={0.025}>
+                    <Heading
+                        level={2}
+                        className="text-xl sm:text-2xl md:text-3xl text-gray-100 font-medium"
+                    >
+                        {titles[currentTitleIndex]}
+                    </Heading>
+                </div>
             </div>
         </Heading>
     );
 }
 function ProgressSection({ progressData }: { progressData: any[] }) {
     return (
-        <div className="flex flex-col items-start gap-6 w-full">
+        <div
+            data-scroll
+            data-scroll-speed={-0.3}
+            className="flex flex-col items-start gap-6 w-full"
+        >
             {progressData.map((progress) =>
                 progress.link ? (
                     <Link
@@ -264,10 +283,16 @@ function ProgressBar({
 
 function Placement3() {
     return (
-        <div className="flex flex-col justify-center items-center gap-10 my-14">
-            <Paragraph className="text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
-                I give vision, JavaScript.
-            </Paragraph>
+        <div
+            data-scroll
+            data-scroll-speed={-0.1}
+            className="flex flex-col justify-center items-center gap-10 my-14"
+        >
+            <div>
+                <Paragraph className="text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
+                    I give vision, JavaScript.
+                </Paragraph>
+            </div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-5">
                 <ActionButton
                     icon={<DownloadIcon />}

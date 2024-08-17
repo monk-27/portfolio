@@ -17,8 +17,8 @@ export default function PageCreator({ title, children }: IPageCreatorProps) {
     }
     return (
         <>
-            <article className="text-gray-200 bg-secondary homepage px-2">
-                <header>
+            <article className="text-gray-200 bg-secondary homepage px-0">
+                <header data-scroll data-scroll-speed={0.1}>
                     <Navbar
                         title={title}
                         className="bg-inherit text-primary"
@@ -28,7 +28,9 @@ export default function PageCreator({ title, children }: IPageCreatorProps) {
                 <div className="rounded-3xl bg-primary overflow-hidden">
                     {children}
                 </div>
-                <footer className="mt-10">
+                <footer
+                    className="mt-10 px-2"
+                >
                     <Footer />
                 </footer>
             </article>

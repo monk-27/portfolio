@@ -11,19 +11,23 @@ export default function HomePageManager(props: IHomePageManagerProps) {
         <PageCreator title="armaancodes">
             <section
                 id="homepage-hero"
-                className="py-10 bg-inherit relative w-full"
+                className="py-10 mt-20 bg-inherit relative w-full"
             >
                 <Hero type="home" />
             </section>
             <section
-                id="homepage-analytics"
+                data-scroll
+                data-scroll-speed={0.3}
+                id="homepage-work"
                 className="py-14 bg-inherit relative w-full"
             >
                 <ProjectsSection />
             </section>
             <section
-                id="homepage-projects"
-                className="py-14 bg-inherit relative w-full"
+                data-scroll
+                data-scroll-speed={0.3}
+                id="homepage-analytics"
+                className="py-14 mb-10 bg-inherit relative w-full"
             >
                 <ActivityHub />
             </section>

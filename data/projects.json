@@ -2,8 +2,8 @@
     {
         "id": 1,
         "title": "We-DD",
-        "sneakPeakDescription":"A designated driver website.",
-        "description": "A designated driver website developed for a Calgary based taxi company easing their day to day operations.",
+        "sneakPeakDescription": "A designated driver website.",
+        "description": "Collaborated with a Calgary-based taxi company to develop a designated driver website, easing their day-to-day operations and improving client booking efficiency.",
         "technologies": [
             "React.js",
             "TailwindCSS",
@@ -35,8 +35,8 @@
     {
         "id": 2,
         "title": "Portfolio 1.0",
-        "sneakPeakDescription":"My first portfolio website.",
-        "description": "My first portfolio website for displaying my projects and skills. Got appreciations from viewers on experimenting with a new UX.",
+        "sneakPeakDescription": "My first portfolio website.",
+        "description": "Designed and developed my first portfolio website to display projects and skills. Successfully implemented a unique UX design that garnered appreciation from viewers.",
         "technologies": [
             "Next.js",
             "TailwindCSS",
@@ -63,8 +63,8 @@
     {
         "id": 3,
         "title": "My Inventory",
-        "sneakPeakDescription":"Inventory management web app.",
-        "description": "Inventory management software helping users to add, manage and print details of their invetory items.",
+        "sneakPeakDescription": "Inventory management web app.",
+        "description": "Developed an inventory management software that assists users in adding, managing, and printing details of their inventory items, streamlining business processes.",
         "technologies": [
             "React.js",
             "TailwindCSS",
@@ -94,8 +94,8 @@
     {
         "id": 4,
         "title": "Sumit Nanda Real Estate",
-        "sneakPeakDescription":"Real Esate portfolio website.",
-        "description": "A portfolio website for Calgary based real estate professional showcasing services offered and proof of commitment.",
+        "sneakPeakDescription": "Real Estate portfolio website.",
+        "description": "Collaborated with a Calgary-based real estate professional to design a portfolio website that showcases services and demonstrates commitment to clients, enhancing brand engagement.",
         "technologies": [
             "Next.js",
             "TailwindCSS",
@@ -108,7 +108,7 @@
             "Email notifications"
         ],
         "challenges": [
-            "Role based user authentication"
+            "Role-based user authentication"
         ],
         "banner": "/project/header/ProjectHeader4.svg",
         "logo": "/Logos/project4.png",
@@ -131,8 +131,8 @@
     {
         "id": 5,
         "title": "Morning Star Contractors",
-        "sneakPeakDescription":"General construction company website.",
-        "description": "Morning Star Contractors is a Canadian construction company based in Calgary.",
+        "sneakPeakDescription": "General construction company website.",
+        "description": "Collaborated with Morning Star Contractors, a Calgary-based construction company, to design and develop a website that aligns with their brand values, enhancing their online presence.",
         "technologies": [
             "Next.js",
             "TailwindCSS",
@@ -143,7 +143,7 @@
             "Responsive Design"
         ],
         "challenges": [
-            "Choosing a design matches the company values"
+            "Choosing a design that matches the company values"
         ],
         "banner": "/project/header/ProjectHeader5.svg",
         "logo": "/Logos/project5.jpg",
@@ -158,8 +158,8 @@
     {
         "id": 6,
         "title": "Portfolio 2.0",
-        "sneakPeakDescription":"Second portfolio design.",
-        "description": "My second iteration of the portfolio website. Tried the trendy bento grid UI and used the aceternity UI components to add a modern feel.",
+        "sneakPeakDescription": "Second portfolio design.",
+        "description": "Developed the second iteration of my portfolio website, experimenting with trendy bento grid UI and implementing modern Aceternity UI components for an updated, sleek design.",
         "technologies": [
             "Next.js",
             "TailwindCSS",
@@ -189,8 +189,8 @@
     {
         "id": 7,
         "title": "Data Structure visualizer",
-        "sneakPeakDescription":"Data structure visualizer web app.",
-        "description": "Web app for developers which will assist them to visualize what a particular data structure looks like and how an algorithm plays out. From Linked Lists to Stacks, it will visualize all.",
+        "sneakPeakDescription": "Data structure visualizer web app.",
+        "description": "Developed a web app to assist developers in visualizing various data structures and algorithms, providing an intuitive and educational tool for understanding complex concepts.",
         "technologies": [
             "Next.js",
             "TailwindCSS",
@@ -205,7 +205,7 @@
             "Live views counter"
         ],
         "challenges": [
-            "Data structure and algorithm"
+            "Visualizing data structures and algorithms"
         ]
     }
 ]
