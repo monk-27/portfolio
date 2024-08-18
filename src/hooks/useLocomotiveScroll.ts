@@ -7,10 +7,13 @@ export const useLocomotiveScroll = (options: any) => {
 
     useLayoutEffect(() => {
         const initScroll = async () => {
+            // Importing LocomotiveScroll dynamically
             const LocomotiveScroll = (await import("locomotive-scroll"))
                 .default;
 
-            scrollRef.current = new LocomotiveScroll(options);
+            if (options.el) {
+                scrollRef.current = new LocomotiveScroll(options);
+            }
         };
 
         initScroll();
@@ -19,7 +22,8 @@ export const useLocomotiveScroll = (options: any) => {
             scrollRef.current?.destroy();
             scrollRef.current = null;
         };
-    }, [options]);
+    }, [options.el, options.smooth]);
+     // Only re-run the effect if the el or smooth options change
 
     return scrollRef;
 };
