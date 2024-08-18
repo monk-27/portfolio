@@ -25,22 +25,22 @@ export default function StorySection(props: StorySectionProps) {
                     >
                         <Paragraph>
                             Ever since I gripped my fingers around a pencil,
-                            I&apos;ve been on a never-ending quest to create. From
-                            the early days of sketching and getting lost in the
-                            world of art, I&apos;ve evolved into a Web/Full Stack
-                            Developer. While I no longer wield a pencil as my
-                            weapon of choice, my love for design and creativity
-                            is stronger than ever. These days, I channel that
-                            passion into crafting stunning websites that not
-                            only look good but work flawlessly too.
+                            I&apos;ve been on a never-ending quest to create.
+                            From the early days of sketching and getting lost in
+                            the world of art, I&apos;ve evolved into a Web/Full
+                            Stack Developer. While I no longer wield a pencil as
+                            my weapon of choice, my love for design and
+                            creativity is stronger than ever. These days, I
+                            channel that passion into crafting stunning websites
+                            that not only look good but work flawlessly too.
                         </Paragraph>
                         <Paragraph>
                             Armed with tools like TailwindCSS, Next.js,
-                            React.js, and Node.js, I&apos;ve become a digital creator
-                            blending design and functionality. My focus has
-                            always been on crafting clean and efficient code,
-                            making sure that every project I work on runs as
-                            smoothly as it looks.
+                            React.js, and Node.js, I&apos;ve become a digital
+                            creator blending design and functionality. My focus
+                            has always been on crafting clean and efficient
+                            code, making sure that every project I work on runs
+                            as smoothly as it looks.
                         </Paragraph>
                         <Paragraph>
                             From building my own portfolio to developing complex
@@ -114,8 +114,8 @@ export default function StorySection(props: StorySectionProps) {
                         Personal Mantra
                     </Heading>
                     <Paragraph className="text-lg max-w-3xl mx-auto text-gray-700">
-                    &ldquo;Embrace the journey, cherish the moments, and always
-                        strive to leave a positive impact.&rdquo;
+                        &ldquo;Embrace the journey, cherish the moments, and
+                        always strive to leave a positive impact.&rdquo;
                     </Paragraph>
                 </div>
             </div>

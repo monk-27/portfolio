@@ -14,7 +14,7 @@ export default function NotFoundPage() {
                     404
                 </Heading>
                 <p className="text-base md:text-lg text-gray-400">
-                    Oops! The page you're looking for doesn&apos;t exist or has been
+                    Oops! The page you&apos;re looking for doesn&apos;t exist or has been
                     moved.
                 </p>
                 <div className="flex gap-4">
