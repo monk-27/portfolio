@@ -3,7 +3,7 @@ import * as React from "react";
 import Heading from "../designs/Heading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavLinksData } from "@/utils/assets";
+import { NavLinksData } from "@/utils/sitedata";
 import Magnetic from "../designs/Magnetic";
 
 interface INavbarProps {

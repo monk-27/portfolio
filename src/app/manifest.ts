@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: "Armaan Jaj | Developer Portfolio",
         short_name: "Armaan Jaj",
         description:
-            "Armaan Jaj's portfolio showcasing innovative web development projects with a focus on artistry and precision, offering top-notch web solutions.",
+            "Explore the developer portfolio of Armaan Jaj, a full-stack developer focused on crafting high-performance, aesthetically pleasing web applications. Dive into projects showcasing expertise in both front-end and back-end development with cutting-edge technologies.",
         start_url: "/?source=pwa",
         display: "standalone",
         background_color: "#fff",
@@ -14,7 +14,7 @@ export default function manifest(): MetadataRoute.Manifest {
         orientation: "portrait",
         screenshots: [
             {
-                src: "/website-gallery/homepage.png",
+                src: "/website-gallery/home.png",
                 sizes: "1200x630",
                 type: "image/png",
             },

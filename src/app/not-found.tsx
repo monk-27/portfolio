@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { _404Illustration } from "@/utils/icons";
+import { _404Illustration } from "@/utils/assets";
 import ActionButton from "@/components/ui/designs/ActionButton";
 import Heading from "@/components/ui/designs/Heading";
 

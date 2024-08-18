@@ -1,5 +1,5 @@
 import Heading from "@/components/ui/designs/Heading";
-import { ServicesData } from "@/utils/assets";
+import { ServicesData } from "@/utils/sitedata";
 import Image from "next/image";
 import * as React from "react";
 

@@ -1,5 +1,4 @@
-import Heading from "@/components/ui/designs/Heading";
-import { SitemapLinks } from "@/utils/assets";
+import { SitemapLinks } from "@/utils/sitedata";
 import Link from "next/link";
 import * as React from "react";
 

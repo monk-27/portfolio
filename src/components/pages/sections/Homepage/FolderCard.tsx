@@ -1,7 +1,7 @@
 "use client";
 import Heading from "@/components/ui/designs/Heading";
 import Paragraph from "@/components/ui/designs/Paragraph";
-import { GitBranchIcon, LockIcon, StarIcon, UnlockIcon } from "@/utils/icons";
+import { GitBranchIcon, LockIcon, StarIcon, UnlockIcon } from "@/utils/assets";
 import Link from "next/link";
 import * as React from "react";
 

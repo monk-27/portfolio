@@ -1,226 +1,84 @@
-import {
-    CodeIcon,
-    FigmaSVG,
-    FolderSVG,
-    GitBranchIcon,
-    GitHubIcon,
-    GrowTrendSVG,
-    InstagramIcon,
-    LinkedInIcon,
-    LinkNodesIcon,
-    MobileAppSVG,
-    TwitterIcon,
-    WebDevSVG,
-} from "./icons";
+// REACT-ICONS
+import { RiServiceFill } from "react-icons/ri";
+import { FaProjectDiagram, FaTools } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io5";
+import { RiTwitterXLine } from "react-icons/ri";
+import { TfiLinkedin } from "react-icons/tfi";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { FaRegStar, FaCodeBranch } from "react-icons/fa";
+import { IoLockClosed, IoLockOpen } from "react-icons/io5";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+import { IoIosArrowRoundForward, IoIosLink, IoIosOpen } from "react-icons/io";
+import { HiLocationMarker } from "react-icons/hi";
+import { IoCodeSlash } from "react-icons/io5";
+import { IoReload } from "react-icons/io5";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosDownload } from "react-icons/io";
 
-// Social Media Links
-export const SocialMediaLinksData = [
-    {
-        href: "https://www.github.com/armaanjaj",
-        title: "GitHub",
-        target: "_blank",
-        icon: GitHubIcon,
-        className: "",
-    },
-    {
-        href: "https://www.linkedin.com/in/connectarmaan",
-        title: "LinkedIn",
-        target: "_blank",
-        icon: LinkedInIcon,
-        className: "",
-    },
-    {
-        href: "https://x.com/armaanjaj",
-        title: "X/Twitter",
-        target: "_blank",
-        icon: TwitterIcon,
-        className: "",
-    },
-    {
-        href: "https://www.instagram.com/armaan_jaj",
-        title: "Instagram",
-        target: "_blank",
-        icon: InstagramIcon,
-        className: "",
-    },
-];
+export const ServiceIcon = RiServiceFill;
+export const ToolIcon = FaTools;
+export const StarIcon = FaRegStar;
+export const GitBranchIcon = FaCodeBranch;
+export const LockIcon = IoLockClosed;
+export const UnlockIcon = IoLockOpen;
+export const CheckIcon = IoCheckmarkCircleOutline;
+export const CloseIcon = IoClose;
+export const LinkIcon = IoIosLink;
+export const LocationIcon = HiLocationMarker;
+export const CodeIcon = IoCodeSlash;
+export const ReloadIcon = IoReload;
+export const LinkNodesIcon = FaProjectDiagram;
+export const ArrowInsideCircleIcon = IoIosArrowDroprightCircle;
+export const DownloadIcon = IoIosDownload;
+export const ArrowRightIcon = IoIosArrowRoundForward;
+export const NewTabIcon = IoIosOpen;
 
-export const ServicesData = [
-    {
-        id: 1,
-        title: "Web Development",
-        description:
-            "I build responsive and high-performance websites using modern technologies like React, Next.js, and TailwindCSS.",
-        icon: WebDevSVG,
-    },
-    {
-        id: 2,
-        title: "Mobile App Development",
-        description:
-            "Creating sleek and user-friendly mobile applications for Android platform.",
-        icon: MobileAppSVG,
-    },
-    {
-        id: 3,
-        title: "UI/UX Design",
-        description:
-            "Designing intuitive and aesthetic user interfaces with a focus on user experience.",
-        icon: FigmaSVG,
-    },
-    {
-        id: 4,
-        title: "SEO Optimization",
-        description:
-            "Improving your website’s visibility on search engines with best SEO practices.",
-        icon: GrowTrendSVG,
-    },
-    {
-        id: 5,
-        title: "Custom Software Solutions",
-        description:
-            "Providing tailored software solutions to meet your business needs, from concept to deployment.",
-        icon: FolderSVG,
-    },
-];
+// Social Icons
+export const InstagramIcon = IoLogoInstagram;
+export const TwitterIcon = RiTwitterXLine;
+export const LinkedInIcon = TfiLinkedin;
+export const GitHubIcon = TbBrandGithubFilled;
 
-export const CondensedSkills = [
-    {
-        title: "Landing Page Development",
-        description:
-            "Expertise in crafting responsive, high-performance landing pages using modern web technologies, including React.js, Next.js, and TailwindCSS. Skilled in creating visually appealing interfaces that drive user engagement and conversions.",
-    },
-    {
-        title: "Full-Stack Application Development",
-        description:
-            "Proven experience in building robust and scalable full-stack applications. Proficient in developing secure and efficient back-end systems using Node.js and Express.js, integrated with databases such as MongoDB and MySQL, to support complex business needs.",
-    },
-    {
-        title: "User Interface Design",
-        description:
-            "Specialized in designing intuitive and visually compelling user interfaces. Committed to enhancing user experience by combining functionality with aesthetics, ensuring a seamless and engaging interaction for end-users.",
-    },
-];
+// SVGs for Icons
+export const ComputerSVG = "/svgs/svg1.svg";
+export const ToolSVG = "/svgs/svg2.svg";
+export const VSCodeSVG = "/svgs/svg3.svg";
+export const FigmaSVG = "/svgs/svg4.svg";
+export const GithubSVG = "/svgs/svg5.svg";
+export const JavaScriptSVG = "/svgs/svg6.svg";
+export const PythonSVG = "/svgs/svg7.svg";
+export const JavaSVG = "/svgs/svg9.svg";
+export const PhpSVG = "/svgs/svg10.svg";
+export const KotlinSVG = "/svgs/svg8.svg";
+export const TypeScriptSVG = "/svgs/svg11.svg";
+export const NextjsSVG = "/svgs/svg12.svg";
+export const ReactjsSVG = "/svgs/svg13.svg";
+export const TailwindCSSSVG = "/svgs/svg14.svg";
+export const NodejsSVG = "/svgs/svg15.svg";
+export const ExpressjsSVG = "/svgs/svg16.svg";
+export const MySQLSVG = "/svgs/svg17.svg";
+export const MongoDBSVG = "/svgs/svg18.svg";
+export const RedisSVG = "/svgs/svg19.svg";
+export const NotionSVG = "/svgs/svg20.svg";
+export const FolderSVG = "/svgs/svg21.svg";
+export const GrowTrendSVG = "/svgs/svg22.svg";
+export const MobileAppSVG = "/svgs/svg23.svg";
+export const WebDevSVG = "/svgs/svg24.svg";
+export const GeometrySVG = "/svgs/svg25.svg";
+export const ServerSVG = "/svgs/svg26.svg";
+export const BrowserSVG = "/svgs/svg27.svg";
+export const CalenderSVG = "/svgs/svg28.svg";
+export const RibbonSVG = "/svgs/svg31.svg";
+export const PersonSVG = "/svgs/DEFAULT.svg";
+export const ProjSVG = "/svgs/svg33.svg";
+export const ElectricitySVG = "/svgs/svg34.svg";
 
-export const TestimonialsData = [
-    {
-        name: "Sumit Nanda",
-        feedback:
-            "Working with Armaan was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
-        photo: "/Photos/Testimonials/Writer2.png",
-    },
-    {
-        name: "Vikram Saraon",
-        feedback:
-            "Armaan was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
-        photo: "/Photos/Testimonials/Writer1.jpg",
-    },
-    {
-        name: "Mohamed EIMenshawy",
-        feedback:
-            "I am pleased to highly recommend Armaan Jaj, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Armaan has my utmost confidence in his future pursuits.",
-    },
-];
+// SVG for illustrations
+export const ChattingIllustration = "/svgs/svg29.svg";
+export const HappyCarIllustration = "/svgs/svg30.svg";
+export const _404Illustration = "/svgs/svg32.svg";
 
-export const NavLinksData = [
-    { id: 1, name: "Homepage", link: "/" },
-    { id: 2, name: "About", link: "/about" },
-    { id: 4, name: "Contact", link: "/contact" },
-];
-
-export const SitemapLinks = [
-    {
-        section: "Main Sections",
-        links: [
-            { href: "/", label: "Home" },
-            { href: "/about", label: "About Me" },
-            { href: "/contact", label: "Contact" },
-            { href: "/resources", label: "Resources" },
-        ],
-    },
-    {
-        section: "Contact & Connect",
-        links: [
-            { href: "https://github.com/armaanjaj", label: "GitHub" },
-            { href: "https://linkedin.com/in/armaanjaj", label: "LinkedIn" },
-            { href: "https://x.com/armaanjaj", label: "Twitter" },
-        ],
-    },
-    {
-        section: "Others",
-        links: [{ href: "/sitemap", label: "Sitemap" }],
-    },
-];
-
-export const ResourcesData = [
-    {
-        title: "Next.js Project Starter",
-        description:
-            "A fully configured Next.js project template with essential dependencies, including TypeScript, TailwindCSS, and ESLint.",
-        link: "#",
-    },
-    {
-        title: "React Component Library",
-        description:
-            "A collection of reusable React components with a focus on accessibility and performance.",
-        link: "#",
-    },
-    {
-        title: "Express.js API Template",
-        description:
-            "A boilerplate for building RESTful APIs with Express.js, including JWT authentication and MongoDB integration.",
-        link: "#",
-    },
-    {
-        title: "TypeScript Best Practices",
-        description:
-            "A comprehensive guide to writing clean and maintainable TypeScript code, including tips and examples.",
-        link: "#",
-    },
-];
-
-export const GitHubAnalyticsdata = [
-    {
-        id: 1,
-        title: "Active Project",
-        icon: LinkNodesIcon,
-        text: "This is where I’m channeling my development efforts, pushing forward with significant updates and improvements.",
-        bgColor: "bg-transparent",
-    },
-    {
-        id: 2,
-        title: "GitHub Contributions",
-        icon: GitBranchIcon,
-        text: "Here’s a snapshot of my recent GitHub contributions. I take pride in consistently contributing to my repositories, tracking my progress and staying committed to my projects.",
-        bgColor: "bg-transparent",
-    },
-    {
-        id: 3,
-        title: "Top Languages",
-        icon: CodeIcon,
-        text: "These are the top programming languages I work with, reflecting my versatility across different technologies. It’s a quick glance at the tools I’m most proficient in, showcasing the breadth of my coding skills.",
-        bgColor: "bg-transparent",
-    },
-];
-
-export const MetricsData = [
-    {
-        id: 1,
-        number: 500,
-        label: "Commits pushed",
-    },
-    {
-        id: 2,
-        number: 6,
-        label: "Projects completed",
-    },
-    {
-        id: 3,
-        number: 15,
-        label: "Technologies mastered",
-    },
-    {
-        id: 4,
-        number: 300,
-        label: "Medium double doubles",
-    },
-];
+// General use images
+export const CaptainAmerica = "/photos/general/cap.jpg";
+export const DefaultProjectHeader = "/project/header/Default.svg";

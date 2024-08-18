@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { DefaultProjectHeader, GitHubIcon, NewTabIcon, ProjSVG } from "@/utils/icons";
+import { DefaultProjectHeader, GitHubIcon, NewTabIcon, ProjSVG } from "@/utils/assets";
 import Heading from "@/components/ui/designs/Heading";
 import { motion } from "framer-motion";
 import Magnetic from "@/components/ui/designs/Magnetic";

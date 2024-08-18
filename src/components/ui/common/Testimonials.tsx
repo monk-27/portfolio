@@ -3,8 +3,8 @@ import Image from "next/image";
 import * as React from "react";
 import Heading from "@/components/ui/designs/Heading";
 import gsap from "gsap";
-import { TestimonialsData } from "@/utils/assets";
-import { PersonSVG } from "@/utils/icons";
+import { TestimonialsData } from "@/utils/sitedata";
+import { PersonSVG } from "@/utils/assets";
 import Paragraph from "../designs/Paragraph";
 
 export interface ITestimonialsProps {}

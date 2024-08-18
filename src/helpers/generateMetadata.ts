@@ -32,7 +32,7 @@ export const generateMetadata = ({
     siteName,
     title,
     description,
-    keywords = "Armaan Jaj, Full Stack Developer, Web Developer, JavaScript, React, Next.js, Node.js",
+    keywords = "Armaan Jaj, developer portfolio, full-stack developer, web development, front-end, back-end, React.js, Next.js, Node.js, JavaScript, modern web applications, software engineer",
     url,
     images,
     twitterCardType = "summary_large_image",
@@ -41,7 +41,7 @@ export const generateMetadata = ({
     googleVerification = process.env.G_VERIFICATION,
     robots = "index, follow",
     manifest = "/manifest.json",
-    applicationName = "Armaan Jaj | Developer Portfolio",
+    applicationName = "Armaan Jaj ● Developer Portfolio",
 }: MetadataParams): Metadata => ({
     title,
     description,

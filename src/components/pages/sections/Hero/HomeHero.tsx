@@ -5,8 +5,8 @@ import * as React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import { ArrowRightIcon } from "@/utils/icons";
-import { MetricsData } from "@/utils/assets";
+import { ArrowRightIcon } from "@/utils/assets";
+import { MetricsData } from "@/utils/sitedata";
 import GlobeWithCityTime from "@/components/pages/sections/Homepage/LocalCityTime";
 import SocialLinks from "@/components/ui/common/SocialLinks";
 

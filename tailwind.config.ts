@@ -9,11 +9,8 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: "#030712", // 60%
-                // secondary: "#FFC700", // 30%
-                secondary: "#4CCD99", // 30%
-                // tertiary: "#4CCD99" // 10%
-                tertiary: "#FFC700" // 10%
+                primary: "#030712",
+                secondary: "#4CCD99",
             },
         },
     },

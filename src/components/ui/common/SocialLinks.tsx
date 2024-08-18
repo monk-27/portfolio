@@ -1,4 +1,4 @@
-import { SocialMediaLinksData } from "@/utils/assets";
+import { SocialMediaLinksData } from "@/utils/sitedata";
 import * as React from "react";
 import Magnetic from "../designs/Magnetic";
 import Link from "next/link";

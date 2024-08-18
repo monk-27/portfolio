@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/charts/GitHub";
 import Heading from "@/components/ui/designs/Heading";
 import * as React from "react";
-import { GitHubAnalyticsdata } from "@/utils/assets";
+import { GitHubAnalyticsdata } from "@/utils/sitedata";
 import Paragraph from "@/components/ui/designs/Paragraph";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

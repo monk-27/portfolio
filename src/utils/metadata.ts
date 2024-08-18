@@ -1,9 +1,9 @@
 export const homepage_MD = {
     title: "Armaan Jaj ● Developer Portfolio",
     description:
-        "Discover the portfolio of Armaan Jaj, a full-stack developer specializing in building high-performance, visually appealing, and user-centric web applications. Explore innovative projects that demonstrate expertise in front-end and back-end development.",
+        "Explore the developer portfolio of Armaan Jaj, a full-stack developer focused on crafting high-performance, aesthetically pleasing web applications. Dive into projects showcasing expertise in both front-end and back-end development with cutting-edge technologies.",
     keywords:
-        "Armaan Jaj, full-stack developer, web developer, portfolio, web applications, front-end development, back-end development, JavaScript, React, Next.js, Node.js, software engineering",
+        "Armaan Jaj, developer portfolio, full-stack developer, web development, front-end, back-end, React.js, Next.js, Node.js, JavaScript, modern web applications, software engineer",
     url: "https://www.armaancodes.com",
     images: [
         {
@@ -18,9 +18,9 @@ export const homepage_MD = {
 export const aboutpage_MD = {
     title: "About - Armaan Jaj",
     description:
-        "Learn more about Armaan Jaj, a passionate full-stack developer with a creative approach to web development. Explore the journey, skills, and experience that shape his approach to building innovative digital solutions.",
+        "Get to know Armaan Jaj, a full-stack developer passionate about creating innovative web solutions. Discover his journey, skills, and experiences that define his creative approach to modern web development.",
     keywords:
-        "Armaan Jaj, about, full-stack developer, web developer, skills, experience, journey, portfolio, web development",
+        "Armaan Jaj, about, full-stack developer, web development journey, programming skills, web engineer, creative web solutions, development experience",
     url: "https://www.armaancodes.com/about",
     images: [
         {
@@ -35,9 +35,9 @@ export const aboutpage_MD = {
 export const contactpage_MD = {
     title: "Contact - Armaan Jaj",
     description:
-        "Explore the professional web development services offered by Armaan Jaj. Specializing in full-stack development, Armaan delivers robust, scalable, and visually stunning web solutions tailored to your business needs.",
+        "Connect with Armaan Jaj to discover tailored web development services, from full-stack solutions to scalable and visually striking applications. Let Armaan's expertise help you bring your ideas to life.",
     keywords:
-        "Armaan Jaj, services, full-stack developer, web development, custom web solutions, scalable applications, portfolio, JavaScript, React, Node.js, Next.js",
+        "Armaan Jaj, contact, web development services, full-stack developer, custom web solutions, scalable applications, front-end and back-end development, professional web services",
     url: "https://www.armaancodes.com/services",
     images: [
         {
@@ -52,9 +52,9 @@ export const contactpage_MD = {
 export const sitemappage_MD = {
     title: "Sitemap - Armaan Jaj",
     description:
-        "Navigate through Armaan Jaj's developer portfolio with ease using the sitemap. Find links to all key pages, including services, tools, and more.",
+        "Easily navigate through Armaan Jaj's portfolio with this sitemap. Find direct links to key pages including services, resources, and projects.",
     keywords:
-        "Armaan Jaj, sitemap, web development, portfolio, navigation, site links, full-stack developer",
+        "Armaan Jaj, sitemap, site navigation, portfolio, web development, website structure, developer portfolio, quick access links",
     url: "https://www.armaancodes.com/sitemap",
     images: [
         {
@@ -68,9 +68,10 @@ export const sitemappage_MD = {
 
 export const reourcespage_MD = {
     title: "Resources - Armaan Jaj",
-    description: "Description here.",
+    description:
+        "Access a curated collection of resources by Armaan Jaj, including web development guides, tools, and best practices for building efficient and modern applications.",
     keywords:
-        "Armaan Jaj, sitemap, web development, portfolio, navigation, site links, full-stack developer",
+        "Armaan Jaj, resources, web development tools, developer resources, programming guides, modern web practices, web development tutorials",
     url: "https://www.armaancodes.com/resources",
     images: [
         {

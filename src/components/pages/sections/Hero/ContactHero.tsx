@@ -3,7 +3,7 @@ import * as React from "react";
 import ActionButton from "@/components/ui/designs/ActionButton";
 import Image from "next/image";
 import Heading from "@/components/ui/designs/Heading";
-import { HappyCarIllustration } from "@/utils/icons";
+import { HappyCarIllustration } from "@/utils/assets";
 
 export interface IServicesHeroProps {}
 

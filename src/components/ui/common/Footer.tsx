@@ -2,7 +2,7 @@
 import Link from "next/link";
 import * as React from "react";
 import Heading from "@/components/ui/designs/Heading";
-import { NavLinksData } from "@/utils/assets";
+import { NavLinksData } from "@/utils/sitedata";
 import SocialLinks from "./SocialLinks";
 
 export interface IFooterProps {}

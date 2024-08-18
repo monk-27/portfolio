@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import Heading from "@/components/ui/designs/Heading";
 import ActionButton from "@/components/ui/designs/ActionButton";
-import { LocationIcon, CodeIcon, DownloadIcon } from "@/utils/icons";
+import { LocationIcon, CodeIcon, DownloadIcon } from "@/utils/assets";
 import Paragraph from "@/components/ui/designs/Paragraph";
 
 export interface HeroSectionProps {}

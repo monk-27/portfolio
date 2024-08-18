@@ -1,6 +1,6 @@
 "use client";
 import Heading from "@/components/ui/designs/Heading";
-import { CondensedSkills } from "@/utils/assets";
+import { CondensedSkills } from "@/utils/sitedata";
 import Image from "next/image";
 import * as React from "react";
 
