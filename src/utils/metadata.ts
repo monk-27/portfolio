@@ -7,7 +7,7 @@ export const homepage_MD = {
     url: "https://www.armaancodes.com",
     images: [
         {
-            url: "https://www.armaancodes.com/website-gallery/homepage.png",
+            url: "https://www.armaancodes.com/opengraph-image.png",
             width: 1200,
             height: 630,
             alt: "Armaan Jaj | Developer Portfolio - Home page",
@@ -24,7 +24,7 @@ export const aboutpage_MD = {
     url: "https://www.armaancodes.com/about",
     images: [
         {
-            url: "https://www.armaancodes.com/website-gallery/about.png",
+            url: "https://www.armaancodes.com/opengraph-image.png",
             width: 1200,
             height: 630,
             alt: "About - Armaan Jaj",
@@ -41,7 +41,7 @@ export const contactpage_MD = {
     url: "https://www.armaancodes.com/services",
     images: [
         {
-            url: "https://www.armaancodes.com/website-gallery/services.png",
+            url: "https://www.armaancodes.com/opengraph-image.png",
             width: 1200,
             height: 630,
             alt: "Contact - Armaan Jaj",
@@ -58,7 +58,7 @@ export const sitemappage_MD = {
     url: "https://www.armaancodes.com/sitemap",
     images: [
         {
-            url: "https://www.armaancodes.com/website-gallery/homepage.png",
+            url: "https://www.armaancodes.com/opengraph-image.png",
             width: 1200,
             height: 630,
             alt: "Sitemap | Armaan Jaj",
@@ -75,7 +75,7 @@ export const reourcespage_MD = {
     url: "https://www.armaancodes.com/resources",
     images: [
         {
-            url: "https://www.armaancodes.com/website-gallery/resources.png",
+            url: "https://www.armaancodes.com/opengraph-image.png",
             width: 1200,
             height: 630,
             alt: "Resources - Armaan Jaj",
