@@ -81,4 +81,4 @@ export const _404Illustration = "/svgs/svg32.svg";
 
 // General use images
 export const CaptainAmerica = "/photos/general/cap.jpg";
-export const DefaultProjectHeader = "/project/header/Default.svg";
+export const DefaultProjectHeader = "/project/header/DEFAULT.svg";
