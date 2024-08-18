@@ -48,6 +48,7 @@ export default function HeroSection(props: HeroSectionProps) {
                     <ActionButton
                         text="Contact Me"
                         status="passive"
+                        link={{ url: "/contact#contact-form-section", target: "_self" }}
                         size="sm"
                     />
                     <ActionButton
@@ -67,7 +68,7 @@ export default function HeroSection(props: HeroSectionProps) {
                     alt="Armaan Jaj"
                     width={4032}
                     height={3024}
-                    className="shadow-lg object-cover h-80"
+                    className="shadow-lg object-cover h-80 rounded-3xl"
                 />
             </div>
         </div>

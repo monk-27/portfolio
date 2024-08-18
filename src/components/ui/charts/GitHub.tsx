@@ -1,5 +1,5 @@
 "use client";
-import FolderCard from "@/components/layout/cards/FolderCard";
+import FolderCard from "@/components/pages/sections/Homepage/FolderCard";
 import * as React from "react";
 import CustomLineChart from "./CustomLineChart";
 import CustomPieChart from "./CustomPieChart";
@@ -11,7 +11,7 @@ export function ActiveRepo({ className }: { className?: string }) {
         starCount: 0,
         forkCount: 0,
         isPrivate: false,
-        language: "", // Updated to store a single language
+        language: "",
         latestCommitMessage: "",
         latestCommitUrl: "",
         latestCommitDate: "",

@@ -9,17 +9,17 @@ export interface IMagneticProps {
 export default function Magnetic({ children }: IMagneticProps) {
     const ref = React.useRef<HTMLElement | null>(null);
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         if (!ref.current) return;
 
         // GSAP QuickTo functions with more elastic and slower animation
         const xTo = gsap.quickTo(ref.current, "x", {
             duration: 1.5,
-            ease: "elastic.out(1, 0.75)", // More bounce and softer effect
+            ease: "elastic.out(1, 1)", // More bounce and softer effect
         });
         const yTo = gsap.quickTo(ref.current, "y", {
             duration: 1.5,
-            ease: "elastic.out(1, 0.75)", // Match the same bounce effect
+            ease: "elastic.out(1, 1)", // Match the same bounce effect
         });
 
         const onMouseMove = (e: MouseEvent) => {

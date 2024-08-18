@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 import Navbar from "../ui/common/Navbar";
@@ -28,9 +29,7 @@ export default function PageCreator({ title, children }: IPageCreatorProps) {
                 <div className="rounded-3xl bg-primary overflow-hidden">
                     {children}
                 </div>
-                <footer
-                    className="mt-10 px-2"
-                >
+                <footer className="mt-10 px-0">
                     <Footer />
                 </footer>
             </article>

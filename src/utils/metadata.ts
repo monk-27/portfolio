@@ -1,5 +1,5 @@
 export const homepage_MD = {
-    title: "Armaan Jaj | Developer Portfolio",
+    title: "Armaan Jaj ● Developer Portfolio",
     description:
         "Discover the portfolio of Armaan Jaj, a full-stack developer specializing in building high-performance, visually appealing, and user-centric web applications. Explore innovative projects that demonstrate expertise in front-end and back-end development.",
     keywords:
@@ -16,7 +16,7 @@ export const homepage_MD = {
 };
 
 export const aboutpage_MD = {
-    title: "About Armaan Jaj | Developer Portfolio",
+    title: "About - Armaan Jaj",
     description:
         "Learn more about Armaan Jaj, a passionate full-stack developer with a creative approach to web development. Explore the journey, skills, and experience that shape his approach to building innovative digital solutions.",
     keywords:
@@ -27,30 +27,13 @@ export const aboutpage_MD = {
             url: "https://www.armaancodes.com/website-gallery/about.png",
             width: 1200,
             height: 630,
-            alt: "About Armaan Jaj | Developer Portfolio - About page",
+            alt: "About - Armaan Jaj",
         },
     ],
 };
 
-export const skillspage_MD = {
-    title: "Skills I possess | Armaan Jaj | Developer Portfolio",
-    description:
-        "Discover the powerful tools and technologies that Armaan Jaj leverages to build innovative web applications. From front-end frameworks to back-end technologies, explore the toolkit behind successful projects.",
-    keywords:
-        "Armaan Jaj, tools, technologies, full-stack developer, web development, JavaScript, React, Node.js, Next.js, development tools",
-    url: "https://www.armaancodes.com/tools",
-    images: [
-        {
-            url: "https://www.armaancodes.com/website-gallery/tools.png",
-            width: 1200,
-            height: 630,
-            alt: "Tools I Use | Armaan Jaj | Developer Portfolio - Tools page",
-        },
-    ],
-};
-
-export const servicespage_MD = {
-    title: "Services by Armaan Jaj | Developer Portfolio",
+export const contactpage_MD = {
+    title: "Contact - Armaan Jaj",
     description:
         "Explore the professional web development services offered by Armaan Jaj. Specializing in full-stack development, Armaan delivers robust, scalable, and visually stunning web solutions tailored to your business needs.",
     keywords:
@@ -61,13 +44,13 @@ export const servicespage_MD = {
             url: "https://www.armaancodes.com/website-gallery/services.png",
             width: 1200,
             height: 630,
-            alt: "Services by Armaan Jaj | Developer Portfolio - Services page",
+            alt: "Contact - Armaan Jaj",
         },
     ],
 };
 
 export const sitemappage_MD = {
-    title: "Sitemap | Armaan Jaj | Developer Portfolio",
+    title: "Sitemap - Armaan Jaj",
     description:
         "Navigate through Armaan Jaj's developer portfolio with ease using the sitemap. Find links to all key pages, including services, tools, and more.",
     keywords:
@@ -78,13 +61,13 @@ export const sitemappage_MD = {
             url: "https://www.armaancodes.com/website-gallery/homepage.png",
             width: 1200,
             height: 630,
-            alt: "Sitemap | Armaan Jaj | Developer Portfolio - Home page",
+            alt: "Sitemap | Armaan Jaj",
         },
     ],
 };
 
 export const reourcespage_MD = {
-    title: "Resources | Armaan Jaj | Developer Portfolio",
+    title: "Resources - Armaan Jaj",
     description: "Description here.",
     keywords:
         "Armaan Jaj, sitemap, web development, portfolio, navigation, site links, full-stack developer",
@@ -94,7 +77,7 @@ export const reourcespage_MD = {
             url: "https://www.armaancodes.com/website-gallery/resources.png",
             width: 1200,
             height: 630,
-            alt: "Resources | Armaan Jaj | Developer Portfolio - Resources page",
+            alt: "Resources - Armaan Jaj",
         },
     ],
 };

@@ -9,7 +9,7 @@ import { FaRegStar, FaCodeBranch } from "react-icons/fa";
 import { IoLockClosed, IoLockOpen } from "react-icons/io5";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { IoIosArrowRoundForward, IoIosLink } from "react-icons/io";
+import { IoIosArrowRoundForward, IoIosLink, IoIosOpen } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoCodeSlash } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
@@ -32,6 +32,7 @@ export const LinkNodesIcon = FaProjectDiagram;
 export const ArrowInsideCircleIcon = IoIosArrowDroprightCircle;
 export const DownloadIcon = IoIosDownload;
 export const ArrowRightIcon = IoIosArrowRoundForward;
+export const NewTabIcon = IoIosOpen;
 
 // Social Icons
 export const InstagramIcon = IoLogoInstagram;

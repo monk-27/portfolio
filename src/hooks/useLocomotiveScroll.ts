@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+"use client";
+import { useLayoutEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 
 export const useLocomotiveScroll = (options: any) => {
     const scrollRef = useRef<LocomotiveScroll | null>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const initScroll = async () => {
             const LocomotiveScroll = (await import("locomotive-scroll"))
                 .default;

@@ -1,15 +1,13 @@
-import SkillsHero from "./SkillsHero";
 import HomeHero from "./HomeHero";
 import AboutHero from "./AboutHero";
-import ServicesHero from "./ServicesHero";
+import ContactHero from "./ContactHero";
 
-type HeroTypes = "home" | "about" | "skills" | "services";
+type HeroTypes = "home" | "about" | "contact";
 
 const heroComponents: Record<HeroTypes, React.ComponentType<any>> = {
     home: HomeHero,
     about: AboutHero,
-    skills: SkillsHero,
-    services: ServicesHero,
+    contact: ContactHero,
 };
 
 interface HeroProps {

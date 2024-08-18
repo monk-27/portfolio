@@ -2,13 +2,13 @@
 import Heading from "@/components/ui/designs/Heading";
 import Paragraph from "@/components/ui/designs/Paragraph";
 import * as React from "react";
-import ActionButton from "@/components/ui/designs/ActionButton";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import { ArrowRightIcon, DownloadIcon } from "@/utils/icons";
-import { SocialMediaLinks } from "@/utils/assets";
-import Magnetic from "@/components/ui/designs/Magnetic";
+import { ArrowRightIcon } from "@/utils/icons";
+import { MetricsData } from "@/utils/assets";
+import GlobeWithCityTime from "@/components/pages/sections/Homepage/LocalCityTime";
+import SocialLinks from "@/components/ui/common/SocialLinks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +40,7 @@ export default function HomeHero(props: IHomeHeroProps) {
         },
     ];
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         const timeline = gsap.timeline();
 
         // Initial intro text animation
@@ -110,22 +110,10 @@ export default function HomeHero(props: IHomeHeroProps) {
                 <ProgressSection progressData={progressData} />
                 <div
                     data-scroll
-                    data-scroll-speed={0.1}
-                    className="flex flex-row justify-center gap-8"
+                    data-scroll-speed={-0.1}
+                    className="flex flex-col justify-center items-center gap-10 my-14"
                 >
-                    {SocialMediaLinks.map((item, index) => (
-                        <Magnetic>
-                            <Link
-                                href={item.href}
-                                target={item.target}
-                                className={item.className}
-                                title={item.title}
-                                key={index}
-                            >
-                                <item.icon className="scale-110 hover:text-secondary transition duration-300" />
-                            </Link>
-                        </Magnetic>
-                    ))}
+                    <GlobeWithCityTime />
                 </div>
             </div>
 
@@ -293,13 +281,12 @@ function Placement3() {
                     I give vision, JavaScript.
                 </Paragraph>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-5">
-                <ActionButton
-                    icon={<DownloadIcon />}
-                    text="Download Resume"
-                    size="sm"
-                />
-                <ActionButton text="Get in Touch" size="sm" status="active" />
+            <div
+                data-scroll
+                data-scroll-speed={-0.1}
+                className="flex flex-row justify-center gap-8 text-xl"
+            >
+                <SocialLinks />
             </div>
         </div>
     );
@@ -308,22 +295,15 @@ function Placement3() {
 function Placement4() {
     return (
         <div className="flex flex-col justify-center items-center gap-14 w-full">
-            <div className="flex flex-col justify-center items-center gap-2">
-                <span className="text-5xl">500+</span>
-                <span className="text-sm">Commits pushed</span>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2">
-                <span className="text-5xl">6+</span>
-                <span className="text-sm">Projects completed</span>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2">
-                <span className="text-5xl">15+</span>
-                <span className="text-sm">Technologies mastered</span>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2">
-                <span className="text-5xl">300+</span>
-                <span className="text-sm">Medium double doubles</span>
-            </div>
+            {MetricsData.map((item, _) => (
+                <div
+                    key={item.id}
+                    className="flex flex-col justify-center items-center gap-2"
+                >
+                    <span className="text-5xl">{item.number}+</span>
+                    <span className="text-sm">{item.label}</span>
+                </div>
+            ))}
         </div>
     );
 }

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>
+            <body suppressHydrationWarning>
                 <NextTopLoader color="#030712" showSpinner={false} height={5} />
                 {children}
             </body>

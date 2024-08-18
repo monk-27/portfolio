@@ -82,26 +82,39 @@ function NavHeader({
 // Internal component: NavLinks
 function NavLinks() {
     return (
-        <div className="flex-row-evenly-center gap-2 md:gap-8 w-full md:w-auto py-4 px-2 rounded-xl text-base">
+        <div className="flex-row-evenly-center gap-2 md:gap-8 h-full w-full md:w-auto py-4 px-2 rounded-xl text-base">
             {NavLinksData.map((item, _) => (
-                <NavLinkItem href={item.link} label={item.name} key={item.id} />
+                <NavLinkItem
+                    href={item.link}
+                    label={item.name}
+                    id={item.id}
+                    key={item.id}
+                />
             ))}
         </div>
     );
 }
 
 // Internal component: NavLinkItem
-function NavLinkItem({ href, label }: { href: string; label: string }) {
+function NavLinkItem({
+    href,
+    label,
+    id,
+}: {
+    href: string;
+    label: string;
+    id: number;
+}) {
     const currentPath = usePathname();
 
     return (
         <Link
             href={href}
-            className={`relative duration-300 px-2 w-full h-full rounded-lg flex-row-center-center md:gap-1 text-inherit text-sm md:text-lg ${
-                currentPath === href ? "underline" : ""
+            className={`relative duration-300 px-3 py-1 uppercase w-full h-full rounded-3xl flex-row-center-center md:gap-1 text-inherit text-sm md:text-lg ${
+                currentPath === href ? "bg-primary text-secondary" : ""
             }`}
         >
-            <Magnetic>
+            <Magnetic key={id}>
                 <span>{label}</span>
             </Magnetic>
         </Link>

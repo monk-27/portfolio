@@ -1,42 +1,20 @@
 import {
-    BrowserSVG,
     CodeIcon,
-    ExpressjsSVG,
     FigmaSVG,
     FolderSVG,
-    GeometrySVG,
     GitBranchIcon,
     GitHubIcon,
-    GithubSVG,
     GrowTrendSVG,
     InstagramIcon,
-    JavaScriptSVG,
-    JavaSVG,
-    KotlinSVG,
     LinkedInIcon,
     LinkNodesIcon,
     MobileAppSVG,
-    MongoDBSVG,
-    MySQLSVG,
-    NextjsSVG,
-    NodejsSVG,
-    NotionSVG,
-    PhpSVG,
-    PythonSVG,
-    ReactjsSVG,
-    RedisSVG,
-    ServerSVG,
-    ServiceIcon,
-    TailwindCSSSVG,
-    ToolIcon,
     TwitterIcon,
-    TypeScriptSVG,
-    VSCodeSVG,
     WebDevSVG,
 } from "./icons";
 
 // Social Media Links
-export const SocialMediaLinks = [
+export const SocialMediaLinksData = [
     {
         href: "https://www.github.com/armaanjaj",
         title: "GitHub",
@@ -146,7 +124,7 @@ export const TestimonialsData = [
 export const NavLinksData = [
     { id: 1, name: "Homepage", link: "/" },
     { id: 2, name: "About", link: "/about" },
-    { id: 4, name: "Services", link: "/services" },
+    { id: 4, name: "Contact", link: "/contact" },
 ];
 
 export const SitemapLinks = [
@@ -155,8 +133,7 @@ export const SitemapLinks = [
         links: [
             { href: "/", label: "Home" },
             { href: "/about", label: "About Me" },
-            { href: "/skills", label: "Skills" },
-            { href: "/services", label: "Services" },
+            { href: "/contact", label: "Contact" },
             { href: "/resources", label: "Resources" },
         ],
     },
@@ -222,5 +199,28 @@ export const GitHubAnalyticsdata = [
         icon: CodeIcon,
         text: "These are the top programming languages I work with, reflecting my versatility across different technologies. It’s a quick glance at the tools I’m most proficient in, showcasing the breadth of my coding skills.",
         bgColor: "bg-transparent",
+    },
+];
+
+export const MetricsData = [
+    {
+        id: 1,
+        number: 500,
+        label: "Commits pushed",
+    },
+    {
+        id: 2,
+        number: 6,
+        label: "Projects completed",
+    },
+    {
+        id: 3,
+        number: 15,
+        label: "Technologies mastered",
+    },
+    {
+        id: 4,
+        number: 300,
+        label: "Medium double doubles",
     },
 ];

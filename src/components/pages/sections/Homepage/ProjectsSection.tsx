@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { DefaultProjectHeader, ProjSVG } from "@/utils/icons";
+import { DefaultProjectHeader, GitHubIcon, NewTabIcon, ProjSVG } from "@/utils/icons";
 import Heading from "@/components/ui/designs/Heading";
 import { motion } from "framer-motion";
 import Magnetic from "@/components/ui/designs/Magnetic";
@@ -137,7 +137,7 @@ function ProjectCard({
                     <div className="flex-col-start-start pr-5">
                         <Heading
                             level={5}
-                            className="text-base md:text-3xl font-semibold text-inherit w-fit md:text-left group-hover:translate-x-0 group-hover:italic md:group-hover:translate-x-5 transition-transform duration-300"
+                            className="text-base md:text-3xl font-semibold text-inherit w-fit md:text-left group-hover:translate-x-0 md:group-hover:translate-x-5 transition-transform duration-500"
                         >
                             {project.title}
                         </Heading>
@@ -241,6 +241,7 @@ function ExpandedDetails({ project }: { project: Project }) {
                         width={1200}
                         height={630}
                         alt="Project Banner"
+                        priority
                         className="rounded-3xl"
                     />
                 </div>
@@ -289,9 +290,10 @@ function ExpandedProjectLinks({ links }: { links?: Project["links"] }) {
                     <a
                         href={links.visit}
                         target="_blank"
-                        className="py-2 px-4 text-sm rounded-full bg-white text-black hover:bg-gray-200 transition-colors duration-300"
+                        className="py-2 px-4 text-sm rounded-full bg-white text-black hover:bg-gray-200 transition-colors duration-300 flex-row-center-center gap-2"
                     >
-                        See Website
+                        <NewTabIcon />
+                        <span>Visit Website</span>
                     </a>
                 </Magnetic>
             )}
@@ -300,9 +302,10 @@ function ExpandedProjectLinks({ links }: { links?: Project["links"] }) {
                     <a
                         href={links.github}
                         target="_blank"
-                        className="py-2 px-4 text-sm rounded-full bg-white text-black hover:bg-gray-200 transition-colors duration-300"
+                        className="py-2 px-4 text-sm rounded-full bg-white text-black hover:bg-gray-200 transition-colors duration-300 flex-row-center-center gap-2"
                     >
-                        See code
+                        <GitHubIcon />
+                        <span className="whitespace-nowrap">See code</span>
                     </a>
                 </Magnetic>
             )}

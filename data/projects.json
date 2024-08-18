@@ -190,7 +190,7 @@
         "id": 7,
         "title": "Data Structure visualizer",
         "sneakPeakDescription": "Data structure visualizer web app.",
-        "description": "Developed a web app to assist developers in visualizing various data structures and algorithms, providing an intuitive and educational tool for understanding complex concepts.",
+        "description": "Developing a web app to assist developers in visualizing various data structures and algorithms, providing an intuitive and educational tool for understanding complex concepts.",
         "technologies": [
             "Next.js",
             "TailwindCSS",

@@ -1,3 +1,4 @@
+import Heading from "@/components/ui/designs/Heading";
 import { ServicesData } from "@/utils/assets";
 import Image from "next/image";
 import * as React from "react";
@@ -12,18 +13,24 @@ interface IServiceCardProps {
 
 export default function Services(props: IServicesProps) {
     return (
-        <div
-            id="services"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12 pt-5 px-4"
-        >
-            {ServicesData.map((service) => (
-                <ServiceCard
-                    key={service.id}
-                    title={service.title}
-                    description={service.description}
-                    icon={service.icon}
-                />
-            ))}
+        <div className="px-4">
+            <div data-scroll data-scroll-speed={0.1}>
+                <Heading level={2}>Services I provide</Heading>
+            </div>
+            <div
+                data-scroll
+                data-scroll-speed={0.2}
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto mt-12 pt-5"
+            >
+                {ServicesData.map((service) => (
+                    <ServiceCard
+                        key={service.id}
+                        title={service.title}
+                        description={service.description}
+                        icon={service.icon}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
