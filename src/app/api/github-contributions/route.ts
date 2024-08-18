@@ -3,6 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 
 const GITHUB_GRAPHQL_API = "https://api.github.com/graphql";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
 const client = new GraphQLClient(GITHUB_GRAPHQL_API, {
     headers: {
@@ -31,7 +32,7 @@ const GET_CONTRIBUTIONS_QUERY = gql`
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
-    const username = searchParams.get("username") || "armaanjaj";
+    const username = searchParams.get("username") || GITHUB_USERNAME;
     const from = searchParams.get("from");
     const to = searchParams.get("to");
 

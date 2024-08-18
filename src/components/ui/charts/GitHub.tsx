@@ -4,6 +4,8 @@ import * as React from "react";
 import CustomLineChart from "./CustomLineChart";
 import CustomPieChart from "./CustomPieChart";
 
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
+
 export function ActiveRepo({ className }: { className?: string }) {
     const [repoData, setRepoData] = React.useState({
         title: "",
@@ -24,10 +26,8 @@ export function ActiveRepo({ className }: { className?: string }) {
         const fetchLatestCommitData = async () => {
             setIsLoading(true);
             try {
-                const owner = "armaanjaj";
-
                 const response = await fetch(
-                    `/api/github-latest-commit?owner=${owner}`
+                    `/api/github-latest-commit?owner=${GITHUB_USERNAME}`
                 );
 
                 if (!response.ok) {
@@ -42,7 +42,7 @@ export function ActiveRepo({ className }: { className?: string }) {
                     starCount: data.starCount || 0,
                     forkCount: data.forkCount || 0,
                     isPrivate: data.isPrivate,
-                    language: data.language || "N/A", // Updated to handle a single language
+                    language: data.language || "N/A",
                     latestCommitMessage: data.latestCommitMessage,
                     latestCommitUrl: data.latestCommitUrl,
                     latestCommitDate: new Date(
@@ -79,7 +79,7 @@ export function ActiveRepo({ className }: { className?: string }) {
                 starCount={repoData.starCount}
                 forkCount={repoData.forkCount}
                 isPrivate={repoData.isPrivate}
-                language={repoData.language} // Pass the single language
+                language={repoData.language}
                 latestCommitMessage={repoData.latestCommitMessage}
                 latestCommitUrl={repoData.latestCommitUrl}
                 latestCommitDate={repoData.latestCommitDate}
@@ -106,7 +106,7 @@ export function Contributions() {
 
         try {
             const response = await fetch(
-                `/api/github-contributions?username=armaanjaj&from=${from}&to=${to}`
+                `/api/github-contributions?username=${GITHUB_USERNAME}&from=${from}&to=${to}`
             );
             if (!response.ok) throw new Error("Failed to fetch data");
 
@@ -155,7 +155,7 @@ export function Languages() {
 
         try {
             const response = await fetch(
-                `/api/github-languages?username=armaanjaj`
+                `/api/github-languages?username=${GITHUB_USERNAME}`
             );
             if (!response.ok) throw new Error("Failed to fetch data");
 

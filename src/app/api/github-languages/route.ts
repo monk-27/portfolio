@@ -3,6 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 
 const GITHUB_GRAPHQL_API = "https://api.github.com/graphql";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
 const client = new GraphQLClient(GITHUB_GRAPHQL_API, {
     headers: {
@@ -38,7 +39,7 @@ const GET_REPOS_LANGUAGES_QUERY = gql`
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
-    const username = searchParams.get("username") || "armaanjaj";
+    const username = searchParams.get("username") || GITHUB_USERNAME;
 
     try {
         const data = await client.request<{
@@ -86,7 +87,10 @@ export async function GET(req: NextRequest) {
 
         // Setting cache control headers for 1 hour (3600 seconds)
         const response = NextResponse.json(topLanguages, { status: 200 });
-        response.headers.set("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+        response.headers.set(
+            "Cache-Control",
+            "public, max-age=3600, stale-while-revalidate=86400"
+        );
 
         return response;
     } catch (error) {

@@ -13,7 +13,7 @@ interface IFormInput {
     message: string;
 }
 
-const FORMSPARK = process.env.NEXT_PUBLIC_FORMSPARK_KEY;
+const FORMSPARK = process.env.FORMSPARK_KEY;
 
 export default function ContactForm() {
     const {

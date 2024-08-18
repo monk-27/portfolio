@@ -13,6 +13,8 @@ import ActionButton from "@/components/ui/designs/ActionButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
+
 export interface IAnalyticsProps {}
 
 export default function ActivityHub(props: IAnalyticsProps) {
@@ -54,7 +56,7 @@ function ActivityHubHeader() {
                         size="sm"
                         status="active"
                         link={{
-                            url: "https://www.github.com/armaanjaj",
+                            url: `https://www.github.com/${GITHUB_USERNAME}`,
                             target: "_blank",
                         }}
                     />
@@ -63,7 +65,7 @@ function ActivityHubHeader() {
                         size="sm"
                         status="passive"
                         link={{
-                            url: "https://www.github.com/armaanjaj?tab=repositories",
+                            url: `https://www.github.com/${GITHUB_USERNAME}?tab=repositories`,
                             target: "_blank",
                         }}
                     />
