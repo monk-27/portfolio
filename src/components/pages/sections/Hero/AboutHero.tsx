@@ -18,7 +18,7 @@ export default function HeroSection(props: HeroSectionProps) {
                     level={1}
                     className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight"
                 >
-                    Hi, I'm <span className="text-secondary">Armaan Jaj</span>
+                    Hi, I&apos;m <span className="text-secondary">Armaan Jaj</span>
                 </Heading>
                 <Paragraph className="text-xl mb-6 text-gray-300 leading-relaxed">
                     A passionate{" "}

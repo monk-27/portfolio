@@ -73,7 +73,8 @@ export default function Testimonials(props: ITestimonialsProps) {
                         </Paragraph>
                     </div>
                     <Paragraph className="text-lg mt-4 sm:mt-2 italic max-w-[90vw] md:max-w-[60vw]">
-                        "{TestimonialsData[currentTestimonial].feedback}"
+                        &ldquo;{TestimonialsData[currentTestimonial].feedback}
+                        &rdquo;
                     </Paragraph>
                 </div>
                 {/* Progress Bar */}

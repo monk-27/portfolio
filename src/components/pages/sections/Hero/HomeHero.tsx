@@ -156,7 +156,7 @@ function Placement2({
                         Hi,
                     </span>
                     <span className="text-sm sm:text-base md:text-lg text-gray-400 font-thin tracking-wide">
-                        I'm
+                        I&apos;m
                     </span>
                 </div>
                 <div data-scroll data-scroll-speed={0.05}>

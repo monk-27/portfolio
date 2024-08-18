@@ -31,7 +31,7 @@ export default function ContactHero(props: IServicesHeroProps) {
                 <p className="text-base sm:text-lg mt-4 text-gray-400">
                     Professional services crafted to elevate your business, from
                     web and mobile app development to custom software solutions.
-                    Let's build something exceptional together.
+                    Let&apos;s build something exceptional together.
                 </p>
                 <div className="mt-8">
                     <span onClick={scrollToServices}>

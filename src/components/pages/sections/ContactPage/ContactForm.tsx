@@ -134,7 +134,7 @@ export default function ContactForm() {
                         htmlFor="organization"
                         className={getLabelClass("organization")}
                     >
-                        What's the name of your organization?{" "}
+                        What&apos;s the name of your organization?{" "}
                         <span className="text-gray-400 text-lg">
                             (Optional)
                         </span>

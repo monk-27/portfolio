@@ -25,9 +25,9 @@ export default function StorySection(props: StorySectionProps) {
                     >
                         <Paragraph>
                             Ever since I gripped my fingers around a pencil,
-                            I've been on a never-ending quest to create. From
+                            I&apos;ve been on a never-ending quest to create. From
                             the early days of sketching and getting lost in the
-                            world of art, I've evolved into a Web/Full Stack
+                            world of art, I&apos;ve evolved into a Web/Full Stack
                             Developer. While I no longer wield a pencil as my
                             weapon of choice, my love for design and creativity
                             is stronger than ever. These days, I channel that
@@ -36,7 +36,7 @@ export default function StorySection(props: StorySectionProps) {
                         </Paragraph>
                         <Paragraph>
                             Armed with tools like TailwindCSS, Next.js,
-                            React.js, and Node.js, I’ve become a digital creator
+                            React.js, and Node.js, I&apos;ve become a digital creator
                             blending design and functionality. My focus has
                             always been on crafting clean and efficient code,
                             making sure that every project I work on runs as
@@ -44,11 +44,11 @@ export default function StorySection(props: StorySectionProps) {
                         </Paragraph>
                         <Paragraph>
                             From building my own portfolio to developing complex
-                            applications, I’ve been able to leverage these
-                            skills in some exciting projects. Whether it's
+                            applications, I&apos;ve been able to leverage these
+                            skills in some exciting projects. Whether it&apos;s
                             optimizing performance or enhancing the user
-                            experience, I'm always ready to tackle new
-                            challenges and push the boundaries of what’s
+                            experience, I&apos;m always ready to tackle new
+                            challenges and push the boundaries of what&apos;s
                             possible.
                         </Paragraph>
                     </div>
@@ -114,8 +114,8 @@ export default function StorySection(props: StorySectionProps) {
                         Personal Mantra
                     </Heading>
                     <Paragraph className="text-lg max-w-3xl mx-auto text-gray-700">
-                        "Embrace the journey, cherish the moments, and always
-                        strive to leave a positive impact."
+                    &ldquo;Embrace the journey, cherish the moments, and always
+                        strive to leave a positive impact.&rdquo;
                     </Paragraph>
                 </div>
             </div>

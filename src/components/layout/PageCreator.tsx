@@ -10,12 +10,10 @@ export interface IPageCreatorProps {
 }
 
 export default function PageCreator({ title, children }: IPageCreatorProps) {
-    if (typeof document !== "undefined") {
-        useLocomotiveScroll({
-            el: document.querySelector("body"),
-            smooth: true,
-        });
-    }
+    useLocomotiveScroll({
+        el: document.querySelector("body"),
+        smooth: true,
+    });
     return (
         <>
             <article className="text-gray-200 bg-secondary homepage px-0">
