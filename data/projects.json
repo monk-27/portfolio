@@ -52,7 +52,7 @@
         ],
         "banner": "/project/header/ProjectHeader2.svg",
         "links": {
-            "visit": "https://www.v1.armaancodes.com/",
+            "visit": "https://v1.armaancodes.com/",
             "github": "https://github.com/armaanjaj/portfolio_v1"
         },
         "completed": {
@@ -178,7 +178,7 @@
         "banner": "/project/header/ProjectHeader6.svg",
         "logo": "/Logos/project6.png",
         "links": {
-            "visit": "https://portfolio-v2-five-sigma.vercel.app/",
+            "visit": "https://v2.armaancodes.com/",
             "github": "https://github.com/armaanjaj/portfolio_v2.git"
         },
         "completed": {
