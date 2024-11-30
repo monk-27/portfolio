@@ -1,13 +1,15 @@
 "use client";
 import * as React from "react";
+
 import ActionButton from "@/components/ui/designs/ActionButton";
 import Image from "next/image";
 import Heading from "@/components/ui/designs/Heading";
 import { HappyCarIllustration } from "@/utils/assets";
 
-export interface IServicesHeroProps {}
+export interface IServicesHeroProps { }
 
 export default function ContactHero(props: IServicesHeroProps) {
+    
     const scrollToServices = () => {
         const servicesSection = document.getElementById("contact-form-section");
         if (servicesSection) {
@@ -16,42 +18,58 @@ export default function ContactHero(props: IServicesHeroProps) {
     };
 
     return (
-        <div className="flex flex-col sm:flex-row justify-between items-center w-full bg-gray-800 p-8 sm:p-12">
-            <div
-                data-scroll
-                data-scroll-speed={0.1}
-                className="flex flex-col justify-center items-start max-w-xl text-gray-200"
-            >
-                <Heading
-                    level={1}
-                    className="text-3xl sm:text-5xl font-bold leading-tight"
+
+        <div className="flex flex-col items-center bg-gray-800 py-12 px-6 relative">
+            <h1 className="text-3xl sm:text-5xl font-bold text-gray-100 mb-6">
+                Contact Us
+            </h1>
+
+
+            <div className="flex flex-col sm:flex-row justify-center items-stretch gap-8 w-full max-w-5xl relative">
+                {/* Left Card */}
+                <div
+                    data-scroll
+                    data-scroll-speed={0.1}
+                    className="bg-gray-700 text-gray-200  sm:m-5 p-6 rounded-lg shadow-md flex flex-col justify-between max-w-sm w-full z-20 relative sm:-mr-32 "
                 >
-                    Empowering Your Business with Tailored Solutions
-                </Heading>
-                <p className="text-base sm:text-lg mt-4 text-gray-400">
-                    Professional services crafted to elevate your business, from
-                    web and mobile app development to custom software solutions.
-                    Let&apos;s build something exceptional together.
-                </p>
-                <div className="mt-8">
-                    <span onClick={scrollToServices}>
-                        <ActionButton
-                            text="Contact me"
-                            size="sm"
-                            status="active"
-                        />
-                    </span>
+                    <h2 className="text-xl font-semibold mb-4 text-yellow-400">
+                        Get in Touch
+                    </h2>
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-2">
+                            <span>📞</span>
+                            <p>CONTACT ME</p>
+                        </div>
+                        <p className="ml-6">+91 9731737300</p>
+
+                        <div className="flex items-center gap-2">
+                            <span>📧</span>
+                            <p>MAIL ME</p>
+                        </div>
+                        <p className="ml-6">exquisiteshashi@gmail.com</p>
+
+                        <div className="flex items-center gap-2">
+                            <span>📍</span>
+                            <p>REACH ME</p>
+                        </div>
+                        <p className="ml-6">
+                            New Delhi -110008
+
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div className="mt-8 sm:mt-0 sm:ml-10 flex justify-center">
-                <Image
-                    src={HappyCarIllustration}
-                    alt="Our Services"
-                    width={250}
-                    height={300}
-                    priority
-                    className="w-full h-auto max-w-[250px] sm:max-w-none"
-                />
+
+                {/* Right Card */}
+                <div className="bg-yellow-200 p-8 rounded-lg shadow-md flex flex-col items-center justify-center w-full relative sm:w-[65%] sm:-ml-16">
+                    <Image
+                        src='/contact.gif' 
+                        alt="Illustration"
+                        width={250}
+                        height={250} 
+                        className="rounded-md sm:ml-20"
+                    />
+                    
+                </div>
             </div>
         </div>
     );

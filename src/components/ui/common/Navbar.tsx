@@ -11,7 +11,7 @@ interface INavbarProps {
     className?: string;
     titlePosition?: "left" | "right" | "center";
     linksPosition?: "left" | "right" | "center";
-    titleColor?: "white" | "primary" | "secondary";
+    titleColor?:  "#424769"|"white" | "primary" | "secondary" ;
 }
 
 export default function Navbar({
@@ -19,11 +19,11 @@ export default function Navbar({
     className = "",
     titlePosition = "left",
     linksPosition = "right",
-    titleColor = "white",
+    titleColor = "#424769",
 }: INavbarProps) {
     return (
         <>
-            <div className={`md:py-7 px-6 bg-inherit ${className}`}>
+            <div className={`md:py-7 px-6  ${className}`}>
                 <nav className="flex-col-between-center md:flex-row w-full gap-10">
                     {linksPosition === "left" && <NavLinks />}
                     {title && (
@@ -47,12 +47,12 @@ function NavHeader({
     title,
     position,
     hideOnMobile,
-    titleColor = "white",
+    titleColor = "#424769",
 }: {
     title: string;
     position: "left" | "right" | "center";
     hideOnMobile?: boolean;
-    titleColor?: "white" | "primary" | "secondary";
+    titleColor?:  "#424769"|"white" | "primary" | "secondary" ;
 }) {
     const alignment =
         position === "left"
@@ -111,7 +111,7 @@ function NavLinkItem({
         <Link
             href={href}
             className={`relative duration-300 px-3 py-1 uppercase w-full h-full rounded-3xl flex-row-center-center md:gap-1 text-inherit text-sm md:text-lg ${
-                currentPath === href ? "bg-primary text-secondary" : ""
+                currentPath === href ? "bg-[#F8B179] text-[#424769]" : ""
             }`}
         >
             <Magnetic key={id}>

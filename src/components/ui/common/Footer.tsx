@@ -28,10 +28,10 @@ function PersonalInfo() {
     return (
         <div className="flex flex-col items-start lg:items-start">
             <Heading level={2} className="text-4xl lg:text-5xl">
-                Armaan Jaj
+                Shashi Bhushan Jha
             </Heading>
             <p className="text-gray-300 max-w-lg mt-4 text-lg lg:text-xl">
-                Full Stack Developer
+                Software Developer
             </p>
             <SocialMedia />
         </div>
@@ -103,11 +103,11 @@ function LegalStuff() {
     return (
         <div className="mt-8 lg:mt-12 w-full">
             <div className="text-left text-base lg:text-xl text-gray-300 flex flex-col lg:flex-row lg:justify-between">
-                <p>Edition &copy; {new Date().getFullYear()} Armaan Jaj.</p>
+                <p>Edition &copy; {new Date().getFullYear()} Shashi Bhushan Jha.</p>
                 <p className="mt-2 lg:mt-0">
                     <Link
                         href="/sitemap"
-                        className="hover:text-secondary transition duration-300"
+                        className="hover:text-[##F8B179] transition duration-300"
                     >
                         Sitemap
                     </Link>

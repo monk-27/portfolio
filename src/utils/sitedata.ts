@@ -16,33 +16,27 @@ import {
 // Social Media Links
 export const SocialMediaLinksData = [
     {
-        href: "https://www.github.com/armaanjaj",
+        href: "https://github.com/monk-27",
         title: "GitHub",
         target: "_blank",
         icon: GitHubIcon,
         className: "",
     },
     {
-        href: "https://www.linkedin.com/in/connectarmaan",
+        href: "https://www.linkedin.com/in/shashi-bhushan-jha-7797371a3/",
         title: "LinkedIn",
         target: "_blank",
         icon: LinkedInIcon,
         className: "",
     },
     {
-        href: "https://x.com/armaanjaj",
+        href: "https://x.com/0frustratedmonk",
         title: "X/Twitter",
         target: "_blank",
         icon: TwitterIcon,
         className: "",
     },
-    {
-        href: "https://www.instagram.com/armaan_jaj",
-        title: "Instagram",
-        target: "_blank",
-        icon: InstagramIcon,
-        className: "",
-    },
+    
 ];
 
 export const ServicesData = [
@@ -117,7 +111,7 @@ export const TestimonialsData = [
     {
         name: "Mohamed EIMenshawy",
         feedback:
-            "I am pleased to highly recommend Armaan Jaj, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Armaan has my utmost confidence in his future pursuits.",
+            "I am pleased to highly recommend Shashi Bhushan Jha, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Armaan has my utmost confidence in his future pursuits.",
     },
 ];
 
@@ -215,12 +209,8 @@ export const MetricsData = [
     },
     {
         id: 3,
-        number: 15,
+        number: 7,
         label: "Technologies mastered",
     },
-    {
-        id: 4,
-        number: 300,
-        label: "Medium double doubles",
-    },
+   
 ];

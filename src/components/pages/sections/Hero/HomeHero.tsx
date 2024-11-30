@@ -16,26 +16,31 @@ export interface IHomeHeroProps {}
 
 export default function HomeHero(props: IHomeHeroProps) {
     const [titles] = React.useState([
-        "A Full Stack Developer",
+        "A Software Developer",
         "A Web Designer",
-        "A Gamer",
         "A Tech Enthusiast",
     ]);
     const [currentTitleIndex, setCurrentTitleIndex] = React.useState(0);
 
     // Data for progress bars
     const progressData = [
+        // {
+        //     id: 1,
+        //     type: "Currently Learning",
+        //     title: "DevOps",
+        //     chaptersCompleted: 3,
+        //     totalChapters: 29,
+        // },
         {
             id: 1,
             type: "Currently Learning",
-            title: "DevOps",
-            chaptersCompleted: 3,
-            totalChapters: 29,
+            title: "Backend Development",
+            progress: 25,
         },
         {
             id: 2,
-            type: "Current Project",
-            title: "Data structure visualizer",
+            type: "Currently Learning",
+            title: "DevOps",
             progress: 5,
         },
     ];
@@ -152,25 +157,25 @@ function Placement2({
                     data-scroll-speed={0.075}
                     className="flex flex-row gap-2"
                 >
-                    <span className="text-sm sm:text-base md:text-lg text-gray-400 font-thin tracking-wide">
-                        Hi,
-                    </span>
-                    <span className="text-sm sm:text-base md:text-lg text-gray-400 font-thin tracking-wide">
+                    <span className="text-sm sm:text-base md:text-lg darkblue font-thin tracking-wide">
+    Hi,
+</span>
+                    <span className="text-sm sm:text-base md:text-lg text-white font-thin tracking-wide">
                         I&apos;m
                     </span>
                 </div>
                 <div data-scroll data-scroll-speed={0.05}>
                     <Heading
                         level={1}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-secondary leading-none"
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#272b12] leading-none"
                     >
-                        <span>Armaan</span>
+                        <span>Shashi Bhushan Jha</span>
                     </Heading>
                 </div>
                 <div data-scroll data-scroll-speed={0.025}>
                     <Heading
                         level={2}
-                        className="text-xl sm:text-2xl md:text-3xl text-gray-100 font-medium"
+                        className="text-xl sm:text-2xl md:text-3xl text-[#161E31] font-medium"
                     >
                         {titles[currentTitleIndex]}
                     </Heading>

@@ -11,10 +11,10 @@ export default function ContactPageManager(props: IContactPageManagerProps) {
     return (
         <PageCreator title="Contact">
             <section
-                id="contact-hero-section"
+                id=""
                 className="bg-inherit relative w-full"
             >
-                <Hero type="contact" />
+               <Hero type={"contact"} />
             </section>
             <section
                 id="contact-offerings-section"
@@ -22,12 +22,12 @@ export default function ContactPageManager(props: IContactPageManagerProps) {
             >
                 <ServicesSection />
             </section>
-            <section
+            {/* <section
                 id="contact-form-section"
                 className="relative w-full  bg-gray-800"
             >
                 <ContactForm />
-            </section>
+            </section> */}
         </PageCreator>
     );
 }

@@ -18,7 +18,7 @@ export default function HeroSection(props: HeroSectionProps) {
                     level={1}
                     className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight"
                 >
-                    Hi, I&apos;m <span className="text-secondary">Armaan Jaj</span>
+                    Hi, I&apos;m <span className="text-secondary">Shashi Bhushan Jha</span>
                 </Heading>
                 <Paragraph className="text-xl mb-6 text-gray-300 leading-relaxed">
                     A passionate{" "}
@@ -65,7 +65,7 @@ export default function HeroSection(props: HeroSectionProps) {
             <div data-scroll data-scroll-speed={-0.2} className="mt-8 md:w-1/3">
                 <Image
                     src="/Armaan.jpeg"
-                    alt="Armaan Jaj"
+                    alt="Shashi Bhushan Jha"
                     width={4032}
                     height={3024}
                     className="shadow-lg object-cover h-80 rounded-3xl"
