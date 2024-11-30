@@ -111,7 +111,7 @@ function NavLinkItem({
         <Link
             href={href}
             className={`relative duration-300 px-3 py-1 uppercase w-full h-full rounded-3xl flex-row-center-center md:gap-1 text-inherit text-sm md:text-lg ${
-                currentPath === href ? "bg-[#F8B179] text-[#424769]" : ""
+                currentPath === href ? "bg-[#F8B179] text-white" : ""
             }`}
         >
             <Magnetic key={id}>
