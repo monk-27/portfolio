@@ -56,7 +56,7 @@ function ActivityHubHeader() {
                         size="sm"
                         status="active"
                         link={{
-                            url: `https://www.github.com/${GITHUB_USERNAME}`,
+                            url: `https://github.com/monk-27`,
                             target: "_blank",
                         }}
                     />
@@ -65,7 +65,7 @@ function ActivityHubHeader() {
                         size="sm"
                         status="passive"
                         link={{
-                            url: `https://www.github.com/${GITHUB_USERNAME}?tab=repositories`,
+                            url: `https://github.com/monk-27?tab=repositories`,
                             target: "_blank",
                         }}
                     />

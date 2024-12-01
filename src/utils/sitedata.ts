@@ -98,21 +98,22 @@ export const CondensedSkills = [
 
 export const TestimonialsData = [
     {
-        name: "Sumit Nanda",
+        name: "Ritesh Singh",
         feedback:
             "Working with Shashi Bhushan Jha was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
-        photo: "/Photos/Testimonials/Writer2.png",
+        photo: "/Photos/Testimonials/Ritesh.png",
     },
     {
-        name: "Vikram Saraon",
+        name: "Raghav Singh",
         feedback:
             "Shashi Bhushan Jha was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
-        photo: "/Photos/Testimonials/Writer1.jpg",
+        photo: "/Photos/Testimonials/raghav.png",
     },
     {
-        name: "Mohamed EIMenshawy",
+        name: "Amit Singh",
+        photo: "/Photos/Testimonials/amit.png",
         feedback:
-            "I am pleased to highly recommend Shashi Bhushan Jha, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Shashi Bhushan Jhahas my utmost confidence in his future pursuits.",
+            "Shashi Bhushan Jha is an exceptional software developer with expertise in React, JavaScript, and TypeScript. He consistently delivered high-quality code. His collaboration skills and ability to communicate technical concepts were a major asset to our team. I highly recommend Shashi Bhushan Jha for any front-end development role.",
     },
 ];
 

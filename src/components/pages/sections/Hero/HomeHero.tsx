@@ -265,7 +265,7 @@ function ProgressBar({
                     transition: "width 0.5s ease-in-out",
                 }}
             />
-            <div className="flex justify-center items-center text-xs text-gray-400 font-semibold">
+            <div className="flex justify-center items-center text-xs text-[#895126] font-semibold">
                 {chaptersCompleted && totalChapters
                     ? `${chaptersCompleted}/${totalChapters}`
                     : `${Math.round(percentage)}%`}

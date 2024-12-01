@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: "Shashi Bhushan Jha | Developer Portfolio",
+        name: "Shashi Bhushan Jha | Software Developer Portfolio",
         short_name: "Shashi Bhushan Jha",
         description:
             "Explore the developer portfolio of Shashi Bhushan Jha, a Software developer focused on crafting high-performance, aesthetically pleasing web applications and android/ios applications. Dive into projects showcasing expertise in software development with cutting-edge technologies.",

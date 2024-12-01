@@ -51,7 +51,7 @@ export default function HeroSection(props: HeroSectionProps) {
                     <ActionButton
                         icon={<DownloadIcon />}
                         text="Download Resume"
-                        link={{ url: "/Resume.pdf", target: "_blank" }}
+                        link={{ url: "/Shashi Bhushan Jha resume.pdf", target: "_blank" }}
                         status="active"
                         size="sm"
                     />
@@ -61,11 +61,11 @@ export default function HeroSection(props: HeroSectionProps) {
             {/* Right Section - Image */}
             <div data-scroll data-scroll-speed={-0.2} className="mt-8 md:w-1/3">
                 <Image
-                    src="/Armaan.jpeg"
+                    src="/shashi.jpg"
                     alt="Shashi Bhushan Jha"
                     width={4032}
                     height={3024}
-                    className="shadow-lg object-cover h-80 rounded-3xl"
+                    className="shadow-lg object-cover h-100 rounded-3xl"
                 />
             </div>
         </div>
