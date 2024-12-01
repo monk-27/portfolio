@@ -136,9 +136,9 @@ export const SitemapLinks = [
     {
         section: "Contact & Connect",
         links: [
-            { href: "https://github.com/armaanjaj", label: "GitHub" },
-            { href: "https://linkedin.com/in/armaanjaj", label: "LinkedIn" },
-            { href: "https://x.com/armaanjaj", label: "Twitter" },
+            { href: "https://github.com/monk-27", label: "GitHub" },
+            { href: "https://www.linkedin.com/in/shashi-bhushan-jha-7797371a3/", label: "LinkedIn" },
+            { href: "https://x.com/0frustratedmonk", label: "Twitter" },
         ],
     },
     {

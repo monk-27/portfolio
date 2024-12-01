@@ -7,7 +7,7 @@ export const homepage_MD = {
     url: "https://www.armaancodes.com",
     images: [
         {
-            url: "https://www.armaancodes.com/opengraph-image.png",
+            url: "https://drive.google.com/file/d/1TNYu772GIRbmO4KZKEhQtuW59tHdoVQo/view?usp=drive_link",
             width: 1200,
             height: 630,
             alt: "Shashi Bhushan Jha |Software Developer Portfolio - Home page",
@@ -21,10 +21,10 @@ export const aboutpage_MD = {
         "Get to know Shashi Bhushan Jha, a full-stack developer passionate about creating innovative web solutions. Discover his journey, skills, and experiences that define his creative approach to modern web development.",
     keywords:
         "Shashi Bhushan Jha, about, full-stack developer, web development journey, programming skills, web engineer, creative web solutions, development experience",
-    url: "https://www.armaancodes.com/about",
+    url: "",
     images: [
         {
-            url: "https://www.armaancodes.com/opengraph-image.png",
+            url: "https://drive.google.com/file/d/1TNYu772GIRbmO4KZKEhQtuW59tHdoVQo/view?usp=drive_link",
             width: 1200,
             height: 630,
             alt: "About - Shashi Bhushan Jha",
@@ -41,7 +41,7 @@ export const contactpage_MD = {
     url: "https://www.armaancodes.com/services",
     images: [
         {
-            url: "https://www.armaancodes.com/opengraph-image.png",
+            url: "https://drive.google.com/file/d/1TNYu772GIRbmO4KZKEhQtuW59tHdoVQo/view?usp=drive_link",
             width: 1200,
             height: 630,
             alt: "Contact - Shashi Bhushan Jha",
@@ -58,7 +58,7 @@ export const sitemappage_MD = {
     url: "https://www.armaancodes.com/sitemap",
     images: [
         {
-            url: "https://www.armaancodes.com/opengraph-image.png",
+            url: "https://drive.google.com/file/d/1TNYu772GIRbmO4KZKEhQtuW59tHdoVQo/view?usp=drive_link",
             width: 1200,
             height: 630,
             alt: "Sitemap | Shashi Bhushan Jha",
@@ -75,7 +75,7 @@ export const reourcespage_MD = {
     url: "https://www.armaancodes.com/resources",
     images: [
         {
-            url: "https://www.armaancodes.com/opengraph-image.png",
+            url: "https://drive.google.com/file/d/1TNYu772GIRbmO4KZKEhQtuW59tHdoVQo/view?usp=drive_link",
             width: 1200,
             height: 630,
             alt: "Resources - Shashi Bhushan Jha",
