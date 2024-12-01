@@ -322,7 +322,7 @@ function ProjectCard({
                         </p>
                     </div>
                 </div>
-                <div className="w-[10%] hidden md:block text-center">
+                <div className="w-[10%] hidden md:block text-center text-white">
                     {project.completed?.date}
                 </div>
                 <div className="w-[30%] md:w-[10%] flex-row-center-center">
