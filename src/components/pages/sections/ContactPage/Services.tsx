@@ -37,7 +37,7 @@ export default function Services(props: IServicesProps) {
 
 function ServiceCard({ title, description, icon }: IServiceCardProps) {
     return (
-        <div className="bg-gray-800 p-6 rounded-3xl hover:bg-gray-700 transition-colors duration-300 shadow-md flex flex-col items-center text-center">
+        <div className="bg-[#031703FF] p-6 rounded-3xl hover:bg-gray-700 transition-colors duration-300 shadow-md flex flex-col items-center text-center">
             <div className="mb-4">
                 <Image
                     src={icon}

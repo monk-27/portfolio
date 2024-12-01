@@ -75,7 +75,7 @@ export const reourcespage_MD = {
     url: "https://www.armaancodes.com/resources",
     images: [
         {
-            url: "https://drive.google.com/file/d/1TNYu772GIRbmO4KZKEhQtuW59tHdoVQo/view?usp=drive_link",
+            url: "https://www.armaancodes.com/opengraph-image.png",
             width: 1200,
             height: 630,
             alt: "Resources - Shashi Bhushan Jha",

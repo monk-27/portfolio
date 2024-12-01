@@ -19,8 +19,8 @@ export default function ContactHero(props: IServicesHeroProps) {
 
     return (
 
-        <div className="flex flex-col items-center bg-gray-800 py-12 px-6 relative">
-            <h1 className="text-3xl sm:text-5xl font-bold text-gray-100 mb-6">
+        <div className="flex flex-col items-center bg-[#abacb2] py-12 px-6 relative">
+            <h1 className="text-3xl sm:text-5xl font-bold text-[#161E31] mb-6">
                 Contact Us
             </h1>
 
@@ -30,27 +30,27 @@ export default function ContactHero(props: IServicesHeroProps) {
                 <div
                     data-scroll
                     data-scroll-speed={0.1}
-                    className="bg-gray-700 text-gray-200  sm:m-5 p-6 rounded-lg shadow-md flex flex-col justify-between max-w-sm w-full z-20 relative sm:-mr-32 "
+                    className="bg-[#031703FF] text-gray-200  sm:m-5 p-6 rounded-lg shadow-md flex flex-col justify-between max-w-sm w-full z-20 relative sm:-mr-32 "
                 >
-                    <h2 className="text-xl font-semibold mb-4 text-yellow-400">
+                    <h2 className="text-xl font-semibold mb-4 text-[#F8B179]">
                         Get in Touch
                     </h2>
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-2">
                             <span>📞</span>
-                            <p>CONTACT ME</p>
+                            <p className="text-[#F8B179]">CONTACT ME</p>
                         </div>
                         <p className="ml-6">+91 9731737300</p>
 
                         <div className="flex items-center gap-2">
                             <span>📧</span>
-                            <p>MAIL ME</p>
+                            <p className="text-[#F8B179]">MAIL ME</p>
                         </div>
                         <p className="ml-6">exquisiteshashi@gmail.com</p>
 
                         <div className="flex items-center gap-2">
                             <span>📍</span>
-                            <p>REACH ME</p>
+                            <p className="text-[#F8B179]">REACH ME</p>
                         </div>
                         <p className="ml-6">
                             New Delhi -110008
@@ -60,7 +60,7 @@ export default function ContactHero(props: IServicesHeroProps) {
                 </div>
 
                 {/* Right Card */}
-                <div className="bg-yellow-200 p-8 rounded-lg shadow-md flex flex-col items-center justify-center w-full relative sm:w-[65%] sm:-ml-16">
+                <div className="bg-[#161E31] p-8 rounded-lg shadow-md flex flex-col items-center justify-center w-full relative sm:w-[65%] sm:-ml-16">
                     <Image
                         src='/contact.gif' 
                         alt="Illustration"
