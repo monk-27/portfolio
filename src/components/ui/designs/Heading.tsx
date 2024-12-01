@@ -7,7 +7,7 @@ export interface IHeadingProps {
 }
 
 export default function Heading({ level, children, className }: IHeadingProps) {
-    const defaultClass = "leading-none font-bold text-gray-200 w-fit";
+    const defaultClass = "leading-none font-bold w-fit";
     switch (level) {
         case 1: {
             return (

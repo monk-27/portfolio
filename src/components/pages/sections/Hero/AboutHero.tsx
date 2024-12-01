@@ -18,28 +18,25 @@ export default function HeroSection(props: HeroSectionProps) {
                     level={1}
                     className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight"
                 >
-                    Hi, I&apos;m <span className="text-secondary">Shashi Bhushan Jha</span>
+                    Hi, I&apos;m <span className="text-[#161E31]">Shashi Bhushan Jha</span>
                 </Heading>
-                <Paragraph className="text-xl mb-6 text-gray-300 leading-relaxed">
-                    A passionate{" "}
-                    <span className="text-secondary underline">
-                        <span className="text-gray-200">Full Stack Developer</span>
+                <Paragraph className="text-xl mb-6 text-[#676F9D] leading-relaxed">
+                A dedicated{" "}
+                    <span className="text-[#161E31] underline">
+                        <span className="text-[#7a4b27]">Software Developer</span>
                     </span>{" "}
-                    dedicated to crafting digital experiences that make an
-                    impact. With expertise in a range of modern technologies, I
-                    bring ideas to life through clean, efficient, and scalable
-                    code.
+                    with 2 years of experience in building impactful digital solutions for web and Android platforms. Skilled in modern technologies, I specialize in creating clean, efficient, and scalable code to bring innovative ideas to life.
                 </Paragraph>
                 {/* Info Items */}
                 <div className="text-sm flex flex-row flex-wrap sm:gap-10 gap-4 mb-8">
                     <InfoItem
                         icon={<LocationIcon />}
-                        text="Calgary, Canada"
+                        text="New Delhi, India"
                         title="I live in"
                     />
                     <InfoItem
                         icon={<CodeIcon />}
-                        text="Coding since 2020"
+                        text="Coding since 2022"
                         title="Coding since"
                     />
                 </div>
@@ -85,8 +82,8 @@ function InfoItem({
     title: string;
 }) {
     return (
-        <div className="flex items-center gap-2 text-gray-400" title={title}>
-            <div className="text-secondary">{icon}</div>
+        <div className="flex items-center gap-2 text-[#7a4b27]" title={title}>
+            <div className="text-[#161E31]">{icon}</div>
             <span>{text}</span>
         </div>
     );

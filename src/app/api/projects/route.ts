@@ -12,6 +12,7 @@ export async function GET(req: NextRequest) {
 
         // Parse the JSON data
         let projects = JSON.parse(jsonData);
+        console.log("projects", projects);
 
         // Sort the projects in descending order by `id`
         projects = projects.sort((a: any, b: any) => b.id - a.id);
@@ -21,8 +22,8 @@ export async function GET(req: NextRequest) {
 
         // Set Cache-Control header for caching
         response.headers.set(
-            "Cache-Control",
-            "public, max-age=3600, stale-while-revalidate=86400"
+           "Cache-Control",
+    "no-store"
         );
 
         // Return the response with caching

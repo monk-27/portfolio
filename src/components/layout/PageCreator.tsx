@@ -20,7 +20,7 @@ export default function PageCreator({ title, children }: IPageCreatorProps) {
 
     return (
         <>
-            <article className="text-[#424769] scroll-smooth scroll-500 bg-[#895126] homepage px-0">
+            <article className="text-[#424769] scroll-smooth scroll-500 bg-[#F8B179] homepage px-0">
                 <header data-scroll data-scroll-speed={0.1}>
                     <Navbar
                         title={title}
@@ -28,7 +28,7 @@ export default function PageCreator({ title, children }: IPageCreatorProps) {
                         titleColor="#424769"
                     />
                 </header>
-                <div className="rounded-3xl bg-[#F8B179] overflow-hidden">
+                <div className="rounded-3xl bg-[#abacb2] overflow-hidden">
                     {children}
                 </div>
                 <footer className="mt-10 px-0">

@@ -79,39 +79,40 @@ export const ServicesData = [
 
 export const CondensedSkills = [
     {
-        title: "Landing Page Development",
+        title: "UI Design",
         description:
-            "Expertise in crafting responsive, high-performance landing pages using modern web technologies, including React.js, Next.js, and TailwindCSS. Skilled in creating visually appealing interfaces that drive user engagement and conversions.",
+            "Proficient in crafting intuitive, visually appealing, and user-friendly interfaces. Skilled in using design tools and frameworks to create responsive layouts that enhance user experience and align with brand aesthetics.",
     },
     {
-        title: "Full-Stack Application Development",
+        title: "Web Development",
         description:
-            "Proven experience in building robust and scalable full-stack applications. Proficient in developing secure and efficient back-end systems using Node.js and Express.js, integrated with databases such as MongoDB and MySQL, to support complex business needs.",
+            "Experienced in building responsive and high-performance websites using modern technologies like React.js, Next.js, and TailwindCSS. Focused on delivering clean, efficient, and scalable code to meet diverse client needs.",
     },
     {
-        title: "User Interface Design",
+        title: "App Development",
         description:
-            "Specialized in designing intuitive and visually compelling user interfaces. Committed to enhancing user experience by combining functionality with aesthetics, ensuring a seamless and engaging interaction for end-users.",
+            "Specialized in developing dynamic and user-focused mobile applications using frameworks like Flutter and React Native. Adept at creating apps with seamless functionality, optimized performance, and engaging user experiences.",
     },
 ];
+
 
 export const TestimonialsData = [
     {
         name: "Sumit Nanda",
         feedback:
-            "Working with Armaan was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
+            "Working with Shashi Bhushan Jha was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
         photo: "/Photos/Testimonials/Writer2.png",
     },
     {
         name: "Vikram Saraon",
         feedback:
-            "Armaan was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
+            "Shashi Bhushan Jha was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
         photo: "/Photos/Testimonials/Writer1.jpg",
     },
     {
         name: "Mohamed EIMenshawy",
         feedback:
-            "I am pleased to highly recommend Shashi Bhushan Jha, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Armaan has my utmost confidence in his future pursuits.",
+            "I am pleased to highly recommend Shashi Bhushan Jha, whom I had the privilege of teaching. He consistently demonstrated a deep understanding of the subject matter and displayed strong dedication and work ethic. His exceptional leadership skills, combined with effective communication abilities, make him an asset in any setting. Shashi Bhushan Jhahas my utmost confidence in his future pursuits.",
     },
 ];
 

@@ -12,7 +12,7 @@ export default function SkillsSection(props: ISkillsSectionProps) {
             <div data-scroll data-scroll-speed={0.1}>
                 <Heading
                     level={2}
-                    className="text-2xl font-light text-center mb-14 text-gray-200"
+                    className="text-2xl font-bold text-center mb-14 text-[#161E31]"
                 >
                     Areas I can help you in
                 </Heading>
@@ -39,7 +39,7 @@ function SkillCard({
 }) {
     return (
         <div className="bg-gray-800 border border-transparent hover:border-gray-600 hover:bg-gray-700 p-8 rounded-3xl flex flex-col items-start justify-between duration-300 shadow-lg hover:shadow-xl text-left">
-            <Heading level={3} className="text-2xl font-extralight mb-5">
+            <Heading level={3} className="text-2xl font-extralight mb-5 text-[#F8B179]">
                 {title}
             </Heading>
             <p className="text-gray-300">{description}</p>

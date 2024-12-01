@@ -2,18 +2,18 @@ import Heading from "@/components/ui/designs/Heading";
 import Paragraph from "@/components/ui/designs/Paragraph";
 import * as React from "react";
 
-export interface StorySectionProps {}
+export interface StorySectionProps { }
 
 export default function StorySection(props: StorySectionProps) {
     return (
-        <div className="py-12 sm:py-20 px-6 sm:px-10 bg-inherit text-gray-200 mt-10">
+        <div className="py-12 sm:py-20 px-6 sm:px-10 bg-inherit text-[#161E31] mt-10">
             <div className="max-w-6xl mx-auto flex flex-col items-center space-y-16">
                 {/* My Story */}
                 <div className="text-center space-y-8">
                     <div data-scroll data-scroll-speed={0.1}>
                         <Heading
                             level={2}
-                            className="text-4xl font-light sm:text-5xl"
+                            className="text-4xl font-bold sm:text-5xl"
                         >
                             My Story
                         </Heading>
@@ -21,35 +21,16 @@ export default function StorySection(props: StorySectionProps) {
                     <div
                         data-scroll
                         data-scroll-speed={0.3}
-                        className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-gray-300"
+                        className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-[#7a4b27]"
                     >
                         <Paragraph>
-                            Ever since I gripped my fingers around a pencil,
-                            I&apos;ve been on a never-ending quest to create.
-                            From the early days of sketching and getting lost in
-                            the world of art, I&apos;ve evolved into a Web/Full
-                            Stack Developer. While I no longer wield a pencil as
-                            my weapon of choice, my love for design and
-                            creativity is stronger than ever. These days, I
-                            channel that passion into crafting stunning websites
-                            that not only look good but work flawlessly too.
+                            Since 2022, my journey as a Software Developer has been deeply rooted in a passion for coding and problem-solving. From the moment I wrote my first line of code, I was hooked on the limitless possibilities it offered. Transitioning from a curious learner to a professional developer, I&apos;ve focused on building impactful digital solutions that bring ideas to life.
                         </Paragraph>
                         <Paragraph>
-                            Armed with tools like TailwindCSS, Next.js,
-                            React.js, and Node.js, I&apos;ve become a digital
-                            creator blending design and functionality. My focus
-                            has always been on crafting clean and efficient
-                            code, making sure that every project I work on runs
-                            as smoothly as it looks.
+                            Specializing in both web and app development, I&apos;ve honed my skills using tools like Next.js and Flutter. Whether it&apos;s designing intuitive user interfaces or building robust backend systems, I strive to deliver clean, efficient, and scalable code in every project.
                         </Paragraph>
                         <Paragraph>
-                            From building my own portfolio to developing complex
-                            applications, I&apos;ve been able to leverage these
-                            skills in some exciting projects. Whether it&apos;s
-                            optimizing performance or enhancing the user
-                            experience, I&apos;m always ready to tackle new
-                            challenges and push the boundaries of what&apos;s
-                            possible.
+                            Over the past two years, I&apos;ve worked on diverse projects, from creating dynamic web platforms to developing seamless mobile applications. My experience has equipped me to tackle challenges, optimize performance, and enhance user experiences. I&apos;m constantly learning, growing, and pushing boundaries to craft solutions that truly make an impact.
                         </Paragraph>
                     </div>
                 </div>
@@ -58,11 +39,11 @@ export default function StorySection(props: StorySectionProps) {
                 <div
                     data-scroll
                     data-scroll-speed={0.2}
-                    className="w-full bg-gray-800 bg-opacity-80 rounded-3xl py-12 px-6 sm:px-10 space-y-10"
+                    className="w-full bg-[#161E31]  rounded-3xl py-12 px-6 sm:px-10 space-y-10"
                 >
                     <Heading
                         level={2}
-                        className="text-3xl sm:text-4xl font-light text-secondary text-center"
+                        className="text-3xl sm:text-4xl font-light text-[#F8B179] text-center"
                     >
                         Interests & Favorites
                     </Heading>
@@ -71,24 +52,30 @@ export default function StorySection(props: StorySectionProps) {
                             title="Favorite Movies"
                             items={[
                                 {
-                                    name: "Captain America: The Winter Soldier",
+                                    name: "Kagaz",
                                     description:
-                                        "A perfect blend of action, storytelling, and character development. This movie takes superhero movies to a whole new level.",
-                                },
-                                {
-                                    name: "The Social Network",
-                                    description:
-                                        "An intriguing look into the rise of Facebook. This film captures the complexity of ambition and innovation.",
+                                        "A heartfelt story about the struggles of a man fighting against bureaucracy to prove his existence. A truly inspiring tale.",
                                 },
                             ]}
                         />
                         <FavoriteItem
+                            title="Favorite App"
+                            items={[
+                                {
+                                    name: "Spotify",
+                                    description:
+                                        "The ultimate music streaming platform, offering a vast library of songs and podcasts to suit every mood.",
+                                },
+                            ]}
+                        />
+
+                        <FavoriteItem
                             title="Favorite Actor"
                             items={[
                                 {
-                                    name: "Shah Rukh Khan",
+                                    name: "Pankaj Tripathi",
                                     description:
-                                        "The King of Bollywood, bringing charm and charisma to every role.",
+                                        "A masterful actor known for his versatile performances and grounded characters.",
                                 },
                             ]}
                         />
@@ -106,17 +93,16 @@ export default function StorySection(props: StorySectionProps) {
                 </div>
 
                 {/* Personal Mantra */}
-                <div className="w-full bg-secondary py-12 sm:py-16 rounded-3xl text-center text-primary">
+                <div className="w-full bg-[#161E31] py-12 sm:py-16 rounded-3xl text-center text-[#F8B179]">
                     <Heading
                         level={3}
-                        className="text-3xl sm:text-4xl font-semibold mb-4 text-primary mx-auto"
+                        className="text-3xl sm:text-4xl font-semibold mb-4 text-[#F8B179] mx-auto"
                     >
                         Personal Mantra
                     </Heading>
-                    <Paragraph className="text-lg max-w-3xl mx-auto text-gray-700">
-                        &ldquo;Embrace the journey, cherish the moments, and
-                        always strive to leave a positive impact.&rdquo;
-                    </Paragraph>
+                    <Paragraph className="text-lg max-w-3xl mx-auto text-white">
+    &ldquo;Hard work and smart work go hand in hand, but the process is more important than the results. Focus on the journey, and excellence will follow.&rdquo;
+</Paragraph>
                 </div>
             </div>
         </div>
@@ -134,7 +120,7 @@ function FavoriteItem({
         <div className="w-full space-y-6">
             <Heading
                 level={5}
-                className="text-2xl font-extralight text-secondary"
+                className="text-2xl font-extralight text-[#F8B179] text-center"
             >
                 {title}
             </Heading>

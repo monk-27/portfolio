@@ -5,39 +5,219 @@ import { DefaultProjectHeader, GitHubIcon, NewTabIcon, ProjSVG } from "@/utils/a
 import Heading from "@/components/ui/designs/Heading";
 import { motion } from "framer-motion";
 import Magnetic from "@/components/ui/designs/Magnetic";
+const projectsData = [
+    {
+        id: 1,
+        title: "Bright DiGi Gold",
+        sneakPeakDescription: "A Digital Gold and Silver website.",
+        description:
+            "Developed a comprehensive Gold and Silver digital platform enabling seamless transactions, user management, and enhanced functionalities to streamline operations and improve customer experience.",
+        technologies: ["Next.js", "TailwindCSS", "Node.js", "MongoDB"],
+        features: [
+            "User Authentication",
+            "Responsive Design",
+            "Financial Transactions",
+            "KYC Feature",
+            "Physical Coin Delivery",
+        ],
+        challenges: ["Optimizing database queries", "SEO Optimization"],
+        banner: "/project/header/ProjectHeader1.png",
+        links: {
+            visit: "https://www.brightdigigold.com/",
+            github: "",
+        },
+        completed: {
+            date: "November 2022",
+            duration: "Currently Working",
+            futurePlans: ["Many Exciting Features"],
+        },
+        web:true,
+    },
+    {
+        id: 2,
+        title: "Bright DiGi Gold",
+        sneakPeakDescription: "A Digital Gold and Silver Application.",
+        description:"Developed a comprehensive Gold and Silver mobile application enabling seamless transactions, intuitive user management, and enhanced functionalities to provide a streamlined and engaging user experience.",
+
+        technologies: ["Flutter", "Dart", "Node.js", "MongoDB"],
+        features: [
+            "User Authentication",
+            "Responsive Design",
+            "Financial Transactions",
+            "KYC Feature",
+            "Physical Coin Delivery",
+        ],
+        challenges: [""],
+        banner: "/project/header/ProjectHeader2.jpeg",
+        links: {
+            visit: "https://play.google.com/store/apps/details?id=com.brightdigigold.customer&hl=en_IN",
+            github: "",
+        },
+        completed: {
+            date: "November 2023",
+            duration: "Currently Working",
+            futurePlans: ["Many Exciting Features"],
+        },
+        web:false,
+    },
+    {
+        id: 3,
+        title: "Bright DiGi Gold Super Admin Panel",
+        sneakPeakDescription: "A powerful Super Admin Panel for comprehensive control.",
+        description:
+            "Developed a robust Super Admin Panel for the Bright DiGi Gold platform, empowering administrators to oversee all aspects of the system, manage users, transactions, and data with precision, and access advanced tools for enhanced control and security.",
+        technologies: ["Next.js", "TailwindCSS", "Node.js", "MongoDB"],
+        features: [
+            "Complete User Management",
+            "Transaction Monitoring",
+            "KYC Approval",
+            "Dashboard with Analytics",
+            "Multi-level Access Control",
+            "Responsive Design",
+            "Enhanced Security Features",
+        ],
+        challenges: [
+            "Implementing role-based access controls",
+            "Optimizing real-time analytics",
+            "Ensuring data security and integrity",
+        ],
+        banner: "/project/header/ProjectHeader3.png",
+        links: {
+            visit: "",
+            github: "",
+        },
+        completed: {
+            date: "November 2023",
+            duration: "Inprogress",
+            futurePlans: ["AI-driven Insights", "Advanced Reporting Tools"],
+        },
+        web: true,
+    },
+    {
+        id: 4,
+        title: "Testofire Coaching Management System",
+        sneakPeakDescription: "A comprehensive platform for managing coaching operations.",
+        description:
+            "Developed a feature-rich Coaching Management System for Testofire, enabling seamless student management, class scheduling, attendance tracking, and performance analysis to streamline coaching operations and enhance the learning experience.",
+        technologies: ["React.js", "TailwindCSS", "Node.js", "MongoDB"],
+        features: [
+            "Student Enrollment and Management",
+            "Class Scheduling and Timetable",
+            "Attendance Tracking",
+            "Performance Analytics and Reporting",
+            "Integrated Payment System",
+            "Responsive Design for Multi-device Access",
+        ],
+        challenges: [
+            "Real-time class scheduling",
+            "Optimizing database queries for performance tracking",
+            "Implementing dynamic dashboards for analytics",
+        ],
+        banner: "/project/header/ProjectHeader4.png",
+        links: {
+            visit: "https://coaching.testofire.in/",
+            github: "",
+        },
+        completed: {
+            date: "July 2024",
+            duration: "6 Months",
+            futurePlans: [
+                "AI-driven Performance Insights",
+                "Mobile App Integration",
+                "Gamified Learning Features",
+            ],
+        },
+        web: true,
+    },
+    {
+        id: 5,
+        title: "Testofire Student App",
+        sneakPeakDescription: "A comprehensive mobile app for students to enhance their learning journey.",
+        description:
+            "Developed a user-friendly mobile application for Testofire, enabling students to access personalized learning resources, track their progress, attend live classes, and interact with educators for a seamless and engaging learning experience.",
+        technologies: ["React-Native", "Typescript", "Node.js", "MongoDB"],
+        features: [
+            "User Authentication",
+            "Responsive and Intuitive Design",
+            "Access to Study Materials and Assignments",
+            "Live Class Integration",
+            "Performance Tracking and Analytics",
+            "Test Management and Results",
+
+            "In-app Notifications",
+        ],
+        challenges: [
+            "Real-time class streaming integration",
+            "Optimizing performance tracking for individual students",
+        ],
+        banner: "/project/header/ProjectHeader5.jpeg",
+        links: {
+            visit: "https://testofire.in/index.html",
+            github: "",
+        },
+        completed: {
+            date: "November 2023",
+            duration: "6 Months",
+            futurePlans: [
+                "Gamified Learning Modules",
+                "AI-powered Performance Suggestions",
+                "Offline Access to Study Materials",
+            ],
+        },
+        web: false,
+    },
+
+    {
+        id: 6,
+        title: "Zyrowave UI Template",
+        sneakPeakDescription: "A modern UI template built with stunning animations and sleek design.",
+        description:
+            "Designed and developed Zyrowave, a cutting-edge UI template featuring modern animations using Framer Motion, sleek and responsive layouts, and reusable components. It empowers developers to build visually appealing and highly interactive user interfaces efficiently.",
+        technologies: ["React.js", "TypeScript", "Framer Motion", "TailwindCSS"],
+        features: [
+            "Reusable and Modular UI Components",
+            "Advanced Animations with Framer Motion",
+            "Responsive and Modern Design",
+            "Dark and Light Mode Support",
+            "Customizable Themes",
+            "Optimized Performance for Web Applications",
+        ],
+        challenges: [
+            "Ensuring smooth and performant animations",
+            "Creating highly customizable components",
+            "Optimizing responsiveness across devices",
+        ],
+        banner: "/project/header/ProjectHeader6.png",
+        links: {
+            visit: "",
+            github: "https://github.com/monk-27/Zyrowave",
+        },
+        completed: {
+            date: "October 2023",
+            duration: "3 Months",
+            futurePlans: [
+                "Integration with popular UI libraries",
+                "Support for additional animation frameworks",
+                "Expansion of component library",
+            ],
+        },
+        web: true,
+    }
+    
+    
+    
+    
+    
+];
 
 // Main Component: ExpandableCardDemo
 export default function ExpandableCardDemo() {
-    const [projects, setProjects] = useState<Project[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [projects, setProjects] = useState(projectsData); 
     const [expandedProjectId, setExpandedProjectId] = useState<number | null>(
         null
     );
 
-    React.useEffect(() => {
-        fetchProjects();
-    }, []);
-
-    // Fetch Projects
-    const fetchProjects = async () => {
-        setLoading(true);
-        try {
-            const response = await fetch("/api/projects");
-            if (response.ok) {
-                const data: Project[] = await response.json();
-                setProjects(data);
-            } else {
-                console.error("Failed to fetch projects");
-            }
-        } catch (error) {
-            console.error("Error:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    // Toggle Expansion
-    const toggleExpansion = (projectId: number) => {
+   const toggleExpansion = (projectId: number) => {
         setExpandedProjectId((prev) => (prev === projectId ? null : projectId));
     };
 
@@ -48,17 +228,11 @@ export default function ExpandableCardDemo() {
             </div>
             <div className="flex flex-col items-center w-full h-full gap-2 mx-auto px-5">
                 <div className="py-2 px-2 md:px-5 w-full flex flex-row justify-between items-center bg-gray-300 text-gray-800 rounded-3xl text-center">
-                    <span className="w-[70%] md:w-[80%]">Case</span>
-                    <span className="w-[10%] hidden md:block">Delivered</span>
+                    <span className="w-[70%] md:w-[80%]">Projects</span>
+                    <span className="w-[10%] hidden md:block">Start Date</span>
                     <span className="w-[30%] md:w-[10%]">Status</span>
                 </div>
-                {loading ? (
-                    <div className="flex justify-center items-center h-64">
-                        <span className="text-base animate-pulse">
-                            Loading...
-                        </span>
-                    </div>
-                ) : (
+                {
                     projects.map((project) => (
                         <ProjectCard
                             key={`project-${project.id}`}
@@ -66,7 +240,7 @@ export default function ExpandableCardDemo() {
                             isExpanded={expandedProjectId === project.id}
                             toggleExpansion={() => toggleExpansion(project.id)}
                         />
-                    ))
+                    )
                 )}
             </div>
         </div>
@@ -83,7 +257,7 @@ function SectionHeader() {
         >
             <Heading
                 level={2}
-                className="text-3xl md:text-4xl font-light text-white mb-4"
+                className="text-3xl md:text-4xl font-bold text-[#161E31] mb-4"
             >
                 Recent work
             </Heading>
@@ -119,7 +293,7 @@ function ProjectCard({
             animate={{ height: isExpanded ? "auto" : "5rem" }}
             initial={{ height: "5rem" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={`w-full overflow-hidden rounded-3xl cursor-pointer bg-gray-800`}
+            className={`w-full overflow-hidden rounded-3xl cursor-pointer bg-[#161E31]`}
             style={{ overflow: "hidden" }}
         >
             <div
@@ -180,7 +354,8 @@ function ExpandedDetails({ project }: { project: Project }) {
                 {project.description}
             </p>
             <div className="flex flex-col md:flex-row justify-start md:justify-between items-center gap-5 md:gap-0 w-full">
-                <ExpandedProjectLinks links={project.links} />
+                <ExpandedProjectLinks links={project.links}
+                web={project.web} />
                 {project.completed && (
                     <ExpandedCompletionDetails completed={project.completed} />
                 )}
@@ -282,10 +457,12 @@ function ExpandedCompletionDetails({
 }
 
 // Component 6: Project Links
-function ExpandedProjectLinks({ links }: { links?: Project["links"] }) {
+function ExpandedProjectLinks({ links,web }: { web?: any
+    links?: Project["links"]
+ }) {
     return (
         <div className="flex items-center gap-5">
-            {links?.visit && (
+            { links?.visit && (
                 <Magnetic>
                     <a
                         href={links.visit}
@@ -293,7 +470,7 @@ function ExpandedProjectLinks({ links }: { links?: Project["links"] }) {
                         className="py-2 px-4 text-sm rounded-full bg-white text-black hover:bg-gray-200 transition-colors duration-300 flex-row-center-center gap-2"
                     >
                         <NewTabIcon />
-                        <span>Visit Website</span>
+                        <span>{web ? "Visit Website" : "Download the App"}</span>
                     </a>
                 </Magnetic>
             )}

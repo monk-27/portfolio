@@ -12,7 +12,7 @@ import SocialLinks from "@/components/ui/common/SocialLinks";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export interface IHomeHeroProps {}
+export interface IHomeHeroProps { }
 
 export default function HomeHero(props: IHomeHeroProps) {
     const [titles] = React.useState([
@@ -157,9 +157,9 @@ function Placement2({
                     data-scroll-speed={0.075}
                     className="flex flex-row gap-2"
                 >
-                    <span className="text-sm sm:text-base md:text-lg darkblue font-thin tracking-wide">
-    Hi,
-</span>
+                    <span className="text-sm sm:text-base md:text-lg text-darkbrown font-thin tracking-wide">
+                        Hi,
+                    </span>
                     <span className="text-sm sm:text-base md:text-lg text-white font-thin tracking-wide">
                         I&apos;m
                     </span>
@@ -167,7 +167,7 @@ function Placement2({
                 <div data-scroll data-scroll-speed={0.05}>
                     <Heading
                         level={1}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#272b12] leading-none"
+                        className="text-[#A66E43] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none"
                     >
                         <span>Shashi Bhushan Jha</span>
                     </Heading>
@@ -196,12 +196,12 @@ function ProgressSection({ progressData }: { progressData: any[] }) {
                     <Link
                         href={progress.link}
                         key={progress.id}
-                        className="w-full text-gray-300 group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
+                        className="w-full text-[#895126] group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
                     >
                         <div className="flex flex-row justify-between items-start">
                             <Heading
                                 level={5}
-                                className="text-sm font-light text-gray-200"
+                                className="text-sm font-light text-[#895126]"
                             >
                                 {progress.type}
                             </Heading>
@@ -221,12 +221,12 @@ function ProgressSection({ progressData }: { progressData: any[] }) {
                 ) : (
                     <div
                         key={progress.id}
-                        className="w-full text-gray-300 group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
+                        className="w-full text-[#895126] group hover:bg-gray-900 hover:text-white p-4 pb-5 rounded-lg duration-300 max-w-xs"
                     >
                         <div className="flex flex-row justify-between items-start">
                             <Heading
                                 level={5}
-                                className="text-sm font-light text-gray-200"
+                                className="text-sm font-light text-[#895126] hover:text-white"
                             >
                                 {progress.type}
                             </Heading>
@@ -259,7 +259,7 @@ function ProgressBar({
     return (
         <div className="w-full bg-gray-700 rounded-full h-[0.10rem] mt-1 relative">
             <div
-                className="bg-secondary h-[0.10rem] rounded-full animate-pulse"
+                className="bg-secondary h-[0.20rem] rounded-full animate-pulse"
                 style={{
                     width: `${percentage}%`,
                     transition: "width 0.5s ease-in-out",
@@ -282,7 +282,7 @@ function Placement3() {
             className="flex flex-col justify-center items-center gap-10 my-14"
         >
             <div>
-                <Paragraph className="text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
+                <Paragraph className=" text- [ #895126]text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
                     I give vision, JavaScript.
                 </Paragraph>
             </div>

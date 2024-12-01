@@ -34,11 +34,11 @@ export default function ActionButton({
 
     // Styling if button is an active style
     const activeStyling: string | undefined =
-        "bg-secondary text-gray-800 hover:bg-gray-300";
+    "bg-[#F9AB81] text-[#161E31]  hover:bg-[#161E31] hover:text-[#F9AB81]";
 
     // Styling if button is a passive style
     const passiveStyling: string | undefined =
-        "hover:text-gray-800 hover:bg-gray-300 text-gray-200 bg-transparent";
+        " bg-[#161E31] text-white  hover:bg-[#F9AB81]";
 
     let stylingType;
     // Apply styling based on status type

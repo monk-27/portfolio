@@ -27,10 +27,10 @@ export default function ActivityHub(props: IAnalyticsProps) {
 
             <div className="px-5">
                 {/* GitHub Activity Summary */}
-                <ActivityHubSummary />
+                {/* <ActivityHubSummary /> */}
 
                 {/* Footer */}
-                <ActivityHubFooter />
+                {/* <ActivityHubFooter /> */}
             </div>
         </div>
     );
@@ -42,11 +42,11 @@ function ActivityHubHeader() {
             <div
                 data-scroll
                 data-scroll-speed={0.1}
-                className="relative flex flex-col items-start gap-4 text-center text-white w-full px-2"
+                className="relative flex flex-col items-start gap-4 text-center text-[#161E31] w-full px-2"
             >
                 <Heading
                     level={1}
-                    className="text-5xl md:text-6xl lg:text-7xl font-light"
+                    className="text-5xl md:text-6xl lg:text-7xl font-bold "
                 >
                     GitHub Activity Hub
                 </Heading>
@@ -102,7 +102,7 @@ function ActivityHubSummary() {
                                 {text}
                             </Paragraph>
                         </div>
-                        <div className="mt-4 w-full">
+                        {/* <div className="mt-4 w-full">
                             {id === 1 ? (
                                 <ActiveRepo />
                             ) : id === 2 ? (
@@ -110,7 +110,7 @@ function ActivityHubSummary() {
                             ) : (
                                 <Languages />
                             )}
-                        </div>
+                        </div> */}
                     </div>
                 )
             )}

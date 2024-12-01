@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "title": "We-DD",
-        "sneakPeakDescription": "A designated driver website.",
-        "description": "Collaborated with a Calgary-based taxi company to develop a designated driver website, easing their day-to-day operations and improving client booking efficiency.",
+        "title": "Bri DiGi Gold",
+        "sneakPeakDescription": "A Digital Gold and Silver website.",
+        "description": "Developed a comprehensive Gold and Silver digital platform enabling seamless transactions, user management, and enhanced functionalities to streamline operations and improve customer experience.",
         "technologies": [
-            "React.js",
+            "Next.js",
             "TailwindCSS",
             "Node.js",
             "MongoDB"
@@ -13,22 +13,24 @@
         "features": [
             "User Authentication",
             "Responsive Design",
-            "Email Notifications"
+            "Financial Transactions",
+            "KYC Feature",
+            "Physical Coin Delivery"
         ],
         "challenges": [
             "Optimizing database queries",
-            "Web server hosting"
+            "SEO Optimization"
         ],
         "banner": "/project/header/ProjectHeader1.svg",
         "links": {
-            "visit": "https://we-dd.vercel.app/",
-            "github": "https://github.com/armaanjaj/we-dd-mern"
+            "visit": "https://www.brightdigigold.com/",
+            "github": ""
         },
         "completed": {
             "date": "November 2022",
             "duration": "5 months",
             "futurePlans": [
-                "Add a mobile app"
+                ""
             ]
         }
     },

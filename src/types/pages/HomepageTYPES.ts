@@ -8,6 +8,7 @@ interface Project {
     technologies: string[];
     features: string[];
     challenges: string[];
+    web?: boolean;
     
     // Optional props
     banner?: string;
