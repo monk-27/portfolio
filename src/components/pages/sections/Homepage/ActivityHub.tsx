@@ -19,9 +19,9 @@ export interface IAnalyticsProps {}
 
 export default function ActivityHub(props: IAnalyticsProps) {
     return (
-        <div className="container mx-auto w-full flex flex-col items-center justify-center gap-20 bg-inherit">
+        <div className="container mx-auto w-full flex flex-col items-center justify-center gap-5 bg-inherit">
             {/* GitHub Activity Header */}
-            <div className="w-full px-5 md:px-10 lg:px-14">
+            <div className="w-full px-5 md:px-1 lg:px-1">
                 <ActivityHubHeader />
             </div>
 
@@ -38,42 +38,55 @@ export default function ActivityHub(props: IAnalyticsProps) {
 
 function ActivityHubHeader() {
     return (
-        <div className="relative w-full flex items-center justify-center">
-            <div
-                data-scroll
-                data-scroll-speed={0.1}
-                className="relative flex flex-col items-start gap-4 text-center text-[#161E31] w-full px-2"
+        <div className="relative w-full max-w-8xl mx-auto p-6 rounded-2xl shadow-lg overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+            <img
+                src="/github-bg.jpg" // Replace with your GitHub background image path
+                alt="GitHub Background"
+                className="w-full h-full object-cover opacity-10"
+            />
+        </div>
+
+        {/* Content Section */}
+        <div className="relative z-10 text-white flex flex-col items-center gap-6 text-center">
+            <Heading
+                level={1}
+                className="text-4xl md:text-5xl lg:text-6xl font-extrabold"
             >
-                <Heading
-                    level={1}
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold "
-                >
-                    GitHub Activity Hub
-                </Heading>
-                <div className="mt-8 flex flex-col md:flex-row justify-center md:justify-start items-center w-full gap-4">
-                    <ActionButton
-                        text="View Profile"
-                        size="sm"
-                        status="active"
-                        link={{
-                            url: `https://github.com/monk-27`,
-                            target: "_blank",
-                        }}
-                    />
-                    <ActionButton
-                        text="Explore Repositories"
-                        size="sm"
-                        status="passive"
-                        link={{
-                            url: `https://github.com/monk-27?tab=repositories`,
-                            target: "_blank",
-                        }}
-                    />
-                </div>
+                GitHub Activity Hub
+            </Heading>
+            <Paragraph className="text-base md:text-lg lg:text-xl max-w-2xl">
+                Monitor your GitHub contributions, explore repositories, and showcase
+                your activity with ease.
+            </Paragraph>
+            <div className="flex flex-wrap justify-center gap-4 mt-4">
+                <ActionButton
+                    text="View Profile"
+                    size="lg"
+                    status="active"
+                    className="transition-transform transform hover:scale-110 shadow-lg"
+                    link={{
+                        url: `https://github.com/monk-27`,
+                        target: "_blank",
+                    }}
+                />
+                <ActionButton
+                    text="Explore Repositories"
+                    size="lg"
+                    status="passive"
+                    className="transition-transform transform hover:scale-110 shadow-lg"
+                    link={{
+                        url: `https://github.com/monk-27?tab=repositories`,
+                        target: "_blank",
+                    }}
+                />
             </div>
         </div>
+    </div>
     );
 }
+
 
 function ActivityHubSummary() {
     return (

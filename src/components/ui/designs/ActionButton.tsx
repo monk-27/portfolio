@@ -12,6 +12,7 @@ export interface IActionButtonProps {
     icon?: React.ReactNode;
     status?: "active" | "passive";
     size?: "sm" | "md" | "lg";
+    className?: string; // Optional className prop
 }
 
 export default function ActionButton({
@@ -20,6 +21,7 @@ export default function ActionButton({
     icon,
     status = "passive",
     size = "sm",
+    className = "", // Default value as an empty string
 }: IActionButtonProps) {
     // Button sizes based on size passed
     const sizeClasses = {
@@ -29,24 +31,18 @@ export default function ActionButton({
     };
 
     // Common styling
-    const defaultClasses: string | undefined =
+    const defaultClasses: string =
         "px-6 py-3 border border-gray-700 rounded-2xl transition-all duration-300 ease-out cursor-pointer active:shadow-none active:scale-95 uppercase";
 
     // Styling if button is an active style
-    const activeStyling: string | undefined =
-    "bg-[#F9AB81] text-[#161E31]  hover:bg-[#161E31] hover:text-[#F9AB81]";
+    const activeStyling: string =
+        "bg-[#F9AB81] text-[#161E31] hover:bg-[#161E31] hover:text-[#F9AB81]";
 
     // Styling if button is a passive style
-    const passiveStyling: string | undefined =
-        " bg-[#161E31] text-white  hover:bg-[#F9AB81]";
+    const passiveStyling: string =
+        "bg-[#161E31] text-white hover:bg-[#F9AB81]";
 
-    let stylingType;
-    // Apply styling based on status type
-    if (status === "active") {
-        stylingType = activeStyling;
-    } else {
-        stylingType = passiveStyling;
-    }
+    const stylingType = status === "active" ? activeStyling : passiveStyling;
 
     return (
         <div className="relative inline-block">
@@ -54,7 +50,7 @@ export default function ActionButton({
                 <Link href={link.url} target={link.target}>
                     <Magnetic>
                         <button
-                            className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
+                            className={`${sizeClasses[size]} ${defaultClasses} ${stylingType} ${className}`}
                         >
                             {icon ? (
                                 <span className="flex-row-center-center gap-2 flex-nowrap">
@@ -70,7 +66,7 @@ export default function ActionButton({
             ) : (
                 <Magnetic>
                     <button
-                        className={`${sizeClasses[size]} ${defaultClasses} ${stylingType}`}
+                        className={`${sizeClasses[size]} ${defaultClasses} ${stylingType} ${className}`}
                     >
                         {icon ? (
                             <span className="flex-row-center-center gap-2 flex-nowrap">

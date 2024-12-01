@@ -12,7 +12,7 @@ export default function Footer(props: IFooterProps) {
 
     return (
         <div className="bg-inherit w-full">
-            <div className="bg-primary p-10 lg:p-20 rounded-t-3xl text-white text-left">
+            <div className="bg-[#1F0733] p-10 lg:p-20 rounded-t-3xl text-white text-left">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                     <PersonalInfo />
                     <QuickLinks />

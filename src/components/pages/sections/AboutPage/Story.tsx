@@ -6,8 +6,8 @@ export interface StorySectionProps { }
 
 export default function StorySection(props: StorySectionProps) {
     return (
-        <div className="py-12 sm:py-20 px-6 sm:px-10 bg-inherit text-[#161E31] mt-10">
-            <div className="max-w-6xl mx-auto flex flex-col items-center space-y-16">
+        <div className="py-12 sm:py-20 px-6 sm:px-0 bg-inherit text-[#7a4b27] mt-10">
+            <div className="max-w-6xl mx-auto flex flex-col  space-y-16">
                 {/* My Story */}
                 <div className="text-center space-y-8">
                     <div data-scroll data-scroll-speed={0.1}>
@@ -21,7 +21,7 @@ export default function StorySection(props: StorySectionProps) {
                     <div
                         data-scroll
                         data-scroll-speed={0.3}
-                        className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-[#7a4b27]"
+                        className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-white"
                     >
                         <Paragraph>
                             Since 2022, my journey as a Software Developer has been deeply rooted in a passion for coding and problem-solving. From the moment I wrote my first line of code, I was hooked on the limitless possibilities it offered. Transitioning from a curious learner to a professional developer, I&apos;ve focused on building impactful digital solutions that bring ideas to life.
@@ -39,7 +39,7 @@ export default function StorySection(props: StorySectionProps) {
                 <div
                     data-scroll
                     data-scroll-speed={0.2}
-                    className="w-full bg-[#161E31]  rounded-3xl py-12 px-6 sm:px-10 space-y-10"
+                    className="w-full bg-[#1F0733]  rounded-3xl py-12 px-6 sm:px-10 space-y-10"
                 >
                     <Heading
                         level={2}
@@ -93,7 +93,7 @@ export default function StorySection(props: StorySectionProps) {
                 </div>
 
                 {/* Personal Mantra */}
-                <div className="w-full bg-[#161E31] py-12 sm:py-16 rounded-3xl text-center text-[#F8B179]">
+                <div className="w-full bg-[#1F0733] py-12 sm:py-16 rounded-3xl text-center text-[#F8B179]">
                     <Heading
                         level={3}
                         className="text-3xl sm:text-4xl font-semibold mb-4 text-[#F8B179] mx-auto"

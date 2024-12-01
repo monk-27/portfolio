@@ -16,11 +16,11 @@ export default function HeroSection(props: HeroSectionProps) {
             <div className="md:w-2/3">
                 <Heading
                     level={1}
-                    className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight"
+                    className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight text-white"
                 >
-                    Hi, I&apos;m <span className="text-[#161E31]">Shashi Bhushan Jha</span>
+                    Hi, I&apos;m <span className="text-[#7a4b27]">Shashi Bhushan Jha</span>
                 </Heading>
-                <Paragraph className="text-xl mb-6 text-[#676F9D] leading-relaxed">
+                <Paragraph className="text-xl mb-6 text-white leading-relaxed">
                 A dedicated{" "}
                     <span className="text-[#161E31] underline">
                         <span className="text-[#7a4b27]">Software Developer</span>

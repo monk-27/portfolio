@@ -109,7 +109,14 @@ export default function HomeHero(props: IHomeHeroProps) {
     }, [titles]);
 
     return (
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start relative bg-inherit">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start relative  bg-[#1F0733]"
+        // style={{
+        //     backgroundImage: "url('/1.jpg')", // Replace with your image path
+        //     backgroundSize: "cover", // Ensures the image covers the entire container
+        //     backgroundPosition: "center", // Centers the image
+        //     backgroundRepeat: "no-repeat", // Prevents the image from repeating
+        // }}
+        >
             {/* Left Column - Progress Bars */}
             <div className="hidden md:flex col-span-1 flex-col justify-between items-center pl-2 h-full">
                 <ProgressSection progressData={progressData} />
@@ -167,7 +174,7 @@ function Placement2({
                 <div data-scroll data-scroll-speed={0.05}>
                     <Heading
                         level={1}
-                        className="text-[#A66E43] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none"
+                        className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none"
                     >
                         <span>Shashi Bhushan Jha</span>
                     </Heading>
@@ -175,7 +182,7 @@ function Placement2({
                 <div data-scroll data-scroll-speed={0.025}>
                     <Heading
                         level={2}
-                        className="text-xl sm:text-2xl md:text-3xl text-[#161E31] font-medium"
+                        className="text-xl sm:text-2xl md:text-3xl text-[#895126] font-medium"
                     >
                         {titles[currentTitleIndex]}
                     </Heading>
@@ -196,12 +203,12 @@ function ProgressSection({ progressData }: { progressData: any[] }) {
                     <Link
                         href={progress.link}
                         key={progress.id}
-                        className="w-full text-[#895126] group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
+                        className="w-full text-white group hover:bg-gray-900 p-4 pb-5 rounded-lg duration-300 max-w-xs"
                     >
                         <div className="flex flex-row justify-between items-start">
                             <Heading
                                 level={5}
-                                className="text-sm font-light text-[#895126]"
+                                className="text-sm font-light text-white"
                             >
                                 {progress.type}
                             </Heading>
@@ -221,12 +228,12 @@ function ProgressSection({ progressData }: { progressData: any[] }) {
                 ) : (
                     <div
                         key={progress.id}
-                        className="w-full text-[#895126] group hover:bg-gray-900 hover:text-white p-4 pb-5 rounded-lg duration-300 max-w-xs"
+                        className="w-full text-white group hover:bg-gray-900 hover:text-white p-4 pb-5 rounded-lg duration-300 max-w-xs"
                     >
                         <div className="flex flex-row justify-between items-start">
                             <Heading
                                 level={5}
-                                className="text-sm font-light text-[#895126] hover:text-white"
+                                className="text-sm font-light text-]white hover:text-white"
                             >
                                 {progress.type}
                             </Heading>
@@ -303,7 +310,7 @@ function Placement4() {
             {MetricsData.map((item, _) => (
                 <div
                     key={item.id}
-                    className="flex flex-col justify-center items-center gap-2"
+                    className="flex flex-col justify-center items-center gap-2 text-white"
                 >
                     <span className="text-5xl">{item.number}+</span>
                     <span className="text-sm">{item.label}</span>

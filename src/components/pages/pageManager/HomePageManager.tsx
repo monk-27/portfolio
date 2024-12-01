@@ -19,7 +19,7 @@ export default function HomePageManager(props: IHomePageManagerProps) {
                 data-scroll
                 data-scroll-speed={0.3}
                 id="homepage-work"
-                className="py-14 relative w-full"
+                className="py-10 relative w-full"
             >
                 <ProjectsSection />
             </section>
@@ -27,7 +27,7 @@ export default function HomePageManager(props: IHomePageManagerProps) {
                 data-scroll
                 data-scroll-speed={0.3}
                 id="homepage-analytics"
-                className="py-14 mb-10  relative w-full"
+                className="py-14 mb-1  relative w-full"
             >
                 <ActivityHub />
             </section>

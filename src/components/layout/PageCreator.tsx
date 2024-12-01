@@ -20,15 +20,15 @@ export default function PageCreator({ title, children }: IPageCreatorProps) {
 
     return (
         <>
-            <article className="text-[#424769] scroll-smooth scroll-500 bg-[#F8B179] homepage px-0">
+            <article className="text-[#424769] scroll-smooth scroll-500 bg-white homepage px-0">
                 <header data-scroll data-scroll-speed={0.1}>
                     <Navbar
                         title={title}
-                        className="  bg-[#161E31] text-[#F8B179]"
+                        className="   bg-[#1F0733] text-white"
                         titleColor="#424769"
                     />
                 </header>
-                <div className="rounded-3xl bg-[#abacb2] overflow-hidden">
+                <div className="rounded-3xl bg-[#2A133D] overflow-hidden">
                     {children}
                 </div>
                 <footer className="mt-10 px-0">

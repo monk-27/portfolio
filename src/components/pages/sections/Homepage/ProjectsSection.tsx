@@ -257,7 +257,7 @@ function SectionHeader() {
         >
             <Heading
                 level={2}
-                className="text-3xl md:text-4xl font-bold text-[#161E31] mb-4"
+                className="text-3xl md:text-4xl font-bold text-[#F8B179] mb-4"
             >
                 Recent work
             </Heading>
@@ -293,7 +293,7 @@ function ProjectCard({
             animate={{ height: isExpanded ? "auto" : "5rem" }}
             initial={{ height: "5rem" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={`w-full overflow-hidden rounded-3xl cursor-pointer bg-[#161E31]`}
+            className={`w-full overflow-hidden rounded-3xl cursor-pointer bg-[#1F0733]`}
             style={{ overflow: "hidden" }}
         >
             <div
@@ -311,7 +311,7 @@ function ProjectCard({
                     <div className="flex-col-start-start pr-5">
                         <Heading
                             level={5}
-                            className="text-base md:text-3xl font-semibold text-inherit w-fit md:text-left group-hover:translate-x-0 md:group-hover:translate-x-5 transition-transform duration-500"
+                            className="text-base md:text-3xl font-semibold text-[#F8B179] w-fit md:text-left group-hover:translate-x-0 md:group-hover:translate-x-5 transition-transform duration-500"
                         >
                             {project.title}
                         </Heading>
