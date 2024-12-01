@@ -19,8 +19,8 @@ export default function ContactHero(props: IServicesHeroProps) {
 
     return (
 
-        <div className="flex flex-col items-center bg-[#abacb2] py-12 px-6 relative">
-            <h1 className="text-3xl sm:text-5xl font-bold text-[#161E31] mb-6">
+        <div className="flex flex-col items-center bg-[#2A133D]py-12 px-6 relative">
+            <h1 className="text-3xl sm:text-5xl font-bold text-[#F8B179] mb-6">
                 Contact Us
             </h1>
 
@@ -60,7 +60,7 @@ export default function ContactHero(props: IServicesHeroProps) {
                 </div>
 
                 {/* Right Card */}
-                <div className="bg-[#161E31] p-8 rounded-lg shadow-md flex flex-col items-center justify-center w-full relative sm:w-[65%] sm:-ml-16">
+                <div className="bg-[#1F0733] p-8 rounded-lg shadow-md flex flex-col items-center justify-center w-full relative sm:w-[65%] sm:-ml-16">
                     <Image
                         src='/contact.gif' 
                         alt="Illustration"

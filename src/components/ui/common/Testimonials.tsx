@@ -47,8 +47,8 @@ export default function Testimonials(props: ITestimonialsProps) {
     }, [currentTestimonial]);
 
     return (
-        <div className="container mx-auto relative max-w-screen-lg px-6 mt-5 flex-col-center-center gap-10 bg-inherit">
-            <Heading level={3} className="text-center mb-10 text-[#F8B179]">
+        <div className="container mx-auto relative max-w-screen-lg px-1 mt-1 flex-col-center-center gap-1 bg-inherit">
+            <Heading level={3} className="text-center mb-1 text-[#F8B179]">
                 Hear About Me
             </Heading>
             <div

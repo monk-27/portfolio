@@ -15,7 +15,7 @@ export default function Services(props: IServicesProps) {
     return (
         <div className="px-4">
             <div data-scroll data-scroll-speed={0.1}>
-                <Heading level={2}>Services I provide</Heading>
+                <Heading className="text-[#F8B179]" level={2}>Services I provide</Heading>
             </div>
             <div
                 data-scroll
