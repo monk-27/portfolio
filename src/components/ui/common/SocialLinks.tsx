@@ -19,7 +19,7 @@ export default function SocialLinks(props: ISocialLinksProps) {
                     >
                         <item.icon
                             key={index}
-                            className="scale-110 rounded-2xl  transition duration-300"
+                            className="scale-110 rounded-2xl text-white  transition duration-300"
                         />
                     </Link>
                 </Magnetic>

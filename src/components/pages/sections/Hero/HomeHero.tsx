@@ -182,7 +182,7 @@ function Placement2({
                 <div data-scroll data-scroll-speed={0.025}>
                     <Heading
                         level={2}
-                        className="text-xl sm:text-2xl md:text-3xl text-[#895126] font-medium"
+                        className="text-xl sm:text-2xl md:text-3xl text-[#F8B179] font-medium"
                     >
                         {titles[currentTitleIndex]}
                     </Heading>
@@ -289,14 +289,14 @@ function Placement3() {
             className="flex flex-col justify-center items-center gap-10 my-14"
         >
             <div>
-                <Paragraph className=" text- [ #895126]text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
+                {/* <Paragraph className=" text- [ #895126]text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
                     I give vision, JavaScript.
-                </Paragraph>
+                </Paragraph> */}
             </div>
             <div
                 data-scroll
                 data-scroll-speed={-0.1}
-                className="flex flex-row justify-center gap-8 text-xl"
+                className="flex flex-row justify-center gap-8 text-xl "
             >
                 <SocialLinks />
             </div>

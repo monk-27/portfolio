@@ -8,7 +8,7 @@ import Magnetic from "@/components/ui/designs/Magnetic";
 const projectsData = [
     {
         id: 1,
-        title: "Bright DiGi Gold",
+        title: "Bright DiGi Gold Website",
         sneakPeakDescription: "A Digital Gold and Silver website.",
         description:
             "Developed a comprehensive Gold and Silver digital platform enabling seamless transactions, user management, and enhanced functionalities to streamline operations and improve customer experience.",
@@ -35,7 +35,7 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "Bright DiGi Gold",
+        title: "Bright DiGi Gold Application",
         sneakPeakDescription: "A Digital Gold and Silver Application.",
         description:"Developed a comprehensive Gold and Silver mobile application enabling seamless transactions, intuitive user management, and enhanced functionalities to provide a streamlined and engaging user experience.",
 

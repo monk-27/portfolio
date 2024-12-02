@@ -100,13 +100,13 @@ export const TestimonialsData = [
     {
         name: "Ritesh Singh",
         feedback:
-            "Working with Shashi Bhushan Jha was a game-changer for my real estate business. He took my vision and turned it into a sleek, user-friendly website that perfectly represents my brand. The project was completed on time, and the end result exceeded all my expectations. I’ve already seen a boost in client engagement!",
+            "From the day I hired Shashi Bhushan Jha, his dedication and technical expertise have stood out. He turned our vision into a sleek, user-friendly website that has boosted client engagement and strengthened our brand. His ability to deliver exceptional results on time is truly commendable. Shashi, your hard work and commitment are invaluable to our team!",
         photo: "/Photos/Testimonials/Ritesh.png",
     },
     {
         name: "Raghav Singh",
         feedback:
-            "Shashi Bhushan Jha was fantastic to work with. He understood the unique needs of my real estate business and crafted a website that not only looks amazing but also functions seamlessly. His attention to detail and dedication to the project really shined through. I couldn’t be happier with the outcome!",
+            "Shashi Bhushan Jha was an incredible team member to work with. He quickly understood the unique requirements of the project and delivered a website that is both visually stunning and highly functional. His attention to detail, problem-solving skills, and dedication to the project were evident at every step. The final result exceeded expectations, and it was a pleasure having him lead the way!",
         photo: "/Photos/Testimonials/raghav.png",
     },
     {
@@ -114,6 +114,12 @@ export const TestimonialsData = [
         photo: "/Photos/Testimonials/amit.png",
         feedback:
             "Shashi Bhushan Jha is an exceptional software developer with expertise in React, JavaScript, and TypeScript. He consistently delivered high-quality code. His collaboration skills and ability to communicate technical concepts were a major asset to our team. I highly recommend Shashi Bhushan Jha for any front-end development role.",
+    },
+    {
+        name: "Ayush Arya",
+        photo: "/Photos/Testimonials/ayush.jpg",
+        feedback:
+            "Working with Shashi Bhushan Jha as a team member has been an absolute pleasure. He brings a sharp understanding of project requirements and delivers results that are both functional and visually impressive. His attention to detail, collaborative approach, and dedication to getting things done right are truly inspiring. Shashi’s contributions consistently elevate the team’s performance, and I’m grateful to have had the chance to work alongside him!",
     },
 ];
 

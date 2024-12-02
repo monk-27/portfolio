@@ -18,7 +18,7 @@ export default function Footer(props: IFooterProps) {
                     <QuickLinks />
                     {isSubscriptionOn && <SubscribeForm />}
                 </div>
-                <LegalStuff />
+                {/* <LegalStuff /> */}
             </div>
         </div>
     );

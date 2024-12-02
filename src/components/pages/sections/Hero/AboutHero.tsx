@@ -18,12 +18,12 @@ export default function HeroSection(props: HeroSectionProps) {
                     level={1}
                     className="text-4xl sm:text-5xl font-semibold mb-4 leading-tight text-white"
                 >
-                    Hi, I&apos;m <span className="text-[#7a4b27]">Shashi Bhushan Jha</span>
+                    Hi, I&apos;m <span className="text-[#F8B179]">Shashi Bhushan Jha</span>
                 </Heading>
                 <Paragraph className="text-xl mb-6 text-white leading-relaxed">
                 A dedicated{" "}
-                    <span className="text-[#161E31] underline">
-                        <span className="text-[#7a4b27]">Software Developer</span>
+                    <span className="text-[#7a4b27] underline">
+                        <span className=" text-[#F8B179]">Software Developer</span>
                     </span>{" "}
                     with 2 years of experience in building impactful digital solutions for web and Android platforms. Skilled in modern technologies, I specialize in creating clean, efficient, and scalable code to bring innovative ideas to life.
                 </Paragraph>
@@ -82,8 +82,8 @@ function InfoItem({
     title: string;
 }) {
     return (
-        <div className="flex items-center gap-2 text-[#7a4b27]" title={title}>
-            <div className="text-[#161E31]">{icon}</div>
+        <div className="flex items-center gap-2 text-[#F8B179]" title={title}>
+            <div className="text-white">{icon}</div>
             <span>{text}</span>
         </div>
     );

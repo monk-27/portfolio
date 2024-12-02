@@ -6,7 +6,7 @@ export interface StorySectionProps { }
 
 export default function StorySection(props: StorySectionProps) {
     return (
-        <div className="py-12 sm:py-20 px-6 sm:px-0 bg-inherit text-[#7a4b27] mt-10">
+        <div className="py-12 sm:py-20 px-6 sm:px-0 bg-inherit text-[#F8B179] mt-10">
             <div className="max-w-6xl mx-auto flex flex-col  space-y-16">
                 {/* My Story */}
                 <div className="text-center space-y-8">
